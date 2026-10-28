@@ -1,0 +1,2 @@
+{"design": "csa8", "min_leaves": 3, "drop_leaf": 0,
+ "why": "the first 3-or-4-leaf cut found loses its first leaf; walking down from the root must reach an input"}

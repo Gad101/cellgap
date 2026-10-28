@@ -1,0 +1,2 @@
+{"design": "csa8", "cut_index": 5, "flip_row": 3,
+ "why": "the stored table of one cut has row 3 inverted; simulation of the AIG must disagree"}

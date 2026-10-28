@@ -1,0 +1,3 @@
+{"remove_families": ["a22oi"],
+ "expect_row": "Exists", "expect_not": 24,
+ "why": "without a22oi_1/2/4 the class of !((A&B)|(C&D)) is no longer Exists, so Table 4 must not match"}

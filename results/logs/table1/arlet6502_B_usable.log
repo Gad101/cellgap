@@ -1,0 +1,2110 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.33 (git sha1 2584903a0, ccache clang 14.0.0-1ubuntu1.1 -Os -flto -flto)
+
+
+-- Executing script file `/Users/abdugad/dd2/cp1/results/logs/table1/arlet6502_B_usable.ys' --
+
+1. Executing Verilog-2005 frontend: /Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v
+Parsing Verilog input from `/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v' to AST representation.
+Generating RTLIL representation for module `\ALU'.
+Generating RTLIL representation for module `\cpu'.
+Successfully finished Verilog frontend.
+
+2. Executing SYNTH pass.
+
+2.1. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1.1. Analyzing design hierarchy..
+Top module:  \cpu
+Used module:     \ALU
+
+2.1.2. Analyzing design hierarchy..
+Top module:  \cpu
+Used module:     \ALU
+Removed 0 unused modules.
+
+2.2. Executing PROC pass (convert processes to netlists).
+
+2.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+2.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1327$247 in module cpu.
+Removed 1 dead cases from process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1309$241 in module cpu.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1309$241 in module cpu.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1279$224 in module cpu.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1253$221 in module cpu.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1243$218 in module cpu.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1234$215 in module cpu.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1223$212 in module cpu.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1213$209 in module cpu.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1204$204 in module cpu.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1195$199 in module cpu.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1185$196 in module cpu.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1177$193 in module cpu.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1166$190 in module cpu.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1155$187 in module cpu.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1143$184 in module cpu.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1122$181 in module cpu.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1102$178 in module cpu.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1085$175 in module cpu.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1079$173 in module cpu.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:975$160 in module cpu.
+Marked 2 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:952$147 in module cpu.
+Marked 2 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:932$142 in module cpu.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:920$139 in module cpu.
+Marked 3 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:906$134 in module cpu.
+Marked 4 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:889$125 in module cpu.
+Marked 3 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:877$117 in module cpu.
+Marked 4 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:857$108 in module cpu.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:820$97 in module cpu.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:787$96 in module cpu.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:745$93 in module cpu.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:727$86 in module cpu.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:701$84 in module cpu.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:653$80 in module cpu.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:644$68 in module cpu.
+Removed 1 dead cases from process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:628$67 in module cpu.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:628$67 in module cpu.
+Removed 1 dead cases from process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:614$66 in module cpu.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:614$66 in module cpu.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:586$61 in module cpu.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:558$60 in module cpu.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:537$55 in module cpu.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:474$43 in module cpu.
+Marked 2 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:436$36 in module cpu.
+Marked 2 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:409$30 in module cpu.
+Removed 1 dead cases from process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:73$9 in module ALU.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:73$9 in module ALU.
+Removed 1 dead cases from process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:59$5 in module ALU.
+Marked 2 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:59$5 in module ALU.
+Removed a total of 5 dead cases.
+
+2.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 24 assignments to connections.
+
+2.2.4. Executing PROC_INIT pass (extract init attributes).
+
+2.2.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \reset in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:975$160'.
+
+2.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~107 debug messages>
+
+2.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1327$247'.
+     1/1: $0\NMI_edge[0:0]
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1324$246'.
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1309$241'.
+     1/1: $1\cond_true[0:0]
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1305$240'.
+     1/1: $0\cond_code[2:0]
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1291$227'.
+     1/10: $0\brk[0:0]
+     2/10: $0\clv[0:0]
+     3/10: $0\sei[0:0]
+     4/10: $0\cli[0:0]
+     5/10: $0\sed[0:0]
+     6/10: $0\cld[0:0]
+     7/10: $0\sec[0:0]
+     8/10: $0\clc[0:0]
+     9/10: $0\php[0:0]
+    10/10: $0\plp[0:0]
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1279$224'.
+     1/1: $0\bit_ins[0:0]
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1253$221'.
+     1/1: $0\op[3:0]
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1243$218'.
+     1/1: $0\rotate[0:0]
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1234$215'.
+     1/1: $0\shift_right[0:0]
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1223$212'.
+     1/1: $0\compare[0:0]
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1213$209'.
+     1/1: $0\shift[0:0]
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1204$204'.
+     1/1: $0\adc_bcd[0:0]
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1195$199'.
+     1/1: $0\adc_sbc[0:0]
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1185$196'.
+     1/1: $0\inc[0:0]
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1177$193'.
+     1/1: $0\load_only[0:0]
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1166$190'.
+     1/1: $0\write_back[0:0]
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1155$187'.
+     1/1: $0\store[0:0]
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1143$184'.
+     1/1: $0\index_y[0:0]
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1122$181'.
+     1/1: $0\src_reg[1:0]
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1102$178'.
+     1/1: $0\dst_reg[1:0]
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1085$175'.
+     1/1: $0\load_reg[0:0]
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1079$173'.
+     1/1: $0\res[0:0]
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:975$160'.
+     1/1: $0\state[5:0]
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:966$157'.
+     1/1: $0\DIHOLD[7:0]
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:952$147'.
+     1/2: $0\IRHOLD_valid[0:0]
+     2/2: $0\IRHOLD[7:0]
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:932$142'.
+     1/1: $0\V[0:0]
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:920$139'.
+     1/1: $0\D[0:0]
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:906$134'.
+     1/1: $0\I[0:0]
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:889$125'.
+     1/1: $0\N[0:0]
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:877$117'.
+     1/1: $0\Z[0:0]
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:857$108'.
+     1/1: $0\C[0:0]
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:820$97'.
+     1/1: $1\CI[0:0]
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:787$96'.
+     1/1: $1\BI[7:0]
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:745$93'.
+     1/1: $1\AI[7:0]
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:737$92'.
+     1/1: $0\backwards[0:0]
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:727$86'.
+     1/1: $1\alu_shift_right[0:0]
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:701$84'.
+     1/1: $1\alu_op[3:0]
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:653$80'.
+     1/1: $1\regsel[1:0]
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:644$68'.
+     1/3: $1$memwr$\AXYS$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:646$28_EN[7:0]$75
+     2/3: $1$memwr$\AXYS$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:646$28_DATA[7:0]$74
+     3/3: $1$memwr$\AXYS$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:646$28_ADDR[1:0]$73
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:628$67'.
+     1/1: $1\ADJH[3:0]
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:614$66'.
+     1/1: $1\ADJL[3:0]
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:604$64'.
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:586$61'.
+     1/1: $1\write_register[0:0]
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:558$60'.
+     1/1: $1\WE[0:0]
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:537$55'.
+     1/1: $1\DO[7:0]
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:526$44'.
+     1/2: $0\ABH[7:0]
+     2/2: $0\ABL[7:0]
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:474$43'.
+     1/1: $1\AB[15:0]
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:462$41'.
+     1/1: $0\PC[15:0]
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:436$36'.
+     1/2: $2\PC_inc[0:0]
+     2/2: $1\PC_inc[0:0]
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:409$30'.
+     1/2: $2\PC_temp[15:0]
+     2/2: $1\PC_temp[15:0]
+Creating decoders for process `\ALU.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:99$21'.
+     1/6: $0\BI7[0:0]
+     2/6: $0\AI7[0:0]
+     3/6: $0\HC[0:0]
+     4/6: $0\OUT[7:0]
+     5/6: $0\N[0:0]
+     6/6: $0\CO[0:0]
+Creating decoders for process `\ALU.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:93$16'.
+Creating decoders for process `\ALU.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:73$9'.
+     1/1: $1\temp_BI[7:0]
+Creating decoders for process `\ALU.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:59$5'.
+     1/2: $2\temp_logic[8:0]
+     2/2: $1\temp_logic[8:0]
+
+2.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\cpu.\cond_true' from process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1309$241'.
+No latch inferred for signal `\cpu.\CI' from process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:820$97'.
+No latch inferred for signal `\cpu.\BI' from process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:787$96'.
+No latch inferred for signal `\cpu.\AI' from process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:745$93'.
+No latch inferred for signal `\cpu.\alu_shift_right' from process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:727$86'.
+No latch inferred for signal `\cpu.\alu_op' from process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:701$84'.
+No latch inferred for signal `\cpu.\regsel' from process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:653$80'.
+No latch inferred for signal `\cpu.\ADJH' from process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:628$67'.
+No latch inferred for signal `\cpu.\ADJL' from process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:614$66'.
+No latch inferred for signal `\cpu.\write_register' from process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:586$61'.
+No latch inferred for signal `\cpu.\WE' from process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:558$60'.
+No latch inferred for signal `\cpu.\DO' from process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:537$55'.
+No latch inferred for signal `\cpu.\AB' from process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:474$43'.
+No latch inferred for signal `\cpu.\PC_inc' from process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:436$36'.
+No latch inferred for signal `\cpu.\PC_temp' from process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:409$30'.
+No latch inferred for signal `\ALU.\temp_l' from process `\ALU.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:93$16'.
+No latch inferred for signal `\ALU.\temp_h' from process `\ALU.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:93$16'.
+No latch inferred for signal `\ALU.\temp_BI' from process `\ALU.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:73$9'.
+No latch inferred for signal `\ALU.\temp_logic' from process `\ALU.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:59$5'.
+
+2.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\cpu.\NMI_edge' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1327$247'.
+  created $dff cell `$procdff$712' with positive edge clock.
+Creating register for signal `\cpu.\NMI_1' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1324$246'.
+  created $dff cell `$procdff$713' with positive edge clock.
+Creating register for signal `\cpu.\cond_code' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1305$240'.
+  created $dff cell `$procdff$714' with positive edge clock.
+Creating register for signal `\cpu.\plp' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1291$227'.
+  created $dff cell `$procdff$715' with positive edge clock.
+Creating register for signal `\cpu.\php' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1291$227'.
+  created $dff cell `$procdff$716' with positive edge clock.
+Creating register for signal `\cpu.\clc' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1291$227'.
+  created $dff cell `$procdff$717' with positive edge clock.
+Creating register for signal `\cpu.\sec' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1291$227'.
+  created $dff cell `$procdff$718' with positive edge clock.
+Creating register for signal `\cpu.\cld' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1291$227'.
+  created $dff cell `$procdff$719' with positive edge clock.
+Creating register for signal `\cpu.\sed' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1291$227'.
+  created $dff cell `$procdff$720' with positive edge clock.
+Creating register for signal `\cpu.\cli' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1291$227'.
+  created $dff cell `$procdff$721' with positive edge clock.
+Creating register for signal `\cpu.\sei' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1291$227'.
+  created $dff cell `$procdff$722' with positive edge clock.
+Creating register for signal `\cpu.\clv' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1291$227'.
+  created $dff cell `$procdff$723' with positive edge clock.
+Creating register for signal `\cpu.\brk' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1291$227'.
+  created $dff cell `$procdff$724' with positive edge clock.
+Creating register for signal `\cpu.\bit_ins' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1279$224'.
+  created $dff cell `$procdff$725' with positive edge clock.
+Creating register for signal `\cpu.\op' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1253$221'.
+  created $dff cell `$procdff$726' with positive edge clock.
+Creating register for signal `\cpu.\rotate' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1243$218'.
+  created $dff cell `$procdff$727' with positive edge clock.
+Creating register for signal `\cpu.\shift_right' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1234$215'.
+  created $dff cell `$procdff$728' with positive edge clock.
+Creating register for signal `\cpu.\compare' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1223$212'.
+  created $dff cell `$procdff$729' with positive edge clock.
+Creating register for signal `\cpu.\shift' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1213$209'.
+  created $dff cell `$procdff$730' with positive edge clock.
+Creating register for signal `\cpu.\adc_bcd' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1204$204'.
+  created $dff cell `$procdff$731' with positive edge clock.
+Creating register for signal `\cpu.\adc_sbc' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1195$199'.
+  created $dff cell `$procdff$732' with positive edge clock.
+Creating register for signal `\cpu.\inc' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1185$196'.
+  created $dff cell `$procdff$733' with positive edge clock.
+Creating register for signal `\cpu.\load_only' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1177$193'.
+  created $dff cell `$procdff$734' with positive edge clock.
+Creating register for signal `\cpu.\write_back' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1166$190'.
+  created $dff cell `$procdff$735' with positive edge clock.
+Creating register for signal `\cpu.\store' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1155$187'.
+  created $dff cell `$procdff$736' with positive edge clock.
+Creating register for signal `\cpu.\index_y' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1143$184'.
+  created $dff cell `$procdff$737' with positive edge clock.
+Creating register for signal `\cpu.\src_reg' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1122$181'.
+  created $dff cell `$procdff$738' with positive edge clock.
+Creating register for signal `\cpu.\dst_reg' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1102$178'.
+  created $dff cell `$procdff$739' with positive edge clock.
+Creating register for signal `\cpu.\load_reg' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1085$175'.
+  created $dff cell `$procdff$740' with positive edge clock.
+Creating register for signal `\cpu.\res' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1079$173'.
+  created $dff cell `$procdff$741' with positive edge clock.
+Creating register for signal `\cpu.\state' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:975$160'.
+  created $adff cell `$procdff$742' with positive edge clock and positive level reset.
+Creating register for signal `\cpu.\DIHOLD' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:966$157'.
+  created $dff cell `$procdff$743' with positive edge clock.
+Creating register for signal `\cpu.\IRHOLD' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:952$147'.
+  created $dff cell `$procdff$744' with positive edge clock.
+Creating register for signal `\cpu.\IRHOLD_valid' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:952$147'.
+  created $dff cell `$procdff$745' with positive edge clock.
+Creating register for signal `\cpu.\V' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:932$142'.
+  created $dff cell `$procdff$746' with positive edge clock.
+Creating register for signal `\cpu.\D' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:920$139'.
+  created $dff cell `$procdff$747' with positive edge clock.
+Creating register for signal `\cpu.\I' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:906$134'.
+  created $dff cell `$procdff$748' with positive edge clock.
+Creating register for signal `\cpu.\N' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:889$125'.
+  created $dff cell `$procdff$749' with positive edge clock.
+Creating register for signal `\cpu.\Z' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:877$117'.
+  created $dff cell `$procdff$750' with positive edge clock.
+Creating register for signal `\cpu.\C' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:857$108'.
+  created $dff cell `$procdff$751' with positive edge clock.
+Creating register for signal `\cpu.\backwards' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:737$92'.
+  created $dff cell `$procdff$752' with positive edge clock.
+Creating register for signal `\cpu.$memwr$\AXYS$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:646$28_ADDR' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:644$68'.
+  created $dff cell `$procdff$753' with positive edge clock.
+Creating register for signal `\cpu.$memwr$\AXYS$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:646$28_DATA' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:644$68'.
+  created $dff cell `$procdff$754' with positive edge clock.
+Creating register for signal `\cpu.$memwr$\AXYS$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:646$28_EN' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:644$68'.
+  created $dff cell `$procdff$755' with positive edge clock.
+Creating register for signal `\cpu.\adj_bcd' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:604$64'.
+  created $dff cell `$procdff$756' with positive edge clock.
+Creating register for signal `\cpu.\ABL' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:526$44'.
+  created $dff cell `$procdff$757' with positive edge clock.
+Creating register for signal `\cpu.\ABH' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:526$44'.
+  created $dff cell `$procdff$758' with positive edge clock.
+Creating register for signal `\cpu.\PC' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:462$41'.
+  created $dff cell `$procdff$759' with positive edge clock.
+Creating register for signal `\ALU.\CO' using process `\ALU.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:99$21'.
+  created $dff cell `$procdff$760' with positive edge clock.
+Creating register for signal `\ALU.\N' using process `\ALU.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:99$21'.
+  created $dff cell `$procdff$761' with positive edge clock.
+Creating register for signal `\ALU.\OUT' using process `\ALU.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:99$21'.
+  created $dff cell `$procdff$762' with positive edge clock.
+Creating register for signal `\ALU.\HC' using process `\ALU.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:99$21'.
+  created $dff cell `$procdff$763' with positive edge clock.
+Creating register for signal `\ALU.\AI7' using process `\ALU.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:99$21'.
+  created $dff cell `$procdff$764' with positive edge clock.
+Creating register for signal `\ALU.\BI7' using process `\ALU.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:99$21'.
+  created $dff cell `$procdff$765' with positive edge clock.
+
+2.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+2.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 2 empty switches in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1327$247'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1327$247'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1324$246'.
+Found and cleaned up 1 empty switch in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1309$241'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1309$241'.
+Found and cleaned up 1 empty switch in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1305$240'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1305$240'.
+Found and cleaned up 1 empty switch in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1291$227'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1291$227'.
+Found and cleaned up 2 empty switches in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1279$224'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1279$224'.
+Found and cleaned up 2 empty switches in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1253$221'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1253$221'.
+Found and cleaned up 2 empty switches in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1243$218'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1243$218'.
+Found and cleaned up 2 empty switches in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1234$215'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1234$215'.
+Found and cleaned up 2 empty switches in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1223$212'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1223$212'.
+Found and cleaned up 2 empty switches in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1213$209'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1213$209'.
+Found and cleaned up 2 empty switches in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1204$204'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1204$204'.
+Found and cleaned up 2 empty switches in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1195$199'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1195$199'.
+Found and cleaned up 2 empty switches in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1185$196'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1185$196'.
+Found and cleaned up 2 empty switches in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1177$193'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1177$193'.
+Found and cleaned up 2 empty switches in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1166$190'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1166$190'.
+Found and cleaned up 2 empty switches in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1155$187'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1155$187'.
+Found and cleaned up 2 empty switches in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1143$184'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1143$184'.
+Found and cleaned up 2 empty switches in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1122$181'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1122$181'.
+Found and cleaned up 2 empty switches in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1102$178'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1102$178'.
+Found and cleaned up 2 empty switches in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1085$175'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1085$175'.
+Found and cleaned up 2 empty switches in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1079$173'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1079$173'.
+Found and cleaned up 3 empty switches in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:975$160'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:975$160'.
+Found and cleaned up 1 empty switch in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:966$157'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:966$157'.
+Found and cleaned up 4 empty switches in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:952$147'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:952$147'.
+Found and cleaned up 6 empty switches in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:932$142'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:932$142'.
+Found and cleaned up 5 empty switches in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:920$139'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:920$139'.
+Found and cleaned up 7 empty switches in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:906$134'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:906$134'.
+Found and cleaned up 6 empty switches in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:889$125'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:889$125'.
+Found and cleaned up 5 empty switches in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:877$117'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:877$117'.
+Found and cleaned up 7 empty switches in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:857$108'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:857$108'.
+Found and cleaned up 1 empty switch in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:820$97'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:820$97'.
+Found and cleaned up 1 empty switch in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:787$96'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:787$96'.
+Found and cleaned up 1 empty switch in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:745$93'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:745$93'.
+Found and cleaned up 1 empty switch in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:737$92'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:737$92'.
+Found and cleaned up 1 empty switch in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:727$86'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:727$86'.
+Found and cleaned up 1 empty switch in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:701$84'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:701$84'.
+Found and cleaned up 1 empty switch in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:653$80'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:653$80'.
+Found and cleaned up 1 empty switch in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:644$68'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:644$68'.
+Found and cleaned up 1 empty switch in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:628$67'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:628$67'.
+Found and cleaned up 1 empty switch in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:614$66'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:614$66'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:604$64'.
+Found and cleaned up 1 empty switch in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:586$61'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:586$61'.
+Found and cleaned up 1 empty switch in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:558$60'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:558$60'.
+Found and cleaned up 1 empty switch in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:537$55'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:537$55'.
+Found and cleaned up 1 empty switch in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:526$44'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:526$44'.
+Found and cleaned up 1 empty switch in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:474$43'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:474$43'.
+Found and cleaned up 1 empty switch in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:462$41'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:462$41'.
+Found and cleaned up 2 empty switches in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:436$36'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:436$36'.
+Found and cleaned up 2 empty switches in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:409$30'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:409$30'.
+Found and cleaned up 1 empty switch in `\ALU.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:99$21'.
+Removing empty process `ALU.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:99$21'.
+Removing empty process `ALU.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:93$16'.
+Found and cleaned up 1 empty switch in `\ALU.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:73$9'.
+Removing empty process `ALU.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:73$9'.
+Found and cleaned up 2 empty switches in `\ALU.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:59$5'.
+Removing empty process `ALU.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:59$5'.
+Cleaned up 107 empty switches.
+
+2.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cpu.
+<suppressed ~9 debug messages>
+Optimizing module ALU.
+<suppressed ~2 debug messages>
+
+2.3. Executing FLATTEN pass (flatten design).
+Deleting now unused module ALU.
+<suppressed ~1 debug messages>
+
+2.4. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cpu.
+
+2.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cpu..
+Removed 7 unused cells and 232 unused wires.
+<suppressed ~16 debug messages>
+
+2.6. Executing CHECK pass (checking for obvious problems).
+Checking module cpu...
+Found and reported 0 problems.
+
+2.7. Executing OPT pass (performing simple optimizations).
+
+2.7.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cpu.
+
+2.7.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cpu'.
+<suppressed ~792 debug messages>
+Removed a total of 264 cells.
+
+2.7.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \cpu..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 2/2 on $mux $procmux$663.
+    dead port 2/2 on $mux $procmux$678.
+Removed 2 multiplexer ports.
+<suppressed ~71 debug messages>
+
+2.7.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \cpu.
+    New ctrl vector for $pmux cell $procmux$381: { $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1082$174_Y $procmux$430_CMP $procmux$429_CMP $procmux$428_CMP $procmux$427_CMP $procmux$426_CMP $procmux$425_CMP $procmux$424_CMP $procmux$423_CMP $procmux$422_CMP $procmux$421_CMP $procmux$420_CMP $procmux$418_CMP $procmux$417_CMP $procmux$416_CMP $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:728$90_Y $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:956$149_Y $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:956$148_Y $procmux$407_CMP $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:646$76_Y $procmux$404_CMP $procmux$403_CMP $procmux$401_CMP $procmux$400_CMP $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:860$111_Y $procmux$398_CMP $procmux$396_CMP $procmux$395_CMP $procmux$394_CMP $auto$opt_reduce.cc:134:opt_pmux$772 $procmux$392_CMP $procmux$391_CMP $procmux$389_CMP $auto$opt_reduce.cc:134:opt_pmux$770 $procmux$387_CMP $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1196$201_Y $procmux$384_CMP $procmux$383_CMP $auto$opt_reduce.cc:134:opt_pmux$768 }
+    New ctrl vector for $pmux cell $procmux$431: { $procmux$455_CMP $procmux$454_CMP $procmux$452_CMP $procmux$451_CMP $procmux$450_CMP $procmux$449_CMP $procmux$367_CMP [0] $procmux$447_CMP $procmux$442_CMP $procmux$441_CMP $auto$opt_reduce.cc:134:opt_pmux$780 $auto$opt_reduce.cc:134:opt_pmux$778 $procmux$437_CMP $procmux$354_CMP [0] $procmux$435_CMP $auto$opt_reduce.cc:134:opt_pmux$776 $auto$opt_reduce.cc:134:opt_pmux$774 }
+    New ctrl vector for $pmux cell $procmux$576: { $procmux$392_CMP $auto$opt_reduce.cc:134:opt_pmux$782 }
+    New ctrl vector for $pmux cell $procmux$594: { $procmux$391_CMP $auto$opt_reduce.cc:134:opt_pmux$784 $procmux$573_CTRL $procmux$595_CTRL }
+    Consolidated identical input bits for $mux cell $procmux$606:
+      Old ports: A=8'00000000, B=8'11111111, Y=$0$memwr$\AXYS$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:646$28_EN[7:0]$71
+      New ports: A=1'0, B=1'1, Y=$0$memwr$\AXYS$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:646$28_EN[7:0]$71 [0]
+      New connections: $0$memwr$\AXYS$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:646$28_EN[7:0]$71 [7:1] = { $0$memwr$\AXYS$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:646$28_EN[7:0]$71 [0] $0$memwr$\AXYS$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:646$28_EN[7:0]$71 [0] $0$memwr$\AXYS$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:646$28_EN[7:0]$71 [0] $0$memwr$\AXYS$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:646$28_EN[7:0]$71 [0] $0$memwr$\AXYS$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:646$28_EN[7:0]$71 [0] $0$memwr$\AXYS$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:646$28_EN[7:0]$71 [0] $0$memwr$\AXYS$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:646$28_EN[7:0]$71 [0] }
+    New ctrl vector for $pmux cell $procmux$614: { $procmux$618_CMP $auto$opt_reduce.cc:134:opt_pmux$786 $procmux$615_CMP }
+    New ctrl vector for $pmux cell $procmux$620: { $procmux$624_CMP $auto$opt_reduce.cc:134:opt_pmux$788 $procmux$621_CMP }
+    New input vector for $reduce_or cell $auto$opt_reduce.cc:128:opt_pmux$781: { $procmux$426_CMP $procmux$421_CMP $procmux$409_CMP $procmux$404_CMP $procmux$403_CMP $procmux$401_CMP $procmux$400_CMP $procmux$396_CMP $procmux$395_CMP $procmux$391_CMP $procmux$384_CMP $procmux$383_CMP $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1196$201_Y $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1082$174_Y $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:956$149_Y $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:956$148_Y $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:860$111_Y $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:728$90_Y $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:728$88_Y $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:646$76_Y }
+    New input vector for $reduce_or cell $auto$opt_reduce.cc:128:opt_pmux$783: { $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:728$90_Y $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:728$88_Y $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:688$82_Y }
+  Optimizing cells in module \cpu.
+Performed a total of 9 changes.
+
+2.7.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cpu'.
+<suppressed ~12 debug messages>
+Removed a total of 4 cells.
+
+2.7.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.7.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cpu..
+Removed 2 unused cells and 139 unused wires.
+<suppressed ~3 debug messages>
+
+2.7.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cpu.
+
+2.7.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.7.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \cpu..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~70 debug messages>
+
+2.7.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \cpu.
+    New ctrl vector for $pmux cell $procmux$381: { $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1082$174_Y $procmux$429_CMP $procmux$427_CMP $procmux$425_CMP $procmux$424_CMP $auto$opt_reduce.cc:134:opt_pmux$790 $procmux$422_CMP $procmux$421_CMP $procmux$420_CMP $procmux$418_CMP $procmux$417_CMP $procmux$416_CMP $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:728$90_Y $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:956$149_Y $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:956$148_Y $procmux$407_CMP $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:646$76_Y $procmux$404_CMP $procmux$403_CMP $procmux$401_CMP $procmux$400_CMP $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:860$111_Y $procmux$398_CMP $procmux$396_CMP $procmux$395_CMP $procmux$394_CMP $auto$opt_reduce.cc:134:opt_pmux$772 $procmux$392_CMP $procmux$391_CMP $procmux$389_CMP $auto$opt_reduce.cc:134:opt_pmux$770 $procmux$387_CMP $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1196$201_Y $procmux$384_CMP $procmux$383_CMP $auto$opt_reduce.cc:134:opt_pmux$768 }
+  Optimizing cells in module \cpu.
+Performed a total of 1 changes.
+
+2.7.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cpu'.
+Removed a total of 0 cells.
+
+2.7.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.7.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cpu..
+
+2.7.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cpu.
+
+2.7.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.7.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \cpu..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~70 debug messages>
+
+2.7.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \cpu.
+Performed a total of 0 changes.
+
+2.7.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cpu'.
+Removed a total of 0 cells.
+
+2.7.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.7.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cpu..
+
+2.7.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cpu.
+
+2.7.23. Finished OPT passes. (There is nothing left to do.)
+
+2.8. Executing FSM pass (extract and optimize FSM).
+
+2.8.1. Executing FSM_DETECT pass (finding FSMs in design).
+Not marking cpu.dst_reg as FSM state register:
+    Users of register don't seem to benefit from recoding.
+Not marking cpu.src_reg as FSM state register:
+    Users of register don't seem to benefit from recoding.
+Found FSM state register cpu.state.
+
+2.8.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+Extracting FSM `\state' from module `\cpu'.
+  found $adff cell for state register: $procdff$742
+  root of input selection tree: $0\state[5:0]
+  found reset state: 6'001000 (from async reset)
+  found ctrl input: \RDY
+  found ctrl input: $auto$opt_reduce.cc:134:opt_pmux$768
+  found ctrl input: $procmux$383_CMP
+  found ctrl input: $procmux$384_CMP
+  found ctrl input: $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1196$201_Y
+  found ctrl input: $procmux$387_CMP
+  found ctrl input: $auto$opt_reduce.cc:134:opt_pmux$770
+  found ctrl input: $procmux$389_CMP
+  found ctrl input: $procmux$391_CMP
+  found ctrl input: $procmux$392_CMP
+  found ctrl input: $auto$opt_reduce.cc:134:opt_pmux$772
+  found ctrl input: $procmux$394_CMP
+  found ctrl input: $procmux$395_CMP
+  found ctrl input: $procmux$396_CMP
+  found ctrl input: $procmux$398_CMP
+  found ctrl input: $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:860$111_Y
+  found ctrl input: $procmux$400_CMP
+  found ctrl input: $procmux$401_CMP
+  found ctrl input: $procmux$403_CMP
+  found ctrl input: $procmux$404_CMP
+  found ctrl input: $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:646$76_Y
+  found ctrl input: $procmux$407_CMP
+  found ctrl input: $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:956$148_Y
+  found ctrl input: $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:956$149_Y
+  found ctrl input: $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:728$90_Y
+  found ctrl input: $procmux$416_CMP
+  found ctrl input: $procmux$417_CMP
+  found ctrl input: $procmux$418_CMP
+  found ctrl input: $procmux$420_CMP
+  found ctrl input: $procmux$421_CMP
+  found ctrl input: $procmux$422_CMP
+  found ctrl input: $auto$opt_reduce.cc:134:opt_pmux$790
+  found ctrl input: $procmux$424_CMP
+  found ctrl input: $procmux$425_CMP
+  found ctrl input: $procmux$427_CMP
+  found ctrl input: $procmux$429_CMP
+  found ctrl input: $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1082$174_Y
+  found state code: 6'010110
+  found state code: 6'001011
+  found state code: 6'001010
+  found state code: 6'001001
+  found state code: 6'011001
+  found state code: 6'001100
+  found state code: 6'010111
+  found ctrl input: $xor$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1059$171_Y
+  found state code: 6'000111
+  found ctrl input: \cond_true
+  found state code: 6'000110
+  found state code: 6'001101
+  found state code: 6'101101
+  found state code: 6'101100
+  found state code: 6'101011
+  found state code: 6'101001
+  found state code: 6'101000
+  found state code: 6'100111
+  found state code: 6'100110
+  found state code: 6'011101
+  found state code: 6'011100
+  found state code: 6'011011
+  found state code: 6'100000
+  found state code: 6'011111
+  found state code: 6'100010
+  found state code: 6'101110
+  found ctrl input: $or$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1016$164_Y
+  found state code: 6'010101
+  found state code: 6'010100
+  found state code: 6'010011
+  found state code: 6'010001
+  found state code: 6'010000
+  found state code: 6'001111
+  found ctrl input: \write_back
+  found state code: 6'100011
+  found ctrl input: $or$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1016$165_Y
+  found state code: 6'000100
+  found state code: 6'000011
+  found state code: 6'000001
+  found state code: 6'110001
+  found ctrl input: $auto$opt_reduce.cc:134:opt_pmux$774
+  found ctrl input: $auto$opt_reduce.cc:134:opt_pmux$776
+  found ctrl input: $procmux$435_CMP
+  found ctrl input: $procmux$354_CMP [0]
+  found ctrl input: $procmux$437_CMP
+  found ctrl input: $auto$opt_reduce.cc:134:opt_pmux$778
+  found ctrl input: $auto$opt_reduce.cc:134:opt_pmux$780
+  found ctrl input: $procmux$441_CMP
+  found ctrl input: $procmux$442_CMP
+  found ctrl input: $procmux$447_CMP
+  found ctrl input: $procmux$367_CMP [0]
+  found ctrl input: $procmux$449_CMP
+  found ctrl input: $procmux$450_CMP
+  found ctrl input: $procmux$451_CMP
+  found ctrl input: $procmux$452_CMP
+  found ctrl input: $procmux$454_CMP
+  found ctrl input: $procmux$455_CMP
+  found state code: 6'100100
+  found state code: 6'000010
+  found state code: 6'110000
+  found state code: 6'010010
+  found state code: 6'000101
+  found state code: 6'000000
+  found state code: 6'101111
+  found state code: 6'001110
+  found state code: 6'011110
+  found state code: 6'100001
+  found state code: 6'011000
+  found state code: 6'101010
+  found state code: 6'100101
+  found state code: 6'011010
+  found ctrl output: $ne$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:527$45_Y
+  found ctrl output: $ne$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:527$46_Y
+  found ctrl output: $ne$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:528$49_Y
+  found ctrl output: $ne$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:528$51_Y
+  found ctrl output: $ne$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:528$53_Y
+  found ctrl output: $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:646$76_Y
+  found ctrl output: $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:688$82_Y
+  found ctrl output: $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:728$88_Y
+  found ctrl output: $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:728$90_Y
+  found ctrl output: $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:858$109_Y
+  found ctrl output: $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:860$111_Y
+  found ctrl output: $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:956$148_Y
+  found ctrl output: $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:956$149_Y
+  found ctrl output: $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1082$174_Y
+  found ctrl output: $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1196$201_Y
+  found ctrl output: $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1328$248_Y
+  found ctrl output: $procmux$383_CMP
+  found ctrl output: $procmux$384_CMP
+  found ctrl output: $procmux$386_CMP
+  found ctrl output: $procmux$387_CMP
+  found ctrl output: $procmux$388_CMP
+  found ctrl output: $procmux$389_CMP
+  found ctrl output: $procmux$390_CMP
+  found ctrl output: $procmux$391_CMP
+  found ctrl output: $procmux$392_CMP
+  found ctrl output: $procmux$393_CMP
+  found ctrl output: $procmux$394_CMP
+  found ctrl output: $procmux$395_CMP
+  found ctrl output: $procmux$396_CMP
+  found ctrl output: $procmux$397_CMP
+  found ctrl output: $procmux$398_CMP
+  found ctrl output: $procmux$400_CMP
+  found ctrl output: $procmux$401_CMP
+  found ctrl output: $procmux$402_CMP
+  found ctrl output: $procmux$403_CMP
+  found ctrl output: $procmux$404_CMP
+  found ctrl output: $procmux$406_CMP
+  found ctrl output: $procmux$407_CMP
+  found ctrl output: $procmux$409_CMP
+  found ctrl output: $procmux$415_CMP
+  found ctrl output: $procmux$416_CMP
+  found ctrl output: $procmux$417_CMP
+  found ctrl output: $procmux$418_CMP
+  found ctrl output: $procmux$419_CMP
+  found ctrl output: $procmux$420_CMP
+  found ctrl output: $procmux$421_CMP
+  found ctrl output: $procmux$422_CMP
+  found ctrl output: $procmux$423_CMP
+  found ctrl output: $procmux$424_CMP
+  found ctrl output: $procmux$425_CMP
+  found ctrl output: $procmux$426_CMP
+  found ctrl output: $procmux$427_CMP
+  found ctrl output: $procmux$428_CMP
+  found ctrl output: $procmux$429_CMP
+  found ctrl output: $procmux$430_CMP
+  ctrl inputs: { $auto$opt_reduce.cc:134:opt_pmux$778 $auto$opt_reduce.cc:134:opt_pmux$780 $auto$opt_reduce.cc:134:opt_pmux$768 $auto$opt_reduce.cc:134:opt_pmux$772 $auto$opt_reduce.cc:134:opt_pmux$776 $procmux$455_CMP $procmux$454_CMP $procmux$452_CMP $procmux$451_CMP $procmux$450_CMP $procmux$449_CMP $procmux$447_CMP $procmux$442_CMP $procmux$441_CMP $procmux$437_CMP $procmux$435_CMP $procmux$367_CMP [0] $procmux$354_CMP [0] $xor$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1059$171_Y $or$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1016$165_Y $or$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1016$164_Y $auto$opt_reduce.cc:134:opt_pmux$770 $auto$opt_reduce.cc:134:opt_pmux$790 $auto$opt_reduce.cc:134:opt_pmux$774 \cond_true \write_back \RDY }
+  ctrl outputs: { $procmux$430_CMP $procmux$429_CMP $procmux$428_CMP $procmux$427_CMP $procmux$426_CMP $procmux$425_CMP $procmux$424_CMP $procmux$423_CMP $procmux$422_CMP $procmux$421_CMP $procmux$420_CMP $procmux$419_CMP $procmux$418_CMP $procmux$417_CMP $procmux$416_CMP $procmux$415_CMP $procmux$409_CMP $procmux$407_CMP $procmux$406_CMP $procmux$404_CMP $procmux$403_CMP $procmux$402_CMP $procmux$401_CMP $procmux$400_CMP $procmux$398_CMP $procmux$397_CMP $procmux$396_CMP $procmux$395_CMP $procmux$394_CMP $procmux$393_CMP $procmux$392_CMP $procmux$391_CMP $procmux$390_CMP $procmux$389_CMP $procmux$388_CMP $procmux$387_CMP $procmux$386_CMP $procmux$384_CMP $procmux$383_CMP $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1328$248_Y $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1196$201_Y $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1082$174_Y $0\state[5:0] $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:956$149_Y $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:956$148_Y $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:860$111_Y $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:858$109_Y $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:728$90_Y $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:728$88_Y $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:688$82_Y $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:646$76_Y $ne$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:528$53_Y $ne$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:528$51_Y $ne$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:528$49_Y $ne$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:527$46_Y $ne$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:527$45_Y }
+  transition:   6'000000 27'--------------------------0 ->   6'000000 61'0001000000000000000000000000000000000000000000000000000011111
+  transition:   6'000000 27'--------------------------1 ->   6'000001 61'0001000000000000000000000000000000000000000000010000000011111
+  transition:   6'100000 27'--------------------------0 ->   6'100000 61'0000000000000000001000000000000000000000001000000000000001111
+  transition:   6'100000 27'---0------------------0---1 ->   6'001100 61'0000000000000000001000000000000000000000000011000000000001111
+  transition:   6'010000 27'--------------------------0 ->   6'010000 61'0000000000100000000000000000000000000000000100000000000011111
+  transition:   6'010000 27'--------------------------1 ->   6'010001 61'0000000000100000000000000000000000000000000100010000000011111
+  transition:   6'110000 27'--------------------------0 ->   6'110000 61'0100000000000000000000000000000000000000001100000000000011111
+  transition:   6'110000 27'--------------------------1 ->   6'110001 61'0100000000000000000000000000000000000000001100010000000011111
+  transition:   6'001000 27'--------------------------0 ->   6'001000 61'0000000000000000000000000000000000000000100010000000000011111
+  transition:   6'001000 27'--------------------------1 ->   6'001001 61'0000000000000000000000000000000000000000100010010000000011111
+  transition:   6'101000 27'--------------------------0 ->   6'101000 61'0000000000000000000000001000000000000000001010000000000011111
+  transition:   6'101000 27'--------------------------1 ->   6'101001 61'0000000000000000000000001000000000000000001010010000000011111
+  transition:   6'011000 27'--------------------------0 ->   6'011000 61'0000000000000000000000000000000000010000000110000000000011111
+  transition:   6'011000 27'--------------------------1 ->   6'011001 61'0000000000000000000000000000000000010000000110010000000011111
+  transition:   6'000100 27'--------------------------0 ->   6'000100 61'0000000100000000000000000000000000000000000001000000000011111
+  transition:   6'000100 27'-------------------------01 ->   6'001101 61'0000000100000000000000000000000000000000000011010000000011111
+  transition:   6'000100 27'-------------------------11 ->   6'100011 61'0000000100000000000000000000000000000000001000110000000011111
+  transition:   6'100100 27'--------------------------0 ->   6'100100 61'0000000000000000000000000000000000000000001001000000010011111
+  transition:   6'100100 27'---0------------------0---1 ->   6'001100 61'0000000000000000000000000000000000000000000011000000010011111
+  transition:   6'010100 27'--------------------------0 ->   6'010100 61'0000000000000010000000000000000000000000000101000000000011111
+  transition:   6'010100 27'--------------------0-----1 ->   6'001101 61'0000000000000010000000000000000000000000000011010000000011111
+  transition:   6'010100 27'--------------------1-----1 ->   6'010101 61'0000000000000010000000000000000000000000000101010000000011111
+  transition:   6'001100 27'--------------------------0 ->   6'001100 61'0000000000000000000000000000000000000000010011000000000011111
+  transition:   6'001100 27'00--00000000000000-----0--1 ->   6'001100 61'0000000000000000000000000000000000000000010011000000000011111
+  transition:   6'001100 27'-----1--------------------1 ->   6'001000 61'0000000000000000000000000000000000000000010010000000000011111
+  transition:   6'001100 27'------1-------------------1 ->   6'011010 61'0000000000000000000000000000000000000000010110100000000011111
+  transition:   6'001100 27'-------1------------------1 ->   6'100101 61'0000000000000000000000000000000000000000011001010000000011111
+  transition:   6'001100 27'--------1-----------------1 ->   6'010110 61'0000000000000000000000000000000000000000010101100000000011111
+  transition:   6'001100 27'---------1----------------1 ->   6'101010 61'0000000000000000000000000000000000000000011010100000000011111
+  transition:   6'001100 27'----------1---------------1 ->   6'011000 61'0000000000000000000000000000000000000000010110000000000011111
+  transition:   6'001100 27'----------------1---------1 ->   6'100001 61'0000000000000000000000000000000000000000011000010000000011111
+  transition:   6'001100 27'-----------1--------------1 ->   6'011110 61'0000000000000000000000000000000000000000010111100000000011111
+  transition:   6'001100 27'------------1-------------1 ->   6'001110 61'0000000000000000000000000000000000000000010011100000000011111
+  transition:   6'001100 27'-------------1------------1 ->   6'101111 61'0000000000000000000000000000000000000000011011110000000011111
+  transition:   6'001100 27'-1------------------------1 ->   6'001101 61'0000000000000000000000000000000000000000010011010000000011111
+  transition:   6'001100 27'1-------------------------1 ->   6'000000 61'0000000000000000000000000000000000000000010000000000000011111
+  transition:   6'001100 27'--------------1-----------1 ->   6'000101 61'0000000000000000000000000000000000000000010001010000000011111
+  transition:   6'001100 27'-----------------1--------1 ->   6'010010 61'0000000000000000000000000000000000000000010100100000000011111
+  transition:   6'001100 27'---------------1----------1 ->   6'110000 61'0000000000000000000000000000000000000000011100000000000011111
+  transition:   6'001100 27'----1---------------------1 ->   6'000010 61'0000000000000000000000000000000000000000010000100000000011111
+  transition:   6'001100 27'-----------------------1--1 ->   6'100100 61'0000000000000000000000000000000000000000011001000000000011111
+  transition:   6'101100 27'--------------------------0 ->   6'101100 61'0000000000000000000000000000100000000000001011000000000011111
+  transition:   6'101100 27'--------------------------1 ->   6'101101 61'0000000000000000000000000000100000000000001011010000000011111
+  transition:   6'011100 27'--------------------------0 ->   6'011100 61'0000000000000000000010000000000000000000000111000000000011111
+  transition:   6'011100 27'--------------------------1 ->   6'011101 61'0000000000000000000010000000000000000000000111010000000011111
+  transition:   6'000010 27'--------------------------0 ->   6'000010 61'0000010000000000000000000000000000000000000000100000000011111
+  transition:   6'000010 27'--------------------------1 ->   6'000011 61'0000010000000000000000000000000000000000000000110000000011111
+  transition:   6'100010 27'--------------------------0 ->   6'100010 61'0000000000000000100000000000000000000000001000100000000011101
+  transition:   6'100010 27'---0------------------0---1 ->   6'001100 61'0000000000000000100000000000000000000000000011000000000011101
+  transition:   6'010010 27'--------------------------0 ->   6'010010 61'0000000000001000000000000000000000000000000100100000000011111
+  transition:   6'010010 27'--------------------------1 ->   6'010011 61'0000000000001000000000000000000000000000000100110000000011111
+  transition:   6'001010 27'--------------------------0 ->   6'001010 61'0000000000000000000000000000000000000010000010100000000011111
+  transition:   6'001010 27'--------------------------1 ->   6'001011 61'0000000000000000000000000000000000000010000010110000000011111
+  transition:   6'101010 27'--------------------------0 ->   6'101010 61'0000000000000000000000000010000000000000001010100000000011111
+  transition:   6'101010 27'--------------------------1 ->   6'101011 61'0000000000000000000000000010000000000000001010110000000011111
+  transition:   6'011010 27'--------------------------0 ->   6'011010 61'0000000000000000000000000000000000000000000110100000000111111
+  transition:   6'011010 27'--------------------------1 ->   6'011011 61'0000000000000000000000000000000000000000000110110000000111111
+  transition:   6'000110 27'--------------------------0 ->   6'000110 61'0000000000000000000000000000000100000000000001100000000011111
+  transition:   6'000110 27'------------------0-------1 ->   6'001100 61'0000000000000000000000000000000100000000000011000000000011111
+  transition:   6'000110 27'------------------1-------1 ->   6'000111 61'0000000000000000000000000000000100000000000001110000000011111
+  transition:   6'100110 27'--------------------------0 ->   6'100110 61'0000000000000000000000010000000000000000001001100000000011111
+  transition:   6'100110 27'--------------------------1 ->   6'100111 61'0000000000000000000000010000000000000000001001110000000011111
+  transition:   6'010110 27'--------------------------0 ->   6'010110 61'0000000000000000000000000000000001000000000101100000000011111
+  transition:   6'010110 27'--------------------------1 ->   6'010111 61'0000000000000000000000000000000001000000000101110000000011111
+  transition:   6'001110 27'--------------------------0 ->   6'001110 61'0000000010000000000000000000000000000000000011100000000011111
+  transition:   6'001110 27'--------------------------1 ->   6'001111 61'0000000010000000000000000000000000000000000011110000000011111
+  transition:   6'101110 27'--------------------------0 ->   6'101110 61'0000000000000000000000000000000000000000001011100001000011111
+  transition:   6'101110 27'----------------------0---1 ->   6'001101 61'0000000000000000000000000000000000000000000011010001000011111
+  transition:   6'011110 27'--------------------------0 ->   6'011110 61'0000000000000000000000000000000000000000000111100100000011011
+  transition:   6'011110 27'--------------------------1 ->   6'011111 61'0000000000000000000000000000000000000000000111110100000011011
+  transition:   6'000001 27'--------------------------0 ->   6'000001 61'0000100000000000000000000000000000000000000000010000000011111
+  transition:   6'000001 27'-------------------------01 ->   6'001101 61'0000100000000000000000000000000000000000000011010000000011111
+  transition:   6'000001 27'-------------------------11 ->   6'100011 61'0000100000000000000000000000000000000000001000110000000011111
+  transition:   6'100001 27'--------------------------0 ->   6'100001 61'0000000000000000000000000000000000000000001000011000000011110
+  transition:   6'100001 27'--------------------------1 ->   6'100010 61'0000000000000000000000000000000000000000001000101000000011110
+  transition:   6'010001 27'--------------------------0 ->   6'010001 61'0000000000010000000000000000000000000000000100010000000011111
+  transition:   6'010001 27'----------------------0---1 ->   6'001101 61'0000000000010000000000000000000000000000000011010000000011111
+  transition:   6'110001 27'--------------------------0 ->   6'110001 61'0010000000000000000000000000000000000000001100010000000011111
+  transition:   6'110001 27'-------------------------01 ->   6'001101 61'0010000000000000000000000000000000000000000011010000000011111
+  transition:   6'110001 27'-------------------------11 ->   6'100011 61'0010000000000000000000000000000000000000001000110000000011111
+  transition:   6'001001 27'--------------------------0 ->   6'001001 61'0000000000000000000000000000000000000100000010010000000011111
+  transition:   6'001001 27'--------------------------1 ->   6'001010 61'0000000000000000000000000000000000000100000010100000000011111
+  transition:   6'101001 27'--------------------------0 ->   6'101001 61'0000000000000000000000000100000000000000001010010000000011111
+  transition:   6'101001 27'---0------------------0---1 ->   6'001100 61'0000000000000000000000000100000000000000000011000000000011111
+  transition:   6'011001 27'--------------------------0 ->   6'011001 61'0000000000000000000000000000000000001000000110010000000011111
+  transition:   6'011001 27'---0-----------------00---1 ->   6'010110 61'0000000000000000000000000000000000001000000101100000000011111
+  transition:   6'000101 27'--------------------------0 ->   6'000101 61'0000000000000000000000000000001000000000000001010000000011111
+  transition:   6'000101 27'------------------------0-1 ->   6'001100 61'0000000000000000000000000000001000000000000011000000000011111
+  transition:   6'000101 27'------------------------1-1 ->   6'000110 61'0000000000000000000000000000001000000000000001100000000011111
+  transition:   6'100101 27'--------------------------0 ->   6'100101 61'0000000000000000000000100000000000000000001001010000000011111
+  transition:   6'100101 27'--------------------------1 ->   6'100110 61'0000000000000000000000100000000000000000001001100000000011111
+  transition:   6'010101 27'--------------------------0 ->   6'010101 61'0000000000000001000000000000000000000000000101010000000011111
+  transition:   6'010101 27'----------------------0---1 ->   6'001101 61'0000000000000001000000000000000000000000000011010000000011111
+  transition:   6'001101 27'--------------------------0 ->   6'001101 61'0000000000000000000000000000000000000000000011010000001011111
+  transition:   6'001101 27'---0------------------0---1 ->   6'001100 61'0000000000000000000000000000000000000000000011000000001011111
+  transition:   6'101101 27'--------------------------0 ->   6'101101 61'0000000000000000000000000000010000000000001011010000000011111
+  transition:   6'101101 27'----------------------0---1 ->   6'001101 61'0000000000000000000000000000010000000000000011010000000011111
+  transition:   6'011101 27'--------------------------0 ->   6'011101 61'0000000000000000000001000000000000000000000111010000000011111
+  transition:   6'011101 27'----------------------0---1 ->   6'001101 61'0000000000000000000001000000000000000000000011010000000011111
+  transition:   6'000011 27'--------------------------0 ->   6'000011 61'0000001000000000000000000000000000000000000000110000000011111
+  transition:   6'000011 27'-------------------0------1 ->   6'001101 61'0000001000000000000000000000000000000000000011010000000011111
+  transition:   6'000011 27'-------------------1------1 ->   6'000100 61'0000001000000000000000000000000000000000000001000000000011111
+  transition:   6'100011 27'--------------------------0 ->   6'100011 61'0000000000000000000000000000000000000000001000110000100011111
+  transition:   6'100011 27'--------------------------1 ->   6'101110 61'0000000000000000000000000000000000000000001011100000100011111
+  transition:   6'010011 27'--------------------------0 ->   6'010011 61'0000000000000100000000000000000000000000000100110000000011111
+  transition:   6'010011 27'--------------------------1 ->   6'010100 61'0000000000000100000000000000000000000000000101000000000011111
+  transition:   6'001011 27'--------------------------0 ->   6'001011 61'0000000000000000000000000000000000000001000010110000000011111
+  transition:   6'001011 27'---0-----------------00---1 ->   6'010110 61'0000000000000000000000000000000000000001000101100000000011111
+  transition:   6'101011 27'--------------------------0 ->   6'101011 61'0000000000000000000000000001000000000000001010110000000011111
+  transition:   6'101011 27'--------------------------1 ->   6'101100 61'0000000000000000000000000001000000000000001011000000000011111
+  transition:   6'011011 27'--------------------------0 ->   6'011011 61'0000000000000000000100000000000000000000000110110000000011111
+  transition:   6'011011 27'--------------------------1 ->   6'011100 61'0000000000000000000100000000000000000000000111000000000011111
+  transition:   6'000111 27'--------------------------0 ->   6'000111 61'0000000000000000000000000000000010000000000001110000000011111
+  transition:   6'000111 27'---0------------------0---1 ->   6'001100 61'0000000000000000000000000000000010000000000011000000000011111
+  transition:   6'100111 27'--------------------------0 ->   6'100111 61'0000000000000000000000000000000000000000001001110010000011111
+  transition:   6'100111 27'--------------------------1 ->   6'101000 61'0000000000000000000000000000000000000000001010000010000011111
+  transition:   6'010111 27'--------------------------0 ->   6'010111 61'0000000000000000000000000000000000100000000101110000000011111
+  transition:   6'010111 27'---0------------------0---1 ->   6'001100 61'0000000000000000000000000000000000100000000011000000000011111
+  transition:   6'001111 27'--------------------------0 ->   6'001111 61'0000000001000000000000000000000000000000000011110000000011111
+  transition:   6'001111 27'--------------------------1 ->   6'010000 61'0000000001000000000000000000000000000000000100000000000011111
+  transition:   6'101111 27'--------------------------0 ->   6'101111 61'1000000000000000000000000000000000000000001011110000000011111
+  transition:   6'101111 27'-------------------------01 ->   6'001101 61'1000000000000000000000000000000000000000000011010000000011111
+  transition:   6'101111 27'-------------------------11 ->   6'100011 61'1000000000000000000000000000000000000000001000110000000011111
+  transition:   6'011111 27'--------------------------0 ->   6'011111 61'0000000000000000010000000000000000000000000111110000000010111
+  transition:   6'011111 27'--------------------------1 ->   6'100000 61'0000000000000000010000000000000000000000001000000000000010111
+
+2.8.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+Optimizing FSM `$fsm$\state$791' from module `\cpu'.
+  Removing unused input signal $auto$opt_reduce.cc:134:opt_pmux$768.
+
+2.8.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cpu..
+Removed 65 unused cells and 65 unused wires.
+<suppressed ~66 debug messages>
+
+2.8.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+Optimizing FSM `$fsm$\state$791' from module `\cpu'.
+  Removing unused output signal $0\state[5:0] [0].
+  Removing unused output signal $0\state[5:0] [1].
+  Removing unused output signal $0\state[5:0] [2].
+  Removing unused output signal $0\state[5:0] [3].
+  Removing unused output signal $0\state[5:0] [4].
+  Removing unused output signal $0\state[5:0] [5].
+  Removing unused output signal $procmux$387_CMP.
+  Removing unused output signal $procmux$389_CMP.
+
+2.8.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+Recoding FSM `$fsm$\state$791' from module `\cpu' using `auto' encoding:
+  mapping auto encoding to `binary` for this FSM.
+  existing encoding is already a packed binary encoding.
+
+2.8.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+FSM `$fsm$\state$791' from module `cpu':
+-------------------------------------
+
+  Information on FSM $fsm$\state$791 (\state):
+
+  Number of input signals:   26
+  Number of output signals:  53
+  Number of state bits:       6
+
+  Input signals:
+    0: \RDY
+    1: \write_back
+    2: \cond_true
+    3: $auto$opt_reduce.cc:134:opt_pmux$774
+    4: $auto$opt_reduce.cc:134:opt_pmux$790
+    5: $auto$opt_reduce.cc:134:opt_pmux$770
+    6: $or$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1016$164_Y
+    7: $or$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1016$165_Y
+    8: $xor$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1059$171_Y
+    9: $procmux$354_CMP [0]
+   10: $procmux$367_CMP [0]
+   11: $procmux$435_CMP
+   12: $procmux$437_CMP
+   13: $procmux$441_CMP
+   14: $procmux$442_CMP
+   15: $procmux$447_CMP
+   16: $procmux$449_CMP
+   17: $procmux$450_CMP
+   18: $procmux$451_CMP
+   19: $procmux$452_CMP
+   20: $procmux$454_CMP
+   21: $procmux$455_CMP
+   22: $auto$opt_reduce.cc:134:opt_pmux$776
+   23: $auto$opt_reduce.cc:134:opt_pmux$772
+   24: $auto$opt_reduce.cc:134:opt_pmux$780
+   25: $auto$opt_reduce.cc:134:opt_pmux$778
+
+  Output signals:
+    0: $ne$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:527$45_Y
+    1: $ne$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:527$46_Y
+    2: $ne$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:528$49_Y
+    3: $ne$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:528$51_Y
+    4: $ne$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:528$53_Y
+    5: $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:646$76_Y
+    6: $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:688$82_Y
+    7: $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:728$88_Y
+    8: $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:728$90_Y
+    9: $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:858$109_Y
+   10: $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:860$111_Y
+   11: $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:956$148_Y
+   12: $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:956$149_Y
+   13: $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1082$174_Y
+   14: $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1196$201_Y
+   15: $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1328$248_Y
+   16: $procmux$383_CMP
+   17: $procmux$384_CMP
+   18: $procmux$386_CMP
+   19: $procmux$388_CMP
+   20: $procmux$390_CMP
+   21: $procmux$391_CMP
+   22: $procmux$392_CMP
+   23: $procmux$393_CMP
+   24: $procmux$394_CMP
+   25: $procmux$395_CMP
+   26: $procmux$396_CMP
+   27: $procmux$397_CMP
+   28: $procmux$398_CMP
+   29: $procmux$400_CMP
+   30: $procmux$401_CMP
+   31: $procmux$402_CMP
+   32: $procmux$403_CMP
+   33: $procmux$404_CMP
+   34: $procmux$406_CMP
+   35: $procmux$407_CMP
+   36: $procmux$409_CMP
+   37: $procmux$415_CMP
+   38: $procmux$416_CMP
+   39: $procmux$417_CMP
+   40: $procmux$418_CMP
+   41: $procmux$419_CMP
+   42: $procmux$420_CMP
+   43: $procmux$421_CMP
+   44: $procmux$422_CMP
+   45: $procmux$423_CMP
+   46: $procmux$424_CMP
+   47: $procmux$425_CMP
+   48: $procmux$426_CMP
+   49: $procmux$427_CMP
+   50: $procmux$428_CMP
+   51: $procmux$429_CMP
+   52: $procmux$430_CMP
+
+  State encoding:
+    0:   6'000000
+    1:   6'100000
+    2:   6'010000
+    3:   6'110000
+    4:   6'001000  <RESET STATE>
+    5:   6'101000
+    6:   6'011000
+    7:   6'000100
+    8:   6'100100
+    9:   6'010100
+   10:   6'001100
+   11:   6'101100
+   12:   6'011100
+   13:   6'000010
+   14:   6'100010
+   15:   6'010010
+   16:   6'001010
+   17:   6'101010
+   18:   6'011010
+   19:   6'000110
+   20:   6'100110
+   21:   6'010110
+   22:   6'001110
+   23:   6'101110
+   24:   6'011110
+   25:   6'000001
+   26:   6'100001
+   27:   6'010001
+   28:   6'110001
+   29:   6'001001
+   30:   6'101001
+   31:   6'011001
+   32:   6'000101
+   33:   6'100101
+   34:   6'010101
+   35:   6'001101
+   36:   6'101101
+   37:   6'011101
+   38:   6'000011
+   39:   6'100011
+   40:   6'010011
+   41:   6'001011
+   42:   6'101011
+   43:   6'011011
+   44:   6'000111
+   45:   6'100111
+   46:   6'010111
+   47:   6'001111
+   48:   6'101111
+   49:   6'011111
+
+  Transition Table (state_in, ctrl_in, state_out, ctrl_out):
+      0:     0 26'-------------------------0   ->     0 53'00010000000000000000000000000000000000000000000011111
+      1:     0 26'-------------------------1   ->    25 53'00010000000000000000000000000000000000000000000011111
+      2:     1 26'-------------------------0   ->     1 53'00000000000000000010000000000000000000000000000001111
+      3:     1 26'--0------------------0---1   ->    10 53'00000000000000000010000000000000000000000000000001111
+      4:     2 26'-------------------------0   ->     2 53'00000000001000000000000000000000000000000000000011111
+      5:     2 26'-------------------------1   ->    27 53'00000000001000000000000000000000000000000000000011111
+      6:     3 26'-------------------------0   ->     3 53'01000000000000000000000000000000000000000000000011111
+      7:     3 26'-------------------------1   ->    28 53'01000000000000000000000000000000000000000000000011111
+      8:     4 26'-------------------------0   ->     4 53'00000000000000000000000000000000000000100000000011111
+      9:     4 26'-------------------------1   ->    29 53'00000000000000000000000000000000000000100000000011111
+     10:     5 26'-------------------------0   ->     5 53'00000000000000000000000010000000000000000000000011111
+     11:     5 26'-------------------------1   ->    30 53'00000000000000000000000010000000000000000000000011111
+     12:     6 26'-------------------------0   ->     6 53'00000000000000000000000000000000000000000000000011111
+     13:     6 26'-------------------------1   ->    31 53'00000000000000000000000000000000000000000000000011111
+     14:     7 26'-------------------------0   ->     7 53'00000001000000000000000000000000000000000000000011111
+     15:     7 26'------------------------01   ->    35 53'00000001000000000000000000000000000000000000000011111
+     16:     7 26'------------------------11   ->    39 53'00000001000000000000000000000000000000000000000011111
+     17:     8 26'-------------------------0   ->     8 53'00000000000000000000000000000000000000000000010011111
+     18:     8 26'--0------------------0---1   ->    10 53'00000000000000000000000000000000000000000000010011111
+     19:     9 26'-------------------------0   ->     9 53'00000000000000100000000000000000000000000000000011111
+     20:     9 26'-------------------1-----1   ->    34 53'00000000000000100000000000000000000000000000000011111
+     21:     9 26'-------------------0-----1   ->    35 53'00000000000000100000000000000000000000000000000011111
+     22:    10 26'1------------------------1   ->     0 53'00000000000000000000000000000000000000010000000011111
+     23:    10 26'--------------1----------1   ->     3 53'00000000000000000000000000000000000000010000000011111
+     24:    10 26'----1--------------------1   ->     4 53'00000000000000000000000000000000000000010000000011111
+     25:    10 26'---------1---------------1   ->     6 53'00000000000000000000000000000000000000010000000011111
+     26:    10 26'----------------------1--1   ->     8 53'00000000000000000000000000000000000000010000000011111
+     27:    10 26'-------------------------0   ->    10 53'00000000000000000000000000000000000000010000000011111
+     28:    10 26'00-00000000000000-----0--1   ->    10 53'00000000000000000000000000000000000000010000000011111
+     29:    10 26'---1---------------------1   ->    13 53'00000000000000000000000000000000000000010000000011111
+     30:    10 26'----------------1--------1   ->    15 53'00000000000000000000000000000000000000010000000011111
+     31:    10 26'--------1----------------1   ->    17 53'00000000000000000000000000000000000000010000000011111
+     32:    10 26'-----1-------------------1   ->    18 53'00000000000000000000000000000000000000010000000011111
+     33:    10 26'-------1-----------------1   ->    21 53'00000000000000000000000000000000000000010000000011111
+     34:    10 26'-----------1-------------1   ->    22 53'00000000000000000000000000000000000000010000000011111
+     35:    10 26'----------1--------------1   ->    24 53'00000000000000000000000000000000000000010000000011111
+     36:    10 26'---------------1---------1   ->    26 53'00000000000000000000000000000000000000010000000011111
+     37:    10 26'-------------1-----------1   ->    32 53'00000000000000000000000000000000000000010000000011111
+     38:    10 26'------1------------------1   ->    33 53'00000000000000000000000000000000000000010000000011111
+     39:    10 26'-1-----------------------1   ->    35 53'00000000000000000000000000000000000000010000000011111
+     40:    10 26'------------1------------1   ->    48 53'00000000000000000000000000000000000000010000000011111
+     41:    11 26'-------------------------0   ->    11 53'00000000000000000000000000001000000000000000000011111
+     42:    11 26'-------------------------1   ->    36 53'00000000000000000000000000001000000000000000000011111
+     43:    12 26'-------------------------0   ->    12 53'00000000000000000000100000000000000000000000000011111
+     44:    12 26'-------------------------1   ->    37 53'00000000000000000000100000000000000000000000000011111
+     45:    13 26'-------------------------0   ->    13 53'00000100000000000000000000000000000000000000000011111
+     46:    13 26'-------------------------1   ->    38 53'00000100000000000000000000000000000000000000000011111
+     47:    14 26'--0------------------0---1   ->    10 53'00000000000000001000000000000000000000000000000011101
+     48:    14 26'-------------------------0   ->    14 53'00000000000000001000000000000000000000000000000011101
+     49:    15 26'-------------------------0   ->    15 53'00000000000010000000000000000000000000000000000011111
+     50:    15 26'-------------------------1   ->    40 53'00000000000010000000000000000000000000000000000011111
+     51:    16 26'-------------------------0   ->    16 53'00000000000000000000000000000000000010000000000011111
+     52:    16 26'-------------------------1   ->    41 53'00000000000000000000000000000000000010000000000011111
+     53:    17 26'-------------------------0   ->    17 53'00000000000000000000000000100000000000000000000011111
+     54:    17 26'-------------------------1   ->    42 53'00000000000000000000000000100000000000000000000011111
+     55:    18 26'-------------------------0   ->    18 53'00000000000000000000000000000000000000000000000111111
+     56:    18 26'-------------------------1   ->    43 53'00000000000000000000000000000000000000000000000111111
+     57:    19 26'-----------------0-------1   ->    10 53'00000000000000000000000000000001000000000000000011111
+     58:    19 26'-------------------------0   ->    19 53'00000000000000000000000000000001000000000000000011111
+     59:    19 26'-----------------1-------1   ->    44 53'00000000000000000000000000000001000000000000000011111
+     60:    20 26'-------------------------0   ->    20 53'00000000000000000000000100000000000000000000000011111
+     61:    20 26'-------------------------1   ->    45 53'00000000000000000000000100000000000000000000000011111
+     62:    21 26'-------------------------0   ->    21 53'00000000000000000000000000000000000000000000000011111
+     63:    21 26'-------------------------1   ->    46 53'00000000000000000000000000000000000000000000000011111
+     64:    22 26'-------------------------0   ->    22 53'00000000100000000000000000000000000000000000000011111
+     65:    22 26'-------------------------1   ->    47 53'00000000100000000000000000000000000000000000000011111
+     66:    23 26'-------------------------0   ->    23 53'00000000000000000000000000000000000000000001000011111
+     67:    23 26'---------------------0---1   ->    35 53'00000000000000000000000000000000000000000001000011111
+     68:    24 26'-------------------------0   ->    24 53'00000000000000000000000000000000000000000100000011011
+     69:    24 26'-------------------------1   ->    49 53'00000000000000000000000000000000000000000100000011011
+     70:    25 26'-------------------------0   ->    25 53'00001000000000000000000000000000000000000000000011111
+     71:    25 26'------------------------01   ->    35 53'00001000000000000000000000000000000000000000000011111
+     72:    25 26'------------------------11   ->    39 53'00001000000000000000000000000000000000000000000011111
+     73:    26 26'-------------------------1   ->    14 53'00000000000000000000000000000000000000001000000011110
+     74:    26 26'-------------------------0   ->    26 53'00000000000000000000000000000000000000001000000011110
+     75:    27 26'-------------------------0   ->    27 53'00000000000100000000000000000000000000000000000011111
+     76:    27 26'---------------------0---1   ->    35 53'00000000000100000000000000000000000000000000000011111
+     77:    28 26'-------------------------0   ->    28 53'00100000000000000000000000000000000000000000000011111
+     78:    28 26'------------------------01   ->    35 53'00100000000000000000000000000000000000000000000011111
+     79:    28 26'------------------------11   ->    39 53'00100000000000000000000000000000000000000000000011111
+     80:    29 26'-------------------------1   ->    16 53'00000000000000000000000000000000000100000000000011111
+     81:    29 26'-------------------------0   ->    29 53'00000000000000000000000000000000000100000000000011111
+     82:    30 26'--0------------------0---1   ->    10 53'00000000000000000000000001000000000000000000000011111
+     83:    30 26'-------------------------0   ->    30 53'00000000000000000000000001000000000000000000000011111
+     84:    31 26'--0-----------------00---1   ->    21 53'00000000000000000000000000000000001000000000000011111
+     85:    31 26'-------------------------0   ->    31 53'00000000000000000000000000000000001000000000000011111
+     86:    32 26'-----------------------0-1   ->    10 53'00000000000000000000000000000010000000000000000011111
+     87:    32 26'-----------------------1-1   ->    19 53'00000000000000000000000000000010000000000000000011111
+     88:    32 26'-------------------------0   ->    32 53'00000000000000000000000000000010000000000000000011111
+     89:    33 26'-------------------------1   ->    20 53'00000000000000000000001000000000000000000000000011111
+     90:    33 26'-------------------------0   ->    33 53'00000000000000000000001000000000000000000000000011111
+     91:    34 26'-------------------------0   ->    34 53'00000000000000010000000000000000000000000000000011111
+     92:    34 26'---------------------0---1   ->    35 53'00000000000000010000000000000000000000000000000011111
+     93:    35 26'--0------------------0---1   ->    10 53'00000000000000000000000000000000000000000000001011111
+     94:    35 26'-------------------------0   ->    35 53'00000000000000000000000000000000000000000000001011111
+     95:    36 26'---------------------0---1   ->    35 53'00000000000000000000000000000100000000000000000011111
+     96:    36 26'-------------------------0   ->    36 53'00000000000000000000000000000100000000000000000011111
+     97:    37 26'---------------------0---1   ->    35 53'00000000000000000000010000000000000000000000000011111
+     98:    37 26'-------------------------0   ->    37 53'00000000000000000000010000000000000000000000000011111
+     99:    38 26'------------------1------1   ->     7 53'00000010000000000000000000000000000000000000000011111
+    100:    38 26'------------------0------1   ->    35 53'00000010000000000000000000000000000000000000000011111
+    101:    38 26'-------------------------0   ->    38 53'00000010000000000000000000000000000000000000000011111
+    102:    39 26'-------------------------1   ->    23 53'00000000000000000000000000000000000000000000100011111
+    103:    39 26'-------------------------0   ->    39 53'00000000000000000000000000000000000000000000100011111
+    104:    40 26'-------------------------1   ->     9 53'00000000000001000000000000000000000000000000000011111
+    105:    40 26'-------------------------0   ->    40 53'00000000000001000000000000000000000000000000000011111
+    106:    41 26'--0-----------------00---1   ->    21 53'00000000000000000000000000000000000001000000000011111
+    107:    41 26'-------------------------0   ->    41 53'00000000000000000000000000000000000001000000000011111
+    108:    42 26'-------------------------1   ->    11 53'00000000000000000000000000010000000000000000000011111
+    109:    42 26'-------------------------0   ->    42 53'00000000000000000000000000010000000000000000000011111
+    110:    43 26'-------------------------1   ->    12 53'00000000000000000001000000000000000000000000000011111
+    111:    43 26'-------------------------0   ->    43 53'00000000000000000001000000000000000000000000000011111
+    112:    44 26'--0------------------0---1   ->    10 53'00000000000000000000000000000000100000000000000011111
+    113:    44 26'-------------------------0   ->    44 53'00000000000000000000000000000000100000000000000011111
+    114:    45 26'-------------------------1   ->     5 53'00000000000000000000000000000000000000000010000011111
+    115:    45 26'-------------------------0   ->    45 53'00000000000000000000000000000000000000000010000011111
+    116:    46 26'--0------------------0---1   ->    10 53'00000000000000000000000000000000010000000000000011111
+    117:    46 26'-------------------------0   ->    46 53'00000000000000000000000000000000010000000000000011111
+    118:    47 26'-------------------------1   ->     2 53'00000000010000000000000000000000000000000000000011111
+    119:    47 26'-------------------------0   ->    47 53'00000000010000000000000000000000000000000000000011111
+    120:    48 26'------------------------01   ->    35 53'10000000000000000000000000000000000000000000000011111
+    121:    48 26'------------------------11   ->    39 53'10000000000000000000000000000000000000000000000011111
+    122:    48 26'-------------------------0   ->    48 53'10000000000000000000000000000000000000000000000011111
+    123:    49 26'-------------------------1   ->     1 53'00000000000000000100000000000000000000000000000010111
+    124:    49 26'-------------------------0   ->    49 53'00000000000000000100000000000000000000000000000010111
+
+-------------------------------------
+
+2.8.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+Mapping FSM `$fsm$\state$791' from module `\cpu'.
+
+2.9. Executing OPT pass (performing simple optimizations).
+
+2.9.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cpu.
+<suppressed ~78 debug messages>
+
+2.9.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cpu'.
+<suppressed ~159 debug messages>
+Removed a total of 53 cells.
+
+2.9.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \cpu..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~70 debug messages>
+
+2.9.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \cpu.
+Performed a total of 0 changes.
+
+2.9.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cpu'.
+Removed a total of 0 cells.
+
+2.9.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $procdff$759 ($dff) from module cpu (D = $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:464$42_Y, Q = \PC).
+Adding EN signal on $procdff$758 ($dff) from module cpu (D = \AB [15:8], Q = \ABH).
+Adding EN signal on $procdff$757 ($dff) from module cpu (D = \AB [7:0], Q = \ABL).
+Adding EN signal on $procdff$752 ($dff) from module cpu (D = \DIMUX [7], Q = \backwards).
+Adding EN signal on $procdff$751 ($dff) from module cpu (D = $0\C[0:0], Q = \C).
+Adding EN signal on $procdff$750 ($dff) from module cpu (D = $0\Z[0:0], Q = \Z).
+Adding EN signal on $procdff$749 ($dff) from module cpu (D = $0\N[0:0], Q = \N).
+Adding SRST signal on $procdff$748 ($dff) from module cpu (D = $procmux$516_Y, Q = \I, rval = 1'1).
+Adding EN signal on $auto$ff.cc:266:slice$1425 ($sdff) from module cpu (D = $procmux$516_Y, Q = \I).
+Adding EN signal on $procdff$747 ($dff) from module cpu (D = $0\D[0:0], Q = \D).
+Adding EN signal on $procdff$746 ($dff) from module cpu (D = $0\V[0:0], Q = \V).
+Adding SRST signal on $procdff$745 ($dff) from module cpu (D = $procmux$466_Y, Q = \IRHOLD_valid, rval = 1'0).
+Adding EN signal on $auto$ff.cc:266:slice$1449 ($sdff) from module cpu (D = $procmux$464_Y, Q = \IRHOLD_valid).
+Adding EN signal on $procdff$744 ($dff) from module cpu (D = \DIMUX, Q = \IRHOLD).
+Adding SRST signal on $procdff$741 ($dff) from module cpu (D = $procmux$376_Y, Q = \res, rval = 1'1).
+Adding EN signal on $auto$ff.cc:266:slice$1460 ($sdff) from module cpu (D = 1'0, Q = \res).
+Adding EN signal on $procdff$740 ($dff) from module cpu (D = $procmux$372_Y, Q = \load_reg).
+Adding EN signal on $procdff$739 ($dff) from module cpu (D = $procmux$365_Y, Q = \dst_reg).
+Adding EN signal on $procdff$738 ($dff) from module cpu (D = $procmux$358_Y, Q = \src_reg).
+Adding EN signal on $procdff$737 ($dff) from module cpu (D = $procmux$353_Y, Q = \index_y).
+Adding EN signal on $procdff$736 ($dff) from module cpu (D = $procmux$348_Y, Q = \store).
+Adding EN signal on $procdff$735 ($dff) from module cpu (D = $procmux$343_Y, Q = \write_back).
+Adding EN signal on $procdff$734 ($dff) from module cpu (D = $procmux$338_Y, Q = \load_only).
+Adding EN signal on $procdff$733 ($dff) from module cpu (D = $procmux$333_Y, Q = \inc).
+Adding EN signal on $procdff$732 ($dff) from module cpu (D = $procmux$328_Y, Q = \adc_sbc).
+Adding EN signal on $procdff$731 ($dff) from module cpu (D = $procmux$323_Y, Q = \adc_bcd).
+Adding SRST signal on $auto$ff.cc:266:slice$1471 ($dffe) from module cpu (D = \D, Q = \adc_bcd, rval = 1'0).
+Adding EN signal on $procdff$730 ($dff) from module cpu (D = $procmux$318_Y, Q = \shift).
+Adding EN signal on $procdff$729 ($dff) from module cpu (D = $procmux$313_Y, Q = \compare).
+Adding EN signal on $procdff$728 ($dff) from module cpu (D = $procmux$308_Y, Q = \shift_right).
+Adding EN signal on $procdff$727 ($dff) from module cpu (D = $procmux$303_Y, Q = \rotate).
+Adding EN signal on $procdff$726 ($dff) from module cpu (D = $procmux$294_Y, Q = \op).
+Adding EN signal on $procdff$725 ($dff) from module cpu (D = $procmux$289_Y, Q = \bit_ins).
+Adding EN signal on $procdff$723 ($dff) from module cpu (D = $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1299$236_Y, Q = \clv).
+Adding EN signal on $procdff$722 ($dff) from module cpu (D = $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1298$235_Y, Q = \sei).
+Adding EN signal on $procdff$721 ($dff) from module cpu (D = $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1297$234_Y, Q = \cli).
+Adding EN signal on $procdff$720 ($dff) from module cpu (D = $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1301$238_Y, Q = \sed).
+Adding EN signal on $procdff$719 ($dff) from module cpu (D = $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1300$237_Y, Q = \cld).
+Adding EN signal on $procdff$718 ($dff) from module cpu (D = $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1296$233_Y, Q = \sec).
+Adding EN signal on $procdff$717 ($dff) from module cpu (D = $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1294$231_Y, Q = \clc).
+Adding EN signal on $procdff$716 ($dff) from module cpu (D = $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1293$230_Y, Q = \php).
+Adding EN signal on $procdff$715 ($dff) from module cpu (D = $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1295$232_Y, Q = \plp).
+Adding EN signal on $procdff$714 ($dff) from module cpu (D = \IR [7:5], Q = \cond_code).
+Adding SRST signal on $procdff$712 ($dff) from module cpu (D = $procmux$252_Y, Q = \NMI_edge, rval = 1'0).
+Adding EN signal on $auto$ff.cc:266:slice$1489 ($sdff) from module cpu (D = 1'1, Q = \NMI_edge).
+Adding EN signal on $flatten\ALU.$procdff$765 ($dff) from module cpu (D = \ALU.temp_BI [7], Q = \ALU.BI7).
+Adding EN signal on $flatten\ALU.$procdff$764 ($dff) from module cpu (D = \ALU.AI [7], Q = \ALU.AI7).
+Adding EN signal on $flatten\ALU.$procdff$763 ($dff) from module cpu (D = \ALU.temp_HC, Q = \ALU.HC).
+Adding EN signal on $flatten\ALU.$procdff$762 ($dff) from module cpu (D = { \ALU.temp_h [3:0] \ALU.temp_l [3:0] }, Q = \ALU.OUT).
+Adding EN signal on $flatten\ALU.$procdff$761 ($dff) from module cpu (D = \ALU.temp_h [3], Q = \ALU.N).
+Adding EN signal on $flatten\ALU.$procdff$760 ($dff) from module cpu (D = $flatten\ALU.$or$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:104$22_Y, Q = \ALU.CO).
+
+2.9.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cpu..
+Removed 51 unused cells and 181 unused wires.
+<suppressed ~52 debug messages>
+
+2.9.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cpu.
+<suppressed ~7 debug messages>
+
+2.9.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.9.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \cpu..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~46 debug messages>
+
+2.9.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \cpu.
+Performed a total of 0 changes.
+
+2.9.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cpu'.
+Removed a total of 0 cells.
+
+2.9.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.9.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cpu..
+
+2.9.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cpu.
+
+2.9.16. Finished OPT passes. (There is nothing left to do.)
+
+2.10. Executing WREDUCE pass (reducing word size of cells).
+Removed top 13 bits (of 16) from mux cell cpu.$ternary$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:428$34 ($mux).
+Removed top 13 bits (of 16) from mux cell cpu.$ternary$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:427$35 ($mux).
+Removed top 3 bits (of 8) from mux cell cpu.$ternary$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:549$59 ($mux).
+Removed top 4 bits (of 6) from port B of cell cpu.$auto$fsm_map.cc:215:map_fsm$864 ($eq).
+Removed top 1 bits (of 2) from mux cell cpu.$ternary$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:658$81 ($mux).
+Removed top 1 bits (of 4) from mux cell cpu.$ternary$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:705$85 ($mux).
+Removed top 3 bits (of 6) from port B of cell cpu.$auto$fsm_map.cc:215:map_fsm$883 ($eq).
+Removed top 24 bits (of 32) from mux cell cpu.$ternary$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:774$95 ($mux).
+Removed top 31 bits (of 32) from mux cell cpu.$ternary$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:831$99 ($mux).
+Removed top 31 bits (of 32) from mux cell cpu.$ternary$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:830$101 ($mux).
+Removed top 31 bits (of 32) from mux cell cpu.$ternary$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:835$104 ($mux).
+Removed top 31 bits (of 32) from mux cell cpu.$ternary$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:834$105 ($mux).
+Removed top 31 bits (of 32) from mux cell cpu.$ternary$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:833$107 ($mux).
+Removed top 1 bits (of 6) from port B of cell cpu.$auto$fsm_map.cc:215:map_fsm$882 ($eq).
+Removed top 2 bits (of 6) from port B of cell cpu.$auto$fsm_map.cc:215:map_fsm$880 ($eq).
+Removed top 1 bits (of 2) from port B of cell cpu.$ne$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:885$121 ($ne).
+Removed top 1 bits (of 6) from port B of cell cpu.$auto$fsm_map.cc:215:map_fsm$878 ($eq).
+Removed top 5 bits (of 6) from port B of cell cpu.$auto$fsm_map.cc:215:map_fsm$876 ($eq).
+Removed top 1 bits (of 6) from port B of cell cpu.$auto$fsm_map.cc:215:map_fsm$875 ($eq).
+Removed top 2 bits (of 6) from port B of cell cpu.$auto$fsm_map.cc:215:map_fsm$873 ($eq).
+Removed top 1 bits (of 6) from port B of cell cpu.$auto$fsm_map.cc:215:map_fsm$872 ($eq).
+Removed top 3 bits (of 6) from port B of cell cpu.$auto$fsm_map.cc:215:map_fsm$870 ($eq).
+Removed top 1 bits (of 6) from port B of cell cpu.$auto$fsm_map.cc:215:map_fsm$869 ($eq).
+Removed top 2 bits (of 6) from port B of cell cpu.$auto$fsm_map.cc:215:map_fsm$867 ($eq).
+Removed top 1 bits (of 6) from port B of cell cpu.$auto$fsm_map.cc:215:map_fsm$866 ($eq).
+Removed top 1 bits (of 2) from port B of cell cpu.$auto$fsm_map.cc:77:implement_pattern_cache$1254 ($eq).
+Removed top 2 bits (of 7) from port B of cell cpu.$auto$opt_dff.cc:195:make_patterns_logic$1406 ($ne).
+Removed top 1 bits (of 4) from port B of cell cpu.$auto$opt_dff.cc:195:make_patterns_logic$1428 ($ne).
+Removed top 1 bits (of 6) from port B of cell cpu.$auto$fsm_map.cc:215:map_fsm$900 ($eq).
+Removed top 1 bits (of 6) from port B of cell cpu.$auto$fsm_map.cc:215:map_fsm$863 ($eq).
+Removed top 2 bits (of 6) from port B of cell cpu.$auto$fsm_map.cc:215:map_fsm$898 ($eq).
+Removed top 2 bits (of 6) from port B of cell cpu.$auto$fsm_map.cc:215:map_fsm$861 ($eq).
+Removed top 1 bits (of 6) from port B of cell cpu.$auto$fsm_map.cc:215:map_fsm$897 ($eq).
+Removed top 1 bits (of 6) from port B of cell cpu.$auto$fsm_map.cc:215:map_fsm$860 ($eq).
+Removed top 3 bits (of 6) from port B of cell cpu.$auto$fsm_map.cc:215:map_fsm$895 ($eq).
+Removed top 3 bits (of 6) from port B of cell cpu.$auto$fsm_map.cc:215:map_fsm$858 ($eq).
+Removed top 1 bits (of 6) from port B of cell cpu.$auto$fsm_map.cc:215:map_fsm$894 ($eq).
+Removed top 1 bits (of 6) from port B of cell cpu.$auto$fsm_map.cc:215:map_fsm$857 ($eq).
+Removed top 2 bits (of 6) from port B of cell cpu.$auto$fsm_map.cc:215:map_fsm$892 ($eq).
+Removed top 1 bits (of 6) from port B of cell cpu.$auto$fsm_map.cc:215:map_fsm$891 ($eq).
+Removed top 2 bits (of 6) from port B of cell cpu.$auto$fsm_map.cc:215:map_fsm$855 ($eq).
+Removed top 4 bits (of 6) from port B of cell cpu.$auto$fsm_map.cc:215:map_fsm$889 ($eq).
+Removed top 1 bits (of 6) from port B of cell cpu.$auto$fsm_map.cc:215:map_fsm$888 ($eq).
+Removed top 1 bits (of 6) from port B of cell cpu.$auto$fsm_map.cc:215:map_fsm$853 ($eq).
+Removed top 1 bits (of 2) from port B of cell cpu.$auto$fsm_map.cc:77:implement_pattern_cache$1258 ($eq).
+Removed top 2 bits (of 6) from port B of cell cpu.$auto$fsm_map.cc:215:map_fsm$886 ($eq).
+Removed top 1 bits (of 6) from port B of cell cpu.$auto$fsm_map.cc:215:map_fsm$885 ($eq).
+Removed top 4 bits (of 8) from port B of cell cpu.$eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1293$230 ($eq).
+Removed top 3 bits (of 8) from port B of cell cpu.$eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1294$231 ($eq).
+Removed top 2 bits (of 8) from port B of cell cpu.$eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1295$232 ($eq).
+Removed top 2 bits (of 8) from port B of cell cpu.$eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1296$233 ($eq).
+Removed top 1 bits (of 8) from port B of cell cpu.$eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1297$234 ($eq).
+Removed top 1 bits (of 8) from port B of cell cpu.$eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:1298$235 ($eq).
+Removed top 1 bits (of 3) from port B of cell cpu.$procmux$262_CMP0 ($eq).
+Removed top 1 bits (of 3) from port B of cell cpu.$procmux$263_CMP0 ($eq).
+Removed top 2 bits (of 3) from port B of cell cpu.$procmux$264_CMP0 ($eq).
+Removed top 2 bits (of 7) from port B of cell cpu.$procmux$290_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell cpu.$procmux$295_CMP0 ($eq).
+Removed top 3 bits (of 4) from port B of cell cpu.$procmux$295_CMP1 ($eq).
+Removed top 1 bits (of 4) from port B of cell cpu.$procmux$297_CMP0 ($eq).
+Removed top 1 bits (of 2) from port B of cell cpu.$auto$fsm_map.cc:77:implement_pattern_cache$1248 ($eq).
+Removed top 2 bits (of 4) from port B of cell cpu.$procmux$299_CMP0 ($eq).
+Removed top 1 bits (of 6) from port B of cell cpu.$procmux$304_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell cpu.$procmux$304_CMP1 ($eq).
+Removed top 1 bits (of 4) from port B of cell cpu.$procmux$319_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell cpu.$procmux$319_CMP1 ($eq).
+Removed top 1 bits (of 5) from port B of cell cpu.$procmux$324_CMP0 ($eq).
+Removed top 1 bits (of 2) from port B of cell cpu.$auto$fsm_map.cc:77:implement_pattern_cache$1242 ($eq).
+Removed top 3 bits (of 7) from port B of cell cpu.$procmux$367_CMP0 ($eq).
+Removed top 2 bits (of 6) from port B of cell cpu.$procmux$373_CMP0 ($eq).
+Removed top 2 bits (of 3) from port B of cell cpu.$procmux$373_CMP1 ($eq).
+Removed top 1 bits (of 5) from port B of cell cpu.$procmux$373_CMP8 ($eq).
+Removed top 2 bits (of 5) from port B of cell cpu.$auto$opt_dff.cc:195:make_patterns_logic$1413 ($ne).
+Removed top 2 bits (of 5) from port B of cell cpu.$auto$opt_dff.cc:195:make_patterns_logic$1420 ($ne).
+Removed top 1 bits (of 5) from port B of cell cpu.$procmux$438_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell cpu.$procmux$439_CMP0 ($eq).
+Removed top 1 bits (of 5) from port B of cell cpu.$procmux$440_CMP0 ($eq).
+Removed top 2 bits (of 3) from port B of cell cpu.$procmux$441_CMP0 ($eq).
+Removed top 4 bits (of 5) from port B of cell cpu.$procmux$442_CMP0 ($eq).
+Removed top 1 bits (of 6) from port B of cell cpu.$procmux$446_CMP0 ($eq).
+Removed top 1 bits (of 7) from port B of cell cpu.$procmux$447_CMP0 ($eq).
+Removed top 1 bits (of 2) from port B of cell cpu.$auto$fsm_map.cc:77:implement_pattern_cache$997 ($eq).
+Removed top 1 bits (of 8) from port B of cell cpu.$procmux$449_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell cpu.$procmux$450_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell cpu.$procmux$451_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell cpu.$procmux$452_CMP0 ($eq).
+Removed top 2 bits (of 8) from port B of cell cpu.$procmux$453_CMP0 ($eq).
+Removed top 2 bits (of 8) from port B of cell cpu.$procmux$454_CMP0 ($eq).
+Removed top 17 bits (of 18) from port B of cell cpu.$auto$fsm_map.cc:77:implement_pattern_cache$1001 ($eq).
+Removed top 2 bits (of 3) from port B of cell cpu.$auto$fsm_map.cc:77:implement_pattern_cache$1005 ($eq).
+Removed top 1 bits (of 2) from port B of cell cpu.$auto$fsm_map.cc:77:implement_pattern_cache$1011 ($eq).
+Removed top 1 bits (of 5) from port B of cell cpu.$auto$opt_dff.cc:195:make_patterns_logic$1444 ($ne).
+Removed top 1 bits (of 5) from port B of cell cpu.$auto$opt_dff.cc:195:make_patterns_logic$1437 ($ne).
+Removed top 3 bits (of 4) from port B of cell cpu.$auto$fsm_map.cc:77:implement_pattern_cache$1110 ($eq).
+Removed top 1 bits (of 4) from port B of cell cpu.$auto$opt_dff.cc:195:make_patterns_logic$1430 ($ne).
+Removed top 1 bits (of 2) from port B of cell cpu.$flatten\ALU.$procmux$710_CMP0 ($eq).
+Removed top 1 bits (of 2) from port B of cell cpu.$flatten\ALU.$procmux$702_CMP0 ($eq).
+Removed top 1 bits (of 9) from port Y of cell cpu.$flatten\ALU.$xor$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:63$8 ($xor).
+Removed top 1 bits (of 9) from port Y of cell cpu.$flatten\ALU.$and$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:62$7 ($and).
+Removed top 1 bits (of 9) from port Y of cell cpu.$flatten\ALU.$or$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:61$6 ($or).
+Removed top 31 bits (of 32) from mux cell cpu.$flatten\ALU.$ternary$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:54$4 ($mux).
+Removed top 1 bits (of 9) from wire cpu.$flatten\ALU.$and$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:62$7_Y.
+Removed top 1 bits (of 9) from wire cpu.$flatten\ALU.$or$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:61$6_Y.
+Removed top 1 bits (of 9) from wire cpu.$flatten\ALU.$xor$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:63$8_Y.
+Removed top 13 bits (of 16) from wire cpu.$ternary$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:427$35_Y.
+Removed top 13 bits (of 16) from wire cpu.$ternary$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:428$34_Y.
+Removed top 1 bits (of 2) from wire cpu.$ternary$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:658$81_Y.
+Removed top 1 bits (of 4) from wire cpu.$ternary$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:705$85_Y.
+Removed top 24 bits (of 32) from wire cpu.$ternary$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:774$95_Y.
+Removed top 31 bits (of 32) from wire cpu.$ternary$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:830$101_Y.
+Removed top 31 bits (of 32) from wire cpu.$ternary$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:833$107_Y.
+Removed top 31 bits (of 32) from wire cpu.$ternary$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:834$105_Y.
+
+2.11. Executing PEEPOPT pass (run peephole optimizers).
+
+2.12. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cpu..
+Removed 0 unused cells and 12 unused wires.
+<suppressed ~1 debug messages>
+
+2.13. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module cpu:
+  creating $macc model for $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:464$42 ($add).
+  creating $macc model for $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:646$77 ($add).
+  creating $macc model for $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:646$78 ($add).
+  creating $macc model for $flatten\ALU.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:94$17 ($add).
+  creating $macc model for $flatten\ALU.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:94$18 ($add).
+  creating $macc model for $flatten\ALU.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:95$19 ($add).
+  creating $macc model for $flatten\ALU.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:95$20 ($add).
+  merging $macc model for $flatten\ALU.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:95$19 into $flatten\ALU.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:95$20.
+  merging $macc model for $flatten\ALU.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:94$17 into $flatten\ALU.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:94$18.
+  creating $alu model for $macc $flatten\ALU.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:94$18.
+  creating $alu model for $macc $flatten\ALU.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:95$20.
+  creating $alu model for $macc $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:646$78.
+  creating $alu model for $macc $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:646$77.
+  creating $alu model for $macc $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:464$42.
+  creating $alu model for $flatten\ALU.$ge$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:83$11 ($ge): new $alu
+  creating $alu model for $flatten\ALU.$ge$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:86$13 ($ge): new $alu
+  creating $alu cell for $flatten\ALU.$ge$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:86$13: $auto$alumacc.cc:485:replace_alu$1510
+  creating $alu cell for $flatten\ALU.$ge$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:83$11: $auto$alumacc.cc:485:replace_alu$1519
+  creating $alu cell for $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:464$42: $auto$alumacc.cc:485:replace_alu$1528
+  creating $alu cell for $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:646$77: $auto$alumacc.cc:485:replace_alu$1531
+  creating $alu cell for $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:646$78: $auto$alumacc.cc:485:replace_alu$1534
+  creating $alu cell for $flatten\ALU.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:95$20: $auto$alumacc.cc:485:replace_alu$1537
+  creating $alu cell for $flatten\ALU.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:94$18: $auto$alumacc.cc:485:replace_alu$1540
+  created 7 $alu and 0 $macc cells.
+
+2.14. Executing SHARE pass (SAT-based resource sharing).
+
+2.15. Executing OPT pass (performing simple optimizations).
+
+2.15.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cpu.
+
+2.15.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cpu'.
+Removed a total of 0 cells.
+
+2.15.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \cpu..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~46 debug messages>
+
+2.15.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \cpu.
+Performed a total of 0 changes.
+
+2.15.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cpu'.
+Removed a total of 0 cells.
+
+2.15.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.15.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cpu..
+Removed 2 unused cells and 4 unused wires.
+<suppressed ~3 debug messages>
+
+2.15.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cpu.
+
+2.15.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.15.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \cpu..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~46 debug messages>
+
+2.15.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \cpu.
+Performed a total of 0 changes.
+
+2.15.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cpu'.
+Removed a total of 0 cells.
+
+2.15.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.15.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cpu..
+
+2.15.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cpu.
+
+2.15.16. Finished OPT passes. (There is nothing left to do.)
+
+2.16. Executing MEMORY pass.
+
+2.16.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+2.16.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+2.16.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+  Analyzing cpu.AXYS write port 0.
+
+2.16.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+2.16.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+Checking read port `\AXYS'[0] in module `\cpu': no output FF found.
+Checking read port address `\AXYS'[0] in module `\cpu': no address FF found.
+
+2.16.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cpu..
+
+2.16.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+2.16.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+2.16.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cpu..
+
+2.16.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+2.17. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cpu..
+
+2.18. Executing OPT pass (performing simple optimizations).
+
+2.18.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cpu.
+<suppressed ~43 debug messages>
+
+2.18.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cpu'.
+Removed a total of 0 cells.
+
+2.18.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.18.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cpu..
+Removed 7 unused cells and 38 unused wires.
+<suppressed ~8 debug messages>
+
+2.18.5. Finished fast OPT passes.
+
+2.19. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+Mapping memory \AXYS in module \cpu:
+  created 4 $dff cells and 0 static cells of width 8.
+  read interface: 0 $dff and 3 $mux cells.
+  write interface: 4 write mux blocks.
+
+2.20. Executing OPT pass (performing simple optimizations).
+
+2.20.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cpu.
+<suppressed ~7 debug messages>
+
+2.20.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cpu'.
+Removed a total of 0 cells.
+
+2.20.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \cpu..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~36 debug messages>
+
+2.20.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \cpu.
+    Consolidated identical input bits for $pmux cell $flatten\ALU.$procmux$707:
+      Old ports: A={ 1'0 $auto$wreduce.cc:461:run$1498 [7:0] }, B={ 1'0 $auto$wreduce.cc:461:run$1497 [7:0] 1'0 $auto$wreduce.cc:461:run$1499 [7:0] 1'0 \ALU.AI }, Y=$flatten\ALU.$1\temp_logic[8:0]
+      New ports: A=$auto$wreduce.cc:461:run$1498 [7:0], B={ $auto$wreduce.cc:461:run$1497 [7:0] $auto$wreduce.cc:461:run$1499 [7:0] \ALU.AI }, Y=$flatten\ALU.$1\temp_logic[8:0] [7:0]
+      New connections: $flatten\ALU.$1\temp_logic[8:0] [8] = 1'0
+    Consolidated identical input bits for $pmux cell $procmux$614:
+      Old ports: A=4'1010, B=8'00000110, Y=\ADJH
+      New ports: A=3'101, B=6'000011, Y=\ADJH [3:1]
+      New connections: \ADJH [0] = 1'0
+    Consolidated identical input bits for $pmux cell $procmux$620:
+      Old ports: A=4'1010, B=8'00000110, Y=\ADJL
+      New ports: A=3'101, B=6'000011, Y=\ADJL [3:1]
+      New connections: \ADJL [0] = 1'0
+    Consolidated identical input bits for $mux cell $ternary$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:428$34:
+      Old ports: A=3'110, B=3'010, Y=$auto$wreduce.cc:461:run$1501 [2:0]
+      New ports: A=1'1, B=1'0, Y=$auto$wreduce.cc:461:run$1501 [2]
+      New connections: $auto$wreduce.cc:461:run$1501 [1:0] = 2'10
+    Consolidated identical input bits for $mux cell $ternary$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:549$59:
+      Old ports: A={ 1'1 \D \I \Z \C }, B={ 1'0 \D \I \Z \C }, Y=$ternary$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:549$59_Y [4:0]
+      New ports: A=1'1, B=1'0, Y=$ternary$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:549$59_Y [4]
+      New connections: $ternary$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:549$59_Y [3:0] = { \D \I \Z \C }
+    Consolidated identical input bits for $mux cell $ternary$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:705$85:
+      Old ports: A=3'011, B=3'111, Y=$auto$wreduce.cc:461:run$1503 [2:0]
+      New ports: A=1'0, B=1'1, Y=$auto$wreduce.cc:461:run$1503 [2]
+      New connections: $auto$wreduce.cc:461:run$1503 [1:0] = 2'11
+  Optimizing cells in module \cpu.
+    Consolidated identical input bits for $mux cell $ternary$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:427$35:
+      Old ports: A=$auto$wreduce.cc:461:run$1501 [2:0], B=3'100, Y=$auto$wreduce.cc:461:run$1500 [2:0]
+      New ports: A={ $auto$wreduce.cc:461:run$1501 [2] 1'1 }, B=2'10, Y=$auto$wreduce.cc:461:run$1500 [2:1]
+      New connections: $auto$wreduce.cc:461:run$1500 [0] = 1'0
+  Optimizing cells in module \cpu.
+Performed a total of 7 changes.
+
+2.20.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cpu'.
+Removed a total of 0 cells.
+
+2.20.6. Executing OPT_SHARE pass.
+
+2.20.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.20.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cpu..
+Removed 0 unused cells and 10 unused wires.
+<suppressed ~1 debug messages>
+
+2.20.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cpu.
+<suppressed ~5 debug messages>
+
+2.20.10. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.20.11. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \cpu..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~36 debug messages>
+
+2.20.12. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \cpu.
+Performed a total of 0 changes.
+
+2.20.13. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cpu'.
+Removed a total of 0 cells.
+
+2.20.14. Executing OPT_SHARE pass.
+
+2.20.15. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $memory\AXYS[3]$1555 ($dff) from module cpu (D = $0$memwr$\AXYS$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:646$28_DATA[7:0]$70, Q = \AXYS[3]).
+Adding EN signal on $memory\AXYS[2]$1553 ($dff) from module cpu (D = $0$memwr$\AXYS$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:646$28_DATA[7:0]$70, Q = \AXYS[2]).
+Adding EN signal on $memory\AXYS[1]$1551 ($dff) from module cpu (D = $0$memwr$\AXYS$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:646$28_DATA[7:0]$70, Q = \AXYS[1]).
+Adding EN signal on $memory\AXYS[0]$1549 ($dff) from module cpu (D = $0$memwr$\AXYS$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/arlet6502.v:646$28_DATA[7:0]$70, Q = \AXYS[0]).
+
+2.20.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cpu..
+Removed 4 unused cells and 5 unused wires.
+<suppressed ~5 debug messages>
+
+2.20.17. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cpu.
+
+2.20.18. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.20.19. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \cpu..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~32 debug messages>
+
+2.20.20. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \cpu.
+Performed a total of 0 changes.
+
+2.20.21. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cpu'.
+Removed a total of 0 cells.
+
+2.20.22. Executing OPT_SHARE pass.
+
+2.20.23. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.20.24. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cpu..
+
+2.20.25. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cpu.
+
+2.20.26. Finished OPT passes. (There is nothing left to do.)
+
+2.21. Executing TECHMAP pass (map to technology primitives).
+
+2.21.1. Executing Verilog-2005 frontend: /share/techmap.v
+Parsing Verilog input from `/share/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+2.21.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $or.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $xnor.
+Using template $paramod$32e7c4d6f92ff4337599ece53082d2e88a82a9f2\_90_pmux for cells of type $pmux.
+Using template $paramod$78e969f2586efcf3a5b0b0440bcca0db83d5cca2\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $reduce_and.
+Using extmapper simplemap for cells of type $logic_and.
+Using extmapper simplemap for cells of type $dffe.
+Using extmapper simplemap for cells of type $eq.
+Using template $paramod$fc16b9f758000d363d24f130038bd99b46b4fa1b\_90_pmux for cells of type $pmux.
+Using template $paramod$645fe0cc96ae5edb83bff90cc2c78f4a20ca3e3c\_90_pmux for cells of type $pmux.
+Using template $paramod$83dd457849c736323edf2edb15923eb27f99c683\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $logic_or.
+Using extmapper simplemap for cells of type $ne.
+Using extmapper simplemap for cells of type $xor.
+Using extmapper simplemap for cells of type $reduce_bool.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $adff.
+Using template $paramod$bf541dd3c0ba8228982b61e7bfbc350a2c253f4c\_90_pmux for cells of type $pmux.
+Using template $paramod$95ab7b964273918a033d1324366ecc612d202989\_90_pmux for cells of type $pmux.
+Using template $paramod$97565c3687be688407d1272a293bd9d0ae6852dc\_90_pmux for cells of type $pmux.
+Using template $paramod$30fa96e978dc3d9d8917e537f49e4beca9251827\_90_pmux for cells of type $pmux.
+Using template $paramod$b3b6ac92d800c6f07aa48f510f923d86a674e5a7\_90_pmux for cells of type $pmux.
+Using template $paramod$f42569e367821ad1b7d52f2d157a44ce80c766dc\_90_pmux for cells of type $pmux.
+Using template $paramod$20d3ee62d72123142eb855d7ddafd835e31ba009\_90_pmux for cells of type $pmux.
+Using template $paramod$c5c783b17ab1d780abfad8cfe6563a0a7b47a3b0\_90_pmux for cells of type $pmux.
+Using template $paramod$0b42e0ef0120c44ea9490666611378bfd171ba8c\_90_pmux for cells of type $pmux.
+Using template $paramod$d629d85c8826a74239b9178d1930215a43b0ceb0\_90_pmux for cells of type $pmux.
+Using template $paramod$ede7b58042915c15b5512c92c18754c007fd5a95\_90_pmux for cells of type $pmux.
+Using extmapper simplemap for cells of type $sdffe.
+Using extmapper simplemap for cells of type $dff.
+Using extmapper simplemap for cells of type $sdffce.
+Using template $paramod$7e708ae28ab761f11d0fb59d3ffc72f6a4baf5d9\_90_alu for cells of type $alu.
+Using template $paramod$b85fbb3374a1d9ba7ee4f4d6323c30f939df3ada\_90_alu for cells of type $alu.
+Using template $paramod$2af30114e9bd4ccb04dad757b3f0a8f6bf0615b0\_90_alu for cells of type $alu.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000000011 for cells of type $lcu.
+Using extmapper simplemap for cells of type $pos.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000000101 for cells of type $lcu.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000000010 for cells of type $lcu.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000010000 for cells of type $lcu.
+No more expansions possible.
+<suppressed ~1837 debug messages>
+
+2.22. Executing OPT pass (performing simple optimizations).
+
+2.22.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cpu.
+<suppressed ~1757 debug messages>
+
+2.22.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cpu'.
+<suppressed ~3132 debug messages>
+Removed a total of 1044 cells.
+
+2.22.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.22.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cpu..
+Removed 45 unused cells and 1909 unused wires.
+<suppressed ~46 debug messages>
+
+2.22.5. Finished fast OPT passes.
+
+2.23. Executing ABC pass (technology mapping using ABC).
+
+2.23.1. Extracting gate netlist of module `\cpu' to `<abc-temp-dir>/input.blif'..
+Extracted 2173 gates and 2330 wires to a netlist network with 155 inputs and 135 outputs.
+
+2.23.1.1. Executing ABC.
+Running ABC command: "/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+
+2.23.1.2. Re-integrating ABC results.
+ABC RESULTS:             ORNOT cells:       85
+ABC RESULTS:              XNOR cells:       10
+ABC RESULTS:               NOT cells:       87
+ABC RESULTS:               NOR cells:      148
+ABC RESULTS:              NAND cells:       57
+ABC RESULTS:            ANDNOT cells:      577
+ABC RESULTS:                OR cells:      670
+ABC RESULTS:               MUX cells:      196
+ABC RESULTS:               AND cells:       70
+ABC RESULTS:               XOR cells:       46
+ABC RESULTS:        internal signals:     2040
+ABC RESULTS:           input signals:      155
+ABC RESULTS:          output signals:      135
+Removing temp directory.
+
+2.24. Executing OPT pass (performing simple optimizations).
+
+2.24.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module cpu.
+<suppressed ~16 debug messages>
+
+2.24.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\cpu'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+2.24.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.24.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cpu..
+Removed 3 unused cells and 1295 unused wires.
+<suppressed ~26 debug messages>
+
+2.24.5. Finished fast OPT passes.
+
+2.25. Executing HIERARCHY pass (managing design hierarchy).
+
+2.25.1. Analyzing design hierarchy..
+Top module:  \cpu
+
+2.25.2. Analyzing design hierarchy..
+Top module:  \cpu
+Removed 0 unused modules.
+
+2.26. Printing statistics.
+
+=== cpu ===
+
+   Number of wires:               1947
+   Number of wire bits:           2232
+   Number of public wires:          84
+   Number of public wire bits:     303
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               2085
+     $_ANDNOT_                     577
+     $_AND_                         70
+     $_DFFE_PP_                    122
+     $_DFF_PP0_                      5
+     $_DFF_PP1_                      1
+     $_DFF_P_                       10
+     $_MUX_                        196
+     $_NAND_                        57
+     $_NOR_                        148
+     $_NOT_                         84
+     $_ORNOT_                       85
+     $_OR_                         670
+     $_SDFFCE_PP0P_                  1
+     $_SDFFE_PP0P_                   2
+     $_SDFFE_PP1P_                   2
+     $_XNOR_                         9
+     $_XOR_                         46
+
+2.27. Executing CHECK pass (checking for obvious problems).
+Checking module cpu...
+Found and reported 0 problems.
+
+3. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+  cell sky130_fd_sc_hd__dfxtp_1 (noninv, pins=3, area=20.02) is a direct match for cell type $_DFF_P_.
+  cell sky130_fd_sc_hd__dfrtn_1 (noninv, pins=4, area=25.02) is a direct match for cell type $_DFF_NN0_.
+  cell sky130_fd_sc_hd__dfrtp_1 (noninv, pins=4, area=25.02) is a direct match for cell type $_DFF_PN0_.
+  cell sky130_fd_sc_hd__dfstp_2 (noninv, pins=4, area=26.28) is a direct match for cell type $_DFF_PN1_.
+  cell sky130_fd_sc_hd__dfbbn_1 (noninv, pins=6, area=32.53) is a direct match for cell type $_DFFSR_NNN_.
+  cell sky130_fd_sc_hd__dfbbp_1 (noninv, pins=6, area=32.53) is a direct match for cell type $_DFFSR_PNN_.
+  final dff cell mappings:
+    unmapped dff cell: $_DFF_N_
+    \sky130_fd_sc_hd__dfxtp_1 _DFF_P_ (.CLK( C), .D( D), .Q( Q));
+    \sky130_fd_sc_hd__dfrtn_1 _DFF_NN0_ (.CLK_N( C), .D( D), .Q( Q), .RESET_B( R));
+    unmapped dff cell: $_DFF_NN1_
+    unmapped dff cell: $_DFF_NP0_
+    unmapped dff cell: $_DFF_NP1_
+    \sky130_fd_sc_hd__dfrtp_1 _DFF_PN0_ (.CLK( C), .D( D), .Q( Q), .RESET_B( R));
+    \sky130_fd_sc_hd__dfstp_2 _DFF_PN1_ (.CLK( C), .D( D), .Q( Q), .SET_B( R));
+    unmapped dff cell: $_DFF_PP0_
+    unmapped dff cell: $_DFF_PP1_
+    \sky130_fd_sc_hd__dfbbn_1 _DFFSR_NNN_ (.CLK_N( C), .D( D), .Q( Q), .Q_N(~Q), .RESET_B( R), .SET_B( S));
+    unmapped dff cell: $_DFFSR_NNP_
+    unmapped dff cell: $_DFFSR_NPN_
+    unmapped dff cell: $_DFFSR_NPP_
+    \sky130_fd_sc_hd__dfbbp_1 _DFFSR_PNN_ (.CLK( C), .D( D), .Q( Q), .Q_N(~Q), .RESET_B( R), .SET_B( S));
+    unmapped dff cell: $_DFFSR_PNP_
+    unmapped dff cell: $_DFFSR_PPN_
+    unmapped dff cell: $_DFFSR_PPP_
+
+3.1. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+Mapping DFF cells in module `\cpu':
+  mapped 5 $_DFF_PN0_ cells to \sky130_fd_sc_hd__dfrtp_1 cells.
+  mapped 1 $_DFF_PN1_ cells to \sky130_fd_sc_hd__dfstp_2 cells.
+  mapped 137 $_DFF_P_ cells to \sky130_fd_sc_hd__dfxtp_1 cells.
+
+4. Executing ABC pass (technology mapping using ABC).
+
+4.1. Extracting gate netlist of module `\cpu' to `<abc-temp-dir>/input.blif'..
+Extracted 2080 gates and 2237 wires to a netlist network with 155 inputs and 173 outputs.
+
+4.1.1. Executing ABC.
+Running ABC command: "/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+
+4.1.2. Re-integrating ABC results.
+ABC RESULTS:   sky130_fd_sc_hd__o211a_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__mux4_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__o221a_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__o32a_1 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__o32ai_1 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__and3b_1 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__o22a_1 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__o221ai_1 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__a222oi_1 cells:       14
+ABC RESULTS:   sky130_fd_sc_hd__nand4b_1 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__o2bb2ai_1 cells:        5
+ABC RESULTS:   sky130_fd_sc_hd__nand3b_1 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__or2_0 cells:        5
+ABC RESULTS:   sky130_fd_sc_hd__a221o_1 cells:       23
+ABC RESULTS:   sky130_fd_sc_hd__nor4b_1 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__o2111ai_1 cells:        5
+ABC RESULTS:   sky130_fd_sc_hd__and3_1 cells:        8
+ABC RESULTS:   sky130_fd_sc_hd__a32o_1 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__o41ai_1 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__a2111oi_0 cells:        6
+ABC RESULTS:   sky130_fd_sc_hd__o31ai_1 cells:        7
+ABC RESULTS:   sky130_fd_sc_hd__a32oi_1 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__a41oi_1 cells:        4
+ABC RESULTS:   sky130_fd_sc_hd__nor3_1 cells:       35
+ABC RESULTS:   sky130_fd_sc_hd__nor3b_1 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__nor4_1 cells:       23
+ABC RESULTS:   sky130_fd_sc_hd__or4_1 cells:        7
+ABC RESULTS:   sky130_fd_sc_hd__o41a_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__nand4_1 cells:       28
+ABC RESULTS:   sky130_fd_sc_hd__a21o_1 cells:        4
+ABC RESULTS:   sky130_fd_sc_hd__nand3_1 cells:       63
+ABC RESULTS:   sky130_fd_sc_hd__or3_1 cells:        5
+ABC RESULTS:   sky130_fd_sc_hd__o22ai_1 cells:       15
+ABC RESULTS:   sky130_fd_sc_hd__nor2b_1 cells:       15
+ABC RESULTS:   sky130_fd_sc_hd__nand2b_1 cells:       14
+ABC RESULTS:   sky130_fd_sc_hd__o211ai_1 cells:       20
+ABC RESULTS:   sky130_fd_sc_hd__mux2i_1 cells:       17
+ABC RESULTS:   sky130_fd_sc_hd__and2_0 cells:       20
+ABC RESULTS:   sky130_fd_sc_hd__a211oi_1 cells:       12
+ABC RESULTS:   sky130_fd_sc_hd__a211o_1 cells:        5
+ABC RESULTS:   sky130_fd_sc_hd__a221oi_1 cells:       12
+ABC RESULTS:   sky130_fd_sc_hd__a22oi_1 cells:       32
+ABC RESULTS:   sky130_fd_sc_hd__a22o_1 cells:        5
+ABC RESULTS:   sky130_fd_sc_hd__a31oi_1 cells:       21
+ABC RESULTS:   sky130_fd_sc_hd__nand2_1 cells:      291
+ABC RESULTS:   sky130_fd_sc_hd__xor2_1 cells:       12
+ABC RESULTS:   sky130_fd_sc_hd__a21boi_0 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__xnor2_1 cells:       20
+ABC RESULTS:   sky130_fd_sc_hd__maj3_1 cells:        4
+ABC RESULTS:   sky130_fd_sc_hd__nor2_1 cells:      175
+ABC RESULTS:   sky130_fd_sc_hd__o2111a_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a21oi_1 cells:      102
+ABC RESULTS:   sky130_fd_sc_hd__o21ai_0 cells:      114
+ABC RESULTS:   sky130_fd_sc_hd__mux2_1 cells:       41
+ABC RESULTS:   sky130_fd_sc_hd__inv_1 cells:       36
+ABC RESULTS:        internal signals:     1909
+ABC RESULTS:           input signals:      155
+ABC RESULTS:          output signals:      173
+Removing temp directory.
+
+5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \cpu..
+Removed 0 unused cells and 2215 unused wires.
+<suppressed ~22 debug messages>
+
+6. Printing statistics.
+
+=== cpu ===
+
+   Number of wires:               1284
+   Number of wire bits:           1422
+   Number of public wires:          63
+   Number of public wire bits:     196
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               1402
+     sky130_fd_sc_hd__a2111oi_0      6
+     sky130_fd_sc_hd__a211o_1        5
+     sky130_fd_sc_hd__a211oi_1      12
+     sky130_fd_sc_hd__a21boi_0       2
+     sky130_fd_sc_hd__a21o_1         4
+     sky130_fd_sc_hd__a21oi_1      102
+     sky130_fd_sc_hd__a221o_1       23
+     sky130_fd_sc_hd__a221oi_1      12
+     sky130_fd_sc_hd__a222oi_1      14
+     sky130_fd_sc_hd__a22o_1         5
+     sky130_fd_sc_hd__a22oi_1       32
+     sky130_fd_sc_hd__a31oi_1       21
+     sky130_fd_sc_hd__a32o_1         2
+     sky130_fd_sc_hd__a32oi_1        2
+     sky130_fd_sc_hd__a41oi_1        4
+     sky130_fd_sc_hd__and2_0        20
+     sky130_fd_sc_hd__and3_1         8
+     sky130_fd_sc_hd__and3b_1        2
+     sky130_fd_sc_hd__dfrtp_1        5
+     sky130_fd_sc_hd__dfstp_2        1
+     sky130_fd_sc_hd__dfxtp_1      137
+     sky130_fd_sc_hd__inv_1         36
+     sky130_fd_sc_hd__maj3_1         4
+     sky130_fd_sc_hd__mux2_1        41
+     sky130_fd_sc_hd__mux2i_1       17
+     sky130_fd_sc_hd__mux4_2         1
+     sky130_fd_sc_hd__nand2_1      291
+     sky130_fd_sc_hd__nand2b_1      14
+     sky130_fd_sc_hd__nand3_1       63
+     sky130_fd_sc_hd__nand3b_1       2
+     sky130_fd_sc_hd__nand4_1       28
+     sky130_fd_sc_hd__nand4b_1       2
+     sky130_fd_sc_hd__nor2_1       175
+     sky130_fd_sc_hd__nor2b_1       15
+     sky130_fd_sc_hd__nor3_1        35
+     sky130_fd_sc_hd__nor3b_1        3
+     sky130_fd_sc_hd__nor4_1        23
+     sky130_fd_sc_hd__nor4b_1        2
+     sky130_fd_sc_hd__o2111a_1       1
+     sky130_fd_sc_hd__o2111ai_1      5
+     sky130_fd_sc_hd__o211a_1        1
+     sky130_fd_sc_hd__o211ai_1      20
+     sky130_fd_sc_hd__o21ai_0      114
+     sky130_fd_sc_hd__o221a_1        1
+     sky130_fd_sc_hd__o221ai_1       2
+     sky130_fd_sc_hd__o22a_1         3
+     sky130_fd_sc_hd__o22ai_1       15
+     sky130_fd_sc_hd__o2bb2ai_1      5
+     sky130_fd_sc_hd__o31ai_1        7
+     sky130_fd_sc_hd__o32a_1         2
+     sky130_fd_sc_hd__o32ai_1        2
+     sky130_fd_sc_hd__o41a_1         1
+     sky130_fd_sc_hd__o41ai_1        3
+     sky130_fd_sc_hd__or2_0          5
+     sky130_fd_sc_hd__or3_1          5
+     sky130_fd_sc_hd__or4_1          7
+     sky130_fd_sc_hd__xnor2_1       20
+     sky130_fd_sc_hd__xor2_1        12
+
+   Chip area for module '\cpu': 9935.779200
+
+End of script. Logfile hash: dd56045010, CPU: user 3.57s system 0.00s
+Yosys 0.33 (git sha1 2584903a0, ccache clang 14.0.0-1ubuntu1.1 -Os -flto -flto)
+Time spent: 18% 2x stat (0 sec), 18% 1x dfflibmap (0 sec), ...

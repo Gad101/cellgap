@@ -1,0 +1,28 @@
+HD cells with <= 4 inputs classified as Exists: 258 / 258
+Table 4 row                   handout     ours
+Exists                             24       24
+Exists with an inverter            20       20
+Contained                          38       38
+New                              3822     3822
+new_one_stage                       9        9
+new_one_stage_small                 5        6   <-- MISMATCH
+read_once                           8        8
+read_once_exists                    6        6
+read_once_contained                 2        2
+
+New one-stage classes (Y = !F), smallest F within 3 in series:
+Y        F (pull-down network)                           T  PDN  PUN  check
+0x0017   (D | ((A | B) & (C | (A & B))))                12    3    3  ok
+0x0117   (none with <= 3 in series and <= 16 T)          -
+0x011F   ((C & D) | ((A | B) & (C | D)))                12    2    3  ok
+0x013F   ((B | D) & (C | (D & (A | B))))                12    3    3  ok
+0x017F   (none with <= 3 in series and <= 16 T)          -
+0x037F   ((B & D) | (C & (D | (A & B))))                12    3    3  ok
+0x077F   ((C | D) & ((A & B) | (C & D)))                12    3    2  ok
+0x177F   (none with <= 3 in series and <= 16 T)          -
+0x17FF   (D & ((A & B) | (C & (A | B))))                12    3    3  ok
+
+NOTE: a cost row differs from the handout. The class rows (the redundancy
+checker) match. Every formula above is checked independently, so our count
+is backed by an explicit network; see results/table4_selftest.txt.
+SELFTEST PASS 

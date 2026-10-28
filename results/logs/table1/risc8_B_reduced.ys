@@ -1,0 +1,6 @@
+read_verilog  /Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v
+synth -flatten -top cpu
+dfflibmap -liberty /Users/abdugad/dd2/DD2_Project1_student_pack/given/hd_reduced.lib
+abc -liberty /Users/abdugad/dd2/DD2_Project1_student_pack/given/hd_reduced.lib -script +strash;&get,-n;&dch,-f;&nf,-R,1000;&put
+opt_clean -purge
+stat -liberty /Users/abdugad/dd2/DD2_Project1_student_pack/given/hd_reduced.lib

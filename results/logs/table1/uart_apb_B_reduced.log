@@ -1,0 +1,1536 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.33 (git sha1 2584903a0, ccache clang 14.0.0-1ubuntu1.1 -Os -flto -flto)
+
+
+-- Executing script file `/Users/abdugad/dd2/cp1/results/logs/table1/uart_apb_B_reduced.ys' --
+
+1. Executing Verilog-2005 frontend: /Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v
+Parsing Verilog input from `/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v' to AST representation.
+Generating RTLIL representation for module `\baud_gen'.
+Generating RTLIL representation for module `\uart_rx'.
+Generating RTLIL representation for module `\uart_tx'.
+Generating RTLIL representation for module `\cmd_parser'.
+Generating RTLIL representation for module `\resp_builder'.
+Generating RTLIL representation for module `\apb_master'.
+Generating RTLIL representation for module `\uart_apb_master'.
+Successfully finished Verilog frontend.
+
+2. Executing SYNTH pass.
+
+2.1. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1.1. Analyzing design hierarchy..
+Top module:  \uart_apb_master
+Used module:     \resp_builder
+Used module:     \apb_master
+Used module:     \cmd_parser
+Used module:     \uart_tx
+Used module:     \uart_rx
+Used module:     \baud_gen
+Parameter \TIMEOUT_CYCLES = 5000000
+
+2.1.2. Executing AST frontend in derive mode using pre-parsed AST for module `\cmd_parser'.
+Parameter \TIMEOUT_CYCLES = 5000000
+Generating RTLIL representation for module `$paramod\cmd_parser\TIMEOUT_CYCLES=32'00000000010011000100101101000000'.
+
+2.1.3. Analyzing design hierarchy..
+Top module:  \uart_apb_master
+Used module:     \resp_builder
+Used module:     \apb_master
+Used module:     $paramod\cmd_parser\TIMEOUT_CYCLES=32'00000000010011000100101101000000
+Used module:     \uart_tx
+Used module:     \uart_rx
+Used module:     \baud_gen
+
+2.1.4. Analyzing design hierarchy..
+Top module:  \uart_apb_master
+Used module:     \resp_builder
+Used module:     \apb_master
+Used module:     $paramod\cmd_parser\TIMEOUT_CYCLES=32'00000000010011000100101101000000
+Used module:     \uart_tx
+Used module:     \uart_rx
+Used module:     \baud_gen
+Removing unused module `\cmd_parser'.
+Removed 1 unused modules.
+
+2.2. Executing PROC pass (convert processes to netlists).
+
+2.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+2.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:579$69 in module uart_apb_master.
+Marked 2 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:470$66 in module apb_master.
+Marked 3 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:368$50 in module resp_builder.
+Marked 10 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:259$94 in module $paramod\cmd_parser\TIMEOUT_CYCLES=32'00000000010011000100101101000000.
+Marked 2 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:248$89 in module $paramod\cmd_parser\TIMEOUT_CYCLES=32'00000000010011000100101101000000.
+Marked 6 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:150$20 in module uart_tx.
+Marked 7 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:61$8 in module uart_rx.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:51$6 in module uart_rx.
+Marked 2 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:13$1 in module baud_gen.
+Removed a total of 0 dead cases.
+
+2.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 9 redundant assignments.
+Promoted 0 assignments to connections.
+
+2.2.4. Executing PROC_INIT pass (extract init attributes).
+
+2.2.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \rst_n in `\uart_apb_master.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:579$69'.
+Found async reset \rst_n in `\apb_master.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:470$66'.
+Found async reset \rst_n in `\resp_builder.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:368$50'.
+Found async reset \rst_n in `$paramod\cmd_parser\TIMEOUT_CYCLES=32'00000000010011000100101101000000.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:259$94'.
+Found async reset \rst_n in `$paramod\cmd_parser\TIMEOUT_CYCLES=32'00000000010011000100101101000000.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:248$89'.
+Found async reset \rst_n in `\uart_tx.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:150$20'.
+Found async reset \rst_n in `\uart_rx.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:61$8'.
+Found async reset \rst_n in `\uart_rx.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:51$6'.
+Found async reset \rst_n in `\baud_gen.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:13$1'.
+
+2.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~47 debug messages>
+
+2.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\uart_apb_master.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:579$69'.
+     1/2: $0\lock_reg[0:0]
+     2/2: $0\lock_armed[0:0]
+Creating decoders for process `\apb_master.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:470$66'.
+     1/10: $0\PWDATA[31:0]
+     2/10: $0\PWRITE[0:0]
+     3/10: $0\PENABLE[0:0]
+     4/10: $0\PSEL[0:0]
+     5/10: $0\PADDR[31:0]
+     6/10: $0\resp_valid[0:0]
+     7/10: $0\resp_is_read[0:0]
+     8/10: $0\resp_error[0:0]
+     9/10: $0\resp_data[31:0]
+    10/10: $0\state[1:0]
+Creating decoders for process `\resp_builder.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:368$50'.
+     1/7: $0\tx_start[0:0]
+     2/7: $0\error_reg[0:0]
+     3/7: $0\is_read[0:0]
+     4/7: $0\data_reg[31:0]
+     5/7: $0\tx_data[7:0]
+     6/7: $0\byte_cnt[1:0]
+     7/7: $0\state[2:0]
+Creating decoders for process `$paramod\cmd_parser\TIMEOUT_CYCLES=32'00000000010011000100101101000000.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:259$94'.
+     1/7: $0\cmd_valid[0:0]
+     2/7: $0\is_write[0:0]
+     3/7: $0\byte_cnt[1:0]
+     4/7: $0\cmd_write[0:0]
+     5/7: $0\cmd_wdata[31:0]
+     6/7: $0\cmd_addr[31:0]
+     7/7: $0\state[2:0]
+Creating decoders for process `$paramod\cmd_parser\TIMEOUT_CYCLES=32'00000000010011000100101101000000.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:248$89'.
+     1/1: $0\timeout_cnt[31:0]
+Creating decoders for process `\uart_tx.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:150$20'.
+     1/6: $0\tx[0:0]
+     2/6: $0\busy[0:0]
+     3/6: $0\shift_reg[7:0]
+     4/6: $0\bit_cnt[2:0]
+     5/6: $0\tick_cnt[3:0]
+     6/6: $0\state[1:0]
+Creating decoders for process `\uart_rx.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:61$8'.
+     1/6: $0\valid[0:0]
+     2/6: $0\shift_reg[7:0]
+     3/6: $0\bit_cnt[2:0]
+     4/6: $0\tick_cnt[3:0]
+     5/6: $0\state[1:0]
+     6/6: $0\data[7:0]
+Creating decoders for process `\uart_rx.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:51$6'.
+     1/2: $0\rx_sync2[0:0]
+     2/2: $0\rx_sync1[0:0]
+Creating decoders for process `\baud_gen.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:13$1'.
+     1/2: $0\tick[0:0]
+     2/2: $0\counter[15:0]
+
+2.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+2.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\uart_apb_master.\lock_armed' using process `\uart_apb_master.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:579$69'.
+  created $adff cell `$procdff$578' with positive edge clock and negative level reset.
+Creating register for signal `\uart_apb_master.\lock_reg' using process `\uart_apb_master.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:579$69'.
+  created $adff cell `$procdff$579' with positive edge clock and negative level reset.
+Creating register for signal `\apb_master.\state' using process `\apb_master.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:470$66'.
+  created $adff cell `$procdff$580' with positive edge clock and negative level reset.
+Creating register for signal `\apb_master.\resp_data' using process `\apb_master.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:470$66'.
+  created $adff cell `$procdff$581' with positive edge clock and negative level reset.
+Creating register for signal `\apb_master.\resp_error' using process `\apb_master.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:470$66'.
+  created $adff cell `$procdff$582' with positive edge clock and negative level reset.
+Creating register for signal `\apb_master.\resp_is_read' using process `\apb_master.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:470$66'.
+  created $adff cell `$procdff$583' with positive edge clock and negative level reset.
+Creating register for signal `\apb_master.\resp_valid' using process `\apb_master.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:470$66'.
+  created $adff cell `$procdff$584' with positive edge clock and negative level reset.
+Creating register for signal `\apb_master.\PADDR' using process `\apb_master.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:470$66'.
+  created $adff cell `$procdff$585' with positive edge clock and negative level reset.
+Creating register for signal `\apb_master.\PSEL' using process `\apb_master.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:470$66'.
+  created $adff cell `$procdff$586' with positive edge clock and negative level reset.
+Creating register for signal `\apb_master.\PENABLE' using process `\apb_master.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:470$66'.
+  created $adff cell `$procdff$587' with positive edge clock and negative level reset.
+Creating register for signal `\apb_master.\PWRITE' using process `\apb_master.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:470$66'.
+  created $adff cell `$procdff$588' with positive edge clock and negative level reset.
+Creating register for signal `\apb_master.\PWDATA' using process `\apb_master.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:470$66'.
+  created $adff cell `$procdff$589' with positive edge clock and negative level reset.
+Creating register for signal `\resp_builder.\state' using process `\resp_builder.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:368$50'.
+  created $adff cell `$procdff$590' with positive edge clock and negative level reset.
+Creating register for signal `\resp_builder.\byte_cnt' using process `\resp_builder.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:368$50'.
+  created $adff cell `$procdff$591' with positive edge clock and negative level reset.
+Creating register for signal `\resp_builder.\tx_data' using process `\resp_builder.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:368$50'.
+  created $adff cell `$procdff$592' with positive edge clock and negative level reset.
+Creating register for signal `\resp_builder.\tx_start' using process `\resp_builder.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:368$50'.
+  created $adff cell `$procdff$593' with positive edge clock and negative level reset.
+Creating register for signal `\resp_builder.\data_reg' using process `\resp_builder.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:368$50'.
+  created $adff cell `$procdff$594' with positive edge clock and negative level reset.
+Creating register for signal `\resp_builder.\is_read' using process `\resp_builder.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:368$50'.
+  created $adff cell `$procdff$595' with positive edge clock and negative level reset.
+Creating register for signal `\resp_builder.\error_reg' using process `\resp_builder.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:368$50'.
+  created $adff cell `$procdff$596' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\cmd_parser\TIMEOUT_CYCLES=32'00000000010011000100101101000000.\state' using process `$paramod\cmd_parser\TIMEOUT_CYCLES=32'00000000010011000100101101000000.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:259$94'.
+  created $adff cell `$procdff$597' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\cmd_parser\TIMEOUT_CYCLES=32'00000000010011000100101101000000.\cmd_addr' using process `$paramod\cmd_parser\TIMEOUT_CYCLES=32'00000000010011000100101101000000.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:259$94'.
+  created $adff cell `$procdff$598' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\cmd_parser\TIMEOUT_CYCLES=32'00000000010011000100101101000000.\cmd_wdata' using process `$paramod\cmd_parser\TIMEOUT_CYCLES=32'00000000010011000100101101000000.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:259$94'.
+  created $adff cell `$procdff$599' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\cmd_parser\TIMEOUT_CYCLES=32'00000000010011000100101101000000.\cmd_write' using process `$paramod\cmd_parser\TIMEOUT_CYCLES=32'00000000010011000100101101000000.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:259$94'.
+  created $adff cell `$procdff$600' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\cmd_parser\TIMEOUT_CYCLES=32'00000000010011000100101101000000.\cmd_valid' using process `$paramod\cmd_parser\TIMEOUT_CYCLES=32'00000000010011000100101101000000.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:259$94'.
+  created $adff cell `$procdff$601' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\cmd_parser\TIMEOUT_CYCLES=32'00000000010011000100101101000000.\byte_cnt' using process `$paramod\cmd_parser\TIMEOUT_CYCLES=32'00000000010011000100101101000000.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:259$94'.
+  created $adff cell `$procdff$602' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\cmd_parser\TIMEOUT_CYCLES=32'00000000010011000100101101000000.\is_write' using process `$paramod\cmd_parser\TIMEOUT_CYCLES=32'00000000010011000100101101000000.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:259$94'.
+  created $adff cell `$procdff$603' with positive edge clock and negative level reset.
+Creating register for signal `$paramod\cmd_parser\TIMEOUT_CYCLES=32'00000000010011000100101101000000.\timeout_cnt' using process `$paramod\cmd_parser\TIMEOUT_CYCLES=32'00000000010011000100101101000000.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:248$89'.
+  created $adff cell `$procdff$604' with positive edge clock and negative level reset.
+Creating register for signal `\uart_tx.\state' using process `\uart_tx.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:150$20'.
+  created $adff cell `$procdff$605' with positive edge clock and negative level reset.
+Creating register for signal `\uart_tx.\tick_cnt' using process `\uart_tx.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:150$20'.
+  created $adff cell `$procdff$606' with positive edge clock and negative level reset.
+Creating register for signal `\uart_tx.\bit_cnt' using process `\uart_tx.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:150$20'.
+  created $adff cell `$procdff$607' with positive edge clock and negative level reset.
+Creating register for signal `\uart_tx.\shift_reg' using process `\uart_tx.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:150$20'.
+  created $adff cell `$procdff$608' with positive edge clock and negative level reset.
+Creating register for signal `\uart_tx.\tx' using process `\uart_tx.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:150$20'.
+  created $adff cell `$procdff$609' with positive edge clock and negative level reset.
+Creating register for signal `\uart_tx.\busy' using process `\uart_tx.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:150$20'.
+  created $adff cell `$procdff$610' with positive edge clock and negative level reset.
+Creating register for signal `\uart_rx.\data' using process `\uart_rx.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:61$8'.
+  created $adff cell `$procdff$611' with positive edge clock and negative level reset.
+Creating register for signal `\uart_rx.\valid' using process `\uart_rx.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:61$8'.
+  created $adff cell `$procdff$612' with positive edge clock and negative level reset.
+Creating register for signal `\uart_rx.\state' using process `\uart_rx.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:61$8'.
+  created $adff cell `$procdff$613' with positive edge clock and negative level reset.
+Creating register for signal `\uart_rx.\tick_cnt' using process `\uart_rx.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:61$8'.
+  created $adff cell `$procdff$614' with positive edge clock and negative level reset.
+Creating register for signal `\uart_rx.\bit_cnt' using process `\uart_rx.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:61$8'.
+  created $adff cell `$procdff$615' with positive edge clock and negative level reset.
+Creating register for signal `\uart_rx.\shift_reg' using process `\uart_rx.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:61$8'.
+  created $adff cell `$procdff$616' with positive edge clock and negative level reset.
+Creating register for signal `\uart_rx.\rx_sync1' using process `\uart_rx.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:51$6'.
+  created $adff cell `$procdff$617' with positive edge clock and negative level reset.
+Creating register for signal `\uart_rx.\rx_sync2' using process `\uart_rx.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:51$6'.
+  created $adff cell `$procdff$618' with positive edge clock and negative level reset.
+Creating register for signal `\baud_gen.\tick' using process `\baud_gen.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:13$1'.
+  created $adff cell `$procdff$619' with positive edge clock and negative level reset.
+Creating register for signal `\baud_gen.\counter' using process `\baud_gen.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:13$1'.
+  created $adff cell `$procdff$620' with positive edge clock and negative level reset.
+
+2.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+2.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 2 empty switches in `\uart_apb_master.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:579$69'.
+Removing empty process `uart_apb_master.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:579$69'.
+Found and cleaned up 4 empty switches in `\apb_master.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:470$66'.
+Removing empty process `apb_master.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:470$66'.
+Found and cleaned up 8 empty switches in `\resp_builder.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:368$50'.
+Removing empty process `resp_builder.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:368$50'.
+Found and cleaned up 11 empty switches in `$paramod\cmd_parser\TIMEOUT_CYCLES=32'00000000010011000100101101000000.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:259$94'.
+Removing empty process `$paramod\cmd_parser\TIMEOUT_CYCLES=32'00000000010011000100101101000000.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:259$94'.
+Found and cleaned up 1 empty switch in `$paramod\cmd_parser\TIMEOUT_CYCLES=32'00000000010011000100101101000000.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:248$89'.
+Removing empty process `$paramod\cmd_parser\TIMEOUT_CYCLES=32'00000000010011000100101101000000.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:248$89'.
+Found and cleaned up 9 empty switches in `\uart_tx.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:150$20'.
+Removing empty process `uart_tx.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:150$20'.
+Found and cleaned up 11 empty switches in `\uart_rx.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:61$8'.
+Removing empty process `uart_rx.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:61$8'.
+Removing empty process `uart_rx.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:51$6'.
+Found and cleaned up 1 empty switch in `\baud_gen.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:13$1'.
+Removing empty process `baud_gen.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:13$1'.
+Cleaned up 47 empty switches.
+
+2.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module uart_apb_master.
+Optimizing module apb_master.
+<suppressed ~7 debug messages>
+Optimizing module resp_builder.
+<suppressed ~14 debug messages>
+Optimizing module $paramod\cmd_parser\TIMEOUT_CYCLES=32'00000000010011000100101101000000.
+<suppressed ~3 debug messages>
+Optimizing module uart_tx.
+<suppressed ~5 debug messages>
+Optimizing module uart_rx.
+<suppressed ~7 debug messages>
+Optimizing module baud_gen.
+
+2.3. Executing FLATTEN pass (flatten design).
+Deleting now unused module apb_master.
+Deleting now unused module resp_builder.
+Deleting now unused module $paramod\cmd_parser\TIMEOUT_CYCLES=32'00000000010011000100101101000000.
+Deleting now unused module uart_tx.
+Deleting now unused module uart_rx.
+Deleting now unused module baud_gen.
+<suppressed ~6 debug messages>
+
+2.4. Executing OPT_EXPR pass (perform const folding).
+Optimizing module uart_apb_master.
+<suppressed ~1 debug messages>
+
+2.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \uart_apb_master..
+Removed 13 unused cells and 195 unused wires.
+<suppressed ~14 debug messages>
+
+2.6. Executing CHECK pass (checking for obvious problems).
+Checking module uart_apb_master...
+Found and reported 0 problems.
+
+2.7. Executing OPT pass (performing simple optimizations).
+
+2.7.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module uart_apb_master.
+
+2.7.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\uart_apb_master'.
+<suppressed ~213 debug messages>
+Removed a total of 71 cells.
+
+2.7.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \uart_apb_master..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~42 debug messages>
+
+2.7.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \uart_apb_master.
+    New ctrl vector for $pmux cell $flatten\u_uart_tx.$procmux$383: { $flatten\u_uart_tx.$procmux$386_CMP $flatten\u_uart_tx.$procmux$385_CMP $auto$opt_reduce.cc:134:opt_pmux$622 }
+  Optimizing cells in module \uart_apb_master.
+Performed a total of 1 changes.
+
+2.7.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\uart_apb_master'.
+<suppressed ~12 debug messages>
+Removed a total of 4 cells.
+
+2.7.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.7.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \uart_apb_master..
+Removed 0 unused cells and 75 unused wires.
+<suppressed ~1 debug messages>
+
+2.7.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module uart_apb_master.
+
+2.7.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.7.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \uart_apb_master..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~43 debug messages>
+
+2.7.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \uart_apb_master.
+    New ctrl vector for $pmux cell $flatten\u_resp_builder.$procmux$178: $auto$opt_reduce.cc:134:opt_pmux$624
+    New ctrl vector for $pmux cell $flatten\u_uart_tx.$procmux$431: { $flatten\u_uart_tx.$procmux$387_CMP $auto$opt_reduce.cc:134:opt_pmux$626 $flatten\u_uart_tx.$procmux$384_CMP }
+  Optimizing cells in module \uart_apb_master.
+Performed a total of 2 changes.
+
+2.7.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\uart_apb_master'.
+Removed a total of 0 cells.
+
+2.7.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.7.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \uart_apb_master..
+
+2.7.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module uart_apb_master.
+
+2.7.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.7.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \uart_apb_master..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~43 debug messages>
+
+2.7.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \uart_apb_master.
+Performed a total of 0 changes.
+
+2.7.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\uart_apb_master'.
+Removed a total of 0 cells.
+
+2.7.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.7.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \uart_apb_master..
+
+2.7.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module uart_apb_master.
+
+2.7.23. Finished OPT passes. (There is nothing left to do.)
+
+2.8. Executing FSM pass (extract and optimize FSM).
+
+2.8.1. Executing FSM_DETECT pass (finding FSMs in design).
+Found FSM state register uart_apb_master.u_apb_master.state.
+Not marking uart_apb_master.u_cmd_parser.state as FSM state register:
+    Users of register don't seem to benefit from recoding.
+Found FSM state register uart_apb_master.u_resp_builder.state.
+Found FSM state register uart_apb_master.u_uart_rx.state.
+Found FSM state register uart_apb_master.u_uart_tx.state.
+
+2.8.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+Extracting FSM `\u_apb_master.state' from module `\uart_apb_master'.
+  found $adff cell for state register: $flatten\u_apb_master.$procdff$580
+  root of input selection tree: $flatten\u_apb_master.$0\state[1:0]
+  found reset state: 2'00 (from async reset)
+  found ctrl input: $flatten\u_apb_master.$procmux$147_CMP
+  found ctrl input: $flatten\u_apb_master.$procmux$127_CMP
+  found ctrl input: $flatten\u_apb_master.$procmux$128_CMP
+  found ctrl input: \cmd_ready
+  found ctrl input: \resp_ready
+  found ctrl input: \PREADY
+  found state code: 2'11
+  found state code: 2'10
+  found ctrl input: \u_apb_master.cmd_valid
+  found state code: 2'01
+  found ctrl output: $flatten\u_apb_master.$procmux$147_CMP
+  found ctrl output: $flatten\u_apb_master.$procmux$128_CMP
+  found ctrl output: $flatten\u_apb_master.$procmux$127_CMP
+  found ctrl output: \cmd_ready
+  ctrl inputs: { \u_apb_master.cmd_valid \PREADY \resp_ready }
+  ctrl outputs: { $flatten\u_apb_master.$0\state[1:0] $flatten\u_apb_master.$procmux$127_CMP $flatten\u_apb_master.$procmux$128_CMP $flatten\u_apb_master.$procmux$147_CMP \cmd_ready }
+  transition:       2'00 3'0-- ->       2'00 6'000001
+  transition:       2'00 3'1-- ->       2'01 6'010001
+  transition:       2'10 3'-0- ->       2'10 6'101000
+  transition:       2'10 3'-1- ->       2'11 6'111000
+  transition:       2'01 3'--- ->       2'10 6'100100
+  transition:       2'11 3'--0 ->       2'11 6'110010
+  transition:       2'11 3'--1 ->       2'00 6'000010
+Extracting FSM `\u_resp_builder.state' from module `\uart_apb_master'.
+  found $adff cell for state register: $flatten\u_resp_builder.$procdff$590
+  root of input selection tree: $flatten\u_resp_builder.$0\state[2:0]
+  found reset state: 3'000 (from async reset)
+  found ctrl input: $flatten\u_resp_builder.$procmux$232_CMP
+  found ctrl input: $flatten\u_resp_builder.$procmux$179_CMP
+  found ctrl input: $flatten\u_resp_builder.$procmux$241_CMP
+  found ctrl input: $flatten\u_resp_builder.$procmux$182_CMP
+  found ctrl input: \resp_ready
+  found ctrl input: $flatten\u_resp_builder.$logic_and$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:404$58_Y
+  found ctrl input: \u_uart_tx.busy
+  found ctrl input: $flatten\u_resp_builder.$eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:414$60_Y
+  found state code: 3'010
+  found state code: 3'100
+  found state code: 3'011
+  found ctrl input: $flatten\u_resp_builder.$logic_and$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:393$55_Y
+  found ctrl input: \u_resp_builder.resp_valid
+  found state code: 3'001
+  found ctrl output: $flatten\u_resp_builder.$procmux$241_CMP
+  found ctrl output: $flatten\u_resp_builder.$procmux$232_CMP
+  found ctrl output: $flatten\u_resp_builder.$procmux$182_CMP
+  found ctrl output: $flatten\u_resp_builder.$procmux$179_CMP
+  found ctrl output: \resp_ready
+  ctrl inputs: { \u_resp_builder.resp_valid $flatten\u_resp_builder.$logic_and$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:393$55_Y $flatten\u_resp_builder.$logic_and$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:404$58_Y $flatten\u_resp_builder.$eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:414$60_Y \u_uart_tx.busy }
+  ctrl outputs: { $flatten\u_resp_builder.$0\state[2:0] $flatten\u_resp_builder.$procmux$179_CMP $flatten\u_resp_builder.$procmux$182_CMP $flatten\u_resp_builder.$procmux$232_CMP $flatten\u_resp_builder.$procmux$241_CMP \resp_ready }
+  transition:      3'000 5'0---- ->      3'000 8'00000001
+  transition:      3'000 5'1---- ->      3'001 8'00100001
+  transition:      3'100 5'--0-- ->      3'100 8'10000100
+  transition:      3'100 5'--1-- ->      3'000 8'00000100
+  transition:      3'010 5'--0-- ->      3'010 8'01000010
+  transition:      3'010 5'--1-- ->      3'011 8'01100010
+  transition:      3'001 5'-0--0 ->      3'100 8'10001000
+  transition:      3'001 5'-1--0 ->      3'010 8'01001000
+  transition:      3'001 5'----1 ->      3'001 8'00101000
+  transition:      3'011 5'---00 ->      3'010 8'01010000
+  transition:      3'011 5'---10 ->      3'100 8'10010000
+  transition:      3'011 5'----1 ->      3'011 8'01110000
+Extracting FSM `\u_uart_rx.state' from module `\uart_apb_master'.
+  found $adff cell for state register: $flatten\u_uart_rx.$procdff$613
+  root of input selection tree: $flatten\u_uart_rx.$0\state[1:0]
+  found reset state: 2'00 (from async reset)
+  found ctrl input: $flatten\u_uart_rx.$procmux$481_CMP
+  found ctrl input: $flatten\u_uart_rx.$procmux$489_CMP
+  found ctrl input: $flatten\u_uart_rx.$procmux$509_CMP
+  found ctrl input: $flatten\u_uart_rx.$procmux$534_CMP
+  found ctrl input: \u_baud_gen.tick
+  found ctrl input: $flatten\u_uart_rx.$eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:113$18_Y
+  found ctrl input: $flatten\u_uart_rx.$eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:100$15_Y
+  found state code: 2'11
+  found ctrl input: $flatten\u_uart_rx.$eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:81$11_Y
+  found ctrl input: \u_uart_rx.rx_sync2
+  found state code: 2'10
+  found state code: 2'01
+  found ctrl output: $flatten\u_uart_rx.$procmux$534_CMP
+  found ctrl output: $flatten\u_uart_rx.$procmux$509_CMP
+  found ctrl output: $flatten\u_uart_rx.$procmux$489_CMP
+  found ctrl output: $flatten\u_uart_rx.$procmux$481_CMP
+  ctrl inputs: { \u_uart_rx.rx_sync2 $flatten\u_uart_rx.$eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:81$11_Y $flatten\u_uart_rx.$eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:100$15_Y $flatten\u_uart_rx.$eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:113$18_Y \u_baud_gen.tick }
+  ctrl outputs: { $flatten\u_uart_rx.$0\state[1:0] $flatten\u_uart_rx.$procmux$481_CMP $flatten\u_uart_rx.$procmux$489_CMP $flatten\u_uart_rx.$procmux$509_CMP $flatten\u_uart_rx.$procmux$534_CMP }
+  transition:       2'00 5'0---- ->       2'01 6'010001
+  transition:       2'00 5'1---- ->       2'00 6'000001
+  transition:       2'10 5'----0 ->       2'10 6'100100
+  transition:       2'10 5'---01 ->       2'10 6'100100
+  transition:       2'10 5'--011 ->       2'10 6'100100
+  transition:       2'10 5'--111 ->       2'11 6'110100
+  transition:       2'01 5'----0 ->       2'01 6'010010
+  transition:       2'01 5'-0--1 ->       2'01 6'010010
+  transition:       2'01 5'01--1 ->       2'10 6'100010
+  transition:       2'01 5'11--1 ->       2'00 6'000010
+  transition:       2'11 5'----0 ->       2'11 6'111000
+  transition:       2'11 5'---01 ->       2'11 6'111000
+  transition:       2'11 5'---11 ->       2'00 6'001000
+Extracting FSM `\u_uart_tx.state' from module `\uart_apb_master'.
+  found $adff cell for state register: $flatten\u_uart_tx.$procdff$605
+  root of input selection tree: $flatten\u_uart_tx.$0\state[1:0]
+  found reset state: 2'00 (from async reset)
+  found ctrl input: $flatten\u_uart_tx.$procmux$384_CMP
+  found ctrl input: $flatten\u_uart_tx.$procmux$385_CMP
+  found ctrl input: $flatten\u_uart_tx.$procmux$386_CMP
+  found ctrl input: $flatten\u_uart_tx.$procmux$387_CMP
+  found ctrl input: \u_baud_gen.tick
+  found ctrl input: $flatten\u_uart_tx.$eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:173$22_Y
+  found ctrl input: $flatten\u_uart_tx.$eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:189$25_Y
+  found state code: 2'11
+  found state code: 2'10
+  found ctrl input: \u_resp_builder.tx_start
+  found state code: 2'01
+  found ctrl output: $flatten\u_uart_tx.$procmux$387_CMP
+  found ctrl output: $flatten\u_uart_tx.$procmux$386_CMP
+  found ctrl output: $flatten\u_uart_tx.$procmux$385_CMP
+  found ctrl output: $flatten\u_uart_tx.$procmux$384_CMP
+  ctrl inputs: { \u_resp_builder.tx_start $flatten\u_uart_tx.$eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:173$22_Y $flatten\u_uart_tx.$eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:189$25_Y \u_baud_gen.tick }
+  ctrl outputs: { $flatten\u_uart_tx.$0\state[1:0] $flatten\u_uart_tx.$procmux$384_CMP $flatten\u_uart_tx.$procmux$385_CMP $flatten\u_uart_tx.$procmux$386_CMP $flatten\u_uart_tx.$procmux$387_CMP }
+  transition:       2'00 4'0--- ->       2'00 6'000001
+  transition:       2'00 4'1--- ->       2'01 6'010001
+  transition:       2'10 4'---0 ->       2'10 6'100100
+  transition:       2'10 4'-0-1 ->       2'10 6'100100
+  transition:       2'10 4'-101 ->       2'10 6'100100
+  transition:       2'10 4'-111 ->       2'11 6'110100
+  transition:       2'01 4'---0 ->       2'01 6'010010
+  transition:       2'01 4'-0-1 ->       2'01 6'010010
+  transition:       2'01 4'-1-1 ->       2'10 6'100010
+  transition:       2'11 4'---0 ->       2'11 6'111000
+  transition:       2'11 4'-0-1 ->       2'11 6'111000
+  transition:       2'11 4'-1-1 ->       2'00 6'001000
+
+2.8.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+Optimizing FSM `$fsm$\u_uart_tx.state$646' from module `\uart_apb_master'.
+Optimizing FSM `$fsm$\u_uart_rx.state$640' from module `\uart_apb_master'.
+Optimizing FSM `$fsm$\u_resp_builder.state$633' from module `\uart_apb_master'.
+Optimizing FSM `$fsm$\u_apb_master.state$627' from module `\uart_apb_master'.
+
+2.8.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \uart_apb_master..
+Removed 52 unused cells and 52 unused wires.
+<suppressed ~53 debug messages>
+
+2.8.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+Optimizing FSM `$fsm$\u_apb_master.state$627' from module `\uart_apb_master'.
+  Removing unused output signal $flatten\u_apb_master.$0\state[1:0] [0].
+  Removing unused output signal $flatten\u_apb_master.$0\state[1:0] [1].
+Optimizing FSM `$fsm$\u_resp_builder.state$633' from module `\uart_apb_master'.
+  Removing unused output signal $flatten\u_resp_builder.$procmux$241_CMP.
+  Removing unused output signal $flatten\u_resp_builder.$procmux$232_CMP.
+  Removing unused output signal $flatten\u_resp_builder.$0\state[2:0] [0].
+  Removing unused output signal $flatten\u_resp_builder.$0\state[2:0] [1].
+  Removing unused output signal $flatten\u_resp_builder.$0\state[2:0] [2].
+Optimizing FSM `$fsm$\u_uart_rx.state$640' from module `\uart_apb_master'.
+  Removing unused output signal $flatten\u_uart_rx.$0\state[1:0] [0].
+  Removing unused output signal $flatten\u_uart_rx.$0\state[1:0] [1].
+Optimizing FSM `$fsm$\u_uart_tx.state$646' from module `\uart_apb_master'.
+  Removing unused output signal $flatten\u_uart_tx.$0\state[1:0] [0].
+  Removing unused output signal $flatten\u_uart_tx.$0\state[1:0] [1].
+
+2.8.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+Recoding FSM `$fsm$\u_apb_master.state$627' from module `\uart_apb_master' using `auto' encoding:
+  mapping auto encoding to `one-hot` for this FSM.
+  00 -> ---1
+  10 -> --1-
+  01 -> -1--
+  11 -> 1---
+Recoding FSM `$fsm$\u_resp_builder.state$633' from module `\uart_apb_master' using `auto' encoding:
+  mapping auto encoding to `one-hot` for this FSM.
+  000 -> ----1
+  100 -> ---1-
+  010 -> --1--
+  001 -> -1---
+  011 -> 1----
+Recoding FSM `$fsm$\u_uart_rx.state$640' from module `\uart_apb_master' using `auto' encoding:
+  mapping auto encoding to `one-hot` for this FSM.
+  00 -> ---1
+  10 -> --1-
+  01 -> -1--
+  11 -> 1---
+Recoding FSM `$fsm$\u_uart_tx.state$646' from module `\uart_apb_master' using `auto' encoding:
+  mapping auto encoding to `one-hot` for this FSM.
+  00 -> ---1
+  10 -> --1-
+  01 -> -1--
+  11 -> 1---
+
+2.8.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+FSM `$fsm$\u_apb_master.state$627' from module `uart_apb_master':
+-------------------------------------
+
+  Information on FSM $fsm$\u_apb_master.state$627 (\u_apb_master.state):
+
+  Number of input signals:    3
+  Number of output signals:   4
+  Number of state bits:       4
+
+  Input signals:
+    0: \resp_ready
+    1: \PREADY
+    2: \u_apb_master.cmd_valid
+
+  Output signals:
+    0: \cmd_ready
+    1: $flatten\u_apb_master.$procmux$147_CMP
+    2: $flatten\u_apb_master.$procmux$128_CMP
+    3: $flatten\u_apb_master.$procmux$127_CMP
+
+  State encoding:
+    0:     4'---1  <RESET STATE>
+    1:     4'--1-
+    2:     4'-1--
+    3:     4'1---
+
+  Transition Table (state_in, ctrl_in, state_out, ctrl_out):
+      0:     0 3'0--   ->     0 4'0001
+      1:     0 3'1--   ->     2 4'0001
+      2:     1 3'-0-   ->     1 4'1000
+      3:     1 3'-1-   ->     3 4'1000
+      4:     2 3'---   ->     1 4'0100
+      5:     3 3'--1   ->     0 4'0010
+      6:     3 3'--0   ->     3 4'0010
+
+-------------------------------------
+
+FSM `$fsm$\u_resp_builder.state$633' from module `uart_apb_master':
+-------------------------------------
+
+  Information on FSM $fsm$\u_resp_builder.state$633 (\u_resp_builder.state):
+
+  Number of input signals:    5
+  Number of output signals:   3
+  Number of state bits:       5
+
+  Input signals:
+    0: \u_uart_tx.busy
+    1: $flatten\u_resp_builder.$eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:414$60_Y
+    2: $flatten\u_resp_builder.$logic_and$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:404$58_Y
+    3: $flatten\u_resp_builder.$logic_and$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:393$55_Y
+    4: \u_resp_builder.resp_valid
+
+  Output signals:
+    0: \resp_ready
+    1: $flatten\u_resp_builder.$procmux$182_CMP
+    2: $flatten\u_resp_builder.$procmux$179_CMP
+
+  State encoding:
+    0:    5'----1  <RESET STATE>
+    1:    5'---1-
+    2:    5'--1--
+    3:    5'-1---
+    4:    5'1----
+
+  Transition Table (state_in, ctrl_in, state_out, ctrl_out):
+      0:     0 5'0----   ->     0 3'001
+      1:     0 5'1----   ->     3 3'001
+      2:     1 5'--1--   ->     0 3'000
+      3:     1 5'--0--   ->     1 3'000
+      4:     2 5'--0--   ->     2 3'000
+      5:     2 5'--1--   ->     4 3'000
+      6:     3 5'-0--0   ->     1 3'010
+      7:     3 5'-1--0   ->     2 3'010
+      8:     3 5'----1   ->     3 3'010
+      9:     4 5'---10   ->     1 3'100
+     10:     4 5'---00   ->     2 3'100
+     11:     4 5'----1   ->     4 3'100
+
+-------------------------------------
+
+FSM `$fsm$\u_uart_rx.state$640' from module `uart_apb_master':
+-------------------------------------
+
+  Information on FSM $fsm$\u_uart_rx.state$640 (\u_uart_rx.state):
+
+  Number of input signals:    5
+  Number of output signals:   4
+  Number of state bits:       4
+
+  Input signals:
+    0: \u_baud_gen.tick
+    1: $flatten\u_uart_rx.$eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:113$18_Y
+    2: $flatten\u_uart_rx.$eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:100$15_Y
+    3: $flatten\u_uart_rx.$eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:81$11_Y
+    4: \u_uart_rx.rx_sync2
+
+  Output signals:
+    0: $flatten\u_uart_rx.$procmux$534_CMP
+    1: $flatten\u_uart_rx.$procmux$509_CMP
+    2: $flatten\u_uart_rx.$procmux$489_CMP
+    3: $flatten\u_uart_rx.$procmux$481_CMP
+
+  State encoding:
+    0:     4'---1  <RESET STATE>
+    1:     4'--1-
+    2:     4'-1--
+    3:     4'1---
+
+  Transition Table (state_in, ctrl_in, state_out, ctrl_out):
+      0:     0 5'1----   ->     0 4'0001
+      1:     0 5'0----   ->     2 4'0001
+      2:     1 5'----0   ->     1 4'0100
+      3:     1 5'---01   ->     1 4'0100
+      4:     1 5'--011   ->     1 4'0100
+      5:     1 5'--111   ->     3 4'0100
+      6:     2 5'11--1   ->     0 4'0010
+      7:     2 5'01--1   ->     1 4'0010
+      8:     2 5'----0   ->     2 4'0010
+      9:     2 5'-0--1   ->     2 4'0010
+     10:     3 5'---11   ->     0 4'1000
+     11:     3 5'----0   ->     3 4'1000
+     12:     3 5'---01   ->     3 4'1000
+
+-------------------------------------
+
+FSM `$fsm$\u_uart_tx.state$646' from module `uart_apb_master':
+-------------------------------------
+
+  Information on FSM $fsm$\u_uart_tx.state$646 (\u_uart_tx.state):
+
+  Number of input signals:    4
+  Number of output signals:   4
+  Number of state bits:       4
+
+  Input signals:
+    0: \u_baud_gen.tick
+    1: $flatten\u_uart_tx.$eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:189$25_Y
+    2: $flatten\u_uart_tx.$eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:173$22_Y
+    3: \u_resp_builder.tx_start
+
+  Output signals:
+    0: $flatten\u_uart_tx.$procmux$387_CMP
+    1: $flatten\u_uart_tx.$procmux$386_CMP
+    2: $flatten\u_uart_tx.$procmux$385_CMP
+    3: $flatten\u_uart_tx.$procmux$384_CMP
+
+  State encoding:
+    0:     4'---1  <RESET STATE>
+    1:     4'--1-
+    2:     4'-1--
+    3:     4'1---
+
+  Transition Table (state_in, ctrl_in, state_out, ctrl_out):
+      0:     0 4'0---   ->     0 4'0001
+      1:     0 4'1---   ->     2 4'0001
+      2:     1 4'---0   ->     1 4'0100
+      3:     1 4'-101   ->     1 4'0100
+      4:     1 4'-0-1   ->     1 4'0100
+      5:     1 4'-111   ->     3 4'0100
+      6:     2 4'-1-1   ->     1 4'0010
+      7:     2 4'---0   ->     2 4'0010
+      8:     2 4'-0-1   ->     2 4'0010
+      9:     3 4'-1-1   ->     0 4'1000
+     10:     3 4'---0   ->     3 4'1000
+     11:     3 4'-0-1   ->     3 4'1000
+
+-------------------------------------
+
+2.8.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+Mapping FSM `$fsm$\u_apb_master.state$627' from module `\uart_apb_master'.
+Mapping FSM `$fsm$\u_resp_builder.state$633' from module `\uart_apb_master'.
+Mapping FSM `$fsm$\u_uart_rx.state$640' from module `\uart_apb_master'.
+Mapping FSM `$fsm$\u_uart_tx.state$646' from module `\uart_apb_master'.
+
+2.9. Executing OPT pass (performing simple optimizations).
+
+2.9.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module uart_apb_master.
+<suppressed ~26 debug messages>
+
+2.9.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\uart_apb_master'.
+<suppressed ~30 debug messages>
+Removed a total of 10 cells.
+
+2.9.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \uart_apb_master..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~39 debug messages>
+
+2.9.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \uart_apb_master.
+Performed a total of 0 changes.
+
+2.9.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\uart_apb_master'.
+Removed a total of 0 cells.
+
+2.9.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $procdff$579 ($adff) from module uart_apb_master (D = 1'1, Q = \lock_reg).
+Adding EN signal on $procdff$578 ($adff) from module uart_apb_master (D = 1'1, Q = \lock_armed).
+Adding EN signal on $flatten\u_uart_tx.$procdff$610 ($adff) from module uart_apb_master (D = $flatten\u_uart_tx.$0\busy[0:0], Q = \u_uart_tx.busy).
+Adding EN signal on $flatten\u_uart_tx.$procdff$608 ($adff) from module uart_apb_master (D = $flatten\u_uart_tx.$0\shift_reg[7:0], Q = \u_uart_tx.shift_reg).
+Adding EN signal on $flatten\u_uart_tx.$procdff$607 ($adff) from module uart_apb_master (D = $flatten\u_uart_tx.$0\bit_cnt[2:0], Q = \u_uart_tx.bit_cnt).
+Adding EN signal on $flatten\u_uart_tx.$procdff$606 ($adff) from module uart_apb_master (D = $flatten\u_uart_tx.$0\tick_cnt[3:0], Q = \u_uart_tx.tick_cnt).
+Adding EN signal on $flatten\u_uart_rx.$procdff$616 ($adff) from module uart_apb_master (D = { \u_uart_rx.rx_sync2 \u_uart_rx.shift_reg [7:1] }, Q = \u_uart_rx.shift_reg).
+Adding EN signal on $flatten\u_uart_rx.$procdff$615 ($adff) from module uart_apb_master (D = $flatten\u_uart_rx.$0\bit_cnt[2:0], Q = \u_uart_rx.bit_cnt).
+Adding EN signal on $flatten\u_uart_rx.$procdff$614 ($adff) from module uart_apb_master (D = $flatten\u_uart_rx.$0\tick_cnt[3:0], Q = \u_uart_rx.tick_cnt).
+Adding EN signal on $flatten\u_uart_rx.$procdff$611 ($adff) from module uart_apb_master (D = \u_uart_rx.shift_reg, Q = \u_uart_rx.data).
+Adding EN signal on $flatten\u_resp_builder.$procdff$596 ($adff) from module uart_apb_master (D = \u_resp_builder.resp_error, Q = \u_resp_builder.error_reg).
+Adding EN signal on $flatten\u_resp_builder.$procdff$595 ($adff) from module uart_apb_master (D = \u_resp_builder.resp_is_read, Q = \u_resp_builder.is_read).
+Adding EN signal on $flatten\u_resp_builder.$procdff$594 ($adff) from module uart_apb_master (D = $flatten\u_resp_builder.$0\data_reg[31:0], Q = \u_resp_builder.data_reg).
+Adding EN signal on $flatten\u_resp_builder.$procdff$592 ($adff) from module uart_apb_master (D = $flatten\u_resp_builder.$0\tx_data[7:0], Q = \u_resp_builder.tx_data).
+Adding EN signal on $flatten\u_resp_builder.$procdff$591 ($adff) from module uart_apb_master (D = $flatten\u_resp_builder.$0\byte_cnt[1:0], Q = \u_resp_builder.byte_cnt).
+Adding EN signal on $flatten\u_cmd_parser.$procdff$603 ($adff) from module uart_apb_master (D = $flatten\u_cmd_parser.$procmux$276_Y, Q = \u_cmd_parser.is_write).
+Adding EN signal on $flatten\u_cmd_parser.$procdff$602 ($adff) from module uart_apb_master (D = $flatten\u_cmd_parser.$procmux$289_Y, Q = \u_cmd_parser.byte_cnt).
+Adding EN signal on $flatten\u_cmd_parser.$procdff$600 ($adff) from module uart_apb_master (D = $flatten\u_cmd_parser.$procmux$314_Y, Q = \u_cmd_parser.cmd_write).
+Adding EN signal on $flatten\u_cmd_parser.$procdff$599 ($adff) from module uart_apb_master (D = { \u_cmd_parser.cmd_wdata [23:0] \u_uart_rx.data }, Q = \u_cmd_parser.cmd_wdata).
+Adding EN signal on $flatten\u_cmd_parser.$procdff$598 ($adff) from module uart_apb_master (D = { \u_cmd_parser.cmd_addr [23:0] \u_uart_rx.data }, Q = \u_cmd_parser.cmd_addr).
+Adding EN signal on $flatten\u_cmd_parser.$procdff$597 ($adff) from module uart_apb_master (D = $flatten\u_cmd_parser.$0\state[2:0], Q = \u_cmd_parser.state).
+Adding EN signal on $flatten\u_apb_master.$procdff$589 ($adff) from module uart_apb_master (D = \u_cmd_parser.cmd_wdata, Q = \u_apb_master.PWDATA).
+Adding EN signal on $flatten\u_apb_master.$procdff$588 ($adff) from module uart_apb_master (D = \u_cmd_parser.cmd_write, Q = \u_apb_master.PWRITE).
+Adding EN signal on $flatten\u_apb_master.$procdff$587 ($adff) from module uart_apb_master (D = $flatten\u_apb_master.$0\PENABLE[0:0], Q = \u_apb_master.PENABLE).
+Adding EN signal on $flatten\u_apb_master.$procdff$586 ($adff) from module uart_apb_master (D = $flatten\u_apb_master.$0\PSEL[0:0], Q = \u_apb_master.PSEL).
+Adding EN signal on $flatten\u_apb_master.$procdff$585 ($adff) from module uart_apb_master (D = \u_cmd_parser.cmd_addr, Q = \u_apb_master.PADDR).
+Adding EN signal on $flatten\u_apb_master.$procdff$584 ($adff) from module uart_apb_master (D = $flatten\u_apb_master.$0\resp_valid[0:0], Q = \u_apb_master.resp_valid).
+Adding EN signal on $flatten\u_apb_master.$procdff$583 ($adff) from module uart_apb_master (D = $flatten\u_apb_master.$not$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:504$68_Y, Q = \u_apb_master.resp_is_read).
+Adding EN signal on $flatten\u_apb_master.$procdff$582 ($adff) from module uart_apb_master (D = \PSLVERR, Q = \u_apb_master.resp_error).
+Adding EN signal on $flatten\u_apb_master.$procdff$581 ($adff) from module uart_apb_master (D = \PRDATA, Q = \u_apb_master.resp_data).
+
+2.9.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \uart_apb_master..
+Removed 38 unused cells and 85 unused wires.
+<suppressed ~39 debug messages>
+
+2.9.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module uart_apb_master.
+<suppressed ~16 debug messages>
+
+2.9.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.9.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \uart_apb_master..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~27 debug messages>
+
+2.9.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \uart_apb_master.
+Performed a total of 0 changes.
+
+2.9.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\uart_apb_master'.
+<suppressed ~66 debug messages>
+Removed a total of 22 cells.
+
+2.9.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.9.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \uart_apb_master..
+Removed 0 unused cells and 22 unused wires.
+<suppressed ~1 debug messages>
+
+2.9.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module uart_apb_master.
+
+2.9.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.9.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \uart_apb_master..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~28 debug messages>
+
+2.9.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \uart_apb_master.
+Performed a total of 0 changes.
+
+2.9.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\uart_apb_master'.
+Removed a total of 0 cells.
+
+2.9.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.9.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \uart_apb_master..
+
+2.9.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module uart_apb_master.
+
+2.9.23. Finished OPT passes. (There is nothing left to do.)
+
+2.10. Executing WREDUCE pass (reducing word size of cells).
+Removed top 31 bits (of 32) from port B of cell uart_apb_master.$flatten\u_baud_gen.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:22$5 ($add).
+Removed top 16 bits (of 32) from port Y of cell uart_apb_master.$flatten\u_baud_gen.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:22$5 ($add).
+Removed top 9 bits (of 16) from port B of cell uart_apb_master.$flatten\u_baud_gen.$eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:18$4 ($eq).
+Removed top 1 bits (of 2) from port B of cell uart_apb_master.$auto$fsm_map.cc:77:implement_pattern_cache$779 ($eq).
+Removed top 1 bits (of 3) from port B of cell uart_apb_master.$auto$fsm_map.cc:77:implement_pattern_cache$770 ($eq).
+Removed top 31 bits (of 32) from port B of cell uart_apb_master.$flatten\u_uart_rx.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:106$17 ($add).
+Removed top 28 bits (of 32) from port Y of cell uart_apb_master.$flatten\u_uart_rx.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:106$17 ($add).
+Removed top 31 bits (of 32) from port B of cell uart_apb_master.$flatten\u_uart_rx.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:103$16 ($add).
+Removed top 29 bits (of 32) from port Y of cell uart_apb_master.$flatten\u_uart_rx.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:103$16 ($add).
+Removed top 1 bits (of 4) from port B of cell uart_apb_master.$flatten\u_uart_rx.$eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:81$11 ($eq).
+Removed top 1 bits (of 2) from port B of cell uart_apb_master.$auto$fsm_map.cc:77:implement_pattern_cache$792 ($eq).
+Removed top 1 bits (of 4) from port B of cell uart_apb_master.$auto$opt_dff.cc:195:make_patterns_logic$1032 ($ne).
+Removed top 2 bits (of 4) from port B of cell uart_apb_master.$auto$opt_dff.cc:195:make_patterns_logic$1030 ($ne).
+Removed top 2 bits (of 4) from port B of cell uart_apb_master.$auto$opt_dff.cc:195:make_patterns_logic$1028 ($ne).
+Removed top 1 bits (of 2) from port B of cell uart_apb_master.$auto$opt_dff.cc:195:make_patterns_logic$1009 ($ne).
+Removed top 1 bits (of 2) from port B of cell uart_apb_master.$auto$opt_dff.cc:195:make_patterns_logic$866 ($ne).
+Removed top 31 bits (of 32) from port B of cell uart_apb_master.$flatten\u_uart_tx.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:192$26 ($add).
+Removed top 29 bits (of 32) from port Y of cell uart_apb_master.$flatten\u_uart_tx.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:192$26 ($add).
+Removed top 31 bits (of 32) from port B of cell uart_apb_master.$flatten\u_uart_tx.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:178$23 ($add).
+Removed top 28 bits (of 32) from port Y of cell uart_apb_master.$flatten\u_uart_tx.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:178$23 ($add).
+Removed top 1 bits (of 2) from port B of cell uart_apb_master.$auto$opt_dff.cc:195:make_patterns_logic$1005 ($ne).
+Removed top 1 bits (of 3) from port B of cell uart_apb_master.$auto$opt_dff.cc:195:make_patterns_logic$994 ($ne).
+Removed top 2 bits (of 3) from port B of cell uart_apb_master.$auto$opt_dff.cc:195:make_patterns_logic$992 ($ne).
+Removed top 1 bits (of 3) from port B of cell uart_apb_master.$auto$opt_dff.cc:195:make_patterns_logic$970 ($ne).
+Removed top 2 bits (of 3) from port B of cell uart_apb_master.$flatten\u_cmd_parser.$procmux$371_CMP0 ($eq).
+Removed top 2 bits (of 3) from mux cell uart_apb_master.$flatten\u_cmd_parser.$procmux$366 ($mux).
+Removed top 1 bits (of 3) from mux cell uart_apb_master.$flatten\u_cmd_parser.$procmux$359 ($mux).
+Removed top 1 bits (of 3) from port B of cell uart_apb_master.$flatten\u_cmd_parser.$procmux$279_CMP0 ($eq).
+Removed top 1 bits (of 3) from port B of cell uart_apb_master.$flatten\u_cmd_parser.$procmux$263_CMP0 ($eq).
+Removed top 31 bits (of 32) from port B of cell uart_apb_master.$flatten\u_cmd_parser.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:315$102 ($add).
+Removed top 30 bits (of 32) from port Y of cell uart_apb_master.$flatten\u_cmd_parser.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:315$102 ($add).
+Removed top 1 bits (of 8) from port B of cell uart_apb_master.$flatten\u_cmd_parser.$eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:294$100 ($eq).
+Removed top 31 bits (of 32) from port B of cell uart_apb_master.$flatten\u_cmd_parser.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:255$93 ($add).
+Removed top 9 bits (of 32) from port B of cell uart_apb_master.$flatten\u_cmd_parser.$eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:246$87 ($eq).
+Removed top 1 bits (of 2) from port B of cell uart_apb_master.$auto$opt_dff.cc:195:make_patterns_logic$956 ($ne).
+Removed top 1 bits (of 3) from port B of cell uart_apb_master.$auto$fsm_map.cc:77:implement_pattern_cache$766 ($eq).
+Removed top 1 bits (of 2) from port B of cell uart_apb_master.$auto$fsm_map.cc:77:implement_pattern_cache$835 ($eq).
+Removed top 31 bits (of 32) from port B of cell uart_apb_master.$flatten\u_resp_builder.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:417$61 ($add).
+Removed top 30 bits (of 32) from port Y of cell uart_apb_master.$flatten\u_resp_builder.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:417$61 ($add).
+Removed top 1 bits (of 8) from mux cell uart_apb_master.$flatten\u_resp_builder.$ternary$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:391$53 ($mux).
+Removed top 16 bits (of 32) from wire uart_apb_master.$flatten\u_baud_gen.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:22$5_Y.
+Removed top 30 bits (of 32) from wire uart_apb_master.$flatten\u_cmd_parser.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:315$102_Y.
+Removed top 30 bits (of 32) from wire uart_apb_master.$flatten\u_resp_builder.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:417$61_Y.
+Removed top 1 bits (of 8) from wire uart_apb_master.$flatten\u_resp_builder.$ternary$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:391$53_Y.
+Removed top 29 bits (of 32) from wire uart_apb_master.$flatten\u_uart_rx.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:103$16_Y.
+Removed top 28 bits (of 32) from wire uart_apb_master.$flatten\u_uart_rx.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:106$17_Y.
+Removed top 28 bits (of 32) from wire uart_apb_master.$flatten\u_uart_tx.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:178$23_Y.
+Removed top 29 bits (of 32) from wire uart_apb_master.$flatten\u_uart_tx.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:192$26_Y.
+
+2.11. Executing PEEPOPT pass (run peephole optimizers).
+
+2.12. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \uart_apb_master..
+Removed 0 unused cells and 8 unused wires.
+<suppressed ~1 debug messages>
+
+2.13. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module uart_apb_master:
+  creating $macc model for $flatten\u_baud_gen.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:22$5 ($add).
+  creating $macc model for $flatten\u_cmd_parser.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:255$93 ($add).
+  creating $macc model for $flatten\u_cmd_parser.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:315$102 ($add).
+  creating $macc model for $flatten\u_resp_builder.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:417$61 ($add).
+  creating $macc model for $flatten\u_uart_rx.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:103$16 ($add).
+  creating $macc model for $flatten\u_uart_rx.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:106$17 ($add).
+  creating $macc model for $flatten\u_uart_tx.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:178$23 ($add).
+  creating $macc model for $flatten\u_uart_tx.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:192$26 ($add).
+  creating $alu model for $macc $flatten\u_uart_tx.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:192$26.
+  creating $alu model for $macc $flatten\u_uart_tx.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:178$23.
+  creating $alu model for $macc $flatten\u_uart_rx.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:106$17.
+  creating $alu model for $macc $flatten\u_uart_rx.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:103$16.
+  creating $alu model for $macc $flatten\u_resp_builder.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:417$61.
+  creating $alu model for $macc $flatten\u_cmd_parser.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:315$102.
+  creating $alu model for $macc $flatten\u_cmd_parser.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:255$93.
+  creating $alu model for $macc $flatten\u_baud_gen.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:22$5.
+  creating $alu cell for $flatten\u_baud_gen.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:22$5: $auto$alumacc.cc:485:replace_alu$1084
+  creating $alu cell for $flatten\u_cmd_parser.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:255$93: $auto$alumacc.cc:485:replace_alu$1087
+  creating $alu cell for $flatten\u_cmd_parser.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:315$102: $auto$alumacc.cc:485:replace_alu$1090
+  creating $alu cell for $flatten\u_resp_builder.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:417$61: $auto$alumacc.cc:485:replace_alu$1093
+  creating $alu cell for $flatten\u_uart_rx.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:103$16: $auto$alumacc.cc:485:replace_alu$1096
+  creating $alu cell for $flatten\u_uart_rx.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:106$17: $auto$alumacc.cc:485:replace_alu$1099
+  creating $alu cell for $flatten\u_uart_tx.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:178$23: $auto$alumacc.cc:485:replace_alu$1102
+  creating $alu cell for $flatten\u_uart_tx.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:192$26: $auto$alumacc.cc:485:replace_alu$1105
+  created 8 $alu and 0 $macc cells.
+
+2.14. Executing SHARE pass (SAT-based resource sharing).
+
+2.15. Executing OPT pass (performing simple optimizations).
+
+2.15.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module uart_apb_master.
+
+2.15.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\uart_apb_master'.
+Removed a total of 0 cells.
+
+2.15.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \uart_apb_master..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~28 debug messages>
+
+2.15.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \uart_apb_master.
+Performed a total of 0 changes.
+
+2.15.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\uart_apb_master'.
+Removed a total of 0 cells.
+
+2.15.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.15.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \uart_apb_master..
+
+2.15.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module uart_apb_master.
+
+2.15.9. Finished OPT passes. (There is nothing left to do.)
+
+2.16. Executing MEMORY pass.
+
+2.16.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+2.16.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+2.16.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+2.16.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+2.16.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+2.16.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \uart_apb_master..
+
+2.16.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+2.16.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+2.16.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \uart_apb_master..
+
+2.16.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+2.17. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \uart_apb_master..
+
+2.18. Executing OPT pass (performing simple optimizations).
+
+2.18.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module uart_apb_master.
+<suppressed ~80 debug messages>
+
+2.18.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\uart_apb_master'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+2.18.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.18.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \uart_apb_master..
+Removed 0 unused cells and 55 unused wires.
+<suppressed ~1 debug messages>
+
+2.18.5. Finished fast OPT passes.
+
+2.19. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+2.20. Executing OPT pass (performing simple optimizations).
+
+2.20.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module uart_apb_master.
+<suppressed ~3 debug messages>
+
+2.20.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\uart_apb_master'.
+Removed a total of 0 cells.
+
+2.20.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \uart_apb_master..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~18 debug messages>
+
+2.20.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \uart_apb_master.
+    New ctrl vector for $pmux cell $flatten\u_cmd_parser.$procmux$349: { $flatten\u_cmd_parser.$eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:252$91_Y $flatten\u_cmd_parser.$procmux$371_CMP $flatten\u_cmd_parser.$procmux$279_CMP $flatten\u_cmd_parser.$procmux$263_CMP }
+    Consolidated identical input bits for $mux cell $flatten\u_cmd_parser.$procmux$353:
+      Old ports: A=3'000, B=3'100, Y=$flatten\u_cmd_parser.$procmux$353_Y
+      New ports: A=1'0, B=1'1, Y=$flatten\u_cmd_parser.$procmux$353_Y [2]
+      New connections: $flatten\u_cmd_parser.$procmux$353_Y [1:0] = 2'00
+    Consolidated identical input bits for $mux cell $flatten\u_cmd_parser.$procmux$359:
+      Old ports: A=2'00, B=2'11, Y=$flatten\u_cmd_parser.$procmux$359_Y [1:0]
+      New ports: A=1'0, B=1'1, Y=$flatten\u_cmd_parser.$procmux$359_Y [0]
+      New connections: $flatten\u_cmd_parser.$procmux$359_Y [1] = $flatten\u_cmd_parser.$procmux$359_Y [0]
+    Consolidated identical input bits for $mux cell $flatten\u_cmd_parser.$procmux$362:
+      Old ports: A={ 1'0 $flatten\u_cmd_parser.$procmux$359_Y [1:0] }, B=3'011, Y=$flatten\u_cmd_parser.$procmux$362_Y
+      New ports: A=$flatten\u_cmd_parser.$procmux$359_Y [1:0], B=2'11, Y=$flatten\u_cmd_parser.$procmux$362_Y [1:0]
+      New connections: $flatten\u_cmd_parser.$procmux$362_Y [2] = 1'0
+    Consolidated identical input bits for $mux cell $flatten\u_cmd_parser.$procmux$369:
+      Old ports: A={ 2'00 $flatten\u_cmd_parser.$eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:276$96_Y }, B=3'010, Y=$flatten\u_cmd_parser.$procmux$369_Y
+      New ports: A={ 1'0 $flatten\u_cmd_parser.$eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:276$96_Y }, B=2'10, Y=$flatten\u_cmd_parser.$procmux$369_Y [1:0]
+      New connections: $flatten\u_cmd_parser.$procmux$369_Y [2] = 1'0
+    Consolidated identical input bits for $mux cell $flatten\u_resp_builder.$ternary$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/uart_apb.v:391$53:
+      Old ports: A=7'0101100, B=7'1101110, Y=$auto$wreduce.cc:461:run$1079 [6:0]
+      New ports: A=1'0, B=1'1, Y=$auto$wreduce.cc:461:run$1079 [1]
+      New connections: { $auto$wreduce.cc:461:run$1079 [6:2] $auto$wreduce.cc:461:run$1079 [0] } = { $auto$wreduce.cc:461:run$1079 [1] 5'10110 }
+  Optimizing cells in module \uart_apb_master.
+    Consolidated identical input bits for $mux cell $flatten\u_cmd_parser.$procmux$362:
+      Old ports: A=$flatten\u_cmd_parser.$procmux$359_Y [1:0], B=2'11, Y=$flatten\u_cmd_parser.$procmux$362_Y [1:0]
+      New ports: A=$flatten\u_cmd_parser.$procmux$359_Y [0], B=1'1, Y=$flatten\u_cmd_parser.$procmux$362_Y [0]
+      New connections: $flatten\u_cmd_parser.$procmux$362_Y [1] = $flatten\u_cmd_parser.$procmux$362_Y [0]
+  Optimizing cells in module \uart_apb_master.
+Performed a total of 7 changes.
+
+2.20.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\uart_apb_master'.
+Removed a total of 0 cells.
+
+2.20.6. Executing OPT_SHARE pass.
+
+2.20.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.20.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \uart_apb_master..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+2.20.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module uart_apb_master.
+<suppressed ~4 debug messages>
+
+2.20.10. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.20.11. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \uart_apb_master..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~18 debug messages>
+
+2.20.12. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \uart_apb_master.
+Performed a total of 0 changes.
+
+2.20.13. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\uart_apb_master'.
+Removed a total of 0 cells.
+
+2.20.14. Executing OPT_SHARE pass.
+
+2.20.15. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.20.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \uart_apb_master..
+Removed 0 unused cells and 3 unused wires.
+<suppressed ~1 debug messages>
+
+2.20.17. Executing OPT_EXPR pass (perform const folding).
+Optimizing module uart_apb_master.
+
+2.20.18. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.20.19. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \uart_apb_master..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~18 debug messages>
+
+2.20.20. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \uart_apb_master.
+Performed a total of 0 changes.
+
+2.20.21. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\uart_apb_master'.
+Removed a total of 0 cells.
+
+2.20.22. Executing OPT_SHARE pass.
+
+2.20.23. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.20.24. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \uart_apb_master..
+
+2.20.25. Executing OPT_EXPR pass (perform const folding).
+Optimizing module uart_apb_master.
+
+2.20.26. Finished OPT passes. (There is nothing left to do.)
+
+2.21. Executing TECHMAP pass (map to technology primitives).
+
+2.21.1. Executing Verilog-2005 frontend: /share/techmap.v
+Parsing Verilog input from `/share/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+2.21.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $logic_and.
+Using extmapper simplemap for cells of type $eq.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $or.
+Using extmapper simplemap for cells of type $adffe.
+Using extmapper simplemap for cells of type $adff.
+Using template $paramod$6a42b6fefed750f8a1c58eab59479d960557103c\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $reduce_and.
+Using extmapper simplemap for cells of type $reduce_bool.
+Using extmapper simplemap for cells of type $ne.
+Using template $paramod$32a7b7b86c07519b7537abc18e96f0331f97914d\_90_alu for cells of type $alu.
+Using template $paramod$c2e415ef15bc3ccd2723772353a6b450d3d76206\_90_pmux for cells of type $pmux.
+Using template $paramod$2af30114e9bd4ccb04dad757b3f0a8f6bf0615b0\_90_alu for cells of type $alu.
+Using template $paramod$bf2533632d512eac76dd186c0da49367e29b8e98\_90_pmux for cells of type $pmux.
+Using template $paramod$c5c783b17ab1d780abfad8cfe6563a0a7b47a3b0\_90_pmux for cells of type $pmux.
+Using template $paramod$3ef7d3dd227da7627a99c5e5a6a4deb817573e39\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $logic_not.
+Using template $paramod$d31bf4d7d72e59528d18fbd4f322e9d608532043\_90_pmux for cells of type $pmux.
+Using template $paramod$175e67c02b86e96b1288b9dc100122520d7240d8\_90_alu for cells of type $alu.
+Using template $paramod$521ce43182eecb9f60c72393a788160d2c356bf5\_90_pmux for cells of type $pmux.
+Using extmapper simplemap for cells of type $logic_or.
+Using extmapper simplemap for cells of type $xor.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000000100 for cells of type $lcu.
+Using extmapper simplemap for cells of type $pos.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000010000 for cells of type $lcu.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000000011 for cells of type $lcu.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000100000 for cells of type $lcu.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000000010 for cells of type $lcu.
+No more expansions possible.
+<suppressed ~1455 debug messages>
+
+2.22. Executing OPT pass (performing simple optimizations).
+
+2.22.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module uart_apb_master.
+<suppressed ~747 debug messages>
+
+2.22.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\uart_apb_master'.
+<suppressed ~435 debug messages>
+Removed a total of 145 cells.
+
+2.22.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.22.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \uart_apb_master..
+Removed 51 unused cells and 788 unused wires.
+<suppressed ~52 debug messages>
+
+2.22.5. Finished fast OPT passes.
+
+2.23. Executing ABC pass (technology mapping using ABC).
+
+2.23.1. Extracting gate netlist of module `\uart_apb_master' to `<abc-temp-dir>/input.blif'..
+Extracted 900 gates and 1157 wires to a netlist network with 255 inputs and 170 outputs.
+
+2.23.1.1. Executing ABC.
+Running ABC command: "/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+
+2.23.1.2. Re-integrating ABC results.
+ABC RESULTS:               NOR cells:       13
+ABC RESULTS:               XOR cells:       47
+ABC RESULTS:               MUX cells:       50
+ABC RESULTS:              XNOR cells:       11
+ABC RESULTS:             ORNOT cells:       68
+ABC RESULTS:               NOT cells:       23
+ABC RESULTS:              NAND cells:       71
+ABC RESULTS:                OR cells:      184
+ABC RESULTS:               AND cells:       31
+ABC RESULTS:            ANDNOT cells:      238
+ABC RESULTS:        internal signals:      732
+ABC RESULTS:           input signals:      255
+ABC RESULTS:          output signals:      170
+Removing temp directory.
+
+2.24. Executing OPT pass (performing simple optimizations).
+
+2.24.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module uart_apb_master.
+<suppressed ~2 debug messages>
+
+2.24.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\uart_apb_master'.
+Removed a total of 0 cells.
+
+2.24.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.24.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \uart_apb_master..
+Removed 0 unused cells and 741 unused wires.
+<suppressed ~3 debug messages>
+
+2.24.5. Finished fast OPT passes.
+
+2.25. Executing HIERARCHY pass (managing design hierarchy).
+
+2.25.1. Analyzing design hierarchy..
+Top module:  \uart_apb_master
+
+2.25.2. Analyzing design hierarchy..
+Top module:  \uart_apb_master
+Removed 0 unused modules.
+
+2.26. Printing statistics.
+
+=== uart_apb_master ===
+
+   Number of wires:                839
+   Number of wire bits:           1518
+   Number of public wires:         112
+   Number of public wire bits:     783
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               1066
+     $_ANDNOT_                     238
+     $_AND_                         31
+     $_DFFE_PN0P_                  258
+     $_DFF_PN0_                     65
+     $_DFF_PN1_                      7
+     $_MUX_                         50
+     $_NAND_                        71
+     $_NOR_                         13
+     $_NOT_                         23
+     $_ORNOT_                       68
+     $_OR_                         184
+     $_XNOR_                        11
+     $_XOR_                         47
+
+2.27. Executing CHECK pass (checking for obvious problems).
+Checking module uart_apb_master...
+Found and reported 0 problems.
+
+3. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+  cell sky130_fd_sc_hd__dfxtp_1 (noninv, pins=3, area=20.02) is a direct match for cell type $_DFF_P_.
+  cell sky130_fd_sc_hd__dfrtn_1 (noninv, pins=4, area=25.02) is a direct match for cell type $_DFF_NN0_.
+  cell sky130_fd_sc_hd__dfrtp_1 (noninv, pins=4, area=25.02) is a direct match for cell type $_DFF_PN0_.
+  cell sky130_fd_sc_hd__dfstp_1 (noninv, pins=4, area=26.28) is a direct match for cell type $_DFF_PN1_.
+  cell sky130_fd_sc_hd__dfbbn_1 (noninv, pins=6, area=32.53) is a direct match for cell type $_DFFSR_NNN_.
+  cell sky130_fd_sc_hd__dfbbp_1 (noninv, pins=6, area=32.53) is a direct match for cell type $_DFFSR_PNN_.
+  final dff cell mappings:
+    unmapped dff cell: $_DFF_N_
+    \sky130_fd_sc_hd__dfxtp_1 _DFF_P_ (.CLK( C), .D( D), .Q( Q));
+    \sky130_fd_sc_hd__dfrtn_1 _DFF_NN0_ (.CLK_N( C), .D( D), .Q( Q), .RESET_B( R));
+    unmapped dff cell: $_DFF_NN1_
+    unmapped dff cell: $_DFF_NP0_
+    unmapped dff cell: $_DFF_NP1_
+    \sky130_fd_sc_hd__dfrtp_1 _DFF_PN0_ (.CLK( C), .D( D), .Q( Q), .RESET_B( R));
+    \sky130_fd_sc_hd__dfstp_1 _DFF_PN1_ (.CLK( C), .D( D), .Q( Q), .SET_B( R));
+    unmapped dff cell: $_DFF_PP0_
+    unmapped dff cell: $_DFF_PP1_
+    \sky130_fd_sc_hd__dfbbn_1 _DFFSR_NNN_ (.CLK_N( C), .D( D), .Q( Q), .Q_N(~Q), .RESET_B( R), .SET_B( S));
+    unmapped dff cell: $_DFFSR_NNP_
+    unmapped dff cell: $_DFFSR_NPN_
+    unmapped dff cell: $_DFFSR_NPP_
+    \sky130_fd_sc_hd__dfbbp_1 _DFFSR_PNN_ (.CLK( C), .D( D), .Q( Q), .Q_N(~Q), .RESET_B( R), .SET_B( S));
+    unmapped dff cell: $_DFFSR_PNP_
+    unmapped dff cell: $_DFFSR_PPN_
+    unmapped dff cell: $_DFFSR_PPP_
+
+3.1. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+Mapping DFF cells in module `\uart_apb_master':
+  mapped 323 $_DFF_PN0_ cells to \sky130_fd_sc_hd__dfrtp_1 cells.
+  mapped 7 $_DFF_PN1_ cells to \sky130_fd_sc_hd__dfstp_1 cells.
+
+4. Executing ABC pass (technology mapping using ABC).
+
+4.1. Extracting gate netlist of module `\uart_apb_master' to `<abc-temp-dir>/input.blif'..
+Extracted 994 gates and 1357 wires to a netlist network with 362 inputs and 328 outputs.
+
+4.1.1. Executing ABC.
+Running ABC command: "/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+
+4.1.2. Re-integrating ABC results.
+ABC RESULTS:   sky130_fd_sc_hd__a31o_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__nand3b_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a32oi_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__or2_1 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__and4_1 cells:        4
+ABC RESULTS:   sky130_fd_sc_hd__and3_1 cells:       13
+ABC RESULTS:   sky130_fd_sc_hd__xor2_1 cells:        7
+ABC RESULTS:   sky130_fd_sc_hd__a32o_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__or4_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__nand4bb_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__nor4b_1 cells:        4
+ABC RESULTS:   sky130_fd_sc_hd__nor4_1 cells:       11
+ABC RESULTS:   sky130_fd_sc_hd__o21bai_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__o2111ai_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__nand3_1 cells:       10
+ABC RESULTS:   sky130_fd_sc_hd__inv_1 cells:       11
+ABC RESULTS:   sky130_fd_sc_hd__mux2i_1 cells:        9
+ABC RESULTS:   sky130_fd_sc_hd__a21boi_1 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__a41oi_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__and4b_1 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__nor4bb_1 cells:        5
+ABC RESULTS:   sky130_fd_sc_hd__or4b_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__xnor2_1 cells:       12
+ABC RESULTS:   sky130_fd_sc_hd__o21a_1 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__nand2b_1 cells:        7
+ABC RESULTS:   sky130_fd_sc_hd__nor3_1 cells:       32
+ABC RESULTS:   sky130_fd_sc_hd__nand4b_1 cells:        4
+ABC RESULTS:   sky130_fd_sc_hd__and2_1 cells:        8
+ABC RESULTS:   sky130_fd_sc_hd__nor3b_1 cells:        7
+ABC RESULTS:   sky130_fd_sc_hd__a211o_1 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__nand4_1 cells:       24
+ABC RESULTS:   sky130_fd_sc_hd__o31ai_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a31oi_1 cells:       15
+ABC RESULTS:   sky130_fd_sc_hd__a211oi_1 cells:        5
+ABC RESULTS:   sky130_fd_sc_hd__a22oi_1 cells:       27
+ABC RESULTS:   sky130_fd_sc_hd__a22o_1 cells:        4
+ABC RESULTS:   sky130_fd_sc_hd__o21ai_1 cells:       24
+ABC RESULTS:   sky130_fd_sc_hd__nor2b_1 cells:       13
+ABC RESULTS:   sky130_fd_sc_hd__nand2_1 cells:      264
+ABC RESULTS:   sky130_fd_sc_hd__a21oi_1 cells:       76
+ABC RESULTS:   sky130_fd_sc_hd__nor2_1 cells:       95
+ABC RESULTS:   sky130_fd_sc_hd__mux2_1 cells:      114
+ABC RESULTS:   sky130_fd_sc_hd__a21o_1 cells:        5
+ABC RESULTS:        internal signals:      667
+ABC RESULTS:           input signals:      362
+ABC RESULTS:          output signals:      328
+Removing temp directory.
+
+5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \uart_apb_master..
+Removed 0 unused cells and 1408 unused wires.
+<suppressed ~62 debug messages>
+
+6. Printing statistics.
+
+=== uart_apb_master ===
+
+   Number of wires:                883
+   Number of wire bits:           1201
+   Number of public wires:          51
+   Number of public wire bits:     369
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               1162
+     sky130_fd_sc_hd__a211o_1        2
+     sky130_fd_sc_hd__a211oi_1       5
+     sky130_fd_sc_hd__a21boi_1       2
+     sky130_fd_sc_hd__a21o_1         5
+     sky130_fd_sc_hd__a21oi_1       76
+     sky130_fd_sc_hd__a22o_1         4
+     sky130_fd_sc_hd__a22oi_1       27
+     sky130_fd_sc_hd__a31o_1         1
+     sky130_fd_sc_hd__a31oi_1       15
+     sky130_fd_sc_hd__a32o_1         1
+     sky130_fd_sc_hd__a32oi_1        1
+     sky130_fd_sc_hd__a41oi_1        1
+     sky130_fd_sc_hd__and2_1         8
+     sky130_fd_sc_hd__and3_1        13
+     sky130_fd_sc_hd__and4_1         4
+     sky130_fd_sc_hd__and4b_1        2
+     sky130_fd_sc_hd__dfrtp_1      323
+     sky130_fd_sc_hd__dfstp_1        7
+     sky130_fd_sc_hd__inv_1         11
+     sky130_fd_sc_hd__mux2_1       114
+     sky130_fd_sc_hd__mux2i_1        9
+     sky130_fd_sc_hd__nand2_1      264
+     sky130_fd_sc_hd__nand2b_1       7
+     sky130_fd_sc_hd__nand3_1       10
+     sky130_fd_sc_hd__nand3b_1       1
+     sky130_fd_sc_hd__nand4_1       24
+     sky130_fd_sc_hd__nand4b_1       4
+     sky130_fd_sc_hd__nand4bb_1      1
+     sky130_fd_sc_hd__nor2_1        95
+     sky130_fd_sc_hd__nor2b_1       13
+     sky130_fd_sc_hd__nor3_1        32
+     sky130_fd_sc_hd__nor3b_1        7
+     sky130_fd_sc_hd__nor4_1        11
+     sky130_fd_sc_hd__nor4b_1        4
+     sky130_fd_sc_hd__nor4bb_1       5
+     sky130_fd_sc_hd__o2111ai_1      1
+     sky130_fd_sc_hd__o21a_1         3
+     sky130_fd_sc_hd__o21ai_1       24
+     sky130_fd_sc_hd__o21bai_1       1
+     sky130_fd_sc_hd__o31ai_1        1
+     sky130_fd_sc_hd__or2_1          2
+     sky130_fd_sc_hd__or4_1          1
+     sky130_fd_sc_hd__or4b_1         1
+     sky130_fd_sc_hd__xnor2_1       12
+     sky130_fd_sc_hd__xor2_1         7
+
+   Chip area for module '\uart_apb_master': 13180.140800
+
+End of script. Logfile hash: 4aa5c2b49d, CPU: user 1.96s system 0.00s
+Yosys 0.33 (git sha1 2584903a0, ccache clang 14.0.0-1ubuntu1.1 -Os -flto -flto)
+Time spent: 20% 1x dfflibmap (0 sec), 19% 2x stat (0 sec), ...

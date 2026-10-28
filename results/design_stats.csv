@@ -1,0 +1,7 @@
+design,inputs,latches,ands,cuts,p_classes,po_classes,npn_classes,check,seconds
+cpu8,10,82,1019,7044,274,192,63,pass,0.2
+dsp8,22,72,1757,12663,277,205,54,pass,0.4
+arlet6502,13,143,2792,21979,304,206,51,pass,1.1
+uart_apb,37,330,3683,30804,321,203,45,pass,1.6
+risc8,30,696,5669,40694,275,175,46,pass,1.4
+fir10,11,176,8267,77909,223,170,42,pass,3.0
