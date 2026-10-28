@@ -1,7 +1,7 @@
 # Project 1, Option 2: Finding Cells Worth Adding
 
 ## 1. Group
-<Abdelrahman Rashed, 900231248> · <Ziad Khairaldin, student ID> · Option 2 · AI used as a development aid
+Abdelrahman Rashed, 900231248 · Ziad Khairaldin, 900225292 · Option 2 · AI used as a development aid
 
 ## 2. Quick start
 Tools used: Python 3.13 (3.11 or newer), numpy 2.x, Yosys 0.33 (git sha1 2584903a0),
