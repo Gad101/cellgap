@@ -16,7 +16,7 @@ HD_LIB_SRC ?= $(PDK_ROOT)/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__
 REQUIRED := cpu8 dsp8 arlet6502 uart_apb risc8 fir10
 export YOSYS
 
-.PHONY: setup check test all demo clean selftest hd-classes aigs stats table1 test-aigs
+.PHONY: setup check test all demo clean selftest hd-classes aigs stats table1 test-aigs area-model candidates
 
 setup:
 	$(PY) -m pip install --quiet -r requirements.txt || true
@@ -36,7 +36,7 @@ check:
 	  if [ -e build/given/$$f ]; then echo "ok   given/$$f"; else echo "MISSING given/$$f (make setup PACK=...)"; fi; done
 
 test:
-	$(PY) -m unittest -v tests/test_all.py
+	$(PY) -m unittest -v tests/test_all.py tests/test_candidates.py
 
 # regenerate the small test AIGs from our own test designs
 test-aigs:
@@ -65,7 +65,18 @@ stats:
 table1:
 	$(PY) src/table1.py
 
-all: hd-classes selftest aigs stats table1
+# step 6: the area model, fitted to HD's x1 cells (results/area_model.json)
+area-model:
+	$(PY) src/costmodel.py fit
+
+# steps 3-7: classify cuts against HD, cost, estimate and rank the candidates.
+# Needs `make aigs` and `make table1` first (the Table 1 logs give the baseline
+# area per AND node). GROUP is your group tag in the cell names: dd2_<GROUP>__...
+GROUP ?= g0
+candidates: area-model
+	$(PY) src/candidates.py --group $(GROUP)
+
+all: hd-classes selftest aigs stats table1 candidates
 
 IN  ?= tests/designs/csa8.v
 TOP ?= csa8

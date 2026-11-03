@@ -1,0 +1,38 @@
+{
+ "site_um2": 1.2512,
+ "lines": {
+  "one-stage": {
+   "a": 1.0526315789473688,
+   "b": 0.5526315789473686
+  },
+  "multi-stage": {
+   "a": 2.5124785421893563,
+   "b": 0.4606166644658654
+  }
+ },
+ "error": {
+  "one-stage": {
+   "cells": 13,
+   "a": 1.0526,
+   "b": 0.5526,
+   "mean_abs_error_sites": 0.615,
+   "max_abs_error_sites": 1.0,
+   "mean_abs_error_pct": 15.9,
+   "worst_cell": "a21oi_1"
+  },
+  "multi-stage": {
+   "cells": 45,
+   "a": 2.5125,
+   "b": 0.4606,
+   "mean_abs_error_sites": 0.978,
+   "max_abs_error_sites": 3.0,
+   "mean_abs_error_pct": 14.93,
+   "worst_cell": "or4_1"
+  }
+ },
+ "left_out_series_rule": [
+  "nand4_1",
+  "nor4_1"
+ ],
+ "library": "sky130_fd_sc_hd__tt_025C_1v80.lib"
+}

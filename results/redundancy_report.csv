@@ -1,0 +1,532 @@
+class_table,inputs,table3_class,matching_hd_cells,function,kept,est_area_um2,hd_threshold_um2,cuts_cpu8,cuts_dsp8,cuts_arlet6502,cuts_uart_apb,cuts_risc8,cuts_fir10
+0x000F,2,Exists,nor2_1; nor2_2; nor2_4,(!C&!D),no,5.0048,,457,820,955,1286,2244,4090
+0x8888,2,Exists,and2_0; and2_1; and2_2,(A&B),no,7.5072,,169,416,963,734,1719,2399
+0x00AA,2,Exists,and2b_1; and2b_2; and2b_4,(A&!D),no,7.5072,,387,449,867,1039,1628,1602
+0x00EE,3,Exists,o21ba_1; o21ba_2; o21ba_4,(!A&B&!D) | (A&!B&!D) | (A&B&!D),no,8.7584,,259,435,326,384,1053,2878
+0x000A,3,Exists,nor3b_1; nor3b_2; nor3b_4,(A&!C&!D),no,8.7584,,184,280,848,507,1431,1977
+0x8000,4,Exists,and4_1; and4_2; and4_4,(A&B&C&D),no,11.2608,,13,122,869,953,1724,768
+0x8080,3,Exists,and3_1; and3_2; and3_4,(A&B&C),no,8.7584,,50,200,745,842,1274,1195
+0x00AF,3,Exists with an inverter,a21oi_1 (input A1 inverted); a21oi_1 (input A2 inverted); a21oi_2 (input A1 inverted),(!A&!C&!D) | (A&!C&!D) | (A&C&!D),no,8.7584,8.7584,340,321,658,609,1508,711
+0x003F,3,Exists,a21oi_1; a21oi_2; a21oi_4,(!B&!C&!D) | (!B&C&!D) | (B&!C&!D),no,6.256,,123,266,699,365,1334,1055
+0x0008,4,Exists,and4bb_1; and4bb_2; and4bb_4,(A&B&!C&!D),no,11.2608,,161,243,1045,631,1354,376
+0x002A,4,Exists with an inverter,a211oi_1 (input B1 inverted); a211oi_1 (input C1 inverted); a211oi_2 (input B1 inverted),(A&!B&!C&!D) | (A&!B&C&!D) | (A&B&!C&!D),yes,10.0096,11.2608,56,93,653,400,1876,292
+0xA8A8,3,Exists,o21a_1; o21a_2; o21a_4,(A&!B&C) | (A&B&!C) | (A&B&C),no,8.7584,,184,244,266,696,724,1101
+0x007F,4,Exists,a31oi_1; a31oi_2; a31oi_4,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B,no,7.5072,,50,130,739,482,970,553
+0x0080,4,Exists,and4b_1; and4b_2; and4b_4,(A&B&C&!D),no,10.0096,,93,139,822,906,613,271
+0x00AB,4,New,,(!A&!B&!C&!D) | (A&!B&!C&!D) | (A&!B&C&!D) | (A&B&!C&!D) | (A&B&C&!D),yes,10.0096,,175,217,154,126,786,1285
+0x0088,3,Exists,and3b_1; and3b_2; and3b_4,(A&B&!D),no,8.7584,,145,232,549,819,412,428
+0x1EE1,4,New,,(!A&!B&!C&!D) | (!A&!B&C&D) | (!A&B&!C&D) | (!A&B&C&!D) | (A&!B&!C&D) | (A&!B&C&,yes,32.5312,,8,133,18,0,12,2305
+0x001E,4,New,,(!A&!B&C&!D) | (!A&B&!C&!D) | (A&!B&!C&!D) | (A&B&!C&!D),yes,17.5168,,28,142,16,33,27,2155
+0x00AE,4,New,,(!A&B&!C&!D) | (A&!B&!C&!D) | (A&!B&C&!D) | (A&B&!C&!D) | (A&B&C&!D),yes,11.2608,,148,183,262,61,825,913
+0x001F,4,Contained,a221oi_1; a221oi_2; a221oi_4,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (A&!B&!C&!D) | (A&B&!C&!D),yes,7.5072,8.7584,154,181,244,341,762,533
+0x00EF,4,New,,(!A&!B&!C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&C&!D) | (A&B&!,yes,11.2608,,79,102,274,255,1105,300
+0x008A,4,New,,(A&!B&!C&!D) | (A&B&!C&!D) | (A&B&C&!D),yes,11.2608,,114,66,665,249,539,457
+0x8882,4,New,,(A&!B&!C&!D) | (A&B&!C&D) | (A&B&C&!D) | (A&B&C&D),yes,17.5168,,26,135,51,6,30,1825
+0xA9A9,3,New,,(!A&!B&!C) | (A&!B&C) | (A&B&!C) | (A&B&C),yes,15.0144,,40,133,59,62,39,1597
+0x0003,3,Exists,nor3_1; nor3_2; nor3_4,(!B&!C&!D),no,6.256,,63,144,165,181,396,977
+0x88A8,4,New,,(A&!B&C&!D) | (A&B&!C&!D) | (A&B&!C&D) | (A&B&C&!D) | (A&B&C&D),yes,11.2608,,105,127,235,531,678,236
+0x2AAA,4,Exists with an inverter,a31oi_1 (input B1 inverted); a31oi_2 (input B1 inverted); a31oi_4 (input B1 inverted),(A&!B&!C&!D) | (A&!B&!C&D) | (A&!B&C&!D) | (A&!B&C&D) | (A&B&!C&!D) | (A&B&!C&D),no,10.0096,10.0096,39,26,211,213,1244,117
+0x00A8,4,Exists with an inverter,o211a_1 (input B1 inverted); o211a_1 (input C1 inverted); o211a_2 (input B1 inverted),(A&!B&C&!D) | (A&B&!C&!D) | (A&B&C&!D),yes,10.0096,13.7632,119,81,229,506,258,579
+0x0AAA,3,Exists,a21boi_0; a21boi_1; a21boi_2,(A&!C&!D) | (A&!C&D) | (A&C&!D),no,8.7584,,78,51,222,377,727,257
+0xEEE0,4,Exists,o22a_1; o22a_2; o22a_4,(!A&B&!C&D) | (!A&B&C&!D) | (!A&B&C&D) | (A&!B&!C&D) | (A&!B&C&!D) | (A&!B&C&D) ,no,10.0096,,31,89,57,130,280,1112
+0x0002,4,Exists,nor4b_1; nor4b_2; nor4b_4,(A&!B&!C&!D),no,11.2608,,151,138,447,470,322,135
+0x000E,4,New,,(!A&B&!C&!D) | (A&!B&!C&!D) | (A&B&!C&!D),yes,11.2608,,73,97,84,180,417,811
+0x00EA,4,New,,(!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&C&!D) | (A&B&!C&!D) | (A&B&C&!D),yes,10.0096,,60,190,172,74,490,656
+0x0001,4,Exists,nor4_1; nor4_2; nor4_4,(!A&!B&!C&!D),no,11.2608,,76,84,272,160,183,808
+0xA888,4,Contained,a32o_1; a32o_2; a32o_4,(A&!B&C&D) | (A&B&!C&!D) | (A&B&!C&D) | (A&B&C&!D) | (A&B&C&D),no,10.0096,10.0096,98,74,173,459,550,220
+0x00A9,4,New,,(!A&!B&!C&!D) | (A&!B&C&!D) | (A&B&!C&!D) | (A&B&C&!D),yes,17.5168,,32,113,26,19,33,1306
+0x0AA0,3,Contained,mux4_1; mux4_2; mux4_4,(A&!C&D) | (A&C&!D),yes,13.7632,22.5216,15,137,38,12,39,1287
+0x00BF,4,Exists with an inverter,a31oi_1 (input A1 inverted); a31oi_1 (input A2 inverted); a31oi_1 (input A3 inverted),(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (A&!B&!C&!D) | (A&!B&C&!D) | (A&B&,no,10.0096,10.0096,140,187,396,391,306,102
+0x0069,4,New,,(!A&!B&!C&!D) | (!A&B&C&!D) | (A&!B&C&!D) | (A&B&!C&!D),yes,26.2752,,2,86,3,0,3,1326
+0x03CF,3,Exists,mux2i_1; mux2i_2; mux2i_4,(!B&!C&!D) | (!B&!C&D) | (B&!C&!D) | (B&C&!D),no,10.0096,,55,38,123,70,952,172
+0x0099,3,New,,(!A&!B&!D) | (A&B&!D),yes,12.512,,16,96,12,25,13,1238
+0x0FF0,2,Exists,xor2_1; xor2_2; xor2_4,(!C&D) | (C&!D),no,11.2608,,21,117,41,50,52,1083
+0x8880,4,Exists,o211a_1; o211a_2; o211a_4,(A&B&!C&D) | (A&B&C&!D) | (A&B&C&D),no,10.0096,,90,140,233,341,169,359
+0x003C,3,New,,(!B&C&!D) | (B&!C&!D),yes,12.512,,17,102,18,10,27,1077
+0x9990,4,New,,(!A&!B&!C&D) | (!A&!B&C&!D) | (!A&!B&C&D) | (A&B&!C&D) | (A&B&C&!D) | (A&B&C&D),yes,17.5168,,8,65,5,6,8,1142
+0x8228,4,New,,(A&!B&!C&D) | (A&!B&C&!D) | (A&B&!C&!D) | (A&B&C&D),yes,26.2752,,0,85,5,0,0,1136
+0x02A8,4,New,,(A&!B&!C&D) | (A&!B&C&!D) | (A&B&!C&!D) | (A&B&C&!D),yes,17.5168,,28,122,39,31,22,960
+0x008F,4,New,,(!A&!B&!C&!D) | (!A&B&!C&!D) | (A&!B&!C&!D) | (A&B&!C&!D) | (A&B&C&!D),yes,11.2608,,69,58,156,190,700,1
+0x0096,4,New,,(!A&!B&C&!D) | (!A&B&!C&!D) | (A&!B&!C&!D) | (A&B&C&!D),yes,26.2752,,5,68,6,0,4,1086
+0x6996,4,New,,(!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&D) | (A&!B&!C&!D) | (A&!B&C,yes,48.7968,,0,49,1,0,0,1058
+0x0006,4,New,,(!A&B&!C&!D) | (A&!B&!C&!D),yes,16.2656,,20,74,10,2,4,987
+0x00FE,4,Exists with an inverter,o31a_1 (input B1 inverted); o31a_2 (input B1 inverted); o31a_4 (input B1 inverted),(!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&C&!D) | (A&B&!C,yes,10.0096,12.512,44,107,77,63,325,435
+0x88A0,4,Contained,mux4_1; mux4_2; mux4_4,(A&!B&C&!D) | (A&B&!C&D) | (A&B&C&!D) | (A&B&C&D),yes,12.512,22.5216,82,26,85,363,466,0
+0x9996,4,New,,(!A&!B&!C&D) | (!A&!B&C&!D) | (!A&!B&C&D) | (!A&B&!C&!D) | (A&!B&!C&!D) | (A&B&!,yes,32.5312,,17,79,7,0,12,907
+0x8282,3,Contained,mux4_1; mux4_2; mux4_4,(A&!B&!C) | (A&B&C),yes,13.7632,22.5216,14,110,27,30,7,831
+0x0007,4,Exists,a211oi_1; a211oi_2; a211oi_4,(!A&!B&!C&!D) | (!A&B&!C&!D) | (A&!B&!C&!D),no,7.5072,,17,70,156,169,350,256
+0x9696,3,Exists,xor3_1; xor3_2; xor3_4,(!A&!B&C) | (!A&B&!C) | (A&!B&!C) | (A&B&C),no,23.7728,,2,66,9,0,3,877
+0x2882,4,New,,(A&!B&!C&!D) | (A&!B&C&D) | (A&B&!C&D) | (A&B&C&!D),yes,26.2752,,0,66,9,0,0,833
+0x006A,4,New,,(!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&C&!D) | (A&B&!C&!D),yes,17.5168,,9,63,1,42,16,766
+0x0EE0,4,New,,(!A&B&!C&D) | (!A&B&C&!D) | (A&!B&!C&D) | (A&!B&C&!D) | (A&B&!C&D) | (A&B&C&!D),yes,17.5168,,7,61,8,6,10,798
+0x2888,4,New,,(A&!B&C&D) | (A&B&!C&!D) | (A&B&!C&D) | (A&B&C&!D),yes,17.5168,,4,64,18,65,15,712
+0x0356,4,New,,(!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&,yes,25.024,,21,47,22,12,20,736
+0x6999,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&C&D) | (A&!B&C&D) | (A&B&!C&,yes,32.5312,,0,66,0,0,0,788
+0x888E,4,New,,(!A&B&!C&!D) | (A&!B&!C&!D) | (A&B&!C&!D) | (A&B&!C&D) | (A&B&C&!D) | (A&B&C&D),yes,12.512,,0,39,0,0,0,803
+0x00AC,4,Contained,mux4_1; mux4_2; mux4_4,(!A&B&!C&!D) | (A&!B&C&!D) | (A&B&!C&!D) | (A&B&C&!D),yes,11.2608,22.5216,54,50,74,9,446,172
+0x000B,4,Exists with an inverter,a211oi_1 (input A1 inverted); a211oi_1 (input A2 inverted); a211oi_2 (input A1 inverted),(!A&!B&!C&!D) | (A&!B&!C&!D) | (A&B&!C&!D),yes,10.0096,11.2608,48,102,133,59,320,119
+0x078F,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&B&!C&!D) | (!A&B&!C&D) | (A&!B&!C&!D) | (A&!B,yes,17.5168,,0,8,27,86,638,0
+0x888A,4,New,,(A&!B&!C&!D) | (A&B&!C&!D) | (A&B&!C&D) | (A&B&C&!D) | (A&B&C&D),yes,11.2608,,134,55,87,93,225,142
+0x802A,4,New,,(A&!B&!C&!D) | (A&!B&C&!D) | (A&B&!C&!D) | (A&B&C&D),yes,17.5168,,2,70,1,30,2,621
+0x9669,4,New,,(!A&!B&!C&!D) | (!A&!B&C&D) | (!A&B&!C&D) | (!A&B&C&!D) | (A&!B&!C&D) | (A&!B&C&,yes,48.7968,,0,46,0,0,0,673
+0x88AA,3,Exists with an inverter,a21boi_0 (input A1 inverted); a21boi_0 (input A2 inverted); a21boi_1 (input A1 inverted),(A&!B&!D) | (A&B&!D) | (A&B&D),yes,10.0096,11.2608,40,56,211,251,53,68
+0xA8FD,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&C&!D) | (A&!B&,yes,11.2608,,7,0,35,14,623,0
+0x3CC3,3,Exists,xnor3_1; xnor3_2; xnor3_4,(!B&!C&!D) | (!B&C&D) | (B&!C&D) | (B&C&!D),no,23.7728,,5,52,5,0,4,603
+0x3CCC,3,New,,(!B&C&D) | (B&!C&!D) | (B&!C&D) | (B&C&!D),yes,15.0144,,4,53,15,43,22,524
+0x0888,4,New,,(A&B&!C&!D) | (A&B&!C&D) | (A&B&C&!D),yes,11.2608,,2,24,106,354,95,80
+0x028A,4,New,,(A&!B&!C&!D) | (A&!B&!C&D) | (A&B&!C&!D) | (A&B&C&!D),yes,15.0144,,62,26,94,28,440,0
+0x99A9,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&D) | (A&!B&C&!D) | (A&B&!C&!D) | (A&B&!C,yes,20.0192,,38,34,69,0,56,450
+0x03FC,3,New,,(!B&!C&D) | (!B&C&!D) | (B&!C&!D) | (B&C&!D),yes,15.0144,,22,59,14,12,21,512
+0x07FF,4,Contained,a32oi_1; a32oi_2; a32oi_4,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&!C&D) | (!A&B,yes,7.5072,8.7584,0,3,74,408,91,26
+0x0009,4,New,,(!A&!B&!C&!D) | (A&B&!C&!D),yes,16.2656,,10,43,6,4,6,519
+0x02AA,4,New,,(A&!B&!C&!D) | (A&!B&!C&D) | (A&!B&C&!D) | (A&B&!C&!D) | (A&B&C&!D),yes,10.0096,,9,21,141,269,90,53
+0x8AAA,4,New,,(A&!B&!C&!D) | (A&!B&!C&D) | (A&!B&C&!D) | (A&B&!C&!D) | (A&B&!C&D) | (A&B&C&!D),yes,11.2608,,38,55,200,122,119,35
+0x0880,4,New,,(A&B&!C&D) | (A&B&C&!D),yes,16.2656,,5,68,7,111,16,357
+0x8088,4,Exists with an inverter,o211a_1 (input A1 inverted); o211a_1 (input A2 inverted); o211a_2 (input A1 inverted),(A&B&!C&!D) | (A&B&C&!D) | (A&B&C&D),yes,11.2608,13.7632,6,49,219,231,29,3
+0x9999,2,Exists,xnor2_1; xnor2_2; xnor2_4,(!A&!B) | (A&B),no,11.2608,,16,47,14,9,14,413
+0x0BFF,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B,yes,10.0096,,0,0,7,492,8,0
+0x0017,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (A&!B&!C&!D),yes,10.0096,,0,32,2,0,2,465
+0x001B,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (A&!B&!C&!D) | (A&B&!C&!D),yes,13.7632,,72,14,33,3,374,0
+0x1BFF,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&!B&C&D) | (!A&B&!C&!D) | (!A&B,yes,13.7632,,0,0,67,407,11,0
+0xA8AA,4,Exists with an inverter,o31a_1 (input A1 inverted); o31a_1 (input A2 inverted); o31a_1 (input A3 inverted),(A&!B&!C&!D) | (A&!B&C&!D) | (A&!B&C&D) | (A&B&!C&!D) | (A&B&!C&D) | (A&B&C&!D) ,yes,11.2608,12.512,91,21,89,194,61,26
+0xAACC,3,Exists,mux2_1; mux2_2; mux2_4,(!A&B&!D) | (A&!B&D) | (A&B&!D) | (A&B&D),no,11.2608,,86,40,44,16,292,0
+0x002F,4,New,,(!A&!B&!C&!D) | (!A&B&!C&!D) | (A&!B&!C&!D) | (A&!B&C&!D) | (A&B&!C&!D),yes,10.0096,,28,53,147,213,32,5
+0x0777,4,Exists,a22oi_1; a22oi_2; a22oi_4,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&!C&D) | (!A&B,no,7.5072,,11,29,121,25,81,210
+0x077F,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&!C&D) | (!A&B,yes,10.0096,,0,49,5,0,0,419
+0x88BB,3,Exists with an inverter,mux2_1 (input A0 inverted); mux2_2 (input A0 inverted); mux2_4 (input A0 inverted),(!A&!B&!D) | (A&!B&!D) | (A&B&!D) | (A&B&D),yes,11.2608,13.7632,76,24,120,192,56,0
+0x03FF,3,Exists,o21ai_0; o21ai_1; o21ai_2,(!B&!C&!D) | (!B&!C&D) | (!B&C&!D) | (B&!C&!D) | (B&C&!D),no,6.256,,1,5,71,308,67,0
+0x999A,4,New,,(!A&!B&!C&D) | (!A&!B&C&!D) | (!A&!B&C&D) | (A&!B&!C&!D) | (A&B&!C&!D) | (A&B&!C,yes,18.768,,29,33,8,6,6,361
+0x03AA,4,New,,(!A&!B&!C&D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&!B&C&!D) | (A&B&!C&!D) | (A&B&C&!,yes,13.7632,,63,40,29,15,280,0
+0x8008,4,New,,(A&B&!C&!D) | (A&B&C&D),yes,16.2656,,3,65,8,60,1,275
+0x888B,4,New,,(!A&!B&!C&!D) | (A&!B&!C&!D) | (A&B&!C&!D) | (A&B&!C&D) | (A&B&C&!D) | (A&B&C&D),yes,13.7632,,56,26,24,15,280,0
+0x0257,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B,yes,12.512,,71,8,95,188,32,0
+0xA880,4,New,,(A&!B&C&D) | (A&B&!C&D) | (A&B&C&!D) | (A&B&C&D),yes,11.2608,,0,26,1,0,1,359
+0x0FFF,2,Exists,nand2_1; nand2_2; nand2_4,(!C&!D) | (!C&D) | (C&!D),no,5.0048,,1,0,1,376,5,0
+0x0990,4,New,,(!A&!B&!C&D) | (!A&!B&C&!D) | (A&B&!C&D) | (A&B&C&!D),yes,28.7776,,1,19,2,0,2,343
+0x8787,3,New,,(!A&!B&!C) | (!A&B&!C) | (A&!B&!C) | (A&B&C),yes,15.0144,,13,22,3,63,9,255
+0xA999,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (A&!B&C&D) | (A&B&!C&!D) | (A&B&!C,yes,17.5168,,5,37,23,0,10,289
+0x0028,4,New,,(A&!B&C&!D) | (A&B&!C&!D),yes,15.0144,,21,45,11,46,21,213
+0x8EE8,4,New,,(!A&B&!C&D) | (!A&B&C&!D) | (A&!B&!C&D) | (A&!B&C&!D) | (A&B&!C&!D) | (A&B&!C&D),yes,22.5216,,0,14,0,0,0,322
+0xAAAF,3,Exists,o21bai_1; o21bai_2; o21bai_4,(!A&!C&!D) | (A&!C&!D) | (A&!C&D) | (A&C&!D) | (A&C&D),no,8.7584,,7,40,14,6,91,176
+0xAAFF,2,Exists,lpflow_inputiso1n_1; nand2b_1; nand2b_2,(!A&!D) | (A&!D) | (A&D),no,7.5072,,0,32,11,270,6,0
+0x01EF,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B,yes,17.5168,,1,1,28,5,280,0
+0x00BE,4,New,,(!A&!B&C&!D) | (!A&B&!C&!D) | (A&!B&!C&!D) | (A&!B&C&!D) | (A&B&!C&!D) | (A&B&C&,yes,15.0144,,4,15,9,5,3,276
+0x08A8,4,New,,(A&!B&C&!D) | (A&B&!C&!D) | (A&B&!C&D) | (A&B&C&!D),yes,13.7632,,6,16,55,199,34,0
+0xEEEE,2,Exists,lpflow_inputiso1p_1; or2_0; or2_1,(!A&B) | (A&!B) | (A&B),no,7.5072,,5,40,2,0,87,176
+0xAABF,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&!B,yes,10.0096,,3,33,13,8,77,176
+0xAAEF,4,New,,(!A&!B&!C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&!B&,yes,11.2608,,6,16,8,3,104,172
+0x17E8,4,New,,(!A&!B&!C&D) | (!A&!B&C&D) | (!A&B&!C&D) | (!A&B&C&!D) | (A&!B&!C&D) | (A&!B&C&!,yes,22.5216,,0,15,0,0,0,294
+0x808A,4,New,,(A&!B&!C&!D) | (A&B&!C&!D) | (A&B&C&!D) | (A&B&C&D),yes,13.7632,,67,10,110,34,86,0
+0x0087,4,New,,(!A&!B&!C&!D) | (!A&B&!C&!D) | (A&!B&!C&!D) | (A&B&C&!D),yes,17.5168,,4,18,2,26,0,252
+0x02AB,4,New,,(!A&!B&!C&!D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&!B&C&!D) | (A&B&!C&!D) | (A&B&C&,yes,11.2608,,7,17,0,0,4,261
+0x8778,4,New,,(!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&D) | (!A&B&C&!D) | (A&!B&!C&D) | (A&!B&C&,yes,32.5312,,0,26,3,0,0,255
+0xE8E8,3,Exists,maj3_1; maj3_2; maj3_4,(!A&B&C) | (A&!B&C) | (A&B&!C) | (A&B&C),no,11.2608,,0,14,0,0,0,269
+0x08AA,4,New,,(A&!B&!C&!D) | (A&!B&C&!D) | (A&B&!C&!D) | (A&B&!C&D) | (A&B&C&!D),yes,11.2608,,5,28,28,194,8,10
+0x1BBB,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&!B&C&D) | (A&!B&!C&!D) | (A&!B,yes,12.512,,0,1,56,203,13,0
+0xAAAC,4,Contained,mux4_1; mux4_2; mux4_4,(!A&B&!C&!D) | (A&!B&!C&D) | (A&!B&C&!D) | (A&!B&C&D) | (A&B&!C&!D) | (A&B&!C&D),yes,16.2656,22.5216,3,0,20,12,237,0
+0x0660,4,New,,(!A&B&!C&D) | (!A&B&C&!D) | (A&!B&!C&D) | (A&!B&C&!D),yes,28.7776,,0,20,2,0,0,249
+0x80BF,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (A&!B&!C&!D) | (A&!B&C&!D) | (A&B&,yes,16.2656,,64,16,54,110,17,0
+0xABEF,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B,yes,15.0144,,1,2,4,0,77,172
+0x0EEE,4,Exists,a2bb2oi_1; a2bb2oi_2; a2bb2oi_4,(!A&B&!C&!D) | (!A&B&!C&D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&!B&C&,no,11.2608,,17,25,54,51,13,92
+0x80AA,4,New,,(A&!B&!C&!D) | (A&!B&C&!D) | (A&B&!C&!D) | (A&B&C&!D) | (A&B&C&D),yes,11.2608,,0,4,168,68,7,5
+0x0666,4,New,,(!A&B&!C&!D) | (!A&B&!C&D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&!B&C&,yes,18.768,,0,17,5,2,13,214
+0x009F,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (A&!B&!C&!D) | (A&B&!C&!D) | (A&B&,yes,16.2656,,5,26,20,3,26,169
+0xAAA8,4,Exists,o31a_1; o31a_2; o31a_4,(A&!B&!C&D) | (A&!B&C&!D) | (A&!B&C&D) | (A&B&!C&!D) | (A&B&!C&D) | (A&B&C&!D) |,no,10.0096,,28,19,81,77,12,28
+0x0082,4,New,,(A&!B&!C&!D) | (A&B&C&!D),yes,15.0144,,25,18,8,50,7,134
+0x6AAA,4,New,,(!A&B&C&D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&!B&C&!D) | (A&!B&C&D) | (A&B&!C&!D),yes,17.5168,,4,9,19,65,26,116
+0x6AC0,4,New,,(!A&B&C&!D) | (!A&B&C&D) | (A&!B&!C&D) | (A&!B&C&D) | (A&B&!C&D) | (A&B&C&!D),yes,23.7728,,0,17,0,11,0,210
+0x006F,4,New,,(!A&!B&!C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&C&!D) | (A&B&!,yes,16.2656,,3,37,18,0,0,179
+0x00E8,4,New,,(!A&B&C&!D) | (A&!B&C&!D) | (A&B&!C&!D) | (A&B&C&!D),yes,11.2608,,0,22,3,0,0,207
+0x022A,4,New,,(A&!B&!C&!D) | (A&!B&!C&D) | (A&!B&C&!D) | (A&B&!C&!D),yes,11.2608,,0,16,3,0,0,210
+0xA8FC,4,Exists with an inverter,a2bb2oi_1 (input B1 inverted); a2bb2oi_1 (input B2 inverted); a2bb2oi_2 (input B1 inverted),(!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&C&!D) | (A&!B&C&D) | (A&B&!C&!,yes,11.2608,12.512,13,46,43,42,46,31
+0x1EEE,4,New,,(!A&!B&C&D) | (!A&B&!C&!D) | (!A&B&!C&D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&!C,yes,23.7728,,5,16,2,7,2,189
+0x8241,4,New,,(!A&!B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&D) | (A&B&C&D),yes,28.7776,,1,9,0,0,1,210
+0x8BFF,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B,yes,12.512,,0,0,0,205,0,0
+0x002B,4,New,,(!A&!B&!C&!D) | (A&!B&!C&!D) | (A&!B&C&!D) | (A&B&!C&!D),yes,11.2608,,5,12,1,0,4,179
+0x08FB,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&C&!D) | (A&B&!,yes,16.2656,,11,0,49,122,14,0
+0x00EB,4,New,,(!A&!B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&C&!D) | (A&B&!C&!D) | (A&B&C&,yes,15.0144,,11,11,7,4,13,150
+0x807F,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B,yes,17.5168,,7,4,2,51,7,116
+0x0BBB,4,Exists with an inverter,a22oi_1 (input A1 inverted); a22oi_1 (input A2 inverted); a22oi_1 (input B1 inverted),(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&!B,yes,10.0096,11.2608,10,28,69,36,41,2
+0x033F,3,Exists with an inverter,maj3_1 (output inverted); maj3_2 (output inverted); maj3_4 (output inverted),(!B&!C&!D) | (!B&!C&D) | (!B&C&!D) | (B&!C&!D),yes,8.7584,13.7632,0,23,5,0,2,151
+0xEEE1,4,New,,(!A&!B&!C&!D) | (!A&B&!C&D) | (!A&B&C&!D) | (!A&B&C&D) | (A&!B&!C&D) | (A&!B&C&!,yes,23.7728,,8,15,3,3,8,134
+0x088A,4,New,,(A&!B&!C&!D) | (A&B&!C&!D) | (A&B&!C&D) | (A&B&C&!D),yes,12.512,,2,25,4,0,1,123
+0xA995,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (A&!B&C&D) | (A&B&!,yes,22.5216,,0,15,3,0,0,136
+0x80A8,4,New,,(A&!B&C&!D) | (A&B&!C&!D) | (A&B&C&!D) | (A&B&C&D),yes,12.512,,3,10,6,0,4,129
+0x88EE,3,Exists with an inverter,maj3_1 (input A inverted); maj3_1 (input B inverted); maj3_1 (input C inverted),(!A&B&!D) | (A&!B&!D) | (A&B&!D) | (A&B&D),yes,11.2608,13.7632,5,9,0,0,3,131
+0x0AFA,3,Exists with an inverter,mux2_1 (input A1 inverted); mux2_2 (input A1 inverted); mux2_4 (input A1 inverted),(!A&C&!D) | (A&!C&!D) | (A&!C&D) | (A&C&!D),yes,11.2608,13.7632,15,44,37,32,13,4
+0x8887,4,New,,(!A&!B&!C&!D) | (!A&B&!C&!D) | (A&!B&!C&!D) | (A&B&!C&D) | (A&B&C&!D) | (A&B&C&D,yes,23.7728,,1,17,13,19,1,92
+0x008E,4,New,,(!A&B&!C&!D) | (A&!B&!C&!D) | (A&B&!C&!D) | (A&B&C&!D),yes,12.512,,3,24,4,0,2,109
+0x1FFF,4,Exists,o211ai_1; o211ai_2; o211ai_4,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&!B&C&D) | (!A&B&!C&!D) | (!A&B,no,7.5072,,0,1,60,44,35,0
+0xE88E,4,New,,(!A&B&!C&!D) | (!A&B&C&D) | (A&!B&!C&!D) | (A&!B&C&D) | (A&B&!C&!D) | (A&B&!C&D),yes,22.5216,,0,12,0,0,0,128
+0x002E,4,New,,(!A&B&!C&!D) | (A&!B&!C&!D) | (A&!B&C&!D) | (A&B&!C&!D),yes,12.512,,7,12,43,5,67,0
+0x2BD4,4,New,,(!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&D) | (A&!B&C,yes,25.024,,3,7,1,0,3,117
+0x0BF4,4,New,,(!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&D) | (A&!B&C,yes,20.0192,,17,26,8,0,26,52
+0x08A2,4,New,,(A&!B&!C&!D) | (A&!B&C&!D) | (A&B&!C&D) | (A&B&C&!D),yes,18.768,,0,18,18,15,2,69
+0x008B,4,New,,(!A&!B&!C&!D) | (A&!B&!C&!D) | (A&B&!C&!D) | (A&B&C&!D),yes,12.512,,7,50,28,5,27,4
+0x9699,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&!B&C&D) | (!A&B&!C&D) | (A&!B&!C&D) | (A&B&!C,yes,35.0336,,3,7,3,0,3,100
+0x8ACF,4,New,,(!A&!B&!C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&B&!,yes,11.2608,,6,34,29,20,21,0
+0xABFF,4,Exists with an inverter,o211ai_1 (input B1 inverted); o211ai_1 (input C1 inverted); o211ai_2 (input B1 inverted),(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B,yes,10.0096,11.2608,2,3,24,22,59,0
+0x87E1,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&B&!C&D) | (!A&B&C&!D) | (A&!B&!C&D) | (A&!B&C,yes,25.024,,1,20,6,0,1,75
+0x82EB,4,New,,(!A&!B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&!B&C&!D) | (A&B&!C,yes,25.024,,0,4,0,0,0,91
+0x07F8,4,New,,(!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&D) | (!A&B&C&!D) | (A&!B&!C&D) | (A&!B&C&,yes,17.5168,,7,7,9,0,5,64
+0x0BB0,4,New,,(!A&!B&!C&D) | (!A&!B&C&!D) | (A&!B&!C&D) | (A&!B&C&!D) | (A&B&!C&D) | (A&B&C&!D,yes,20.0192,,7,24,2,0,3,56
+0x01AB,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (A&!B&!C&!D) | (A&!B&C&!D) | (A&B&!C&!D) | (A&B&C,yes,12.512,,10,34,12,28,2,4
+0x02DF,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B,yes,17.5168,,10,0,1,64,14,0
+0x009A,4,New,,(!A&!B&C&!D) | (A&!B&!C&!D) | (A&B&!C&!D) | (A&B&C&!D),yes,18.768,,6,4,5,0,6,67
+0x002D,4,New,,(!A&!B&!C&!D) | (!A&B&!C&!D) | (A&!B&C&!D) | (A&B&!C&!D),yes,18.768,,3,7,0,12,3,63
+0x28BE,4,New,,(!A&!B&C&!D) | (!A&B&!C&!D) | (A&!B&!C&!D) | (A&!B&C&!D) | (A&!B&C&D) | (A&B&!C&,yes,25.024,,0,6,0,0,0,82
+0x9FFF,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&!B&C&D) | (!A&B&!C&!D) | (!A&B,yes,16.2656,,0,0,14,65,8,0
+0x99AA,3,New,,(!A&!B&D) | (A&!B&!D) | (A&B&!D) | (A&B&D),yes,16.2656,,2,16,2,23,10,33
+0x07F7,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&!C&D) | (!A&B,yes,12.512,,0,0,33,48,5,0
+0x0AAF,3,Contained,mux4_1; mux4_2; mux4_4,(!A&!C&!D) | (A&!C&!D) | (A&!C&D) | (A&C&!D),yes,11.2608,22.5216,2,21,5,0,2,55
+0x0999,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (A&B&!C&!D) | (A&B&!C&D) | (A&B&C&,yes,18.768,,0,9,5,16,2,52
+0x2DD2,4,New,,(!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&C,yes,35.0336,,0,14,2,0,1,66
+0xFEFF,4,Exists,or4b_1; or4b_2; or4b_4,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&!B&C&D) | (!A&B&!C&!D) | (!A&B&!C&D) | (!A&B&,no,10.0096,,0,0,0,71,12,0
+0xAACA,4,Contained,mux4_1; mux4_2; mux4_4,(!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&!B&C&D) | (A&B&!C&!D) | (A&B&!C&D),yes,16.2656,22.5216,10,0,15,8,49,0
+0x0AF5,3,New,,(!A&!C&!D) | (!A&C&!D) | (A&!C&D) | (A&C&!D),yes,16.2656,,6,5,5,4,7,55
+0x011F,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (A&!B&!C&!D) | (A&B,yes,10.0096,,2,13,4,0,1,55
+0xA9FC,4,New,,(!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&C&!D) | (A&!B&C,yes,23.7728,,3,5,2,4,6,54
+0xEEE8,4,New,,(!A&B&!C&D) | (!A&B&C&!D) | (!A&B&C&D) | (A&!B&!C&D) | (A&!B&C&!D) | (A&!B&C&D) ,yes,11.2608,,4,5,0,0,3,62
+0x0EF1,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&B&!C&D) | (!A&B&C&!D) | (A&!B&!C&D) | (A&!B&C,yes,18.768,,10,9,3,6,3,42
+0x8777,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&!C&D) | (!A&B,yes,25.024,,0,3,0,42,0,28
+0x8288,4,New,,(A&!B&!C&D) | (A&B&!C&!D) | (A&B&C&!D) | (A&B&C&D),yes,18.768,,4,5,0,6,8,49
+0x03A9,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (A&!B&!C&D) | (A&!B&C&!D) | (A&B&!C&!D) | (A&B&C&,yes,25.024,,1,13,2,23,2,31
+0x82C3,4,New,,(!A&!B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&B&C&!D) | (A&B&C&D,yes,20.0192,,8,22,2,0,3,34
+0x9AAA,4,New,,(!A&!B&C&D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&!B&C&!D) | (A&B&!C&!D) | (A&B&!C&D,yes,18.768,,1,3,0,31,10,23
+0x2AEA,4,New,,(!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&!B&C&!D) | (A&!B&C&D) | (A&B&!C&!D,yes,17.5168,,9,10,19,29,1,0
+0xEFFF,4,Exists,nand4bb_1; nand4bb_2; nand4bb_4,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&!C&D) | (!A&B,no,11.2608,,2,0,0,50,15,0
+0xA8FE,4,New,,(!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&C&!D) | (A&!B&C,yes,12.512,,1,12,10,0,3,40
+0x1EF0,4,New,,(!A&!B&C&!D) | (!A&!B&C&D) | (!A&B&!C&D) | (!A&B&C&!D) | (A&!B&!C&D) | (A&!B&C&!,yes,17.5168,,1,3,3,23,2,32
+0x9993,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&!B&C&D) | (A&!B&!C&!D) | (A&B&,yes,17.5168,,3,3,1,4,2,51
+0x08F7,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B,yes,18.768,,7,3,4,13,8,29
+0x82AA,4,New,,(A&!B&!C&!D) | (A&!B&!C&D) | (A&!B&C&!D) | (A&B&!C&!D) | (A&B&C&!D) | (A&B&C&D),yes,17.5168,,0,5,24,0,1,30
+0xA9AA,4,New,,(!A&!B&!C&D) | (A&!B&!C&!D) | (A&!B&C&!D) | (A&!B&C&D) | (A&B&!C&!D) | (A&B&!C&D,yes,18.768,,4,8,9,12,1,24
+0x2ABF,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&!B,yes,11.2608,,0,14,0,0,0,41
+0x8ABA,4,New,,(!A&!B&C&!D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&!B&C&!D) | (A&B&!C&!D) | (A&B&!C&,yes,17.5168,,3,24,6,10,10,0
+0xEBFF,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (!A&B,yes,15.0144,,0,0,15,33,3,0
+0xACCC,4,Contained,mux4_1; mux4_2; mux4_4,(!A&B&!C&!D) | (!A&B&!C&D) | (!A&B&C&!D) | (A&!B&C&D) | (A&B&!C&!D) | (A&B&!C&D),yes,16.2656,22.5216,7,14,8,18,3,0
+0xAAFE,4,New,,(!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&!B&C,yes,11.2608,,2,32,2,6,3,4
+0x02FD,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&D) | (A&!B&,yes,18.768,,12,4,7,2,4,19
+0x2DE1,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&B&!C&D) | (!A&B&C&!D) | (A&!B&C&!D) | (A&!B&C,yes,23.7728,,1,0,23,0,23,0
+0xAFFF,3,Exists,nand3b_1; nand3b_2; nand3b_4,(!A&!C&!D) | (!A&!C&D) | (!A&C&!D) | (A&!C&!D) | (A&!C&D) | (A&C&!D) | (A&C&D),no,8.7584,,0,0,1,43,3,0
+0xA88A,4,New,,(A&!B&!C&!D) | (A&!B&C&D) | (A&B&!C&!D) | (A&B&!C&D) | (A&B&C&!D) | (A&B&C&D),yes,16.2656,,3,7,1,0,1,32
+0xA8AB,4,New,,(!A&!B&!C&!D) | (A&!B&!C&!D) | (A&!B&C&!D) | (A&!B&C&D) | (A&B&!C&!D) | (A&B&!C&,yes,17.5168,,6,8,0,28,2,0
+0x099F,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (A&!B&!C&!D) | (A&B,yes,25.024,,0,3,0,0,0,41
+0x87FF,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&!C&D) | (!A&B,yes,17.5168,,0,3,0,32,0,7
+0x02CE,4,New,,(!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&B&!C&!D) | (A&B&C&!,yes,12.512,,2,10,13,5,10,0
+0x0EFE,4,New,,(!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&!C&D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&!,yes,11.2608,,6,0,8,2,12,12
+0x8BBB,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&!B,yes,13.7632,,1,0,7,24,8,0
+0x01FE,4,New,,(!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&,yes,17.5168,,4,2,1,3,4,25
+0x1BE4,4,New,,(!A&!B&!C&D) | (!A&!B&C&D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&D) | (A&!B&C&,yes,23.7728,,27,0,8,0,3,0
+0xAEFE,4,New,,(!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&!C&D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&!,yes,13.7632,,0,32,1,1,0,4
+0x8EEE,4,New,,(!A&B&!C&!D) | (!A&B&!C&D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&!B&C&,yes,12.512,,0,2,0,0,0,36
+0x02FF,4,Exists with an inverter,o31ai_1 (input A1 inverted); o31ai_1 (input A2 inverted); o31ai_1 (input A3 inverted),(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B,yes,10.0096,11.2608,0,0,28,10,0,0
+0xE8EE,4,New,,(!A&B&!C&!D) | (!A&B&C&!D) | (!A&B&C&D) | (A&!B&!C&!D) | (A&!B&C&!D) | (A&!B&C&D,yes,12.512,,1,2,0,0,0,33
+0x02FE,4,New,,(!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&!B&C,yes,16.2656,,2,8,6,3,17,0
+0x0EEF,4,New,,(!A&!B&!C&!D) | (!A&B&!C&!D) | (!A&B&!C&D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&,yes,12.512,,0,7,6,0,4,18
+0x6FFF,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&!C&D) | (!A&B,yes,16.2656,,0,0,1,34,0,0
+0x8AEF,4,New,,(!A&!B&!C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&!B&,yes,12.512,,3,3,0,0,1,27
+0x06F9,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&B&!C&D) | (!A&B&C&!D) | (A&!B&!C&D) | (A&!B&C,yes,28.7776,,2,0,0,0,0,32
+0x96AA,4,New,,(!A&!B&C&D) | (!A&B&!C&D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&!B&C&!D) | (A&B&!C&!,yes,28.7776,,0,2,0,0,0,32
+0x2DFF,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&!C&D) | (!A&B,yes,18.768,,0,0,28,6,0,0
+0x88B8,4,Contained,mux4_1; mux4_2; mux4_4,(!A&!B&C&!D) | (A&!B&C&!D) | (A&B&!C&!D) | (A&B&!C&D) | (A&B&C&!D) | (A&B&C&D),yes,13.7632,22.5216,2,14,6,5,6,0
+0x2DDD,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&!C&D) | (!A&B,yes,25.024,,2,0,1,29,0,1
+0x28D7,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B,yes,28.7776,,0,3,0,0,0,30
+0xAAFC,4,Contained,mux4_1; mux4_2; mux4_4,(!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&D) | (A&!B&C&!D) | (A&!B&C&,yes,12.512,22.5216,4,8,8,3,9,0
+0xBFFF,4,Exists,nand4b_1; nand4b_2; nand4b_4,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&!B&C&D) | (!A&B&!C&!D) | (!A&B,no,11.2608,,4,0,1,21,6,0
+0xACFC,4,Contained,mux4_1; mux4_2; mux4_4,(!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&!C&D) | (!A&B&C&!D) | (A&!B&C&!D) | (A&!B&C&,yes,13.7632,22.5216,4,2,0,25,0,0
+0xEAEF,4,New,,(!A&!B&!C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (!A&B&C&D) | (A&!B&!C&!D) | (A&!B&!,yes,13.7632,,4,8,8,0,11,0
+0x8ADF,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B,yes,12.512,,1,0,18,12,0,0
+0x88FF,3,Exists,a21bo_1; a21bo_2; a21bo_4,(!A&!B&!D) | (!A&B&!D) | (A&!B&!D) | (A&B&!D) | (A&B&D),no,8.7584,,0,0,21,9,1,0
+0x2AFF,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B,yes,10.0096,,0,0,10,20,1,0
+0xAACF,4,Contained,mux4_1; mux4_2; mux4_4,(!A&!B&!C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&!B&,yes,13.7632,22.5216,3,0,17,1,9,0
+0x9AFF,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&!B&C&D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&,yes,18.768,,2,0,28,0,0,0
+0xEEE2,4,Contained,mux4_1; mux4_2; mux4_4,(!A&B&!C&D) | (!A&B&C&!D) | (!A&B&C&D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&!B&C&!D,yes,12.512,22.5216,3,1,5,7,13,0
+0x8AFF,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B,yes,11.2608,,1,0,0,28,0,0
+0x2FFF,4,Exists with an inverter,o211ai_1 (input A1 inverted); o211ai_1 (input A2 inverted); o211ai_2 (input A1 inverted),(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&!C&D) | (!A&B,yes,10.0096,11.2608,0,0,4,23,2,0
+0x01FF,4,Exists,o31ai_1; o31ai_2; o31ai_4,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B,no,7.5072,,2,0,1,9,16,0
+0x8FFF,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&!C&D) | (!A&B,yes,11.2608,,0,1,2,19,4,2
+0x1EFF,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&!B&C&D) | (!A&B&!C&!D) | (!A&B&!C&D) | (!A&B&,yes,17.5168,,0,0,28,0,0,0
+0x035F,4,Contained,a222oi_1,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B,yes,8.7584,10.0096,0,23,1,0,3,0
+0x2EEE,4,New,,(!A&B&!C&!D) | (!A&B&!C&D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&!B&C&,yes,13.7632,,0,1,2,22,0,0
+0xFEEE,4,Exists,a211o_1; a211o_2; a211o_4,(!A&!B&C&D) | (!A&B&!C&!D) | (!A&B&!C&D) | (!A&B&C&!D) | (!A&B&C&D) | (A&!B&!C&!,no,10.0096,,0,0,20,3,2,0
+0x0EFF,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&!C&D) | (!A&B&C&!D) | (A&!B&,yes,11.2608,,0,0,6,13,6,0
+0x0AFF,3,Exists with an inverter,a21bo_1 (input A1 inverted); a21bo_1 (input A2 inverted); a21bo_2 (input A1 inverted),(!A&!C&!D) | (!A&C&!D) | (A&!C&!D) | (A&!C&D) | (A&C&!D),no,8.7584,8.7584,1,0,10,12,1,0
+0x9BDF,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&!B&C&D) | (!A&B&!C&!D) | (!A&B,yes,16.2656,,0,1,17,0,6,0
+0xAAC0,4,Contained,mux4_1; mux4_2; mux4_4,(!A&B&C&!D) | (A&!B&!C&D) | (A&!B&C&D) | (A&B&!C&D) | (A&B&C&!D) | (A&B&C&D),yes,12.512,22.5216,7,8,0,3,5,0
+0xAAA9,4,New,,(!A&!B&!C&!D) | (A&!B&!C&D) | (A&!B&C&!D) | (A&!B&C&D) | (A&B&!C&!D) | (A&B&!C&D,yes,17.5168,,1,9,0,4,1,8
+0x0BFB,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B,yes,12.512,,1,0,18,1,3,0
+0xEAAA,4,Exists,a31o_1; a31o_2; a31o_4,(!A&B&C&D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&!B&C&!D) | (A&!B&C&D) | (A&B&!C&!D),no,10.0096,,0,0,1,5,17,0
+0x87B4,4,New,,(!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&!C&D) | (A&!B&!C&D) | (A&!B&C,yes,23.7728,,1,8,2,0,11,0
+0x038B,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&B&!C&!D) | (A&B&C,yes,12.512,,1,8,7,6,0,0
+0x88AF,4,New,,(!A&!B&!C&!D) | (!A&B&!C&!D) | (A&!B&!C&!D) | (A&!B&C&!D) | (A&B&!C&!D) | (A&B&!,yes,11.2608,,0,1,9,1,11,0
+0x80FF,4,Exists with an inverter,a31o_1 (input B1 inverted); a31o_2 (input B1 inverted); a31o_4 (input B1 inverted),(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B,yes,10.0096,12.512,0,0,13,9,0,0
+0xEEFF,3,Exists,or3b_1; or3b_2; or3b_4,(!A&!B&!D) | (!A&B&!D) | (!A&B&D) | (A&!B&!D) | (A&!B&D) | (A&B&!D) | (A&B&D),no,8.7584,,0,0,0,12,10,0
+0x99A5,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&D) | (!A&B&!C&!D) | (A&!B&C&!D) | (A&B&!,yes,23.7728,,11,0,7,0,3,0
+0xA99A,4,New,,(!A&!B&!C&D) | (!A&!B&C&!D) | (A&!B&!C&!D) | (A&!B&C&D) | (A&B&!C&!D) | (A&B&!C&,yes,28.7776,,0,1,0,0,0,20
+0x28AA,4,New,,(A&!B&!C&!D) | (A&!B&C&!D) | (A&!B&C&D) | (A&B&!C&!D) | (A&B&!C&D) | (A&B&C&!D),yes,17.5168,,0,7,1,0,0,13
+0xBEFF,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&!B&C&D) | (!A&B&!C&!D) | (!A&B&!C&D) | (!A&B&,yes,15.0144,,0,0,2,18,0,0
+0x99FF,3,New,,(!A&!B&!D) | (!A&!B&D) | (!A&B&!D) | (A&!B&!D) | (A&B&!D) | (A&B&D),yes,12.512,,1,0,15,0,3,0
+0xA8EC,4,New,,(!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&C&!D) | (A&!B&C&D) | (A&B&!C&!D) | (A&B&!C&D),yes,11.2608,,0,16,1,0,1,0
+0x066F,4,New,,(!A&!B&!C&!D) | (!A&B&!C&!D) | (!A&B&!C&D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&,yes,25.024,,0,0,0,0,0,18
+0xAEFF,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&!C&D) | (!A&B&C&!D) | (A&!B&,yes,11.2608,,2,0,1,8,6,0
+0x09F9,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&C&!D) | (A&!B&C&!D) | (A&B&!,yes,16.2656,,0,0,2,0,8,7
+0x08FF,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B,yes,11.2608,,0,0,9,8,0,0
+0xAAEE,3,Exists with an inverter,a21o_1 (input A1 inverted); a21o_1 (input A2 inverted); a21o_2 (input A1 inverted),(!A&B&!D) | (A&!B&!D) | (A&!B&D) | (A&B&!D) | (A&B&D),yes,10.0096,11.2608,5,0,4,5,2,0
+0x82D7,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B,yes,16.2656,,0,0,16,0,0,0
+0xA8FF,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B,yes,10.0096,,0,0,0,15,1,0
+0x08F8,4,New,,(!A&!B&C&!D) | (!A&B&C&!D) | (A&!B&C&!D) | (A&B&!C&!D) | (A&B&!C&D) | (A&B&C&!D),yes,11.2608,,1,0,10,4,0,0
+0xEABF,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&D) | (A&!B&!C&!D) | (A&!B&,yes,17.5168,,6,0,1,0,8,0
+0x8AA8,4,New,,(A&!B&!C&D) | (A&!B&C&!D) | (A&B&!C&!D) | (A&B&!C&D) | (A&B&C&!D) | (A&B&C&D),yes,16.2656,,0,10,0,0,0,5
+0x69AA,4,New,,(!A&!B&!C&D) | (!A&B&C&D) | (A&!B&!C&!D) | (A&!B&C&!D) | (A&!B&C&D) | (A&B&!C&!D,yes,28.7776,,0,1,2,0,0,12
+0xEEEA,4,Contained,a221o_1; a221o_2; a221o_4,(!A&B&!C&D) | (!A&B&C&!D) | (!A&B&C&D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&!B&C&!D,no,10.0096,10.0096,5,0,1,7,1,0
+0x99F0,4,New,,(!A&!B&!C&D) | (!A&!B&C&!D) | (!A&!B&C&D) | (!A&B&C&!D) | (A&!B&C&!D) | (A&B&!C&,yes,17.5168,,0,3,1,0,10,0
+0x827D,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&D) | (A&!B&,yes,28.7776,,0,1,0,0,0,13
+0xEAC8,4,Contained,mux4_1; mux4_2; mux4_4,(!A&B&C&!D) | (!A&B&C&D) | (A&!B&!C&D) | (A&!B&C&D) | (A&B&!C&!D) | (A&B&!C&D) |,yes,11.2608,22.5216,0,8,0,6,0,0
+0xAAEA,4,Exists with an inverter,a31o_1 (input A1 inverted); a31o_1 (input A2 inverted); a31o_1 (input A3 inverted),(!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&!B&C&!D) | (A&!B&C&D) | (A&B&!C&!D,yes,11.2608,12.512,0,0,2,12,0,0
+0xEAFF,4,Exists with an inverter,a211o_1 (input B1 inverted); a211o_1 (input C1 inverted); a211o_2 (input B1 inverted),(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (!A&B&C&D) | (A&!B&!,yes,10.0096,12.512,0,0,1,12,1,0
+0xEAC0,4,Exists,a22o_1; a22o_2; a22o_4,(!A&B&C&!D) | (!A&B&C&D) | (A&!B&!C&D) | (A&!B&C&D) | (A&B&!C&D) | (A&B&C&!D) | ,no,10.0096,,0,0,0,6,8,0
+0xAEFB,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&B&!C&D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&,yes,18.768,,5,0,7,0,1,0
+0xEEEF,4,New,,(!A&!B&!C&!D) | (!A&B&!C&!D) | (!A&B&!C&D) | (!A&B&C&!D) | (!A&B&C&D) | (A&!B&!C,yes,11.2608,,0,1,1,2,9,0
+0x03AF,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&B&!C&!D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&!B,yes,11.2608,,0,1,8,4,0,0
+0x9AA9,4,New,,(!A&!B&!C&!D) | (!A&!B&C&D) | (A&!B&!C&D) | (A&!B&C&!D) | (A&B&!C&!D) | (A&B&!C&,yes,28.7776,,0,1,0,0,0,12
+0x8ACE,4,New,,(!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&B&!C&!D) | (A&B&!C&,yes,11.2608,,0,0,7,0,6,0
+0x0BBF,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (A&!B&!C&!D) | (A&!,yes,11.2608,,0,0,2,0,2,9
+0x2EE2,4,New,,(!A&B&!C&D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&!B&C&!D) | (A&!B&C&D,yes,17.5168,,0,12,0,0,0,0
+0x8788,4,New,,(!A&!B&!C&D) | (!A&B&!C&D) | (A&!B&!C&D) | (A&B&!C&!D) | (A&B&C&!D) | (A&B&C&D),yes,23.7728,,0,0,0,10,0,2
+0xBDDD,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&!B&C&D) | (!A&B&!C&!D) | (!A&B,yes,17.5168,,0,0,0,12,0,0
+0xAEEE,4,New,,(!A&B&!C&!D) | (!A&B&!C&D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&!B&C&,yes,11.2608,,3,0,1,6,1,0
+0x3FFF,3,Exists,nand3_1; nand3_2; nand3_4,(!B&!C&!D) | (!B&!C&D) | (!B&C&!D) | (!B&C&D) | (B&!C&!D) | (B&!C&D) | (B&C&!D),no,6.256,,2,0,0,8,1,0
+0x7FFF,4,Exists,nand4_1; nand4_2; nand4_4,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&!B&C&D) | (!A&B&!C&!D) | (!A&B,no,11.2608,,1,0,0,10,0,0
+0xEAEA,3,Exists,a21o_1; a21o_2; a21o_4,(!A&B&C) | (A&!B&!C) | (A&!B&C) | (A&B&!C) | (A&B&C),no,8.7584,,1,0,1,0,9,0
+0x0ACE,4,New,,(!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&B&!C&!D) | (A&B&!C&,yes,11.2608,,0,8,0,3,0,0
+0x0ABB,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&!B&C&!D) | (A&B&!,yes,11.2608,,0,7,2,1,1,0
+0x888F,4,Exists,a2bb2o_1; a2bb2o_2; a2bb2o_4,(!A&!B&!C&!D) | (!A&B&!C&!D) | (A&!B&!C&!D) | (A&B&!C&!D) | (A&B&!C&D) | (A&B&C&,no,11.2608,,0,0,5,5,1,0
+0x87A5,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&B&!C&!D) | (!A&B&!C&D) | (A&!B&!C&D) | (A&!B&,yes,20.0192,,1,2,1,0,3,3
+0x2DF0,4,New,,(!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&D) | (!A&B&C&!D) | (A&!B&C&!D) | (A&!B&C&,yes,20.0192,,1,9,0,0,0,0
+0x022F,4,New,,(!A&!B&!C&!D) | (!A&B&!C&!D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&!B&C&!D) | (A&B&!,yes,11.2608,,0,8,1,0,1,0
+0x87F0,4,New,,(!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&D) | (!A&B&C&!D) | (A&!B&!C&D) | (A&!B&C&,yes,18.768,,0,1,0,0,8,1
+0x07B7,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&!C&D) | (A&!B,yes,18.768,,0,0,10,0,0,0
+0xBDFF,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&!B&C&D) | (!A&B&!C&!D) | (!A&B,yes,17.5168,,0,0,0,10,0,0
+0xAAAB,4,Exists with an inverter,o31ai_1 (input B1 inverted); o31ai_2 (input B1 inverted); o31ai_4 (input B1 inverted),(!A&!B&!C&!D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&!B&C&!D) | (A&!B&C&D) | (A&B&!C&,yes,10.0096,11.2608,6,1,1,0,1,0
+0x03D7,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B,yes,20.0192,,1,0,0,0,8,0
+0xAAC8,4,New,,(!A&B&C&!D) | (A&!B&!C&D) | (A&!B&C&D) | (A&B&!C&!D) | (A&B&!C&D) | (A&B&C&!D) |,yes,13.7632,,0,8,0,1,0,0
+0x88F8,4,Exists with an inverter,a22o_1 (input A1 inverted); a22o_1 (input A2 inverted); a22o_1 (input B1 inverted),(!A&!B&C&!D) | (!A&B&C&!D) | (A&!B&C&!D) | (A&B&!C&!D) | (A&B&!C&D) | (A&B&C&!D),yes,11.2608,12.512,0,0,2,6,1,0
+0x1BB1,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&!B&C&D) | (A&!B&!C&D) | (A&!B&,yes,16.2656,,0,0,9,0,0,0
+0x0357,4,Exists,o22ai_1; o22ai_2; o22ai_4,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B,no,7.5072,,0,0,1,6,2,0
+0x038F,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&B&!C&!D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&B&,yes,15.0144,,0,0,1,8,0,0
+0x06F6,4,New,,(!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&!C&D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&!,yes,16.2656,,0,0,0,0,0,9
+0xAAC3,4,New,,(!A&!B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&!B&C&D) | (A&B&!C&,yes,17.5168,,2,0,4,2,0,0
+0x88F0,4,Contained,mux4_1; mux4_2; mux4_4,(!A&!B&C&!D) | (!A&B&C&!D) | (A&!B&C&!D) | (A&B&!C&D) | (A&B&C&!D) | (A&B&C&D),yes,12.512,22.5216,1,0,0,5,2,0
+0x179F,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&!B&C&D) | (!A&B&!C&!D) | (!A&B,yes,21.2704,,0,8,0,0,0,0
+0x9BFF,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&!B&C&D) | (!A&B&!C&!D) | (!A&B,yes,13.7632,,0,0,1,7,0,0
+0x03AB,4,Exists with an inverter,a2bb2o_1 (input B1 inverted); a2bb2o_1 (input B2 inverted); a2bb2o_2 (input B1 inverted),(!A&!B&!C&!D) | (!A&!B&!C&D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&!B&C&!D) | (A&B&!,no,10.0096,10.0096,0,0,2,6,0,0
+0xFEFE,3,Exists,or3_1; or3_2; or3_4,(!A&!B&C) | (!A&B&!C) | (!A&B&C) | (A&!B&!C) | (A&!B&C) | (A&B&!C) | (A&B&C),no,8.7584,,0,0,5,0,3,0
+0x808F,4,New,,(!A&!B&!C&!D) | (!A&B&!C&!D) | (A&!B&!C&!D) | (A&B&!C&!D) | (A&B&C&!D) | (A&B&C&,yes,11.2608,,0,0,1,7,0,0
+0x0AEA,4,New,,(!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&!B&C&!D) | (A&B&!C&!D) | (A&B&!C&D,yes,15.0144,,0,0,0,8,0,0
+0x2EFF,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&!C&D) | (!A&B&C&!D) | (A&!B&,yes,12.512,,0,0,0,7,1,0
+0x0AEE,4,New,,(!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&!B&C&!D) | (A&B&!C&,yes,11.2608,,0,0,0,8,0,0
+0x3DFD,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&!B&C&D) | (!A&B&!C&!D) | (!A&B,yes,16.2656,,2,1,3,0,1,0
+0x08AE,4,New,,(!A&B&!C&!D) | (A&!B&!C&!D) | (A&!B&C&!D) | (A&B&!C&!D) | (A&B&!C&D) | (A&B&C&!D,yes,12.512,,3,1,0,0,2,1
+0x88BF,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (A&!B&!C&!D) | (A&!B&C&!D) | (A&B&,yes,13.7632,,0,1,0,6,0,0
+0x88E8,4,New,,(!A&B&C&!D) | (A&!B&C&!D) | (A&B&!C&!D) | (A&B&!C&D) | (A&B&C&!D) | (A&B&C&D),yes,12.512,,0,3,0,0,0,4
+0x03DF,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B,yes,13.7632,,0,0,7,0,0,0
+0x07BB,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&D) | (A&!B&!C&!D) | (A&!B,yes,17.5168,,0,0,7,0,0,0
+0xACFB,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&B&!C&D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&,yes,20.0192,,0,0,7,0,0,0
+0x06B3,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&B&!C&D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&!B&,yes,25.024,,0,0,7,0,0,0
+0x8AE6,4,New,,(!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&!B&C&!D) | (A&B&!C&,yes,23.7728,,0,0,7,0,0,0
+0x0EFA,4,New,,(!A&!B&C&!D) | (!A&B&!C&D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&!B&C&,yes,12.512,,0,0,7,0,0,0
+0xAACB,4,New,,(!A&!B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&!B&C&D) | (A&B&!C&,yes,20.0192,,0,0,7,0,0,0
+0x0AC3,4,New,,(!A&!B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&B&!C&D) | (A&B&C&!,yes,20.0192,,0,0,7,0,0,0
+0x8689,4,New,,(!A&!B&!C&!D) | (!A&B&!C&D) | (A&!B&!C&D) | (A&B&!C&!D) | (A&B&C&!D) | (A&B&C&D),yes,31.28,,0,0,7,0,0,0
+0x037F,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B,yes,10.0096,,0,0,7,0,0,0
+0x0018,4,New,,(!A&!B&C&!D) | (A&B&!C&!D),yes,17.5168,,2,0,0,4,0,0
+0x0ACA,4,Contained,mux4_1; mux4_2; mux4_4,(!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&B&!C&!D) | (A&B&!C&D) | (A&B&C&!D),yes,13.7632,22.5216,2,0,0,4,0,0
+0x8AC0,4,New,,(!A&B&C&!D) | (A&!B&!C&D) | (A&B&!C&D) | (A&B&C&!D) | (A&B&C&D),yes,16.2656,,0,6,0,0,0,0
+0x09F6,4,New,,(!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&,yes,28.7776,,0,1,0,0,0,5
+0x08A0,4,New,,(A&!B&C&!D) | (A&B&!C&D) | (A&B&C&!D),yes,16.2656,,0,0,0,6,0,0
+0x7EEE,4,New,,(!A&!B&C&D) | (!A&B&!C&!D) | (!A&B&!C&D) | (!A&B&C&!D) | (!A&B&C&D) | (A&!B&!C&!,yes,17.5168,,0,0,0,6,0,0
+0x8FF7,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&!C&D) | (!A&B,yes,18.768,,0,0,0,6,0,0
+0xACEC,4,New,,(!A&B&!C&!D) | (!A&B&!C&D) | (!A&B&C&!D) | (A&!B&C&!D) | (A&!B&C&D) | (A&B&!C&!D,yes,15.0144,,0,0,0,6,0,0
+0xAAEB,4,New,,(!A&!B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&!B&C&!D) | (A&!B&C,yes,17.5168,,5,0,0,0,0,0
+0xEEEB,4,New,,(!A&!B&!C&!D) | (!A&B&!C&D) | (!A&B&C&!D) | (!A&B&C&D) | (A&!B&!C&!D) | (A&!B&!C,yes,17.5168,,5,0,0,0,0,0
+0xABFD,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B,yes,17.5168,,1,0,0,4,0,0
+0xEFFE,4,New,,(!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&!C&D) | (!A&B&C&!D) | (!A&B&C,yes,16.2656,,4,1,0,0,0,0
+0x8187,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&B&!C&!D) | (A&!B&!C&!D) | (A&B&C&!D) | (A&B&C,yes,18.768,,0,1,0,0,0,4
+0x8781,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&B&!C&D) | (A&!B&!C&D) | (A&B&C&!D) | (A&B&C&D,yes,20.0192,,0,1,0,0,0,4
+0xEEFE,4,Exists with an inverter,a211o_1 (input A1 inverted); a211o_1 (input A2 inverted); a211o_2 (input A1 inverted),(!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&!C&D) | (!A&B&C&!D) | (!A&B&C&D) | (A&!B&!C&,yes,11.2608,12.512,0,0,1,1,3,0
+0x2AD5,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&D) | (A&!B&,yes,18.768,,0,0,3,0,1,1
+0xADFF,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&!C&D) | (!A&B,yes,15.0144,,0,0,0,5,0,0
+0x0787,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&B&!C&!D) | (!A&B&!C&D) | (A&!B&!C&!D) | (A&!B,yes,17.5168,,0,0,0,5,0,0
+0xFFFE,4,Exists,or4_1; or4_2; or4_4,(!A&!B&!C&D) | (!A&!B&C&!D) | (!A&!B&C&D) | (!A&B&!C&!D) | (!A&B&!C&D) | (!A&B&C,no,11.2608,,0,0,0,0,5,0
+0x1788,4,New,,(!A&!B&!C&D) | (!A&!B&C&D) | (!A&B&!C&D) | (A&!B&!C&D) | (A&B&!C&!D) | (A&B&C&!D,yes,18.768,,0,0,0,0,0,5
+0xEAAB,4,New,,(!A&!B&!C&!D) | (!A&B&C&D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&!B&C&!D) | (A&!B&C&,yes,17.5168,,4,0,0,0,0,0
+0x889F,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (A&!B&!C&!D) | (A&B&!C&!D) | (A&B&,yes,18.768,,4,0,0,0,0,0
+0xAFF5,3,New,,(!A&!C&!D) | (!A&!C&D) | (!A&C&!D) | (A&!C&D) | (A&C&!D) | (A&C&D),yes,15.0144,,2,0,0,2,0,0
+0xEFFB,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&D) | (!A&B&C&!D) | (!A&B&,yes,17.5168,,3,0,0,0,1,0
+0x01EE,4,New,,(!A&!B&!C&D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&C&!D) | (A&B&!C,yes,16.2656,,0,0,0,4,0,0
+0x803F,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (A&!B&!C&!D) | (A&!B&C&!D) | (A&B&,yes,16.2656,,0,0,0,4,0,0
+0xEEFA,4,Contained,mux4_1; mux4_2; mux4_4,(!A&!B&C&!D) | (!A&B&!C&D) | (!A&B&C&!D) | (!A&B&C&D) | (A&!B&!C&!D) | (A&!B&!C&,yes,12.512,22.5216,2,0,0,1,0,0
+0x07AB,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&B&!C&D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&!B&,yes,18.768,,3,0,0,0,0,0
+0xABFE,4,New,,(!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&,yes,17.5168,,2,1,0,0,0,0
+0xBEEE,4,New,,(!A&!B&C&D) | (!A&B&!C&!D) | (!A&B&!C&D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&!C,yes,17.5168,,3,0,0,0,0,0
+0x88F7,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B,yes,16.2656,,1,0,0,2,0,0
+0x3CFF,3,New,,(!B&!C&!D) | (!B&C&!D) | (!B&C&D) | (B&!C&!D) | (B&!C&D) | (B&C&!D),yes,12.512,,1,0,2,0,0,0
+0x0294,4,New,,(!A&!B&C&!D) | (!A&B&!C&!D) | (A&!B&!C&D) | (A&B&C&!D),yes,30.0288,,0,1,2,0,0,0
+0xEAEE,4,New,,(!A&B&!C&!D) | (!A&B&C&!D) | (!A&B&C&D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&!B&C&!,yes,11.2608,,0,0,2,1,0,0
+0x88BA,4,New,,(!A&!B&C&!D) | (A&!B&!C&!D) | (A&!B&C&!D) | (A&B&!C&!D) | (A&B&!C&D) | (A&B&C&!D,yes,15.0144,,0,0,2,1,0,0
+0x80AF,4,New,,(!A&!B&!C&!D) | (!A&B&!C&!D) | (A&!B&!C&!D) | (A&!B&C&!D) | (A&B&!C&!D) | (A&B&C,yes,13.7632,,0,0,1,2,0,0
+0x8BB8,4,New,,(!A&!B&!C&D) | (!A&!B&C&!D) | (A&!B&!C&D) | (A&!B&C&!D) | (A&B&!C&!D) | (A&B&!C&,yes,17.5168,,0,0,2,1,0,0
+0xA8DD,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&C&D) | (A&B&!C,yes,12.512,,0,0,0,3,0,0
+0x83CF,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B,yes,13.7632,,0,0,0,3,0,0
+0x9BBB,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&!B&C&D) | (A&!B&!C&!D) | (A&!B,yes,13.7632,,0,0,0,3,0,0
+0x0288,4,New,,(A&!B&!C&D) | (A&B&!C&!D) | (A&B&C&!D),yes,15.0144,,0,0,0,3,0,0
+0xAAD5,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&D) | (A&!B&,yes,12.512,,0,0,0,3,0,0
+0x03CC,3,New,,(!B&!C&D) | (B&!C&!D) | (B&C&!D),yes,12.512,,0,0,0,3,0,0
+0x1AAA,4,New,,(!A&!B&C&D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&!B&C&!D) | (A&B&!C&!D) | (A&B&!C&D,yes,17.5168,,0,0,0,3,0,0
+0xAAAE,4,New,,(!A&B&!C&!D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&!B&C&!D) | (A&!B&C&D) | (A&B&!C&!,yes,11.2608,,0,0,0,1,2,0
+0x01A9,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (A&!B&C&!D) | (A&B&!C&!D) | (A&B&C&!D),yes,17.5168,,0,0,0,3,0,0
+0x189A,4,New,,(!A&!B&C&!D) | (!A&!B&C&D) | (A&!B&!C&!D) | (A&B&!C&!D) | (A&B&!C&D) | (A&B&C&!D,yes,21.2704,,0,0,0,0,0,3
+0x2BC0,4,New,,(!A&!B&!C&D) | (!A&B&C&!D) | (A&!B&!C&D) | (A&!B&C&D) | (A&B&!C&D) | (A&B&C&!D),yes,20.0192,,0,0,0,0,0,3
+0xAEEF,4,New,,(!A&!B&!C&!D) | (!A&B&!C&!D) | (!A&B&!C&D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&,yes,12.512,,1,0,0,0,0,1
+0x01BF,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (A&!B&!C&!D) | (A&!,yes,16.2656,,2,0,0,0,0,0
+0xABBF,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (A&!B&!C&!D) | (A&!,yes,11.2608,,1,1,0,0,0,0
+0x0667,4,New,,(!A&!B&!C&!D) | (!A&B&!C&!D) | (!A&B&!C&D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&,yes,22.5216,,1,1,0,0,0,0
+0x98BA,4,New,,(!A&!B&C&!D) | (!A&!B&C&D) | (A&!B&!C&!D) | (A&!B&C&!D) | (A&B&!C&!D) | (A&B&!C&,yes,16.2656,,2,0,0,0,0,0
+0xAFFA,3,Contained,mux4_1; mux4_2; mux4_4,(!A&!C&D) | (!A&C&!D) | (A&!C&!D) | (A&!C&D) | (A&C&!D) | (A&C&D),yes,13.7632,22.5216,2,0,0,0,0,0
+0xBEEB,4,New,,(!A&!B&!C&!D) | (!A&!B&C&D) | (!A&B&!C&D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&!,yes,26.2752,,2,0,0,0,0,0
+0xEBEB,3,Contained,mux4_1; mux4_2; mux4_4,(!A&!B&!C) | (!A&B&C) | (A&!B&!C) | (A&!B&C) | (A&B&!C) | (A&B&C),yes,13.7632,22.5216,1,0,0,0,1,0
+0x889A,4,New,,(!A&!B&C&!D) | (A&!B&!C&!D) | (A&B&!C&!D) | (A&B&!C&D) | (A&B&C&!D) | (A&B&C&D),yes,18.768,,2,0,0,0,0,0
+0x03DE,4,New,,(!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&,yes,21.2704,,2,0,0,0,0,0
+0x01AF,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&B&!C&!D) | (A&!B&!C&!D) | (A&!B&C&!D) | (A&B&,yes,13.7632,,1,1,0,0,0,0
+0x024E,4,New,,(!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&B&!C&!D),yes,17.5168,,0,2,0,0,0,0
+0x0BBA,4,New,,(!A&!B&!C&D) | (!A&!B&C&!D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&!B&C&!D) | (A&B&!C,yes,20.0192,,0,1,0,0,0,1
+0xADFD,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&!C&D) | (!A&B,yes,15.0144,,0,0,1,0,1,0
+0x0258,4,New,,(!A&!B&C&!D) | (!A&B&C&!D) | (A&!B&!C&D) | (A&B&!C&!D),yes,22.5216,,0,0,2,0,0,0
+0x07AF,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&B&!C&!D) | (!A&B&!C&D) | (A&!B&!C&!D) | (A&!B,yes,13.7632,,0,0,2,0,0,0
+0x999F,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&!B&C&D) | (!A&B&!C&!D) | (A&!B,yes,18.768,,0,0,1,1,0,0
+0x838F,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&B&!C&!D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&B&,yes,15.0144,,0,0,0,2,0,0
+0x2CEC,4,New,,(!A&B&!C&!D) | (!A&B&!C&D) | (!A&B&C&!D) | (A&!B&C&!D) | (A&!B&C&D) | (A&B&!C&!D,yes,15.0144,,0,0,0,2,0,0
+0x0AC8,4,New,,(!A&B&C&!D) | (A&!B&!C&D) | (A&B&!C&!D) | (A&B&!C&D) | (A&B&C&!D),yes,16.2656,,0,0,0,2,0,0
+0x02CF,4,New,,(!A&!B&!C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&B&!,yes,15.0144,,0,0,0,2,0,0
+0x03C3,3,New,,(!B&!C&!D) | (!B&!C&D) | (B&C&!D),yes,12.512,,0,0,0,2,0,0
+0x0788,4,New,,(!A&!B&!C&D) | (!A&B&!C&D) | (A&!B&!C&D) | (A&B&!C&!D) | (A&B&C&!D),yes,16.2656,,0,0,0,2,0,0
+0x0019,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (A&B&!C&!D),yes,16.2656,,0,0,0,2,0,0
+0xBCCC,4,New,,(!A&!B&C&D) | (!A&B&!C&!D) | (!A&B&!C&D) | (!A&B&C&!D) | (A&!B&C&D) | (A&B&!C&!D,yes,16.2656,,0,0,0,2,0,0
+0x0FF8,4,New,,(!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&D) | (!A&B&C&!D) | (A&!B&!C&D) | (A&!B&C&,yes,12.512,,0,0,0,2,0,0
+0x1FFE,4,New,,(!A&!B&!C&D) | (!A&!B&C&!D) | (!A&!B&C&D) | (!A&B&!C&!D) | (!A&B&!C&D) | (!A&B&C,yes,17.5168,,0,0,0,2,0,0
+0x6EEA,4,New,,(!A&B&!C&D) | (!A&B&C&!D) | (!A&B&C&D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&!B&C&!D,yes,17.5168,,0,0,0,2,0,0
+0x9BB3,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&!B&C&D) | (A&!B&!C&!D) | (A&!B,yes,17.5168,,0,0,0,2,0,0
+0x0EF0,4,New,,(!A&!B&C&!D) | (!A&B&!C&D) | (!A&B&C&!D) | (A&!B&!C&D) | (A&!B&C&!D) | (A&B&!C&D,yes,12.512,,0,0,0,2,0,0
+0x0BF0,4,New,,(!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&C&!D) | (A&!B&!C&D) | (A&!B&C&!D) | (A&B&!C&,yes,13.7632,,0,0,0,2,0,0
+0x83C3,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&B&C,yes,13.7632,,0,0,0,2,0,0
+0x0256,4,New,,(!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&!C&D),yes,17.5168,,0,0,0,2,0,0
+0xA8A9,4,New,,(!A&!B&!C&!D) | (A&!B&C&!D) | (A&!B&C&D) | (A&B&!C&!D) | (A&B&!C&D) | (A&B&C&!D),yes,16.2656,,0,0,0,2,0,0
+0x00AD,4,New,,(!A&!B&!C&!D) | (!A&B&!C&!D) | (A&!B&C&!D) | (A&B&!C&!D) | (A&B&C&!D),yes,15.0144,,0,0,0,2,0,0
+0x0399,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (A&!B&!C&D) | (A&B&!C&!D) | (A&B&C,yes,20.0192,,0,0,0,2,0,0
+0xA8CC,4,New,,(!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&C&D) | (A&B&!C&!D) | (A&B&!C&D) | (A&B&C&!D) ,yes,13.7632,,0,0,0,2,0,0
+0x17FF,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&!B&C&D) | (!A&B&!C&!D) | (!A&B,yes,10.0096,,0,0,0,0,0,2
+0x2BE8,4,New,,(!A&!B&!C&D) | (!A&B&C&!D) | (A&!B&!C&D) | (A&!B&C&!D) | (A&!B&C&D) | (A&B&!C&!D,yes,22.5216,,1,0,0,0,0,0
+0x0AC6,4,New,,(!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&B&!C&D) | (A&B&C&!D,yes,26.2752,,1,0,0,0,0,0
+0x9AB8,4,New,,(!A&!B&C&!D) | (!A&!B&C&D) | (A&!B&!C&D) | (A&!B&C&!D) | (A&B&!C&!D) | (A&B&!C&D,yes,21.2704,,1,0,0,0,0,0
+0x29EA,4,New,,(!A&!B&!C&D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&C&!D) | (A&!B&C&D) | (A&B&!C&!,yes,27.5264,,1,0,0,0,0,0
+0x7FFE,4,New,,(!A&!B&!C&D) | (!A&!B&C&!D) | (!A&!B&C&D) | (!A&B&!C&!D) | (!A&B&!C&D) | (!A&B&C,yes,17.5168,,1,0,0,0,0,0
+0xE8EB,4,New,,(!A&!B&!C&!D) | (!A&B&C&!D) | (!A&B&C&D) | (A&!B&!C&!D) | (A&!B&C&!D) | (A&!B&C&,yes,18.768,,1,0,0,0,0,0
+0x9ACF,4,New,,(!A&!B&!C&!D) | (!A&!B&C&D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&,yes,26.2752,,1,0,0,0,0,0
+0x09F3,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B,yes,21.2704,,1,0,0,0,0,0
+0x836D,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&D) | (A&!B&,yes,33.7824,,1,0,0,0,0,0
+0x89AF,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&B&!C&!D) | (A&!B&!C&!D) | (A&!B&C&!D) | (A&B&,yes,17.5168,,1,0,0,0,0,0
+0x89EF,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B,yes,21.2704,,1,0,0,0,0,0
+0x98FF,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&!B&C&D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&,yes,15.0144,,1,0,0,0,0,0
+0x2FFD,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&!C&D) | (!A&B,yes,20.0192,,1,0,0,0,0,0
+0xAEF7,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&!C&D) | (!A&B&C&!D) | (A&!B&,yes,18.768,,1,0,0,0,0,0
+0x0BFD,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B,yes,20.0192,,1,0,0,0,0,0
+0x88AB,4,New,,(!A&!B&!C&!D) | (A&!B&!C&!D) | (A&!B&C&!D) | (A&B&!C&!D) | (A&B&!C&D) | (A&B&C&!,yes,16.2656,,1,0,0,0,0,0
+0x889B,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (A&!B&!C&!D) | (A&B&!C&!D) | (A&B&!C&D) | (A&B&C&,yes,15.0144,,1,0,0,0,0,0
+0x89AB,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (A&!B&!C&!D) | (A&!B&C&!D) | (A&B&!C&!D) | (A&B&!,yes,16.2656,,1,0,0,0,0,0
+0xAABD,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (A&!B&!C&D) | (A&!B&C&!D) | (A&!B&,yes,17.5168,,1,0,0,0,0,0
+0xAADD,3,Contained,mux4_1; mux4_2; mux4_4,(!A&!B&!D) | (!A&B&!D) | (A&!B&D) | (A&B&!D) | (A&B&D),yes,11.2608,22.5216,1,0,0,0,0,0
+0x999B,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&!B&C&D) | (A&!B&!C&!D) | (A&B&,yes,13.7632,,1,0,0,0,0,0
+0x0AFD,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&D) | (A&!B&,yes,17.5168,,1,0,0,0,0,0
+0xAEF3,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&B&!C&D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&,yes,17.5168,,1,0,0,0,0,0
+0xEEFB,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&B&!C&D) | (!A&B&C&!D) | (!A&B&C&D) | (A&!B&!C,yes,16.2656,,1,0,0,0,0,0
+0x88A9,4,New,,(!A&!B&!C&!D) | (A&!B&C&!D) | (A&B&!C&!D) | (A&B&!C&D) | (A&B&C&!D) | (A&B&C&D),yes,18.768,,1,0,0,0,0,0
+0x87B7,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&!C&D) | (A&!B,yes,20.0192,,1,0,0,0,0,0
+0x06FF,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&!C&D) | (!A&B&C&!D) | (A&!B&,yes,16.2656,,1,0,0,0,0,0
+0x806F,4,New,,(!A&!B&!C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&C&!D) | (A&B&!,yes,23.7728,,1,0,0,0,0,0
+0xABEB,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&!B&,yes,17.5168,,1,0,0,0,0,0
+0xBFFD,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&!B&C&D) | (!A&B&!C&!D) | (!A&B,yes,17.5168,,0,1,0,0,0,0
+0x8FFB,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&D) | (!A&B&C&!D) | (A&!B&,yes,18.768,,0,1,0,0,0,0
+0x81EE,4,New,,(!A&!B&!C&D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&C&!D) | (A&B&!C,yes,22.5216,,0,1,0,0,0,0
+0x8002,4,New,,(A&!B&!C&!D) | (A&B&C&D),yes,17.5168,,0,1,0,0,0,0
+0xEBEF,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&B&!C&!D) | (!A&B&C&!D) | (!A&B&C&D) | (A&!B&!,yes,15.0144,,0,1,0,0,0,0
+0x02EE,4,New,,(!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&!B&C&!D) | (A&B&!C&,yes,13.7632,,0,1,0,0,0,0
+0xA8AC,4,New,,(!A&B&!C&!D) | (A&!B&C&!D) | (A&!B&C&D) | (A&B&!C&!D) | (A&B&!C&D) | (A&B&C&!D) ,yes,15.0144,,0,1,0,0,0,0
+0x81A9,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (A&!B&C&!D) | (A&B&!C&!D) | (A&B&C&!D) | (A&B&C&D,yes,20.0192,,0,1,0,0,0,0
+0xEAFE,4,New,,(!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (!A&B&C&D) | (A&!B&!C&!D) | (A&!B&!C,yes,12.512,,0,1,0,0,0,0
+0x188E,4,New,,(!A&!B&C&D) | (!A&B&!C&!D) | (A&!B&!C&!D) | (A&B&!C&!D) | (A&B&!C&D) | (A&B&C&!D,yes,27.5264,,0,1,0,0,0,0
+0x89FE,4,New,,(!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&,yes,21.2704,,0,1,0,0,0,0
+0x89FF,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B,yes,13.7632,,0,1,0,0,0,0
+0xACFF,4,Contained,mux4_1; mux4_2; mux4_4,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&!C&D) | (!A&B&C&!D) | (A&!B&,yes,11.2608,22.5216,0,0,1,0,0,0
+0xACDF,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&!C&D) | (!A&B&C&!D) | (A&!B&,yes,20.0192,,0,0,1,0,0,0
+0x0793,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&D) | (A&!B&!C&!D) | (A&!B,yes,26.2752,,0,0,1,0,0,0
+0xBCC4,4,New,,(!A&!B&C&D) | (!A&B&!C&!D) | (!A&B&!C&D) | (!A&B&C&!D) | (A&!B&C&D) | (A&B&!C&D),yes,23.7728,,0,0,1,0,0,0
+0xAADC,4,New,,(!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&D) | (A&!B&C&D) | (A&B&!C&!,yes,15.0144,,0,0,1,0,0,0
+0xAABC,4,New,,(!A&!B&C&!D) | (!A&B&!C&!D) | (A&!B&!C&D) | (A&!B&C&!D) | (A&!B&C&D) | (A&B&!C&!,yes,20.0192,,0,0,1,0,0,0
+0x03AC,4,New,,(!A&!B&!C&D) | (!A&B&!C&!D) | (A&!B&!C&D) | (A&!B&C&!D) | (A&B&!C&!D) | (A&B&C&!,yes,18.768,,0,0,1,0,0,0
+0x8896,4,New,,(!A&!B&C&!D) | (!A&B&!C&!D) | (A&!B&!C&!D) | (A&B&!C&D) | (A&B&C&!D) | (A&B&C&D),yes,31.28,,0,0,1,0,0,0
+0xAAEC,4,New,,(!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&D) | (A&!B&C&!D) | (A&!B&C&D) | (A&B&!C&!D,yes,13.7632,,0,0,1,0,0,0
+0x0ABF,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&!B,yes,11.2608,,0,0,1,0,0,0
+0x03EF,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B,yes,15.0144,,0,0,0,1,0,0
+0x0ACF,4,Contained,mux4_1; mux4_2; mux4_4,(!A&!B&!C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&B&!,yes,11.2608,22.5216,0,0,0,1,0,0
+0x8ABB,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&!B&C&!D) | (A&B&!,yes,16.2656,,0,0,0,1,0,0
+0x99BB,3,New,,(!A&!B&!D) | (!A&!B&D) | (A&!B&!D) | (A&B&!D) | (A&B&D),yes,12.512,,0,0,0,1,0,0
+0x1EFE,4,New,,(!A&!B&C&!D) | (!A&!B&C&D) | (!A&B&!C&!D) | (!A&B&!C&D) | (!A&B&C&!D) | (A&!B&!C,yes,16.2656,,0,0,0,1,0,0
+0x6AEA,4,New,,(!A&B&C&!D) | (!A&B&C&D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&!B&C&!D) | (A&!B&C&D),yes,16.2656,,0,0,0,1,0,0
+0x03FD,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B,yes,17.5168,,0,0,0,1,0,0
+0x878F,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&B&!C&!D) | (!A&B&!C&D) | (A&!B&!C&!D) | (A&!B,yes,16.2656,,0,0,0,1,0,0
+0x3DDD,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&!B&C&D) | (!A&B&!C&!D) | (!A&B,yes,17.5168,,0,0,0,1,0,0
+0x87F7,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&!C&D) | (!A&B,yes,17.5168,,0,0,0,1,0,0
+0xAAFD,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&D) | (A&!B&,yes,12.512,,0,0,0,1,0,0
+0x3EEE,4,New,,(!A&!B&C&D) | (!A&B&!C&!D) | (!A&B&!C&D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&!C,yes,16.2656,,0,0,0,1,0,0
+0xADDD,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&!C&D) | (!A&B,yes,16.2656,,0,0,0,1,0,0
+0x8FF0,4,New,,(!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&D) | (!A&B&C&!D) | (A&!B&!C&D) | (A&!B&C&,yes,15.0144,,0,0,0,1,0,0
+0x3CEC,4,New,,(!A&!B&C&D) | (!A&B&!C&!D) | (!A&B&!C&D) | (!A&B&C&!D) | (A&!B&C&!D) | (A&!B&C&D,yes,16.2656,,0,0,0,1,0,0
+0x99B3,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&!B&C&D) | (A&!B&!C&!D) | (A&!B,yes,16.2656,,0,0,0,1,0,0
+0x002C,4,New,,(!A&B&!C&!D) | (A&!B&C&!D) | (A&B&!C&!D),yes,15.0144,,0,0,0,1,0,0
+0x88FA,4,Contained,mux4_1; mux4_2; mux4_4,(!A&!B&C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&C&!D) | (A&B&!C&!D) | (A&B&!C&,yes,11.2608,22.5216,0,0,0,1,0,0
+0x02C0,4,New,,(!A&B&C&!D) | (A&!B&!C&D) | (A&B&C&!D),yes,16.2656,,0,0,0,1,0,0
+0x001A,4,New,,(!A&!B&C&!D) | (A&!B&!C&!D) | (A&B&!C&!D),yes,13.7632,,0,0,0,1,0,0
+0x8899,3,New,,(!A&!B&!D) | (A&B&!D) | (A&B&D),yes,13.7632,,0,0,0,1,0,0
+0x9899,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&!B&C&D) | (A&B&!C&!D) | (A&B&!C&D) | (A&B&C&!,yes,16.2656,,0,0,0,1,0,0
+0x19FF,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&!B&C&D) | (!A&B&!C&!D) | (!A&B,yes,16.2656,,0,0,0,1,0,0
+0x003E,4,New,,(!A&!B&C&!D) | (!A&B&!C&!D) | (A&!B&!C&!D) | (A&!B&C&!D) | (A&B&!C&!D),yes,16.2656,,0,0,0,1,0,0
+0x035A,4,New,,(!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&B&!C,yes,20.0192,,0,0,0,1,0,0
+0x0FF2,4,New,,(!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&!,yes,13.7632,,0,0,0,1,0,0
+0x08F0,4,New,,(!A&!B&C&!D) | (!A&B&C&!D) | (A&!B&C&!D) | (A&B&!C&D) | (A&B&C&!D),yes,12.512,,0,0,0,1,0,0
+0x800F,4,New,,(!A&!B&!C&!D) | (!A&B&!C&!D) | (A&!B&!C&!D) | (A&B&!C&!D) | (A&B&C&D),yes,12.512,,0,0,0,1,0,0
+0x8AD5,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&D) | (A&B&!,yes,15.0144,,0,0,0,1,0,0
+0x07A5,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&B&!C&!D) | (!A&B&!C&D) | (A&!B&!C&D) | (A&!B&,yes,17.5168,,0,0,0,1,0,0
+0x99B9,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&!B&C&D) | (A&!B&C&!D) | (A&B&!,yes,13.7632,,0,0,0,1,0,0
+0x08F3,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&C&!D) | (A&B&!,yes,17.5168,,0,0,0,1,0,0
+0x0AFB,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&!B&,yes,13.7632,,0,0,0,0,1,0
+0x9991,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&!B&C&D) | (A&B&!C&D) | (A&B&C&,yes,12.512,,0,0,0,0,1,0
+0x2BEB,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&!B&,yes,20.0192,,0,0,0,0,1,0
+0x03C7,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B,yes,15.0144,,0,0,0,0,1,0
+0x99B1,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&!B&C&D) | (A&!B&C&!D) | (A&B&!,yes,15.0144,,0,0,0,0,1,0
+0xA898,4,New,,(!A&!B&C&!D) | (A&!B&C&D) | (A&B&!C&!D) | (A&B&!C&D) | (A&B&C&!D) | (A&B&C&D),yes,17.5168,,0,0,0,0,1,0
+0xFEEF,4,New,,(!A&!B&!C&!D) | (!A&!B&C&D) | (!A&B&!C&!D) | (!A&B&!C&D) | (!A&B&C&!D) | (!A&B&C,yes,16.2656,,0,0,0,0,1,0
+0x03CB,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&B&!,yes,13.7632,,0,0,0,0,1,0
+0x19B9,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&!B&C&D) | (A&!B&C&!D) | (A&B&!,yes,16.2656,,0,0,0,0,1,0
+0x1ABB,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&!B&C&D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&!B&,yes,18.768,,0,0,0,0,1,0
+0x6AFF,4,New,,(!A&!B&!C&!D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (!A&B&C&D) | (A&!B&!,yes,17.5168,,0,0,0,0,1,0
+0x88F2,4,New,,(!A&!B&C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&C&!D) | (A&B&!C&D) | (A&B&C&!D,yes,16.2656,,0,0,0,0,1,0
+0x8782,4,New,,(!A&!B&!C&D) | (!A&B&!C&D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&B&C&!D) | (A&B&C&D),yes,18.768,,0,0,0,0,1,0
+0x0228,4,New,,(A&!B&!C&D) | (A&!B&C&!D) | (A&B&!C&!D),yes,22.5216,,0,0,0,0,0,1
+0x8BB7,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (A&!B&!C&!D) | (A&!,yes,25.024,,0,0,0,0,0,1
+0x0EE8,4,New,,(!A&B&!C&D) | (!A&B&C&!D) | (A&!B&!C&D) | (A&!B&C&!D) | (A&B&!C&!D) | (A&B&!C&D),yes,20.0192,,0,0,0,0,0,1
+0x8117,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (A&!B&!C&!D) | (A&B,yes,27.5264,,0,0,0,0,0,1
+0x07A1,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&B&!C&D) | (A&!B&!C&D) | (A&!B&C&!D) | (A&B&C&,yes,21.2704,,0,0,0,0,0,1
+0x824B,4,New,,(!A&!B&!C&!D) | (!A&B&C&!D) | (A&!B&!C&!D) | (A&!B&!C&D) | (A&B&!C&!D) | (A&B&C&,yes,26.2752,,0,0,0,0,0,1
+0x2BFF,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (!A&B&!C&!D) | (!A&B&C&!D) | (A&!B,yes,11.2608,,0,0,0,0,0,1
+0x0993,4,New,,(!A&!B&!C&!D) | (!A&!B&!C&D) | (!A&!B&C&!D) | (A&!B&!C&!D) | (A&B&!C&D) | (A&B&C,yes,26.2752,,0,0,0,0,0,1

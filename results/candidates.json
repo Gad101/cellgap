@@ -1,0 +1,1917 @@
+{
+ "group": "GB2",
+ "designs": [
+  "cpu8",
+  "dsp8",
+  "arlet6502",
+  "uart_apb",
+  "risc8",
+  "fir10"
+ ],
+ "area_per_and_um2": {
+  "cpu8": 2.528,
+  "dsp8": 2.546,
+  "arlet6502": 2.44,
+  "uart_apb": 1.273,
+  "risc8": 2.4,
+  "fir10": 2.849
+ },
+ "area_per_and_source": {
+  "cpu8": "table1 logs",
+  "dsp8": "table1 logs",
+  "arlet6502": "table1 logs",
+  "uart_apb": "table1 logs",
+  "risc8": "table1 logs",
+  "fir10": "table1 logs"
+ },
+ "candidates": [
+  {
+   "request_id": "C-001",
+   "name": "dd2_GB2__faabf_1",
+   "inputs": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "output": "Y",
+   "expression": "!((!A & (D | (B & C))))",
+   "truth_table": "0xAABF",
+   "sizing": "hd",
+   "estimated_area_um2": 10.0096,
+   "rank": 1,
+   "class_table": "0xAABF",
+   "cost": {
+    "transistors": 10,
+    "stages": 2,
+    "inverters": 1
+   },
+   "estimated_saving_um2": 249.98,
+   "cuts_in_designs": 310,
+   "and_nodes_replaced": 836,
+   "per_design": {
+    "cpu8": {
+     "cuts": 3,
+     "used": 1,
+     "and_nodes_replaced": 4,
+     "saving_um2": 0.1
+    },
+    "dsp8": {
+     "cuts": 33,
+     "used": 32,
+     "and_nodes_replaced": 128,
+     "saving_um2": 5.56
+    },
+    "arlet6502": {
+     "cuts": 13,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "uart_apb": {
+     "cuts": 8,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "risc8": {
+     "cuts": 77,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "fir10": {
+     "cuts": 176,
+     "used": 176,
+     "and_nodes_replaced": 704,
+     "saving_um2": 244.32
+    }
+   }
+  },
+  {
+   "request_id": "C-002",
+   "name": "dd2_GB2__f8ae6_1",
+   "inputs": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "output": "Y",
+   "expression": "!((B & (!((D & (A)) | (!D & (!((A & !C))))))) | (!B & (!((A & (!((C & D))))))))",
+   "truth_table": "0x8AE6",
+   "sizing": "hd",
+   "estimated_area_um2": 23.7728,
+   "rank": 2,
+   "class_table": "0x8AE6",
+   "cost": {
+    "transistors": 34,
+    "stages": 4,
+    "inverters": 3
+   },
+   "estimated_saving_um2": 55.64,
+   "cuts_in_designs": 7,
+   "and_nodes_replaced": 91,
+   "per_design": {
+    "cpu8": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "dsp8": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "arlet6502": {
+     "cuts": 7,
+     "used": 7,
+     "and_nodes_replaced": 91,
+     "saving_um2": 55.64
+    },
+    "uart_apb": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "risc8": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "fir10": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    }
+   }
+  },
+  {
+   "request_id": "C-003",
+   "name": "dd2_GB2__f00ac_1",
+   "inputs": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "output": "Y",
+   "expression": "!(D | (!((C & (A)) | (!C & (B)))))",
+   "truth_table": "0x00AC",
+   "sizing": "hd",
+   "estimated_area_um2": 11.2608,
+   "rank": 3,
+   "class_table": "0x00AC",
+   "cost": {
+    "transistors": 14,
+    "stages": 3,
+    "inverters": 1
+   },
+   "estimated_saving_um2": 23.56,
+   "cuts_in_designs": 805,
+   "and_nodes_replaced": 688,
+   "per_design": {
+    "cpu8": {
+     "cuts": 54,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "dsp8": {
+     "cuts": 50,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "arlet6502": {
+     "cuts": 74,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "uart_apb": {
+     "cuts": 9,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "risc8": {
+     "cuts": 446,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "fir10": {
+     "cuts": 172,
+     "used": 172,
+     "and_nodes_replaced": 688,
+     "saving_um2": 23.56
+    }
+   }
+  },
+  {
+   "request_id": "C-004",
+   "name": "dd2_GB2__faaef_1",
+   "inputs": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "output": "Y",
+   "expression": "!((!A & (D | (!B & C))))",
+   "truth_table": "0xAAEF",
+   "sizing": "hd",
+   "estimated_area_um2": 11.2608,
+   "rank": 4,
+   "class_table": "0xAAEF",
+   "cost": {
+    "transistors": 12,
+    "stages": 2,
+    "inverters": 2
+   },
+   "estimated_saving_um2": 23.56,
+   "cuts_in_designs": 309,
+   "and_nodes_replaced": 688,
+   "per_design": {
+    "cpu8": {
+     "cuts": 6,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "dsp8": {
+     "cuts": 16,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "arlet6502": {
+     "cuts": 8,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "uart_apb": {
+     "cuts": 3,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "risc8": {
+     "cuts": 104,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "fir10": {
+     "cuts": 172,
+     "used": 172,
+     "and_nodes_replaced": 688,
+     "saving_um2": 23.56
+    }
+   }
+  },
+  {
+   "request_id": "C-005",
+   "name": "dd2_GB2__f17_1",
+   "inputs": [
+    "A",
+    "B",
+    "C"
+   ],
+   "output": "Y",
+   "expression": "!(((A & B) | (C & (A | B))))",
+   "truth_table": "0x17",
+   "sizing": "hd",
+   "estimated_area_um2": 8.7584,
+   "rank": 5,
+   "class_table": "0x033F",
+   "cost": {
+    "transistors": 10,
+    "stages": 1,
+    "inverters": 0
+   },
+   "estimated_saving_um2": 16.47,
+   "cuts_in_designs": 181,
+   "and_nodes_replaced": 15,
+   "per_design": {
+    "cpu8": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "dsp8": {
+     "cuts": 23,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "arlet6502": {
+     "cuts": 5,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "uart_apb": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "risc8": {
+     "cuts": 2,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "fir10": {
+     "cuts": 151,
+     "used": 3,
+     "and_nodes_replaced": 15,
+     "saving_um2": 16.47
+    }
+   }
+  },
+  {
+   "request_id": "C-006",
+   "name": "dd2_GB2__facfb_1",
+   "inputs": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "output": "Y",
+   "expression": "!((D & (!((C & (A)) | (!C & (B))))) | (!D & (!((A | (!B | C))))))",
+   "truth_table": "0xACFB",
+   "sizing": "hd",
+   "estimated_area_um2": 20.0192,
+   "rank": 6,
+   "class_table": "0xACFB",
+   "cost": {
+    "transistors": 28,
+    "stages": 3,
+    "inverters": 3
+   },
+   "estimated_saving_um2": 13.59,
+   "cuts_in_designs": 7,
+   "and_nodes_replaced": 63,
+   "per_design": {
+    "cpu8": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "dsp8": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "arlet6502": {
+     "cuts": 7,
+     "used": 7,
+     "and_nodes_replaced": 63,
+     "saving_um2": 13.59
+    },
+    "uart_apb": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "risc8": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "fir10": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    }
+   }
+  },
+  {
+   "request_id": "C-007",
+   "name": "dd2_GB2__f077f_1",
+   "inputs": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "output": "Y",
+   "expression": "!(((C | D) & ((A & B) | (C & D))))",
+   "truth_table": "0x077F",
+   "sizing": "hd",
+   "estimated_area_um2": 10.0096,
+   "rank": 7,
+   "class_table": "0x077F",
+   "cost": {
+    "transistors": 12,
+    "stages": 1,
+    "inverters": 0
+   },
+   "estimated_saving_um2": 12.71,
+   "cuts_in_designs": 473,
+   "and_nodes_replaced": 15,
+   "per_design": {
+    "cpu8": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "dsp8": {
+     "cuts": 49,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "arlet6502": {
+     "cuts": 5,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "uart_apb": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "risc8": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "fir10": {
+     "cuts": 419,
+     "used": 3,
+     "and_nodes_replaced": 15,
+     "saving_um2": 12.71
+    }
+   }
+  },
+  {
+   "request_id": "C-008",
+   "name": "dd2_GB2__f035f_1",
+   "inputs": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "output": "Y",
+   "expression": "!(((A & C) | (D & (B | C))))",
+   "truth_table": "0x035F",
+   "sizing": "hd",
+   "estimated_area_um2": 8.7584,
+   "rank": 8,
+   "class_table": "0x035F",
+   "cost": {
+    "transistors": 10,
+    "stages": 1,
+    "inverters": 0
+   },
+   "estimated_saving_um2": 11.4,
+   "cuts_in_designs": 27,
+   "and_nodes_replaced": 32,
+   "per_design": {
+    "cpu8": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "dsp8": {
+     "cuts": 23,
+     "used": 8,
+     "and_nodes_replaced": 32,
+     "saving_um2": 11.4
+    },
+    "arlet6502": {
+     "cuts": 1,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "uart_apb": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "risc8": {
+     "cuts": 3,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "fir10": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    }
+   }
+  },
+  {
+   "request_id": "C-009",
+   "name": "dd2_GB2__f07ff_1",
+   "inputs": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "output": "Y",
+   "expression": "!((D & (C | (A & B))))",
+   "truth_table": "0x07FF",
+   "sizing": "hd",
+   "estimated_area_um2": 7.5072,
+   "rank": 9,
+   "class_table": "0x07FF",
+   "cost": {
+    "transistors": 8,
+    "stages": 1,
+    "inverters": 0
+   },
+   "estimated_saving_um2": 10.92,
+   "cuts_in_designs": 602,
+   "and_nodes_replaced": 23,
+   "per_design": {
+    "cpu8": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "dsp8": {
+     "cuts": 3,
+     "used": 1,
+     "and_nodes_replaced": 3,
+     "saving_um2": 0.13
+    },
+    "arlet6502": {
+     "cuts": 74,
+     "used": 2,
+     "and_nodes_replaced": 8,
+     "saving_um2": 4.51
+    },
+    "uart_apb": {
+     "cuts": 408,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "risc8": {
+     "cuts": 91,
+     "used": 3,
+     "and_nodes_replaced": 12,
+     "saving_um2": 6.28
+    },
+    "fir10": {
+     "cuts": 26,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    }
+   }
+  },
+  {
+   "request_id": "C-010",
+   "name": "dd2_GB2__f001f_1",
+   "inputs": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "output": "Y",
+   "expression": "!((D | (C & (A | B))))",
+   "truth_table": "0x001F",
+   "sizing": "hd",
+   "estimated_area_um2": 7.5072,
+   "rank": 10,
+   "class_table": "0x001F",
+   "cost": {
+    "transistors": 8,
+    "stages": 1,
+    "inverters": 0
+   },
+   "estimated_saving_um2": 10.29,
+   "cuts_in_designs": 2215,
+   "and_nodes_replaced": 288,
+   "per_design": {
+    "cpu8": {
+     "cuts": 154,
+     "used": 42,
+     "and_nodes_replaced": 126,
+     "saving_um2": 3.25
+    },
+    "dsp8": {
+     "cuts": 181,
+     "used": 54,
+     "and_nodes_replaced": 162,
+     "saving_um2": 7.04
+    },
+    "arlet6502": {
+     "cuts": 244,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "uart_apb": {
+     "cuts": 341,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "risc8": {
+     "cuts": 762,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "fir10": {
+     "cuts": 533,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    }
+   }
+  },
+  {
+   "request_id": "C-011",
+   "name": "dd2_GB2__f17ff_1",
+   "inputs": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "output": "Y",
+   "expression": "!((D & ((A & B) | (C & (A | B)))))",
+   "truth_table": "0x17FF",
+   "sizing": "hd",
+   "estimated_area_um2": 10.0096,
+   "rank": 11,
+   "class_table": "0x17FF",
+   "cost": {
+    "transistors": 12,
+    "stages": 1,
+    "inverters": 0
+   },
+   "estimated_saving_um2": 8.48,
+   "cuts_in_designs": 2,
+   "and_nodes_replaced": 10,
+   "per_design": {
+    "cpu8": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "dsp8": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "arlet6502": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "uart_apb": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "risc8": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "fir10": {
+     "cuts": 2,
+     "used": 2,
+     "and_nodes_replaced": 10,
+     "saving_um2": 8.48
+    }
+   }
+  },
+  {
+   "request_id": "C-012",
+   "name": "dd2_GB2__fbcc4_1",
+   "inputs": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "output": "Y",
+   "expression": "!((B & (!((A & (((C | D)))) | (!A & (!((C & D))))))) | (!B & (!((C & D)))))",
+   "truth_table": "0xBCC4",
+   "sizing": "hd",
+   "estimated_area_um2": 23.7728,
+   "rank": 12,
+   "class_table": "0xBCC4",
+   "cost": {
+    "transistors": 34,
+    "stages": 4,
+    "inverters": 3
+   },
+   "estimated_saving_um2": 7.95,
+   "cuts_in_designs": 1,
+   "and_nodes_replaced": 13,
+   "per_design": {
+    "cpu8": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "dsp8": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "arlet6502": {
+     "cuts": 1,
+     "used": 1,
+     "and_nodes_replaced": 13,
+     "saving_um2": 7.95
+    },
+    "uart_apb": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "risc8": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "fir10": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    }
+   }
+  },
+  {
+   "request_id": "C-013",
+   "name": "dd2_GB2__f06f6_1",
+   "inputs": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "output": "Y",
+   "expression": "!((C & (D)) | (!C & (!((A & (!B)) | (!A & (B))))))",
+   "truth_table": "0x06F6",
+   "sizing": "hd",
+   "estimated_area_um2": 16.2656,
+   "rank": 13,
+   "class_table": "0x06F6",
+   "cost": {
+    "transistors": 22,
+    "stages": 3,
+    "inverters": 3
+   },
+   "estimated_saving_um2": 7.48,
+   "cuts_in_designs": 9,
+   "and_nodes_replaced": 54,
+   "per_design": {
+    "cpu8": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "dsp8": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "arlet6502": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "uart_apb": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "risc8": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "fir10": {
+     "cuts": 9,
+     "used": 9,
+     "and_nodes_replaced": 54,
+     "saving_um2": 7.48
+    }
+   }
+  },
+  {
+   "request_id": "C-014",
+   "name": "dd2_GB2__f09f9_1",
+   "inputs": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "output": "Y",
+   "expression": "!((C & (D)) | (!C & (!((A & (B)) | (!A & (!B))))))",
+   "truth_table": "0x09F9",
+   "sizing": "hd",
+   "estimated_area_um2": 16.2656,
+   "rank": 14,
+   "class_table": "0x09F9",
+   "cost": {
+    "transistors": 22,
+    "stages": 3,
+    "inverters": 3
+   },
+   "estimated_saving_um2": 5.82,
+   "cuts_in_designs": 17,
+   "and_nodes_replaced": 42,
+   "per_design": {
+    "cpu8": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "dsp8": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "arlet6502": {
+     "cuts": 2,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "uart_apb": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "risc8": {
+     "cuts": 8,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "fir10": {
+     "cuts": 7,
+     "used": 7,
+     "and_nodes_replaced": 42,
+     "saving_um2": 5.82
+    }
+   }
+  },
+  {
+   "request_id": "C-015",
+   "name": "dd2_GB2__f0bbf_1",
+   "inputs": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "output": "Y",
+   "expression": "!(((C | D) & ((!A & B) | (C & D))))",
+   "truth_table": "0x0BBF",
+   "sizing": "hd",
+   "estimated_area_um2": 11.2608,
+   "rank": 15,
+   "class_table": "0x0BBF",
+   "cost": {
+    "transistors": 14,
+    "stages": 2,
+    "inverters": 1
+   },
+   "estimated_saving_um2": 2.99,
+   "cuts_in_designs": 13,
+   "and_nodes_replaced": 5,
+   "per_design": {
+    "cpu8": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "dsp8": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "arlet6502": {
+     "cuts": 2,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "uart_apb": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "risc8": {
+     "cuts": 2,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "fir10": {
+     "cuts": 9,
+     "used": 1,
+     "and_nodes_replaced": 5,
+     "saving_um2": 2.99
+    }
+   }
+  },
+  {
+   "request_id": "C-016",
+   "name": "dd2_GB2__f2bff_1",
+   "inputs": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "output": "Y",
+   "expression": "!((D & ((!A & B) | (C & (!A | B)))))",
+   "truth_table": "0x2BFF",
+   "sizing": "hd",
+   "estimated_area_um2": 11.2608,
+   "rank": 16,
+   "class_table": "0x2BFF",
+   "cost": {
+    "transistors": 14,
+    "stages": 2,
+    "inverters": 1
+   },
+   "estimated_saving_um2": 2.99,
+   "cuts_in_designs": 1,
+   "and_nodes_replaced": 5,
+   "per_design": {
+    "cpu8": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "dsp8": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "arlet6502": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "uart_apb": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "risc8": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "fir10": {
+     "cuts": 1,
+     "used": 1,
+     "and_nodes_replaced": 5,
+     "saving_um2": 2.99
+    }
+   }
+  },
+  {
+   "request_id": "C-017",
+   "name": "dd2_GB2__f0667_1",
+   "inputs": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "output": "Y",
+   "expression": "!((A & (((B | (C & D))))) | (!A & (!(((B & !C) | (!D & (B | !C)))))))",
+   "truth_table": "0x0667",
+   "sizing": "hd",
+   "estimated_area_um2": 22.5216,
+   "rank": 17,
+   "class_table": "0x0667",
+   "cost": {
+    "transistors": 32,
+    "stages": 3,
+    "inverters": 4
+   },
+   "estimated_saving_um2": 2.76,
+   "cuts_in_designs": 2,
+   "and_nodes_replaced": 10,
+   "per_design": {
+    "cpu8": {
+     "cuts": 1,
+     "used": 1,
+     "and_nodes_replaced": 10,
+     "saving_um2": 2.76
+    },
+    "dsp8": {
+     "cuts": 1,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "arlet6502": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "uart_apb": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "risc8": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "fir10": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    }
+   }
+  },
+  {
+   "request_id": "C-018",
+   "name": "dd2_GB2__feb_1",
+   "inputs": [
+    "A",
+    "B",
+    "C"
+   ],
+   "output": "Y",
+   "expression": "!((!A & (!((B & (C)) | (!B & (!C))))))",
+   "truth_table": "0xEB",
+   "sizing": "hd",
+   "estimated_area_um2": 13.7632,
+   "rank": 18,
+   "class_table": "0xEBEB",
+   "cost": {
+    "transistors": 18,
+    "stages": 3,
+    "inverters": 3
+   },
+   "estimated_saving_um2": 2.04,
+   "cuts_in_designs": 2,
+   "and_nodes_replaced": 12,
+   "per_design": {
+    "cpu8": {
+     "cuts": 1,
+     "used": 1,
+     "and_nodes_replaced": 6,
+     "saving_um2": 1.41
+    },
+    "dsp8": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "arlet6502": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "uart_apb": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "risc8": {
+     "cuts": 1,
+     "used": 1,
+     "and_nodes_replaced": 6,
+     "saving_um2": 0.64
+    },
+    "fir10": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    }
+   }
+  },
+  {
+   "request_id": "C-019",
+   "name": "dd2_GB2__facdf_1",
+   "inputs": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "output": "Y",
+   "expression": "!((D & (!((C & (A)) | (!C & (B))))) | (!D & (!(B | (!((A & C)))))))",
+   "truth_table": "0xACDF",
+   "sizing": "hd",
+   "estimated_area_um2": 20.0192,
+   "rank": 19,
+   "class_table": "0xACDF",
+   "cost": {
+    "transistors": 28,
+    "stages": 3,
+    "inverters": 2
+   },
+   "estimated_saving_um2": 1.94,
+   "cuts_in_designs": 1,
+   "and_nodes_replaced": 9,
+   "per_design": {
+    "cpu8": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "dsp8": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "arlet6502": {
+     "cuts": 1,
+     "used": 1,
+     "and_nodes_replaced": 9,
+     "saving_um2": 1.94
+    },
+    "uart_apb": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "risc8": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "fir10": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    }
+   }
+  },
+  {
+   "request_id": "C-020",
+   "name": "dd2_GB2__faefe_1",
+   "inputs": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "output": "Y",
+   "expression": "!((!A & (!((C & (!D)) | (!C & (B))))))",
+   "truth_table": "0xAEFE",
+   "sizing": "hd",
+   "estimated_area_um2": 13.7632,
+   "rank": 20,
+   "class_table": "0xAEFE",
+   "cost": {
+    "transistors": 18,
+    "stages": 3,
+    "inverters": 3
+   },
+   "estimated_saving_um2": 1.94,
+   "cuts_in_designs": 38,
+   "and_nodes_replaced": 20,
+   "per_design": {
+    "cpu8": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "dsp8": {
+     "cuts": 32,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "arlet6502": {
+     "cuts": 1,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "uart_apb": {
+     "cuts": 1,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "risc8": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "fir10": {
+     "cuts": 4,
+     "used": 4,
+     "and_nodes_replaced": 20,
+     "saving_um2": 1.94
+    }
+   }
+  },
+  {
+   "request_id": "C-021",
+   "name": "dd2_GB2__f0efe_1",
+   "inputs": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "output": "Y",
+   "expression": "!((C & (D)) | (!C & (!((A | B)))))",
+   "truth_table": "0x0EFE",
+   "sizing": "hd",
+   "estimated_area_um2": 11.2608,
+   "rank": 21,
+   "class_table": "0x0EFE",
+   "cost": {
+    "transistors": 14,
+    "stages": 2,
+    "inverters": 1
+   },
+   "estimated_saving_um2": 1.64,
+   "cuts_in_designs": 40,
+   "and_nodes_replaced": 48,
+   "per_design": {
+    "cpu8": {
+     "cuts": 6,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "dsp8": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "arlet6502": {
+     "cuts": 8,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "uart_apb": {
+     "cuts": 2,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "risc8": {
+     "cuts": 12,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "fir10": {
+     "cuts": 12,
+     "used": 12,
+     "and_nodes_replaced": 48,
+     "saving_um2": 1.64
+    }
+   }
+  },
+  {
+   "request_id": "C-022",
+   "name": "dd2_GB2__f88f7_1",
+   "inputs": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "output": "Y",
+   "expression": "!((D & (!((A & B)))) | (!D & (!(C | (!((A & B)))))))",
+   "truth_table": "0x88F7",
+   "sizing": "hd",
+   "estimated_area_um2": 16.2656,
+   "rank": 22,
+   "class_table": "0x88F7",
+   "cost": {
+    "transistors": 22,
+    "stages": 3,
+    "inverters": 1
+   },
+   "estimated_saving_um2": 1.43,
+   "cuts_in_designs": 3,
+   "and_nodes_replaced": 7,
+   "per_design": {
+    "cpu8": {
+     "cuts": 1,
+     "used": 1,
+     "and_nodes_replaced": 7,
+     "saving_um2": 1.43
+    },
+    "dsp8": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "arlet6502": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "uart_apb": {
+     "cuts": 2,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "risc8": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "fir10": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    }
+   }
+  },
+  {
+   "request_id": "C-023",
+   "name": "dd2_GB2__feefe_1",
+   "inputs": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "output": "Y",
+   "expression": "((A | (B | (C & !D))))",
+   "truth_table": "0xEEFE",
+   "sizing": "hd",
+   "estimated_area_um2": 11.2608,
+   "rank": 23,
+   "class_table": "0xEEFE",
+   "cost": {
+    "transistors": 12,
+    "stages": 3,
+    "inverters": 2
+   },
+   "estimated_saving_um2": 0.94,
+   "cuts_in_designs": 5,
+   "and_nodes_replaced": 5,
+   "per_design": {
+    "cpu8": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "dsp8": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "arlet6502": {
+     "cuts": 1,
+     "used": 1,
+     "and_nodes_replaced": 5,
+     "saving_um2": 0.94
+    },
+    "uart_apb": {
+     "cuts": 1,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "risc8": {
+     "cuts": 3,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "fir10": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    }
+   }
+  },
+  {
+   "request_id": "C-024",
+   "name": "dd2_GB2__fa995_1",
+   "inputs": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "output": "Y",
+   "expression": "!((A & (!(((B & C) | (D & (B | C)))))) | (!A & ((((B & C) | (D & (B | C)))))))",
+   "truth_table": "0xA995",
+   "sizing": "hd",
+   "estimated_area_um2": 22.5216,
+   "rank": 24,
+   "class_table": "0xA995",
+   "cost": {
+    "transistors": 32,
+    "stages": 3,
+    "inverters": 2
+   },
+   "estimated_saving_um2": 0.82,
+   "cuts_in_designs": 154,
+   "and_nodes_replaced": 24,
+   "per_design": {
+    "cpu8": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "dsp8": {
+     "cuts": 15,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "arlet6502": {
+     "cuts": 3,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "uart_apb": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "risc8": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "fir10": {
+     "cuts": 136,
+     "used": 3,
+     "and_nodes_replaced": 24,
+     "saving_um2": 0.82
+    }
+   }
+  },
+  {
+   "request_id": "C-025",
+   "name": "dd2_GB2__f0017_1",
+   "inputs": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "output": "Y",
+   "expression": "!((D | ((A | B) & (C | (A & B)))))",
+   "truth_table": "0x0017",
+   "sizing": "hd",
+   "estimated_area_um2": 10.0096,
+   "rank": 25,
+   "class_table": "0x0017",
+   "cost": {
+    "transistors": 12,
+    "stages": 1,
+    "inverters": 0
+   },
+   "estimated_saving_um2": 0.7,
+   "cuts_in_designs": 501,
+   "and_nodes_replaced": 16,
+   "per_design": {
+    "cpu8": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "dsp8": {
+     "cuts": 32,
+     "used": 4,
+     "and_nodes_replaced": 16,
+     "saving_um2": 0.7
+    },
+    "arlet6502": {
+     "cuts": 2,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "uart_apb": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "risc8": {
+     "cuts": 2,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "fir10": {
+     "cuts": 465,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    }
+   }
+  },
+  {
+   "request_id": "C-026",
+   "name": "dd2_GB2__f17e8_1",
+   "inputs": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "output": "Y",
+   "expression": "!((D & ((((A & B) | (C & (A | B)))))) | (!D & (!(((A & B) | (C & (A | B)))))))",
+   "truth_table": "0x17E8",
+   "sizing": "hd",
+   "estimated_area_um2": 22.5216,
+   "rank": 26,
+   "class_table": "0x17E8",
+   "cost": {
+    "transistors": 32,
+    "stages": 3,
+    "inverters": 2
+   },
+   "estimated_saving_um2": 0.55,
+   "cuts_in_designs": 309,
+   "and_nodes_replaced": 16,
+   "per_design": {
+    "cpu8": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "dsp8": {
+     "cuts": 15,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "arlet6502": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "uart_apb": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "risc8": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "fir10": {
+     "cuts": 294,
+     "used": 2,
+     "and_nodes_replaced": 16,
+     "saving_um2": 0.55
+    }
+   }
+  },
+  {
+   "request_id": "C-027",
+   "name": "dd2_GB2__faafe_1",
+   "inputs": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "output": "Y",
+   "expression": "((A | (!D & (B | C))))",
+   "truth_table": "0xAAFE",
+   "sizing": "hd",
+   "estimated_area_um2": 11.2608,
+   "rank": 27,
+   "class_table": "0xAAFE",
+   "cost": {
+    "transistors": 12,
+    "stages": 3,
+    "inverters": 2
+   },
+   "estimated_saving_um2": 0.55,
+   "cuts_in_designs": 49,
+   "and_nodes_replaced": 16,
+   "per_design": {
+    "cpu8": {
+     "cuts": 2,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "dsp8": {
+     "cuts": 32,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "arlet6502": {
+     "cuts": 2,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "uart_apb": {
+     "cuts": 6,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "risc8": {
+     "cuts": 3,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "fir10": {
+     "cuts": 4,
+     "used": 4,
+     "and_nodes_replaced": 16,
+     "saving_um2": 0.55
+    }
+   }
+  },
+  {
+   "request_id": "C-028",
+   "name": "dd2_GB2__fa8ac_1",
+   "inputs": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "output": "Y",
+   "expression": "!((C & (!A)) | (!C & (!((B & (A | !D))))))",
+   "truth_table": "0xA8AC",
+   "sizing": "hd",
+   "estimated_area_um2": 15.0144,
+   "rank": 28,
+   "class_table": "0xA8AC",
+   "cost": {
+    "transistors": 20,
+    "stages": 3,
+    "inverters": 3
+   },
+   "estimated_saving_um2": 0.26,
+   "cuts_in_designs": 1,
+   "and_nodes_replaced": 6,
+   "per_design": {
+    "cpu8": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "dsp8": {
+     "cuts": 1,
+     "used": 1,
+     "and_nodes_replaced": 6,
+     "saving_um2": 0.26
+    },
+    "arlet6502": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "uart_apb": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "risc8": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "fir10": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    }
+   }
+  },
+  {
+   "request_id": "C-029",
+   "name": "dd2_GB2__f2be8_1",
+   "inputs": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "output": "Y",
+   "expression": "!((B & (!((C & (!D)) | (!C & (A))))) | (!B & (!((C & (A)) | (!C & (D))))))",
+   "truth_table": "0x2BE8",
+   "sizing": "hd",
+   "estimated_area_um2": 22.5216,
+   "rank": 29,
+   "class_table": "0x2BE8",
+   "cost": {
+    "transistors": 32,
+    "stages": 3,
+    "inverters": 4
+   },
+   "estimated_saving_um2": 0.23,
+   "cuts_in_designs": 1,
+   "and_nodes_replaced": 9,
+   "per_design": {
+    "cpu8": {
+     "cuts": 1,
+     "used": 1,
+     "and_nodes_replaced": 9,
+     "saving_um2": 0.23
+    },
+    "dsp8": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "arlet6502": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "uart_apb": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "risc8": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "fir10": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    }
+   }
+  },
+  {
+   "request_id": "C-030",
+   "name": "dd2_GB2__faabd_1",
+   "inputs": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "output": "Y",
+   "expression": "!((A & (!((B | (C | D))))) | (!A & (((D | (B & C))))))",
+   "truth_table": "0xAABD",
+   "sizing": "hd",
+   "estimated_area_um2": 17.5168,
+   "rank": 30,
+   "class_table": "0xAABD",
+   "cost": {
+    "transistors": 24,
+    "stages": 3,
+    "inverters": 2
+   },
+   "estimated_saving_um2": 0.18,
+   "cuts_in_designs": 1,
+   "and_nodes_replaced": 7,
+   "per_design": {
+    "cpu8": {
+     "cuts": 1,
+     "used": 1,
+     "and_nodes_replaced": 7,
+     "saving_um2": 0.18
+    },
+    "dsp8": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "arlet6502": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "uart_apb": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "risc8": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    },
+    "fir10": {
+     "cuts": 0,
+     "used": 0,
+     "and_nodes_replaced": 0,
+     "saving_um2": 0
+    }
+   }
+  }
+ ]
+}

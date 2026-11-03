@@ -1,0 +1,5 @@
+{
+  "what": "A cost entry whose formula does not compute the function it claims (checkpoint 2, step 4). costmodel.verify must reject it.",
+  "truth_table": "0x0707",
+  "expression": "!(A & B)"
+}
