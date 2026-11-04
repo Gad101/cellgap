@@ -1,0 +1,15 @@
+{
+ "request_id": "C-001",
+ "name": "dd2_gb2__feefa_1",
+ "inputs": [
+  "A",
+  "B",
+  "C",
+  "D"
+ ],
+ "output": "Y",
+ "expression": "!((!A & (!((D & (B)) | (!D & (C))))))",
+ "truth_table": "0xEEFA",
+ "sizing": "hd",
+ "estimated_area_um2": 12.512
+}

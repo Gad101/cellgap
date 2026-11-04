@@ -1,0 +1,5 @@
+ABC command line: "read_aiger /Users/abdugad/dd2/cellgap/build/mapping_equivalence/arlet6502_est_ref.aig; zero; write_aiger /Users/abdugad/dd2/cellgap/build/mapping_equivalence/arlet6502_est_ref_0.aig; read_aiger /Users/abdugad/dd2/cellgap/build/mapping_equivalence/arlet6502_est_B.aig; zero; write_aiger /Users/abdugad/dd2/cellgap/build/mapping_equivalence/arlet6502_est_B_0.aig; dsec /Users/abdugad/dd2/cellgap/build/mapping_equivalence/arlet6502_est_ref_0.aig /Users/abdugad/dd2/cellgap/build/mapping_equivalence/arlet6502_est_B_0.aig".
+
+Converting 143 flops from don't-care to zero initial value.
+Converting 143 flops from don't-care to zero initial value.
+Networks are equivalent.  Time =     0.48 sec

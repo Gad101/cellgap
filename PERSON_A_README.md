@@ -5,6 +5,12 @@
 > unchanged; every output in `results/` was regenerated from the corrected inputs. The ranking
 > changed (top: 0xEEFA, 36.7 um2; was 0xAABF, 250.0 um2), so anything done with the old ranking,
 > such as remapping the top 5 cells, must be redone. See README section 6.
+>
+> **Changed in `src/candidates.py` (4 Nov 2026, Person B):** the group tag default is now `gb2`
+> (cell names `dd2_gb2__...`), and the ranking keeps only candidates with estimated saving > 0
+> (11 of 30). It now ranks on all 8 designs (the 6 required plus SPM and mul, `ANALYSED` in
+> `src/designs.py`); for SPM and mul the area per AND comes from `make baseline-mapping-spm-mul`.
+> `tests/test_candidates.py` is unchanged and passes.
 
 Copy these files over your repository (the Makefile replaces yours; it only adds the
 targets `area-model` and `candidates`, adds `tests/test_candidates.py` to `make test`,
@@ -20,7 +26,7 @@ or the PDK (AGENTS.md rule 1).
 
 ## Run (after `make setup`, `make aigs`, `make table1`)
     make area-model        # results/area_model.json, results/area_model_fit.csv
-    make candidates GROUP=g<your group number>
+    make candidates GROUP=gb2
     make test
 
 Outputs in `results/`: `candidates.json` (each entry already has the Appendix A request

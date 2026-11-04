@@ -29,8 +29,8 @@ LIBS = {
 TOLERANCE = 0.005   # 0.5 %: counts as reproduced
 
 
-def map_design(name: str, lib: str, script: str, log: str) -> tuple[float, dict]:
-    """Run the handout's commands; return (chip area, cell counts)."""
+def map_design(name: str, lib: str, script: str, log: str, extra: str = "") -> tuple[float, dict]:
+    """Run the handout's commands (then `extra`, e.g. write_verilog); return (chip area, cell counts)."""
     top, _, flags = DESIGNS[name]
     reads = "\n".join("read_verilog %s %s" % (flags, f) for f in files(name))
     cmds = f"""{reads}
@@ -39,7 +39,7 @@ dfflibmap -liberty {lib}
 abc -liberty {lib} -script {script}
 opt_clean -purge
 stat -liberty {lib}
-"""
+{extra}"""
     os.makedirs(os.path.dirname(log), exist_ok=True)
     ys = log[:-4] + ".ys"
     with open(ys, "w") as f:

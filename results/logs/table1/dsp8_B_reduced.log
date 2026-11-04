@@ -748,7 +748,7 @@ ABC: ABC command line: "source <abc-temp-dir>/abc.script".
 ABC: 
 ABC: + read_blif <abc-temp-dir>/input.blif 
 ABC: + read_lib -w /Users/abdugad/dd2/DD2_Project1_student_pack/given/hd_reduced.lib 
-ABC: Parsing finished successfully.  Parsing time =     0.03 sec
+ABC: Parsing finished successfully.  Parsing time =     0.06 sec
 ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbn_1".
 ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbp_1".
 ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrbp_1".
@@ -766,8 +766,8 @@ ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxbn_1".
 ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxbp_1".
 ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_1".
 ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtp_1".
-ABC: Library "sky130_fd_sc_hd__tt_025C_1v80" from "/Users/abdugad/dd2/DD2_Project1_student_pack/given/hd_reduced.lib" has 172 cells (17 skipped: 17 seq; 0 tri-state; 0 no func; 0 dont_use).  Time =     0.05 sec
-ABC: Memory =    9.94 MB. Time =     0.05 sec
+ABC: Library "sky130_fd_sc_hd__tt_025C_1v80" from "/Users/abdugad/dd2/DD2_Project1_student_pack/given/hd_reduced.lib" has 172 cells (17 skipped: 17 seq; 0 tri-state; 0 no func; 0 dont_use).  Time =     0.09 sec
+ABC: Memory =    9.94 MB. Time =     0.09 sec
 ABC: Warning: Detected 2 multi-output gates (for example, "sky130_fd_sc_hd__fa_1").
 ABC: + strash 
 ABC: + &get -n 
@@ -883,6 +883,6 @@ Removed 0 unused cells and 1108 unused wires.
 
    Chip area for module '\dsp8': 6214.710400
 
-End of script. Logfile hash: f2d1a8aea1, CPU: user 0.31s system 0.01s, MEM: 25.82 MB peak
+End of script. Logfile hash: 6c914cb287, CPU: user 0.56s system 0.01s, MEM: 25.64 MB peak
 Yosys 0.33 (git sha1 2584903a060)
-Time spent: 41% 2x abc (0 sec), 11% 26x opt_expr (0 sec), ...
+Time spent: 41% 2x abc (0 sec), 10% 26x opt_expr (0 sec), ...

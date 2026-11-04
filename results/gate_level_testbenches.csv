@@ -1,0 +1,13 @@
+design,library,script,testbench,result,message
+spm,baseline,A,SPM_tb,pass,PASS: SPM behaves as a signed 32x32 multiplier
+spm,baseline,B,SPM_tb,pass,PASS: SPM behaves as a signed 32x32 multiplier
+spm,est,A,SPM_tb,pass,PASS: SPM behaves as a signed 32x32 multiplier
+spm,est,B,SPM_tb,pass,PASS: SPM behaves as a signed 32x32 multiplier
+mul,baseline,A,mul_tb,pass,PASS: 7/7 tests passed
+mul,baseline,A,mul_exhaustive_tb,pass,PASS: all 65536 signed input pairs correct
+mul,baseline,B,mul_tb,pass,PASS: 7/7 tests passed
+mul,baseline,B,mul_exhaustive_tb,pass,PASS: all 65536 signed input pairs correct
+mul,est,A,mul_tb,pass,PASS: 7/7 tests passed
+mul,est,A,mul_exhaustive_tb,pass,PASS: all 65536 signed input pairs correct
+mul,est,B,mul_tb,pass,PASS: 7/7 tests passed
+mul,est,B,mul_exhaustive_tb,pass,PASS: all 65536 signed input pairs correct

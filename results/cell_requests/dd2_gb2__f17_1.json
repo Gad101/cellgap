@@ -1,0 +1,14 @@
+{
+ "request_id": "C-003",
+ "name": "dd2_gb2__f17_1",
+ "inputs": [
+  "A",
+  "B",
+  "C"
+ ],
+ "output": "Y",
+ "expression": "!(((A & B) | (C & (A | B))))",
+ "truth_table": "0x17",
+ "sizing": "hd",
+ "estimated_area_um2": 8.7584
+}

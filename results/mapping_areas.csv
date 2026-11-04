@@ -1,0 +1,33 @@
+design,library,script,area_um2,new_cell_instances,new_cells,netlist
+cpu8,baseline,A,4186.5,0,,results/netlists/cpu8_baseline_A.v
+cpu8,baseline,B,4359.2,0,,results/netlists/cpu8_baseline_B.v
+cpu8,est,A,4186.5,1,dd2_gb2__f07ff_1:1,results/netlists/cpu8_est_A.v
+cpu8,est,B,4282.9,6,dd2_gb2__f07ff_1:6,results/netlists/cpu8_est_B.v
+dsp8,baseline,A,5928.2,0,,results/netlists/dsp8_baseline_A.v
+dsp8,baseline,B,6214.7,0,,results/netlists/dsp8_baseline_B.v
+dsp8,est,A,5914.4,10,dd2_gb2__f07ff_1:10,results/netlists/dsp8_est_A.v
+dsp8,est,B,6185.9,40,dd2_gb2__f07ff_1:16 dd2_gb2__f17_1:22 dd2_gb2__feefa_1:2,results/netlists/dsp8_est_B.v
+arlet6502,baseline,A,9701.8,0,,results/netlists/arlet6502_baseline_A.v
+arlet6502,baseline,B,9995.8,0,,results/netlists/arlet6502_baseline_B.v
+arlet6502,est,A,9654.3,3,dd2_gb2__f07ff_1:3,results/netlists/arlet6502_est_A.v
+arlet6502,est,B,9887.0,16,dd2_gb2__f07ff_1:11 dd2_gb2__f17_1:4 dd2_gb2__feefa_1:1,results/netlists/arlet6502_est_B.v
+uart_apb,baseline,A,12948.7,0,,results/netlists/uart_apb_baseline_A.v
+uart_apb,baseline,B,13180.1,0,,results/netlists/uart_apb_baseline_B.v
+uart_apb,est,A,12939.9,0,,results/netlists/uart_apb_est_A.v
+uart_apb,est,B,13168.9,4,dd2_gb2__f07ff_1:3 dd2_gb2__faabf_1:1,results/netlists/uart_apb_est_B.v
+risc8,baseline,A,28263.4,0,,results/netlists/risc8_baseline_A.v
+risc8,baseline,B,27511.4,0,,results/netlists/risc8_baseline_B.v
+risc8,est,A,28252.1,3,dd2_gb2__f07ff_1:3,results/netlists/risc8_est_A.v
+risc8,est,B,27493.9,40,dd2_gb2__f077f_1:1 dd2_gb2__f07ff_1:22 dd2_gb2__f17_1:3 dd2_gb2__faabf_1:1 dd2_gb2__feefa_1:13,results/netlists/risc8_est_B.v
+fir10,baseline,A,25968.7,0,,results/netlists/fir10_baseline_A.v
+fir10,baseline,B,29055.4,0,,results/netlists/fir10_baseline_B.v
+fir10,est,A,25968.7,0,,results/netlists/fir10_est_A.v
+fir10,est,B,28507.3,254,dd2_gb2__f077f_1:34 dd2_gb2__f0bbf_1:1 dd2_gb2__f17_1:219,results/netlists/fir10_est_B.v
+spm,baseline,A,2869.0,0,,results/netlists/spm_baseline_A.v
+spm,baseline,B,2907.8,0,,results/netlists/spm_baseline_B.v
+spm,est,A,2869.0,0,,results/netlists/spm_est_A.v
+spm,est,B,2946.6,31,dd2_gb2__f077f_1:31,results/netlists/spm_est_B.v
+mul,baseline,A,1756.7,0,,results/netlists/mul_baseline_A.v
+mul,baseline,B,1948.1,0,,results/netlists/mul_baseline_B.v
+mul,est,A,1756.7,0,,results/netlists/mul_est_A.v
+mul,est,B,1923.1,16,dd2_gb2__f077f_1:1 dd2_gb2__f07ff_1:2 dd2_gb2__f0bbf_1:1 dd2_gb2__f17_1:12,results/netlists/mul_est_B.v

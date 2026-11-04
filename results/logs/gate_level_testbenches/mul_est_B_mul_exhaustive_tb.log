@@ -1,0 +1,3 @@
+
+PASS: all 65536 signed input pairs correct
+/Users/abdugad/dd2/cellgap/build/tut2/mul_exhaustive_tb.v:42: $finish called at 65536000 (1ps)

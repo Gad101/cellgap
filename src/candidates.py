@@ -46,7 +46,7 @@ import costmodel                                    # noqa: E402
 import cuts as cutlib                               # noqa: E402
 import liberty                                      # noqa: E402
 import redundancy                                   # noqa: E402
-from designs import GIVEN, REQUIRED, ROOT           # noqa: E402
+from designs import ANALYSED, GIVEN, ROOT           # noqa: E402
 from tt import NAMES, canon, support, to_hex        # noqa: E402
 
 RESULTS = os.path.join(ROOT, "results")
@@ -117,7 +117,8 @@ def pick_disjoint(occ: list[tuple[int, frozenset, int]], gain_of) -> list[tuple[
 def baseline_area_per_and(design: str, n_ands: int) -> tuple[float | None, str]:
     """Combinational area of the baseline mapping / AND nodes, best of scripts A and B.
 
-    Read from the Table 1 logs (results/logs/table1/<design>_<script>_reduced.log),
+    Read from the Table 1 logs (results/logs/table1/<design>_<script>_reduced.log), or for
+    SPM and mul the baseline mapping logs (results/logs/mapping/<design>_baseline_<script>.log),
     so it comes from a file the flow wrote. Returns (None, reason) when there is no log:
     we never invent an area (AGENTS.md rule 3).
     """
@@ -127,6 +128,8 @@ def baseline_area_per_and(design: str, n_ands: int) -> tuple[float | None, str]:
         area = {c["name"]: (c["area"], c["sequential"]) for c in liberty.cells(lib)}
         for script in "AB":
             log = os.path.join(RESULTS, "logs", "table1", "%s_%s_reduced.log" % (design, script))
+            if not os.path.exists(log):   # designs without a Table 1 row: make baseline-mapping-spm-mul
+                log = os.path.join(RESULTS, "logs", "mapping", "%s_baseline_%s.log" % (design, script))
             if not os.path.exists(log):
                 continue
             text = open(log).read()
@@ -168,9 +171,9 @@ def collect(design: str, hd: redundancy.HDIndex, cache: dict, aig_dir: str) -> d
 
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--group", default="g0", help="group tag used in cell names: dd2_<group>__...")
+    ap.add_argument("--group", default="gb2", help="group tag used in cell names: dd2_<group>__...")
     ap.add_argument("--top", type=int, default=30, help="candidates written to candidates.json")
-    ap.add_argument("--designs", default=",".join(REQUIRED))
+    ap.add_argument("--designs", default=",".join(ANALYSED))
     ap.add_argument("--aig-dir", default=os.path.join(ROOT, "build", "aig"))
     ap.add_argument("--out", default=RESULTS, help="folder for the result files")
     ap.add_argument("--a-and", type=float, default=None,
@@ -267,6 +270,7 @@ def main(argv=None):
         ranked.append({"class": c, "low": low, "n": n, "cost": cost, "area": area, "saving": total, "S": S,
                        "cuts": sum(per_design[d]["cuts"] for d in designs), "replaced": replaced, "per_design": per_design})
     ranked.sort(key=lambda r: (-r["saving"], -r["cuts"], r["class"]))
+    ranked = [r for r in ranked if r["saving"] > 0]   # only cells estimated to save area
 
     out = []
     for i, r in enumerate(ranked[:a.top], 1):

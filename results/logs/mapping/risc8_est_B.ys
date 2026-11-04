@@ -1,0 +1,7 @@
+read_verilog  /Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v
+synth -flatten -top cpu
+dfflibmap -liberty /Users/abdugad/dd2/cellgap/libs/hd_reduced_plus_new_cells_est.lib
+abc -liberty /Users/abdugad/dd2/cellgap/libs/hd_reduced_plus_new_cells_est.lib -script +strash;&get,-n;&dch,-f;&nf,-R,1000;&put
+opt_clean -purge
+stat -liberty /Users/abdugad/dd2/cellgap/libs/hd_reduced_plus_new_cells_est.lib
+write_verilog -noattr /Users/abdugad/dd2/cellgap/results/netlists/risc8_est_B.v

@@ -1,0 +1,15 @@
+{
+ "request_id": "C-006",
+ "name": "dd2_gb2__fbcc4_1",
+ "inputs": [
+  "A",
+  "B",
+  "C",
+  "D"
+ ],
+ "output": "Y",
+ "expression": "!((B & (!((A & (((C | D)))) | (!A & (!((C & D))))))) | (!B & (!((C & D)))))",
+ "truth_table": "0xBCC4",
+ "sizing": "hd",
+ "estimated_area_um2": 23.7728
+}

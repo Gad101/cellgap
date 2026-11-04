@@ -1324,7 +1324,7 @@ ABC: ABC command line: "source <abc-temp-dir>/abc.script".
 ABC: 
 ABC: + read_blif <abc-temp-dir>/input.blif 
 ABC: + read_lib -w /Users/abdugad/dd2/DD2_Project1_student_pack/given/hd_reduced.lib 
-ABC: Parsing finished successfully.  Parsing time =     0.03 sec
+ABC: Parsing finished successfully.  Parsing time =     0.06 sec
 ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbn_1".
 ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbp_1".
 ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrbp_1".
@@ -1342,8 +1342,8 @@ ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxbn_1".
 ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxbp_1".
 ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_1".
 ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtp_1".
-ABC: Library "sky130_fd_sc_hd__tt_025C_1v80" from "/Users/abdugad/dd2/DD2_Project1_student_pack/given/hd_reduced.lib" has 172 cells (17 skipped: 17 seq; 0 tri-state; 0 no func; 0 dont_use).  Time =     0.05 sec
-ABC: Memory =    9.94 MB. Time =     0.05 sec
+ABC: Library "sky130_fd_sc_hd__tt_025C_1v80" from "/Users/abdugad/dd2/DD2_Project1_student_pack/given/hd_reduced.lib" has 172 cells (17 skipped: 17 seq; 0 tri-state; 0 no func; 0 dont_use).  Time =     0.08 sec
+ABC: Memory =    9.94 MB. Time =     0.08 sec
 ABC: Warning: Detected 2 multi-output gates (for example, "sky130_fd_sc_hd__fa_1").
 ABC: + strash 
 ABC: + dch -f 
@@ -1461,6 +1461,6 @@ Removed 0 unused cells and 3482 unused wires.
    Chip area for module '\cpu': 28263.356800
 
 Warnings: 3 unique messages, 3 total
-End of script. Logfile hash: 9b52ca6e8b, CPU: user 0.83s system 0.01s, MEM: 32.56 MB peak
+End of script. Logfile hash: 3250510d80, CPU: user 1.45s system 0.02s, MEM: 32.56 MB peak
 Yosys 0.33 (git sha1 2584903a060)
-Time spent: 51% 2x abc (0 sec), 12% 25x opt_expr (0 sec), ...
+Time spent: 52% 2x abc (1 sec), 12% 25x opt_expr (0 sec), ...

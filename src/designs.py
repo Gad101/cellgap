@@ -27,8 +27,18 @@ DESIGNS = {
     "pic1826":   ("cpu", False, "-sv"),
     "xfir":      ("xfir", False, ""),
     "chacha":    ("chacha", False, ""),
+    # handout section 3: SPM from Tutorial 4 and the multiplier from Tutorial 2
+    "spm":       ("SPM", False, ""),
+    "mul":       ("mul", False, ""),
+}
+# Tutorial files, linked by make setup into build/tut2 and build/tut4.
+TUTORIAL = {
+    "spm": ("tut4", ["SPM.v", "CSADD.v", "TCMP.v"]),
+    "mul": ("tut2", ["mul.v"]),
 }
 REQUIRED = [d for d, (_, req, _) in DESIGNS.items() if req]
+# Every design the flow analyses, maps and ranks on: the required ones plus SPM and mul (section 3).
+ANALYSED = REQUIRED + ["spm", "mul"]
 
 # Handout Table 1: area in um2 with Yosys 0.33. Do not edit (AGENTS.md rule 2).
 TABLE1 = {  # design: (A usable, A reduced, B usable, B reduced)
@@ -48,6 +58,14 @@ SCRIPTS = {
 
 def files(name: str) -> list[str]:
     """Verilog files of a design."""
+    if name in TUTORIAL:
+        tut, names = TUTORIAL[name]
+        d = os.path.realpath(os.path.join(ROOT, "build", tut))
+        fs = [os.path.join(d, f) for f in names]
+        missing = [f for f in fs if not os.path.exists(f)]
+        if missing:
+            raise FileNotFoundError("%s not found (run make setup TUT2=... TUT4=...)" % missing)
+        return fs
     base = os.path.join(GIVEN, "designs")
     for ext in (".v", ".sv"):
         p = os.path.join(base, name + ext)

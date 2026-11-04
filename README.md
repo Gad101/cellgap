@@ -52,6 +52,13 @@ Liberty file, and measure the area saving. Order of the steps:
 | `make aigs` | student-pack designs | `build/aig/<design>.aag`, and `<design>_abc.aig` after ABC `strash; dch` (checked with `cec`) |
 | `make stats` | AIGs | `results/design_stats.csv` (before/after ABC), `results/cuts/<design>[_abc].json` |
 | `make table1` | designs, `hd_usable.lib`, `hd_reduced.lib` | `results/table1.{csv,md}`, `results/logs/table1/` |
+| `make cell-requests` | `results/candidates.json` | `results/cell_requests/<cell>.json`: one Appendix A request per candidate, each passing `request.py`'s check |
+| `make liberty-with-new-cells` | `results/cell_requests/`, `hd_reduced.lib` | `libs/hd_reduced_plus_new_cells_est.lib`: the reduced library plus the new cells (section 6 format); checked: Yosys imports 189 + N cell types, each new cell's function matches its request |
+| `make mapping` | the designs (6 required, SPM, mul), `hd_reduced.lib`, `libs/hd_reduced_plus_new_cells_est.lib` | `results/mapping_areas.csv`, `results/logs/mapping/`, `results/netlists/`: each design with and without the new cells, scripts A and B (section 2 commands); baseline must equal Table 1 |
+| `make mapping-equivalence` | `results/netlists/` | `results/mapping_equivalence.csv`, `results/logs/mapping_equivalence/`: every mapping against the RTL (synth + dfflibmap) with ABC `cec`, or `dsec` when the design has flip-flops |
+| `make new-cell-verilog-sims` | `results/cell_requests/` | `libs/new_cell_verilog_sims.v`: one Verilog model per new cell (its function), for simulation |
+| `make gate-level-testbenches` (**on the host**, Icarus Verilog 13) | SPM and mul netlists, Tutorial 4 / 2 testbenches, PDK cell models | `results/gate_level_testbenches.csv`, `results/logs/gate_level_testbenches/`: SPM_tb, mul_tb, mul_exhaustive_tb with Tutorial 4's iverilog command |
+| `make table5-estimated` | `results/mapping_areas.csv`, `results/mapping_equivalence.csv` | `results/table5_estimated.{md,csv}`: handout Table 5 with estimated areas, best of both per design, total over the required designs |
 | `make all` | | all of the above |
 | `make demo IN=<design.v> TOP=<top>` | a design | AIG, cut check, most frequent functions and their HD class |
 | `make clean` | | removes `build/` outputs |
@@ -65,7 +72,8 @@ Liberty file, and measure the area saving. Order of the steps:
 - `ai/`: AI use log and AI mistakes log
 - `report/`: report.pdf and ai_report.pdf with sources
 
-## 6. Results (checkpoint 1)
+## 6. Results
+### Checkpoint 1
 - `results/table4_selftest.txt`: redundancy self-test. 258/258 HD cells -> Exists;
   Table 4 class rows 24 / 20 / 38 / 3,822 reproduced exactly; read-once rows 8 / 6 / 2
   and New one-stage 9 reproduced; New one-stage within 3-in-series and 12 T: **6, handout 5**
@@ -88,8 +96,30 @@ Fixes, all on `main` and in `cp2` (the `cp1` tag is not moved):
 - Every result was regenerated from the corrected checkpoint 1, including the checkpoint 2
   candidates: the ranking changed (top candidate 0xEEFA, 36.7 um2, was 0xAABF, 250.0 um2).
 
+### Checkpoint 2 (Person B: write, map and measure)
+- Every design the flow analyses, maps and ranks on: the 6 required designs plus SPM and mul
+  (`ANALYSED` in `src/designs.py`); `design_stats.csv` and `candidate_stats.csv` have rows for all 8.
+  SPM and mul add no estimated saving to any candidate, so the 11 cells are the same as with the
+  6 required designs alone.
+- `results/cell_requests/`: 11 Appendix A requests, one per candidate with estimated saving > 0,
+  each passing `src/request.py`'s check.
+- `libs/hd_reduced_plus_new_cells_est.lib`: hd_reduced.lib plus the 11 new cells (estimated areas,
+  section 6 placeholders, timing_sense from the truth table); Yosys imports 200 = 189 + 11 cell types.
+- `results/mapping_areas.csv`, `results/netlists/`, `results/logs/mapping/`: 8 designs (6 required,
+  SPM, mul) x {baseline, with new cells} x {script A, B}; the baseline equals Table 1.
+- `results/mapping_equivalence.csv`: 32 of 32 mappings equivalent to the RTL (ABC `dsec` for designs
+  with flip-flops, `cec` for mul).
+- `results/gate_level_testbenches.csv`: SPM_tb, mul_tb and mul_exhaustive_tb pass on all 8 SPM and
+  mul netlists (12 of 12 runs; run on the host with Icarus Verilog 13).
+- `results/table5_estimated.md`: Table 5 with estimated areas. Best of both over the required
+  designs: 86,245.3 -> 86,157.7 um2, **0.10%** smaller; largest per design arlet6502 0.49%. With
+  script B alone fir10 is 1.89% smaller, but 0.00% against the best of both, because script A
+  without new cells is smaller still; SPM with script B is 1.33% larger.
+- Not yet: OpenSTA worst delay per design, greedy selection, real cells, the 30% experiment
+  (checkpoint 3).
+
 ## 7. Tests
-`make test` runs `tests/test_all.py`, `tests/test_candidates.py` and `tests/test_abc_after.py`:
+`make test` runs `tests/test_all.py`, `tests/test_candidates.py`, `tests/test_abc_after.py`, `tests/test_liberty_with_new_cells.py`, `tests/test_mapping_equivalence.py` and `tests/test_gate_level_testbenches.py` (needs Icarus, so it runs on the host and skips in the image):
 | Check | Broken case (in `tests/broken/`) |
 |---|---|
 | Truth tables: Appendix A example is 0x077F; 3,984 P and 222 NPN classes | |
@@ -99,6 +129,12 @@ Fixes, all on `main` and in `cp2` (the `cp1` tag is not moved):
 | Binary and ASCII AIGER give the same cuts | |
 | Redundancy self-test: every HD cell -> Exists, Table 4 class rows | `hd_missing_cells.json`: without a22oi, Table 4 must not match |
 | After-ABC AIG equals the original (`src/aig_equiv.sh`, ABC `cec`; `tests/test_abc_after.py`) | in the test file: csa8 with AND 40's first input inverted must be rejected |
+| Timing sense (`src/timing_sense_calc.py`) agrees with HD's own `timing_sense` for every input of every single-output HD cell; nand2/and2/xor2 by hand (`tests/test_liberty_with_new_cells.py`) | |
+| Liberty file loads in Yosys (`read_liberty -lib`) | in `tests/test_liberty_with_new_cells.py`: an unclosed quote must make Yosys reject it |
+| Yosys imports 189 + N cell types | in `tests/test_liberty_with_new_cells.py`: a missing brace; Yosys 0.33 reads it without error but imports 190, so the count must fail |
+| Each new cell's function equals its request's truth table | in `tests/test_liberty_with_new_cells.py`: a function using a pin the cell lacks must be reported |
+| Every mapped netlist equals the RTL (`src/check_mapping_equivalence.py`: ABC `cec`, or `dsec` with flip-flops; `tests/test_mapping_equivalence.py`) | in `tests/test_mapping_equivalence.py`: one nand2_1 swapped for a nor2_1 in mul (cec) and in cpu8 (dsec) must be rejected |
+| SPM and mul netlists pass Tutorial 4's gate-level testbenches (`src/run_gate_level_testbenches.py`; `tests/test_gate_level_testbenches.py`, host only) | in `tests/test_gate_level_testbenches.py`: mul with one nand2_1 swapped for a nor2_1 must fail mul_exhaustive_tb |
 
 ## 8. AI use
 AGENTS.md · ai/use_log.md · ai/mistakes_log.md · report/ai_report.pdf
