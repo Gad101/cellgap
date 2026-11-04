@@ -12,7 +12,8 @@ which ones the sky130_fd_sc_hd (HD) library already has, and measures what new
 cells would save in area when Yosys maps the designs.
 
 ## How the project is checked
-- `make check`: tool versions (Python >= 3.11, Yosys 0.33 or newer) and the
+- `make check`: tool versions (Python >= 3.11, Yosys 0.33, run in the
+  student pack's Docker image) and the
   paths that `make setup` links (HD Liberty, student pack).
 - `make test`: every self-test and every broken case. It must pass on a clean
   checkout. A check that has no broken case does not count as a check.

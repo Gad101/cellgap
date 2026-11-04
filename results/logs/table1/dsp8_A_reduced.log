@@ -19,13 +19,13 @@
  |                                                                            |
  \----------------------------------------------------------------------------/
 
- Yosys 0.33 (git sha1 2584903a0, ccache clang 14.0.0-1ubuntu1.1 -Os -flto -flto)
+ Yosys 0.33 (git sha1 2584903a060)
 
 
--- Executing script file `/Users/ziadtaher/cellgap/results/logs/table1/dsp8_A_reduced.ys' --
+-- Executing script file `/Users/abdugad/dd2/cellgap/results/logs/table1/dsp8_A_reduced.ys' --
 
-1. Executing Verilog-2005 frontend: /Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/dsp8.v
-Parsing Verilog input from `/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/dsp8.v' to AST representation.
+1. Executing Verilog-2005 frontend: /Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/dsp8.v
+Parsing Verilog input from `/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/dsp8.v' to AST representation.
 Generating RTLIL representation for module `\dsp8'.
 Successfully finished Verilog frontend.
 
@@ -46,7 +46,7 @@ Removed 0 unused modules.
 Cleaned up 0 empty switches.
 
 2.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
-Marked 2 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:40$10 in module dsp8.
+Marked 2 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:40$10 in module dsp8.
 Removed a total of 0 dead cases.
 
 2.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
@@ -62,7 +62,7 @@ Converted 0 switches.
 <suppressed ~2 debug messages>
 
 2.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
-Creating decoders for process `\dsp8.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:40$10'.
+Creating decoders for process `\dsp8.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:40$10'.
      1/8: $0\x3[7:0]
      2/8: $0\x2[7:0]
      3/8: $0\x1[7:0]
@@ -75,28 +75,28 @@ Creating decoders for process `\dsp8.$proc$/Users/ziadtaher/dd2/DD2_Project1_stu
 2.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
 
 2.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
-Creating register for signal `\dsp8.\dout' using process `\dsp8.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:40$10'.
+Creating register for signal `\dsp8.\dout' using process `\dsp8.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:40$10'.
   created $dff cell `$procdff$84' with positive edge clock.
-Creating register for signal `\dsp8.\acc' using process `\dsp8.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:40$10'.
+Creating register for signal `\dsp8.\acc' using process `\dsp8.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:40$10'.
   created $dff cell `$procdff$85' with positive edge clock.
-Creating register for signal `\dsp8.\a' using process `\dsp8.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:40$10'.
+Creating register for signal `\dsp8.\a' using process `\dsp8.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:40$10'.
   created $dff cell `$procdff$86' with positive edge clock.
-Creating register for signal `\dsp8.\b' using process `\dsp8.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:40$10'.
+Creating register for signal `\dsp8.\b' using process `\dsp8.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:40$10'.
   created $dff cell `$procdff$87' with positive edge clock.
-Creating register for signal `\dsp8.\x0' using process `\dsp8.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:40$10'.
+Creating register for signal `\dsp8.\x0' using process `\dsp8.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:40$10'.
   created $dff cell `$procdff$88' with positive edge clock.
-Creating register for signal `\dsp8.\x1' using process `\dsp8.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:40$10'.
+Creating register for signal `\dsp8.\x1' using process `\dsp8.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:40$10'.
   created $dff cell `$procdff$89' with positive edge clock.
-Creating register for signal `\dsp8.\x2' using process `\dsp8.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:40$10'.
+Creating register for signal `\dsp8.\x2' using process `\dsp8.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:40$10'.
   created $dff cell `$procdff$90' with positive edge clock.
-Creating register for signal `\dsp8.\x3' using process `\dsp8.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:40$10'.
+Creating register for signal `\dsp8.\x3' using process `\dsp8.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:40$10'.
   created $dff cell `$procdff$91' with positive edge clock.
 
 2.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
 
 2.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
-Found and cleaned up 2 empty switches in `\dsp8.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:40$10'.
-Removing empty process `dsp8.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:40$10'.
+Found and cleaned up 2 empty switches in `\dsp8.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:40$10'.
+Removing empty process `dsp8.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:40$10'.
 Cleaned up 2 empty switches.
 
 2.2.12. Executing OPT_EXPR pass (perform const folding).
@@ -307,8 +307,8 @@ Optimizing module dsp8.
 2.9.23. Finished OPT passes. (There is nothing left to do.)
 
 2.10. Executing WREDUCE pass (reducing word size of cells).
-Removed top 8 bits (of 16) from port B of cell dsp8.$add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:31$2 ($add).
-Removed top 8 bits (of 16) from port B of cell dsp8.$sub$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:32$3 ($sub).
+Removed top 8 bits (of 16) from port B of cell dsp8.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:31$2 ($add).
+Removed top 8 bits (of 16) from port B of cell dsp8.$sub$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:32$3 ($sub).
 Removed top 3 bits (of 4) from port B of cell dsp8.$procmux$30_CMP0 ($eq).
 Removed top 1 bits (of 4) from port B of cell dsp8.$procmux$55_CMP0 ($eq).
 Removed top 1 bits (of 4) from port B of cell dsp8.$procmux$56_CMP0 ($eq).
@@ -324,28 +324,28 @@ Finding unused cells or wires in module \dsp8..
 
 2.13. Executing ALUMACC pass (create $alu and $macc cells).
 Extracting $alu and $macc cells in module dsp8:
-  creating $macc model for $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:31$2 ($add).
-  creating $macc model for $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:33$4 ($add).
-  creating $macc model for $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:65$11 ($add).
-  creating $macc model for $mul$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:30$1 ($mul).
-  creating $macc model for $sub$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:32$3 ($sub).
-  creating $alu model for $macc $sub$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:32$3.
-  creating $alu model for $macc $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:65$11.
-  creating $alu model for $macc $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:33$4.
-  creating $alu model for $macc $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:31$2.
-  creating $macc cell for $mul$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:30$1: $auto$alumacc.cc:365:replace_macc$114
-  creating $alu cell for $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:31$2: $auto$alumacc.cc:485:replace_alu$115
-  creating $alu cell for $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:33$4: $auto$alumacc.cc:485:replace_alu$118
-  creating $alu cell for $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:65$11: $auto$alumacc.cc:485:replace_alu$121
-  creating $alu cell for $sub$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:32$3: $auto$alumacc.cc:485:replace_alu$124
+  creating $macc model for $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:31$2 ($add).
+  creating $macc model for $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:33$4 ($add).
+  creating $macc model for $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:65$11 ($add).
+  creating $macc model for $mul$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:30$1 ($mul).
+  creating $macc model for $sub$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:32$3 ($sub).
+  creating $alu model for $macc $sub$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:32$3.
+  creating $alu model for $macc $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:65$11.
+  creating $alu model for $macc $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:33$4.
+  creating $alu model for $macc $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:31$2.
+  creating $macc cell for $mul$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:30$1: $auto$alumacc.cc:365:replace_macc$114
+  creating $alu cell for $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:31$2: $auto$alumacc.cc:485:replace_alu$115
+  creating $alu cell for $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:33$4: $auto$alumacc.cc:485:replace_alu$118
+  creating $alu cell for $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:65$11: $auto$alumacc.cc:485:replace_alu$121
+  creating $alu cell for $sub$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:32$3: $auto$alumacc.cc:485:replace_alu$124
   created 4 $alu and 1 $macc cells.
 
 2.14. Executing SHARE pass (SAT-based resource sharing).
 Found 2 cells in module dsp8 that may be considered for resource sharing.
-  Analyzing resource sharing options for $shr$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:35$6 ($shr):
+  Analyzing resource sharing options for $shr$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:35$6 ($shr):
     Found 1 activation_patterns using ctrl signal $procmux$55_CMP.
     No candidates found.
-  Analyzing resource sharing options for $shl$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:34$5 ($shl):
+  Analyzing resource sharing options for $shl$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/dsp8.v:34$5 ($shl):
     Found 1 activation_patterns using ctrl signal $procmux$56_CMP.
     No candidates found.
 
@@ -537,8 +537,8 @@ Optimizing module dsp8.
 
 2.21. Executing TECHMAP pass (map to technology primitives).
 
-2.21.1. Executing Verilog-2005 frontend: /share/techmap.v
-Parsing Verilog input from `/share/techmap.v' to AST representation.
+2.21.1. Executing Verilog-2005 frontend: /usr/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/usr/bin/../share/yosys/techmap.v' to AST representation.
 Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
 Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
 Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
@@ -621,7 +621,16 @@ Removed 69 unused cells and 499 unused wires.
 Extracted 909 gates and 971 wires to a netlist network with 60 inputs and 45 outputs.
 
 2.23.1.1. Executing ABC.
-Running ABC command: "/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 13 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
 
 2.23.1.2. Re-integrating ABC results.
 ABC RESULTS:              XNOR cells:       34
@@ -734,41 +743,71 @@ Mapping DFF cells in module `\dsp8':
 Extracted 1037 gates and 1131 wires to a netlist network with 93 inputs and 73 outputs.
 
 4.1.1. Executing ABC.
-Running ABC command: "/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_lib -w /Users/abdugad/dd2/DD2_Project1_student_pack/given/hd_reduced.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.03 sec
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfsbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxbn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtp_1".
+ABC: Library "sky130_fd_sc_hd__tt_025C_1v80" from "/Users/abdugad/dd2/DD2_Project1_student_pack/given/hd_reduced.lib" has 172 cells (17 skipped: 17 seq; 0 tri-state; 0 no func; 0 dont_use).  Time =     0.05 sec
+ABC: Memory =    9.94 MB. Time =     0.05 sec
+ABC: Warning: Detected 2 multi-output gates (for example, "sky130_fd_sc_hd__fa_1").
+ABC: + strash 
+ABC: + dch -f 
+ABC: + amap 
+ABC: + topo 
+ABC: + write_blif <abc-temp-dir>/output.blif 
 
 4.1.2. Re-integrating ABC results.
-ABC RESULTS:   sky130_fd_sc_hd__nand4_1 cells:        3
-ABC RESULTS:   sky130_fd_sc_hd__o221a_2 cells:        1
-ABC RESULTS:   sky130_fd_sc_hd__nand2b_1 cells:        3
-ABC RESULTS:   sky130_fd_sc_hd__a211oi_1 cells:        2
-ABC RESULTS:   sky130_fd_sc_hd__a21boi_1 cells:        1
-ABC RESULTS:   sky130_fd_sc_hd__or2_1 cells:        3
-ABC RESULTS:   sky130_fd_sc_hd__xnor2_1 cells:        2
-ABC RESULTS:   sky130_fd_sc_hd__and2_1 cells:        7
-ABC RESULTS:   sky130_fd_sc_hd__o22a_1 cells:       19
-ABC RESULTS:   sky130_fd_sc_hd__o311ai_1 cells:        2
-ABC RESULTS:   sky130_fd_sc_hd__a21o_1 cells:       74
-ABC RESULTS:   sky130_fd_sc_hd__a32o_1 cells:        1
-ABC RESULTS:   sky130_fd_sc_hd__or3_1 cells:        5
-ABC RESULTS:   sky130_fd_sc_hd__a31oi_1 cells:        1
-ABC RESULTS:   sky130_fd_sc_hd__o211ai_1 cells:       11
+ABC RESULTS:   sky130_fd_sc_hd__nor4_1 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__a32oi_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__o311a_1 cells:        1
 ABC RESULTS:   sky130_fd_sc_hd__o32a_1 cells:        1
-ABC RESULTS:   sky130_fd_sc_hd__o32ai_1 cells:        7
-ABC RESULTS:   sky130_fd_sc_hd__nor3_1 cells:        5
-ABC RESULTS:   sky130_fd_sc_hd__o21a_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a21o_1 cells:        4
+ABC RESULTS:   sky130_fd_sc_hd__and2_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__xor2_1 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__o22a_1 cells:       19
+ABC RESULTS:   sky130_fd_sc_hd__or3_1 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__o22ai_1 cells:       25
+ABC RESULTS:   sky130_fd_sc_hd__o21a_1 cells:       38
+ABC RESULTS:   sky130_fd_sc_hd__and3_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__nand3_1 cells:        7
+ABC RESULTS:   sky130_fd_sc_hd__nor3_1 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__a311oi_1 cells:       12
+ABC RESULTS:   sky130_fd_sc_hd__nand4_1 cells:        4
+ABC RESULTS:   sky130_fd_sc_hd__a211oi_1 cells:        4
+ABC RESULTS:   sky130_fd_sc_hd__o32ai_1 cells:        6
+ABC RESULTS:   sky130_fd_sc_hd__o311ai_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a222oi_1 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__nand2b_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a221oi_1 cells:        4
+ABC RESULTS:   sky130_fd_sc_hd__or2_1 cells:        9
+ABC RESULTS:   sky130_fd_sc_hd__inv_1 cells:       79
+ABC RESULTS:   sky130_fd_sc_hd__o221ai_1 cells:        8
+ABC RESULTS:   sky130_fd_sc_hd__a21oi_1 cells:       90
 ABC RESULTS:   sky130_fd_sc_hd__a22oi_1 cells:       23
-ABC RESULTS:   sky130_fd_sc_hd__nand3_1 cells:        4
-ABC RESULTS:   sky130_fd_sc_hd__o221ai_1 cells:       14
-ABC RESULTS:   sky130_fd_sc_hd__a31o_1 cells:        1
-ABC RESULTS:   sky130_fd_sc_hd__nand2_1 cells:       95
-ABC RESULTS:   sky130_fd_sc_hd__a222oi_1 cells:        5
-ABC RESULTS:   sky130_fd_sc_hd__o21ai_1 cells:       36
-ABC RESULTS:   sky130_fd_sc_hd__a21oi_1 cells:      144
-ABC RESULTS:   sky130_fd_sc_hd__inv_2 cells:       68
-ABC RESULTS:   sky130_fd_sc_hd__o22ai_1 cells:       14
-ABC RESULTS:   sky130_fd_sc_hd__a221oi_1 cells:       17
-ABC RESULTS:   sky130_fd_sc_hd__nor2_1 cells:      278
-ABC RESULTS:   sky130_fd_sc_hd__nor2b_1 cells:       29
+ABC RESULTS:   sky130_fd_sc_hd__nand2_1 cells:      146
+ABC RESULTS:   sky130_fd_sc_hd__o21ai_1 cells:      129
+ABC RESULTS:   sky130_fd_sc_hd__a31oi_1 cells:       10
+ABC RESULTS:   sky130_fd_sc_hd__nor2_1 cells:      246
+ABC RESULTS:   sky130_fd_sc_hd__nor2b_1 cells:       31
 ABC RESULTS:        internal signals:      965
 ABC RESULTS:           input signals:       93
 ABC RESULTS:          output signals:       73
@@ -783,50 +822,50 @@ Removed 0 unused cells and 1108 unused wires.
 
 === dsp8 ===
 
-   Number of wires:                891
-   Number of wire bits:            972
+   Number of wires:                928
+   Number of wire bits:           1009
    Number of public wires:          15
    Number of public wire bits:      96
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:                949
-     sky130_fd_sc_hd__a211oi_1       2
-     sky130_fd_sc_hd__a21boi_1       1
-     sky130_fd_sc_hd__a21o_1        74
-     sky130_fd_sc_hd__a21oi_1      144
-     sky130_fd_sc_hd__a221oi_1      17
-     sky130_fd_sc_hd__a222oi_1       5
+   Number of cells:                986
+     sky130_fd_sc_hd__a211oi_1       4
+     sky130_fd_sc_hd__a21o_1         4
+     sky130_fd_sc_hd__a21oi_1       90
+     sky130_fd_sc_hd__a221oi_1       4
+     sky130_fd_sc_hd__a222oi_1       2
      sky130_fd_sc_hd__a22oi_1       23
-     sky130_fd_sc_hd__a31o_1         1
-     sky130_fd_sc_hd__a31oi_1        1
-     sky130_fd_sc_hd__a32o_1         1
-     sky130_fd_sc_hd__and2_1         7
+     sky130_fd_sc_hd__a311oi_1      12
+     sky130_fd_sc_hd__a31oi_1       10
+     sky130_fd_sc_hd__a32oi_1        1
+     sky130_fd_sc_hd__and2_1         1
+     sky130_fd_sc_hd__and3_1         1
      sky130_fd_sc_hd__dfxtp_1       72
-     sky130_fd_sc_hd__inv_2         68
-     sky130_fd_sc_hd__nand2_1       95
-     sky130_fd_sc_hd__nand2b_1       3
-     sky130_fd_sc_hd__nand3_1        4
-     sky130_fd_sc_hd__nand4_1        3
-     sky130_fd_sc_hd__nor2_1       278
-     sky130_fd_sc_hd__nor2b_1       29
-     sky130_fd_sc_hd__nor3_1         5
-     sky130_fd_sc_hd__o211ai_1      11
-     sky130_fd_sc_hd__o21a_1         1
-     sky130_fd_sc_hd__o21ai_1       36
-     sky130_fd_sc_hd__o221a_2        1
-     sky130_fd_sc_hd__o221ai_1      14
+     sky130_fd_sc_hd__inv_1         79
+     sky130_fd_sc_hd__nand2_1      146
+     sky130_fd_sc_hd__nand2b_1       1
+     sky130_fd_sc_hd__nand3_1        7
+     sky130_fd_sc_hd__nand4_1        4
+     sky130_fd_sc_hd__nor2_1       246
+     sky130_fd_sc_hd__nor2b_1       31
+     sky130_fd_sc_hd__nor3_1         3
+     sky130_fd_sc_hd__nor4_1         3
+     sky130_fd_sc_hd__o21a_1        38
+     sky130_fd_sc_hd__o21ai_1      129
+     sky130_fd_sc_hd__o221ai_1       8
      sky130_fd_sc_hd__o22a_1        19
-     sky130_fd_sc_hd__o22ai_1       14
-     sky130_fd_sc_hd__o311ai_1       2
+     sky130_fd_sc_hd__o22ai_1       25
+     sky130_fd_sc_hd__o311a_1        1
+     sky130_fd_sc_hd__o311ai_1       1
      sky130_fd_sc_hd__o32a_1         1
-     sky130_fd_sc_hd__o32ai_1        7
-     sky130_fd_sc_hd__or2_1          3
-     sky130_fd_sc_hd__or3_1          5
-     sky130_fd_sc_hd__xnor2_1        2
+     sky130_fd_sc_hd__o32ai_1        6
+     sky130_fd_sc_hd__or2_1          9
+     sky130_fd_sc_hd__or3_1          3
+     sky130_fd_sc_hd__xor2_1         2
 
-   Chip area for module '\dsp8': 5914.422400
+   Chip area for module '\dsp8': 5928.185600
 
-End of script. Logfile hash: 57997661cb, CPU: user 1.61s system 0.00s
-Yosys 0.33 (git sha1 2584903a0, ccache clang 14.0.0-1ubuntu1.1 -Os -flto -flto)
-Time spent: 29% 2x stat (0 sec), 24% 1x dfflibmap (0 sec), ...
+End of script. Logfile hash: 287e7d31b3, CPU: user 0.32s system 0.00s, MEM: 25.89 MB peak
+Yosys 0.33 (git sha1 2584903a060)
+Time spent: 43% 2x abc (0 sec), 10% 26x opt_expr (0 sec), ...

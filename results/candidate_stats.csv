@@ -1,7 +1,7 @@
 design,ands,real_cuts,p_classes,Exists,Exists_with_an_inverter,Contained,New,cuts_in_new_classes,area_per_and_um2,area_per_and_source,seconds
-cpu8,1019,7011,272,39,19,23,191,2431,2.528,table1 logs,0.2
-dsp8,1757,12471,271,35,18,16,202,5313,2.546,table1 logs,0.3
-arlet6502,2792,21134,299,45,27,18,209,5137,2.44,table1 logs,0.5
-uart_apb,3683,25306,307,46,25,23,213,7208,1.273,table1 logs,0.6
-risc8,5669,40271,272,51,24,20,177,10627,2.4,table1 logs,0.7
-fir10,8267,77523,220,31,15,7,167,44932,2.849,table1 logs,1.7
+cpu8,1265,10689,278,39,19,23,197,3852,2.012,table1 logs,0.2
+dsp8,1973,16253,262,35,18,15,194,7260,2.274,table1 logs,0.3
+arlet6502,3221,26208,305,44,27,23,211,6912,2.114,table1 logs,0.4
+uart_apb,4673,33786,305,44,25,23,213,9841,1.002,table1 logs,0.6
+risc8,7750,56729,273,50,27,21,175,16377,1.752,table1 logs,0.8
+fir10,8795,91810,230,31,16,9,174,52564,2.552,table1 logs,1.8

@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 # Step 1 of the Option 2 handout: synthesize a design and write it as an AIG.
 #   src/make_aig.sh <design.v> <top> <out.aag> [extra read_verilog flags]
+# Also writes <out>.aig, the same graph in binary AIGER for ABC (src/abc_after.sh).
 # Flip-flops with asynchronous resets cannot be written to AIGER, so they are
 # converted with async2sync and dffunmap first (handout section 4, step 1).
+# -zinit: the handout's Table 2 AND counts are reproduced only with it.
 set -euo pipefail
 YOSYS=${YOSYS:-yosys}
 v=$1; top=$2; out=$3; flags=${4:-}
@@ -13,8 +15,8 @@ $YOSYS -q -l "${out%.*}.log" -p "
   async2sync
   dffunmap
   aigmap
-  opt_clean
-  write_aiger -ascii -map ${out%.*}.map $out
+  write_aiger -ascii -zinit -map ${out%.*}.map $out
+  write_aiger -zinit ${out%.*}.aig
   stat
 "
 head -1 "$out"

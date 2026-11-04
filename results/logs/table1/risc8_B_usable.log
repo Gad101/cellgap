@@ -19,94 +19,94 @@
  |                                                                            |
  \----------------------------------------------------------------------------/
 
- Yosys 0.33 (git sha1 2584903a0, ccache clang 14.0.0-1ubuntu1.1 -Os -flto -flto)
+ Yosys 0.33 (git sha1 2584903a060)
 
 
--- Executing script file `/Users/ziadtaher/cellgap/results/logs/table1/risc8_B_usable.ys' --
+-- Executing script file `/Users/abdugad/dd2/cellgap/results/logs/table1/risc8_B_usable.ys' --
 
-1. Executing Verilog-2005 frontend: /Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v
-Parsing Verilog input from `/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v' to AST representation.
+1. Executing Verilog-2005 frontend: /Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v
+Parsing Verilog input from `/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v' to AST representation.
 Warning: Encountered `parallel_case' comment! Such legacy hot comments are supported by Yosys, but are not part of any formal language specification. Using the Verilog `parallel_case' attribute or the SystemVerilog `unique' or `priority' keywords is recommended!
 Warning: Encountered `full_case' comment! Such legacy hot comments are supported by Yosys, but are not part of any formal language specification. Using the Verilog `full_case' attribute or the SystemVerilog `unique' or `unique0' keywords is recommended!
 Warning: Encountered `translate_off' comment! Such legacy hot comments are supported by Yosys, but are not part of any formal language specification. Using a portable and standards-compliant construct such as `ifdef is recommended!
 Generating RTLIL representation for module `\alu'.
-Note: Assuming pure combinatorial block at /Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:58.1-71.4 in
+Note: Assuming pure combinatorial block at /Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:58.1-71.4 in
 compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
 use of @* instead of @(...) for better match of synthesis and simulation.
-Note: Assuming pure combinatorial block at /Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:73.1-74.24 in
+Note: Assuming pure combinatorial block at /Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:73.1-74.24 in
 compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
 use of @* instead of @(...) for better match of synthesis and simulation.
-Note: Assuming pure combinatorial block at /Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:76.1-78.43 in
+Note: Assuming pure combinatorial block at /Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:76.1-78.43 in
 compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
 use of @* instead of @(...) for better match of synthesis and simulation.
 Generating RTLIL representation for module `\dram'.
 Generating RTLIL representation for module `\idec'.
-Note: Assuming pure combinatorial block at /Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:243.1-327.4 in
+Note: Assuming pure combinatorial block at /Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:243.1-327.4 in
 compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
 use of @* instead of @(...) for better match of synthesis and simulation.
 Generating RTLIL representation for module `\regs'.
-Note: Assuming pure combinatorial block at /Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:436.1-466.4 in
+Note: Assuming pure combinatorial block at /Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:436.1-466.4 in
 compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
 use of @* instead of @(...) for better match of synthesis and simulation.
 Generating RTLIL representation for module `\cpu'.
-Note: Assuming pure combinatorial block at /Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:826.1-838.4 in
+Note: Assuming pure combinatorial block at /Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:826.1-838.4 in
 compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
 use of @* instead of @(...) for better match of synthesis and simulation.
-Note: Assuming pure combinatorial block at /Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:844.1-845.38 in
+Note: Assuming pure combinatorial block at /Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:844.1-845.38 in
 compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
 use of @* instead of @(...) for better match of synthesis and simulation.
-Note: Assuming pure combinatorial block at /Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:851.1-852.90 in
+Note: Assuming pure combinatorial block at /Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:851.1-852.90 in
 compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
 use of @* instead of @(...) for better match of synthesis and simulation.
-Note: Assuming pure combinatorial block at /Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:862.1-891.4 in
+Note: Assuming pure combinatorial block at /Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:862.1-891.4 in
 compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
 use of @* instead of @(...) for better match of synthesis and simulation.
-Note: Assuming pure combinatorial block at /Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:896.1-897.19 in
+Note: Assuming pure combinatorial block at /Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:896.1-897.19 in
 compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
 use of @* instead of @(...) for better match of synthesis and simulation.
-Note: Assuming pure combinatorial block at /Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:899.1-900.23 in
+Note: Assuming pure combinatorial block at /Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:899.1-900.23 in
 compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
 use of @* instead of @(...) for better match of synthesis and simulation.
-Note: Assuming pure combinatorial block at /Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:902.1-903.84 in
+Note: Assuming pure combinatorial block at /Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:902.1-903.84 in
 compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
 use of @* instead of @(...) for better match of synthesis and simulation.
-Note: Assuming pure combinatorial block at /Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:905.1-906.33 in
+Note: Assuming pure combinatorial block at /Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:905.1-906.33 in
 compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
 use of @* instead of @(...) for better match of synthesis and simulation.
-Note: Assuming pure combinatorial block at /Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:918.1-961.4 in
+Note: Assuming pure combinatorial block at /Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:918.1-961.4 in
 compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
 use of @* instead of @(...) for better match of synthesis and simulation.
-Note: Assuming pure combinatorial block at /Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:966.1-967.18 in
+Note: Assuming pure combinatorial block at /Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:966.1-967.18 in
 compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
 use of @* instead of @(...) for better match of synthesis and simulation.
-Note: Assuming pure combinatorial block at /Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:969.1-970.21 in
+Note: Assuming pure combinatorial block at /Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:969.1-970.21 in
 compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
 use of @* instead of @(...) for better match of synthesis and simulation.
-Note: Assuming pure combinatorial block at /Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:974.1-975.15 in
+Note: Assuming pure combinatorial block at /Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:974.1-975.15 in
 compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
 use of @* instead of @(...) for better match of synthesis and simulation.
-Note: Assuming pure combinatorial block at /Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:992.1-1003.4 in
+Note: Assuming pure combinatorial block at /Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:992.1-1003.4 in
 compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
 use of @* instead of @(...) for better match of synthesis and simulation.
-Note: Assuming pure combinatorial block at /Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1005.1-1006.32 in
+Note: Assuming pure combinatorial block at /Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1005.1-1006.32 in
 compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
 use of @* instead of @(...) for better match of synthesis and simulation.
-Note: Assuming pure combinatorial block at /Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1032.1-1052.4 in
+Note: Assuming pure combinatorial block at /Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1032.1-1052.4 in
 compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
 use of @* instead of @(...) for better match of synthesis and simulation.
-Note: Assuming pure combinatorial block at /Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1057.1-1064.4 in
+Note: Assuming pure combinatorial block at /Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1057.1-1064.4 in
 compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
 use of @* instead of @(...) for better match of synthesis and simulation.
-Note: Assuming pure combinatorial block at /Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1069.1-1076.4 in
+Note: Assuming pure combinatorial block at /Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1069.1-1076.4 in
 compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
 use of @* instead of @(...) for better match of synthesis and simulation.
-Note: Assuming pure combinatorial block at /Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1239.1-1240.21 in
+Note: Assuming pure combinatorial block at /Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1239.1-1240.21 in
 compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
 use of @* instead of @(...) for better match of synthesis and simulation.
-Note: Assuming pure combinatorial block at /Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1255.1-1256.21 in
+Note: Assuming pure combinatorial block at /Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1255.1-1256.21 in
 compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
 use of @* instead of @(...) for better match of synthesis and simulation.
-Note: Assuming pure combinatorial block at /Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1317.1-1329.4 in
+Note: Assuming pure combinatorial block at /Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1317.1-1329.4 in
 compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
 use of @* instead of @(...) for better match of synthesis and simulation.
 Successfully finished Verilog frontend.
@@ -136,41 +136,41 @@ Removed 0 unused modules.
 Cleaned up 0 empty switches.
 
 2.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
-Marked 2 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1375$158 in module cpu.
-Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1336$156 in module cpu.
-Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1317$154 in module cpu.
-Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1313$153 in module cpu.
-Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1281$148 in module cpu.
-Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1270$143 in module cpu.
-Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1259$138 in module cpu.
-Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1243$131 in module cpu.
-Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1227$124 in module cpu.
-Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1222$123 in module cpu.
-Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1208$122 in module cpu.
-Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1191$118 in module cpu.
-Marked 2 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1157$112 in module cpu.
-Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1137$109 in module cpu.
-Removed 1 dead cases from process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1101$71 in module cpu.
-Marked 2 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1101$71 in module cpu.
-Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1079$70 in module cpu.
-Removed 1 dead cases from process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1069$69 in module cpu.
-Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1069$69 in module cpu.
-Removed 1 dead cases from process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1057$68 in module cpu.
-Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1057$68 in module cpu.
-Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1032$67 in module cpu.
-Marked 2 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1011$65 in module cpu.
-Removed 1 dead cases from process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:992$61 in module cpu.
-Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:992$61 in module cpu.
-Removed 1 dead cases from process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:918$57 in module cpu.
-Marked 3 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:918$57 in module cpu.
-Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:826$34 in module cpu.
-Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:728$29 in module cpu.
-Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:716$25 in module cpu.
-Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:436$24 in module regs.
-Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:243$23 in module idec.
-Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:163$16 in module dram.
-Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:76$10 in module alu.
-Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:58$1 in module alu.
+Marked 2 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1375$158 in module cpu.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1336$156 in module cpu.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1317$154 in module cpu.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1313$153 in module cpu.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1281$148 in module cpu.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1270$143 in module cpu.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1259$138 in module cpu.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1243$131 in module cpu.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1227$124 in module cpu.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1222$123 in module cpu.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1208$122 in module cpu.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1191$118 in module cpu.
+Marked 2 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1157$112 in module cpu.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1137$109 in module cpu.
+Removed 1 dead cases from process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1101$71 in module cpu.
+Marked 2 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1101$71 in module cpu.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1079$70 in module cpu.
+Removed 1 dead cases from process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1069$69 in module cpu.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1069$69 in module cpu.
+Removed 1 dead cases from process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1057$68 in module cpu.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1057$68 in module cpu.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1032$67 in module cpu.
+Marked 2 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1011$65 in module cpu.
+Removed 1 dead cases from process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:992$61 in module cpu.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:992$61 in module cpu.
+Removed 1 dead cases from process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:918$57 in module cpu.
+Marked 3 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:918$57 in module cpu.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:826$34 in module cpu.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:728$29 in module cpu.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:716$25 in module cpu.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:436$24 in module regs.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:243$23 in module idec.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:163$16 in module dram.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:76$10 in module alu.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:58$1 in module alu.
 Removed a total of 5 dead cases.
 
 2.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
@@ -186,253 +186,253 @@ Converted 1 switch.
 <suppressed ~75 debug messages>
 
 2.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
-Creating decoders for process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1375$158'.
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1375$158'.
      1/1: $0\stacklevel[1:0]
-Creating decoders for process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1336$156'.
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1336$156'.
      1/2: $0\stack2[10:0]
      2/2: $0\stack1[10:0]
-Creating decoders for process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1317$154'.
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1317$154'.
      1/1: $1\pc_in[10:0]
-Creating decoders for process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1313$153'.
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1313$153'.
      1/1: $0\pc[10:0]
-Creating decoders for process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1281$148'.
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1281$148'.
      1/1: $0\trisc[7:0]
-Creating decoders for process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1270$143'.
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1270$143'.
      1/1: $0\trisb[7:0]
-Creating decoders for process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1259$138'.
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1259$138'.
      1/1: $0\trisa[7:0]
-Creating decoders for process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1255$137'.
-Creating decoders for process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1243$131'.
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1255$137'.
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1243$131'.
      1/1: $0\portc[7:0]
-Creating decoders for process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1239$130'.
-Creating decoders for process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1227$124'.
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1239$130'.
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1227$124'.
      1/1: $0\portb[7:0]
-Creating decoders for process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1222$123'.
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1222$123'.
      1/1: $0\porta[7:0]
-Creating decoders for process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1208$122'.
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1208$122'.
      1/1: $0\option[7:0]
-Creating decoders for process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1191$118'.
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1191$118'.
      1/1: $0\fsr[7:0]
-Creating decoders for process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1157$112'.
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1157$112'.
      1/1: $0\status[7:0]
-Creating decoders for process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1137$109'.
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1137$109'.
      1/1: $0\prescaler[7:0]
-Creating decoders for process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1101$71'.
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1101$71'.
      1/1: $0\tmr0[7:0]
-Creating decoders for process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1079$70'.
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1079$70'.
      1/1: $0\w[7:0]
-Creating decoders for process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1069$69'.
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1069$69'.
      1/1: $1\alub[7:0]
-Creating decoders for process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1057$68'.
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1057$68'.
      1/1: $1\alua[7:0]
-Creating decoders for process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1032$67'.
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1032$67'.
      1/1: $1\skip[0:0]
-Creating decoders for process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1011$65'.
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1011$65'.
      1/1: $0\inst[11:0]
-Creating decoders for process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1005$62'.
-Creating decoders for process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:992$61'.
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1005$62'.
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:992$61'.
      1/1: $1\bdec[7:0]
-Creating decoders for process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:974$60'.
-Creating decoders for process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:969$59'.
-Creating decoders for process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:966$58'.
-Creating decoders for process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:918$57'.
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:974$60'.
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:969$59'.
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:966$58'.
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:918$57'.
      1/4: $4\sbus[7:0]
      2/4: $3\sbus[7:0]
      3/4: $2\sbus[7:0]
      4/4: $1\sbus[7:0]
-Creating decoders for process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:905$54'.
-Creating decoders for process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:902$48'.
-Creating decoders for process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:899$47'.
-Creating decoders for process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:896$46'.
-Creating decoders for process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:862$45'.
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:905$54'.
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:902$48'.
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:899$47'.
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:896$46'.
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:862$45'.
      1/3: $1\expsel[0:0]
      2/3: $1\regfilesel[0:0]
      3/3: $1\specialsel[0:0]
-Creating decoders for process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:851$39'.
-Creating decoders for process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:844$36'.
-Creating decoders for process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:826$34'.
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:851$39'.
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:844$36'.
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:826$34'.
      1/1: $1\fileaddr[6:0]
-Creating decoders for process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:728$29'.
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:728$29'.
      1/2: $0\q4[0:0]
      2/2: $0\q1[0:0]
-Creating decoders for process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:716$25'.
+Creating decoders for process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:716$25'.
      1/1: $0\phase_cnt[1:0]
-Creating decoders for process `\regs.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:436$24'.
+Creating decoders for process `\regs.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:436$24'.
      1/1: $1\final_address[6:0]
-Creating decoders for process `\idec.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:243$23'.
+Creating decoders for process `\idec.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:243$23'.
      1/1: $1\decodes[14:0]
-Creating decoders for process `\dram.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:163$16'.
-     1/3: $1$memwr$\mem$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:164$13_EN[7:0]$22
-     2/3: $1$memwr$\mem$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:164$13_DATA[7:0]$21
-     3/3: $1$memwr$\mem$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:164$13_ADDR[6:0]$20
-Creating decoders for process `\dram.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:159$14'.
+Creating decoders for process `\dram.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:163$16'.
+     1/3: $1$memwr$\mem$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:164$13_EN[7:0]$22
+     2/3: $1$memwr$\mem$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:164$13_DATA[7:0]$21
+     3/3: $1$memwr$\mem$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:164$13_ADDR[6:0]$20
+Creating decoders for process `\dram.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:159$14'.
      1/1: $0\dout[7:0]
-Creating decoders for process `\alu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:76$10'.
+Creating decoders for process `\alu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:76$10'.
      1/1: $1\cout[0:0]
-Creating decoders for process `\alu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:73$8'.
-Creating decoders for process `\alu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:58$1'.
+Creating decoders for process `\alu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:73$8'.
+Creating decoders for process `\alu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:58$1'.
      1/1: { $1\addercout[0:0] $1\y[7:0] }
 
 2.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
-No latch inferred for signal `\cpu.\pc_in' from process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1317$154'.
-No latch inferred for signal `\cpu.\portcout' from process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1255$137'.
-No latch inferred for signal `\cpu.\portbout' from process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1239$130'.
-No latch inferred for signal `\cpu.\alub' from process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1069$69'.
-No latch inferred for signal `\cpu.\alua' from process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1057$68'.
-No latch inferred for signal `\cpu.\skip' from process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1032$67'.
-No latch inferred for signal `\cpu.\bd' from process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1005$62'.
-No latch inferred for signal `\cpu.\bdec' from process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:992$61'.
-No latch inferred for signal `\cpu.\paddr' from process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:974$60'.
-No latch inferred for signal `\cpu.\regfilein' from process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:969$59'.
-No latch inferred for signal `\cpu.\dbus' from process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:966$58'.
-No latch inferred for signal `\cpu.\sbus' from process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:918$57'.
-No latch inferred for signal `\cpu.\expwrite' from process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:905$54'.
-No latch inferred for signal `\cpu.\expread' from process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:902$48'.
-No latch inferred for signal `\cpu.\expaddr' from process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:899$47'.
-No latch inferred for signal `\cpu.\expdout' from process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:896$46'.
-No latch inferred for signal `\cpu.\specialsel' from process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:862$45'.
-No latch inferred for signal `\cpu.\regfilesel' from process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:862$45'.
-No latch inferred for signal `\cpu.\expsel' from process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:862$45'.
-No latch inferred for signal `\cpu.\regfilere' from process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:851$39'.
-No latch inferred for signal `\cpu.\regfilewe' from process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:844$36'.
-No latch inferred for signal `\cpu.\fileaddr' from process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:826$34'.
-No latch inferred for signal `\regs.\final_address' from process `\regs.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:436$24'.
-No latch inferred for signal `\idec.\decodes' from process `\idec.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:243$23'.
-No latch inferred for signal `\alu.\cout' from process `\alu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:76$10'.
-No latch inferred for signal `\alu.\zout' from process `\alu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:73$8'.
-No latch inferred for signal `\alu.\y' from process `\alu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:58$1'.
-No latch inferred for signal `\alu.\addercout' from process `\alu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:58$1'.
+No latch inferred for signal `\cpu.\pc_in' from process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1317$154'.
+No latch inferred for signal `\cpu.\portcout' from process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1255$137'.
+No latch inferred for signal `\cpu.\portbout' from process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1239$130'.
+No latch inferred for signal `\cpu.\alub' from process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1069$69'.
+No latch inferred for signal `\cpu.\alua' from process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1057$68'.
+No latch inferred for signal `\cpu.\skip' from process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1032$67'.
+No latch inferred for signal `\cpu.\bd' from process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1005$62'.
+No latch inferred for signal `\cpu.\bdec' from process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:992$61'.
+No latch inferred for signal `\cpu.\paddr' from process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:974$60'.
+No latch inferred for signal `\cpu.\regfilein' from process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:969$59'.
+No latch inferred for signal `\cpu.\dbus' from process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:966$58'.
+No latch inferred for signal `\cpu.\sbus' from process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:918$57'.
+No latch inferred for signal `\cpu.\expwrite' from process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:905$54'.
+No latch inferred for signal `\cpu.\expread' from process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:902$48'.
+No latch inferred for signal `\cpu.\expaddr' from process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:899$47'.
+No latch inferred for signal `\cpu.\expdout' from process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:896$46'.
+No latch inferred for signal `\cpu.\specialsel' from process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:862$45'.
+No latch inferred for signal `\cpu.\regfilesel' from process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:862$45'.
+No latch inferred for signal `\cpu.\expsel' from process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:862$45'.
+No latch inferred for signal `\cpu.\regfilere' from process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:851$39'.
+No latch inferred for signal `\cpu.\regfilewe' from process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:844$36'.
+No latch inferred for signal `\cpu.\fileaddr' from process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:826$34'.
+No latch inferred for signal `\regs.\final_address' from process `\regs.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:436$24'.
+No latch inferred for signal `\idec.\decodes' from process `\idec.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:243$23'.
+No latch inferred for signal `\alu.\cout' from process `\alu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:76$10'.
+No latch inferred for signal `\alu.\zout' from process `\alu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:73$8'.
+No latch inferred for signal `\alu.\y' from process `\alu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:58$1'.
+No latch inferred for signal `\alu.\addercout' from process `\alu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:58$1'.
 
 2.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
-Creating register for signal `\cpu.\stacklevel' using process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1375$158'.
+Creating register for signal `\cpu.\stacklevel' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1375$158'.
   created $dff cell `$procdff$486' with positive edge clock.
-Creating register for signal `\cpu.\stack1' using process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1336$156'.
+Creating register for signal `\cpu.\stack1' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1336$156'.
   created $dff cell `$procdff$487' with positive edge clock.
-Creating register for signal `\cpu.\stack2' using process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1336$156'.
+Creating register for signal `\cpu.\stack2' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1336$156'.
   created $dff cell `$procdff$488' with positive edge clock.
-Creating register for signal `\cpu.\pc' using process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1313$153'.
+Creating register for signal `\cpu.\pc' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1313$153'.
   created $dff cell `$procdff$489' with positive edge clock.
-Creating register for signal `\cpu.\trisc' using process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1281$148'.
+Creating register for signal `\cpu.\trisc' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1281$148'.
   created $dff cell `$procdff$490' with positive edge clock.
-Creating register for signal `\cpu.\trisb' using process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1270$143'.
+Creating register for signal `\cpu.\trisb' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1270$143'.
   created $dff cell `$procdff$491' with positive edge clock.
-Creating register for signal `\cpu.\trisa' using process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1259$138'.
+Creating register for signal `\cpu.\trisa' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1259$138'.
   created $dff cell `$procdff$492' with positive edge clock.
-Creating register for signal `\cpu.\portc' using process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1243$131'.
+Creating register for signal `\cpu.\portc' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1243$131'.
   created $dff cell `$procdff$493' with positive edge clock.
-Creating register for signal `\cpu.\portb' using process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1227$124'.
+Creating register for signal `\cpu.\portb' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1227$124'.
   created $dff cell `$procdff$494' with positive edge clock.
-Creating register for signal `\cpu.\porta' using process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1222$123'.
+Creating register for signal `\cpu.\porta' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1222$123'.
   created $dff cell `$procdff$495' with positive edge clock.
-Creating register for signal `\cpu.\option' using process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1208$122'.
+Creating register for signal `\cpu.\option' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1208$122'.
   created $dff cell `$procdff$496' with positive edge clock.
-Creating register for signal `\cpu.\fsr' using process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1191$118'.
+Creating register for signal `\cpu.\fsr' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1191$118'.
   created $dff cell `$procdff$497' with positive edge clock.
-Creating register for signal `\cpu.\status' using process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1157$112'.
+Creating register for signal `\cpu.\status' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1157$112'.
   created $dff cell `$procdff$498' with positive edge clock.
-Creating register for signal `\cpu.\prescaler' using process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1137$109'.
+Creating register for signal `\cpu.\prescaler' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1137$109'.
   created $dff cell `$procdff$499' with positive edge clock.
-Creating register for signal `\cpu.\tmr0' using process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1101$71'.
+Creating register for signal `\cpu.\tmr0' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1101$71'.
   created $dff cell `$procdff$500' with positive edge clock.
-Creating register for signal `\cpu.\w' using process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1079$70'.
+Creating register for signal `\cpu.\w' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1079$70'.
   created $dff cell `$procdff$501' with positive edge clock.
-Creating register for signal `\cpu.\inst' using process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1011$65'.
+Creating register for signal `\cpu.\inst' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1011$65'.
   created $dff cell `$procdff$502' with positive edge clock.
-Creating register for signal `\cpu.\q1' using process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:728$29'.
+Creating register for signal `\cpu.\q1' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:728$29'.
   created $dff cell `$procdff$503' with positive edge clock.
-Creating register for signal `\cpu.\q4' using process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:728$29'.
+Creating register for signal `\cpu.\q4' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:728$29'.
   created $dff cell `$procdff$504' with positive edge clock.
-Creating register for signal `\cpu.\phase_cnt' using process `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:716$25'.
+Creating register for signal `\cpu.\phase_cnt' using process `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:716$25'.
   created $dff cell `$procdff$505' with positive edge clock.
-Creating register for signal `\dram.$memwr$\mem$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:164$13_ADDR' using process `\dram.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:163$16'.
+Creating register for signal `\dram.$memwr$\mem$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:164$13_ADDR' using process `\dram.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:163$16'.
   created $dff cell `$procdff$506' with positive edge clock.
-Creating register for signal `\dram.$memwr$\mem$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:164$13_DATA' using process `\dram.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:163$16'.
+Creating register for signal `\dram.$memwr$\mem$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:164$13_DATA' using process `\dram.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:163$16'.
   created $dff cell `$procdff$507' with positive edge clock.
-Creating register for signal `\dram.$memwr$\mem$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:164$13_EN' using process `\dram.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:163$16'.
+Creating register for signal `\dram.$memwr$\mem$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:164$13_EN' using process `\dram.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:163$16'.
   created $dff cell `$procdff$508' with positive edge clock.
-Creating register for signal `\dram.\dout' using process `\dram.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:159$14'.
+Creating register for signal `\dram.\dout' using process `\dram.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:159$14'.
   created $dff cell `$procdff$509' with positive edge clock.
 
 2.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
 
 2.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
-Found and cleaned up 3 empty switches in `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1375$158'.
-Removing empty process `cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1375$158'.
-Found and cleaned up 4 empty switches in `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1336$156'.
-Removing empty process `cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1336$156'.
-Found and cleaned up 1 empty switch in `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1317$154'.
-Removing empty process `cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1317$154'.
-Found and cleaned up 2 empty switches in `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1313$153'.
-Removing empty process `cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1313$153'.
-Found and cleaned up 3 empty switches in `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1281$148'.
-Removing empty process `cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1281$148'.
-Found and cleaned up 3 empty switches in `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1270$143'.
-Removing empty process `cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1270$143'.
-Found and cleaned up 3 empty switches in `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1259$138'.
-Removing empty process `cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1259$138'.
-Removing empty process `cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1255$137'.
-Found and cleaned up 3 empty switches in `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1243$131'.
-Removing empty process `cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1243$131'.
-Removing empty process `cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1239$130'.
-Found and cleaned up 3 empty switches in `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1227$124'.
-Removing empty process `cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1227$124'.
-Found and cleaned up 2 empty switches in `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1222$123'.
-Removing empty process `cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1222$123'.
-Found and cleaned up 3 empty switches in `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1208$122'.
-Removing empty process `cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1208$122'.
-Found and cleaned up 3 empty switches in `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1191$118'.
-Removing empty process `cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1191$118'.
-Found and cleaned up 3 empty switches in `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1157$112'.
-Removing empty process `cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1157$112'.
-Found and cleaned up 3 empty switches in `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1137$109'.
-Removing empty process `cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1137$109'.
-Found and cleaned up 13 empty switches in `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1101$71'.
-Removing empty process `cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1101$71'.
-Found and cleaned up 3 empty switches in `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1079$70'.
-Removing empty process `cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1079$70'.
-Found and cleaned up 1 empty switch in `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1069$69'.
-Removing empty process `cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1069$69'.
-Found and cleaned up 1 empty switch in `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1057$68'.
-Removing empty process `cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1057$68'.
-Found and cleaned up 1 empty switch in `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1032$67'.
-Removing empty process `cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1032$67'.
-Found and cleaned up 3 empty switches in `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1011$65'.
-Removing empty process `cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1011$65'.
-Removing empty process `cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1005$62'.
-Found and cleaned up 1 empty switch in `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:992$61'.
-Removing empty process `cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:992$61'.
-Removing empty process `cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:974$60'.
-Removing empty process `cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:969$59'.
-Removing empty process `cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:966$58'.
-Found and cleaned up 4 empty switches in `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:918$57'.
-Removing empty process `cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:918$57'.
-Removing empty process `cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:905$54'.
-Removing empty process `cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:902$48'.
-Removing empty process `cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:899$47'.
-Removing empty process `cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:896$46'.
-Found and cleaned up 1 empty switch in `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:862$45'.
-Removing empty process `cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:862$45'.
-Removing empty process `cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:851$39'.
-Removing empty process `cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:844$36'.
-Found and cleaned up 1 empty switch in `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:826$34'.
-Removing empty process `cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:826$34'.
-Found and cleaned up 1 empty switch in `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:728$29'.
-Removing empty process `cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:728$29'.
-Found and cleaned up 1 empty switch in `\cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:716$25'.
-Removing empty process `cpu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:716$25'.
-Found and cleaned up 1 empty switch in `\regs.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:436$24'.
-Removing empty process `regs.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:436$24'.
-Found and cleaned up 1 empty switch in `\idec.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:243$23'.
-Removing empty process `idec.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:243$23'.
-Found and cleaned up 1 empty switch in `\dram.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:163$16'.
-Removing empty process `dram.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:163$16'.
-Found and cleaned up 1 empty switch in `\dram.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:159$14'.
-Removing empty process `dram.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:159$14'.
-Found and cleaned up 1 empty switch in `\alu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:76$10'.
-Removing empty process `alu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:76$10'.
-Removing empty process `alu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:73$8'.
-Found and cleaned up 1 empty switch in `\alu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:58$1'.
-Removing empty process `alu.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:58$1'.
+Found and cleaned up 3 empty switches in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1375$158'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1375$158'.
+Found and cleaned up 4 empty switches in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1336$156'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1336$156'.
+Found and cleaned up 1 empty switch in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1317$154'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1317$154'.
+Found and cleaned up 2 empty switches in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1313$153'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1313$153'.
+Found and cleaned up 3 empty switches in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1281$148'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1281$148'.
+Found and cleaned up 3 empty switches in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1270$143'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1270$143'.
+Found and cleaned up 3 empty switches in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1259$138'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1259$138'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1255$137'.
+Found and cleaned up 3 empty switches in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1243$131'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1243$131'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1239$130'.
+Found and cleaned up 3 empty switches in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1227$124'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1227$124'.
+Found and cleaned up 2 empty switches in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1222$123'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1222$123'.
+Found and cleaned up 3 empty switches in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1208$122'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1208$122'.
+Found and cleaned up 3 empty switches in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1191$118'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1191$118'.
+Found and cleaned up 3 empty switches in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1157$112'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1157$112'.
+Found and cleaned up 3 empty switches in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1137$109'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1137$109'.
+Found and cleaned up 13 empty switches in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1101$71'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1101$71'.
+Found and cleaned up 3 empty switches in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1079$70'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1079$70'.
+Found and cleaned up 1 empty switch in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1069$69'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1069$69'.
+Found and cleaned up 1 empty switch in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1057$68'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1057$68'.
+Found and cleaned up 1 empty switch in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1032$67'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1032$67'.
+Found and cleaned up 3 empty switches in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1011$65'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1011$65'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1005$62'.
+Found and cleaned up 1 empty switch in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:992$61'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:992$61'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:974$60'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:969$59'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:966$58'.
+Found and cleaned up 4 empty switches in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:918$57'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:918$57'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:905$54'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:902$48'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:899$47'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:896$46'.
+Found and cleaned up 1 empty switch in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:862$45'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:862$45'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:851$39'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:844$36'.
+Found and cleaned up 1 empty switch in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:826$34'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:826$34'.
+Found and cleaned up 1 empty switch in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:728$29'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:728$29'.
+Found and cleaned up 1 empty switch in `\cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:716$25'.
+Removing empty process `cpu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:716$25'.
+Found and cleaned up 1 empty switch in `\regs.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:436$24'.
+Removing empty process `regs.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:436$24'.
+Found and cleaned up 1 empty switch in `\idec.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:243$23'.
+Removing empty process `idec.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:243$23'.
+Found and cleaned up 1 empty switch in `\dram.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:163$16'.
+Removing empty process `dram.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:163$16'.
+Found and cleaned up 1 empty switch in `\dram.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:159$14'.
+Removing empty process `dram.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:159$14'.
+Found and cleaned up 1 empty switch in `\alu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:76$10'.
+Removing empty process `alu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:76$10'.
+Removing empty process `alu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:73$8'.
+Found and cleaned up 1 empty switch in `\alu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:58$1'.
+Removing empty process `alu.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:58$1'.
 Cleaned up 76 empty switches.
 
 2.2.12. Executing OPT_EXPR pass (perform const folding).
@@ -487,19 +487,19 @@ Removed 4 multiplexer ports.
 
 2.7.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
   Optimizing cells in module \cpu.
-    New input vector for $reduce_or cell $reduce_or$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1128$102: \prescaler [6:0]
-    New input vector for $reduce_or cell $reduce_or$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1127$98: \prescaler [5:0]
-    New input vector for $reduce_or cell $reduce_or$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1126$94: \prescaler [4:0]
-    New input vector for $reduce_or cell $reduce_or$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1125$90: \prescaler [3:0]
-    New input vector for $reduce_or cell $reduce_or$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1124$86: \prescaler [2:0]
-    New input vector for $reduce_or cell $reduce_or$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1123$82: \prescaler [1:0]
+    New input vector for $reduce_or cell $reduce_or$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1128$102: \prescaler [6:0]
+    New input vector for $reduce_or cell $reduce_or$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1127$98: \prescaler [5:0]
+    New input vector for $reduce_or cell $reduce_or$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1126$94: \prescaler [4:0]
+    New input vector for $reduce_or cell $reduce_or$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1125$90: \prescaler [3:0]
+    New input vector for $reduce_or cell $reduce_or$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1124$86: \prescaler [2:0]
+    New input vector for $reduce_or cell $reduce_or$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1123$82: \prescaler [1:0]
     New ctrl vector for $pmux cell $flatten\idec.$procmux$414: { $flatten\idec.$procmux$460_CMP $flatten\idec.$procmux$459_CMP $flatten\idec.$procmux$458_CMP $flatten\idec.$procmux$457_CMP $flatten\idec.$procmux$456_CMP $flatten\idec.$procmux$455_CMP $flatten\idec.$procmux$454_CMP $flatten\idec.$procmux$453_CMP $flatten\idec.$procmux$452_CMP $flatten\idec.$procmux$451_CMP $flatten\idec.$procmux$450_CMP $flatten\idec.$procmux$449_CMP $flatten\idec.$procmux$448_CMP $flatten\idec.$procmux$447_CMP $flatten\idec.$procmux$446_CMP $flatten\idec.$procmux$445_CMP $flatten\idec.$procmux$444_CMP $flatten\idec.$procmux$443_CMP $flatten\idec.$procmux$442_CMP $flatten\idec.$procmux$441_CMP $flatten\idec.$procmux$440_CMP $flatten\idec.$procmux$439_CMP $flatten\idec.$procmux$438_CMP $flatten\idec.$procmux$437_CMP $flatten\idec.$procmux$436_CMP $flatten\idec.$procmux$435_CMP $flatten\idec.$procmux$434_CMP $flatten\idec.$procmux$433_CMP $flatten\idec.$procmux$432_CMP $flatten\idec.$procmux$431_CMP $flatten\idec.$procmux$430_CMP $flatten\idec.$procmux$429_CMP $flatten\idec.$procmux$428_CMP $auto$opt_reduce.cc:134:opt_pmux$518 $flatten\idec.$procmux$425_CMP $flatten\idec.$procmux$424_CMP $auto$opt_reduce.cc:134:opt_pmux$516 $auto$opt_reduce.cc:134:opt_pmux$514 $auto$opt_reduce.cc:134:opt_pmux$512 $flatten\idec.$procmux$417_CMP $flatten\idec.$procmux$416_CMP $flatten\idec.$procmux$415_CMP }
     Consolidated identical input bits for $mux cell $flatten\regs.\dram.$procmux$462:
-      Old ports: A=8'00000000, B=8'11111111, Y=$flatten\regs.\dram.$0$memwr$\mem$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:164$13_EN[7:0]$19
-      New ports: A=1'0, B=1'1, Y=$flatten\regs.\dram.$0$memwr$\mem$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:164$13_EN[7:0]$19 [0]
-      New connections: $flatten\regs.\dram.$0$memwr$\mem$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:164$13_EN[7:0]$19 [7:1] = { $flatten\regs.\dram.$0$memwr$\mem$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:164$13_EN[7:0]$19 [0] $flatten\regs.\dram.$0$memwr$\mem$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:164$13_EN[7:0]$19 [0] $flatten\regs.\dram.$0$memwr$\mem$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:164$13_EN[7:0]$19 [0] $flatten\regs.\dram.$0$memwr$\mem$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:164$13_EN[7:0]$19 [0] $flatten\regs.\dram.$0$memwr$\mem$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:164$13_EN[7:0]$19 [0] $flatten\regs.\dram.$0$memwr$\mem$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:164$13_EN[7:0]$19 [0] $flatten\regs.\dram.$0$memwr$\mem$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:164$13_EN[7:0]$19 [0] }
+      Old ports: A=8'00000000, B=8'11111111, Y=$flatten\regs.\dram.$0$memwr$\mem$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:164$13_EN[7:0]$19
+      New ports: A=1'0, B=1'1, Y=$flatten\regs.\dram.$0$memwr$\mem$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:164$13_EN[7:0]$19 [0]
+      New connections: $flatten\regs.\dram.$0$memwr$\mem$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:164$13_EN[7:0]$19 [7:1] = { $flatten\regs.\dram.$0$memwr$\mem$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:164$13_EN[7:0]$19 [0] $flatten\regs.\dram.$0$memwr$\mem$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:164$13_EN[7:0]$19 [0] $flatten\regs.\dram.$0$memwr$\mem$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:164$13_EN[7:0]$19 [0] $flatten\regs.\dram.$0$memwr$\mem$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:164$13_EN[7:0]$19 [0] $flatten\regs.\dram.$0$memwr$\mem$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:164$13_EN[7:0]$19 [0] $flatten\regs.\dram.$0$memwr$\mem$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:164$13_EN[7:0]$19 [0] $flatten\regs.\dram.$0$memwr$\mem$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:164$13_EN[7:0]$19 [0] }
     New ctrl vector for $pmux cell $procmux$165: { $auto$opt_reduce.cc:134:opt_pmux$524 $auto$opt_reduce.cc:134:opt_pmux$522 $auto$opt_reduce.cc:134:opt_pmux$520 }
-    New ctrl vector for $pmux cell $procmux$199: { $flatten\idec.$procmux$419_CMP $eq$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1342$157_Y $auto$opt_reduce.cc:134:opt_pmux$528 $auto$opt_reduce.cc:134:opt_pmux$526 $procmux$200_CMP }
+    New ctrl vector for $pmux cell $procmux$199: { $flatten\idec.$procmux$419_CMP $eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1342$157_Y $auto$opt_reduce.cc:134:opt_pmux$528 $auto$opt_reduce.cc:134:opt_pmux$526 $procmux$200_CMP }
     New ctrl vector for $pmux cell $procmux$335: $auto$opt_reduce.cc:134:opt_pmux$530
     New ctrl vector for $pmux cell $procmux$366: { $procmux$373_CMP $procmux$372_CMP $procmux$371_CMP $auto$opt_reduce.cc:134:opt_pmux$532 $procmux$369_CMP $procmux$368_CMP $procmux$367_CMP }
     New ctrl vector for $pmux cell $procmux$384: $auto$opt_reduce.cc:134:opt_pmux$534
@@ -597,8 +597,8 @@ Removed a total of 0 cells.
 
 2.9.6. Executing OPT_DFF pass (perform DFF optimizations).
 Adding SRST signal on $procdff$505 ($dff) from module cpu (D = \phase_cnt_inc, Q = \phase_cnt, rval = 2'00).
-Adding SRST signal on $procdff$504 ($dff) from module cpu (D = $ternary$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:735$33_Y, Q = \q4, rval = 1'0).
-Adding SRST signal on $procdff$503 ($dff) from module cpu (D = $ternary$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:734$31_Y, Q = \q1, rval = 1'1).
+Adding SRST signal on $procdff$504 ($dff) from module cpu (D = $ternary$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:735$33_Y, Q = \q4, rval = 1'0).
+Adding SRST signal on $procdff$503 ($dff) from module cpu (D = $ternary$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:734$31_Y, Q = \q1, rval = 1'1).
 Adding SRST signal on $procdff$502 ($dff) from module cpu (D = $procmux$344_Y, Q = \inst, rval = 12'000000000000).
 Adding EN signal on $auto$ff.cc:266:slice$540 ($sdff) from module cpu (D = $procmux$342_Y, Q = \inst).
 Adding SRST signal on $procdff$501 ($dff) from module cpu (D = $procmux$319_Y, Q = \w, rval = 8'00000000).
@@ -606,7 +606,7 @@ Adding EN signal on $auto$ff.cc:266:slice$542 ($sdff) from module cpu (D = \alu.
 Adding SRST signal on $procdff$500 ($dff) from module cpu (D = $procmux$312_Y, Q = \tmr0, rval = 8'00000000).
 Adding EN signal on $auto$ff.cc:266:slice$546 ($sdff) from module cpu (D = $procmux$310_Y, Q = \tmr0).
 Adding SRST signal on $procdff$499 ($dff) from module cpu (D = $procmux$276_Y, Q = \prescaler, rval = 8'00000000).
-Adding EN signal on $auto$ff.cc:266:slice$570 ($sdff) from module cpu (D = $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1143$111_Y [7:0], Q = \prescaler).
+Adding EN signal on $auto$ff.cc:266:slice$570 ($sdff) from module cpu (D = $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1143$111_Y [7:0], Q = \prescaler).
 Adding SRST signal on $procdff$498 ($dff) from module cpu (D = $procmux$269_Y, Q = \status, rval = 8'00011000).
 Adding EN signal on $auto$ff.cc:266:slice$576 ($sdff) from module cpu (D = { \alu.y [7:3] \alu.y [1] }, Q = { \status [7:3] \status [1] }).
 Adding EN signal on $auto$ff.cc:266:slice$576 ($sdff) from module cpu (D = $procmux$267_Y [0], Q = \status [0]).
@@ -629,7 +629,7 @@ Adding SRST signal on $procdff$487 ($dff) from module cpu (D = $procmux$193_Y, Q
 Adding EN signal on $auto$ff.cc:266:slice$620 ($sdff) from module cpu (D = \pc, Q = \stack1).
 Adding SRST signal on $procdff$486 ($dff) from module cpu (D = $procmux$174_Y, Q = \stacklevel, rval = 2'00).
 Adding EN signal on $auto$ff.cc:266:slice$624 ($sdff) from module cpu (D = $procmux$165_Y, Q = \stacklevel).
-Adding EN signal on $flatten\regs.\dram.$procdff$509 ($dff) from module cpu (D = $flatten\regs.\dram.$memrd$\mem$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:160$15_DATA, Q = \regs.dram.dout).
+Adding EN signal on $flatten\regs.\dram.$procdff$509 ($dff) from module cpu (D = $flatten\regs.\dram.$memrd$\mem$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:160$15_DATA, Q = \regs.dram.dout).
 
 2.9.7. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \cpu..
@@ -670,18 +670,18 @@ Optimizing module cpu.
 
 2.10. Executing WREDUCE pass (reducing word size of cells).
 Removed top 29 address bits (of 32) from memory init port cpu.$auto$mem.cc:319:emit$163 ($auto$proc_rom.cc:150:do_switch$161).
-Removed top 1 bits (of 2) from port B of cell cpu.$add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:725$26 ($add).
-Removed top 1 bits (of 2) from port B of cell cpu.$eq$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:735$32 ($eq).
-Removed top 1 bits (of 2) from port B of cell cpu.$eq$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:852$41 ($eq).
-Removed top 1 bits (of 2) from port B of cell cpu.$eq$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:852$42 ($eq).
-Removed top 2 bits (of 3) from port B of cell cpu.$eq$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1107$73 ($eq).
-Removed top 31 bits (of 32) from port B of cell cpu.$add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1121$76 ($add).
-Removed top 24 bits (of 32) from port Y of cell cpu.$add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1121$76 ($add).
-Removed top 31 bits (of 32) from port B of cell cpu.$add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1143$111 ($add).
-Removed top 24 bits (of 32) from port Y of cell cpu.$add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1143$111 ($add).
-Removed top 1 bits (of 3) from port B of cell cpu.$eq$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1163$114 ($eq).
-Removed top 31 bits (of 32) from port B of cell cpu.$add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1327$155 ($add).
-Removed top 21 bits (of 32) from port Y of cell cpu.$add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1327$155 ($add).
+Removed top 1 bits (of 2) from port B of cell cpu.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:725$26 ($add).
+Removed top 1 bits (of 2) from port B of cell cpu.$eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:735$32 ($eq).
+Removed top 1 bits (of 2) from port B of cell cpu.$eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:852$41 ($eq).
+Removed top 1 bits (of 2) from port B of cell cpu.$eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:852$42 ($eq).
+Removed top 2 bits (of 3) from port B of cell cpu.$eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1107$73 ($eq).
+Removed top 31 bits (of 32) from port B of cell cpu.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1121$76 ($add).
+Removed top 24 bits (of 32) from port Y of cell cpu.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1121$76 ($add).
+Removed top 31 bits (of 32) from port B of cell cpu.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1143$111 ($add).
+Removed top 24 bits (of 32) from port Y of cell cpu.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1143$111 ($add).
+Removed top 1 bits (of 3) from port B of cell cpu.$eq$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1163$114 ($eq).
+Removed top 31 bits (of 32) from port B of cell cpu.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1327$155 ($add).
+Removed top 21 bits (of 32) from port Y of cell cpu.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1327$155 ($add).
 Removed top 1 bits (of 2) from port B of cell cpu.$procmux$180_CMP0 ($eq).
 Removed top 5 bits (of 11) from port B of cell cpu.$procmux$200_CMP0 ($eq).
 Removed top 1 bits (of 2) from port B of cell cpu.$auto$opt_dff.cc:195:make_patterns_logic$567 ($ne).
@@ -751,8 +751,8 @@ Removed top 10 bits (of 12) from port B of cell cpu.$flatten\idec.$procmux$425_C
 Removed top 9 bits (of 12) from port B of cell cpu.$flatten\idec.$procmux$424_CMP0 ($eq).
 Removed top 9 bits (of 12) from port B of cell cpu.$flatten\idec.$procmux$423_CMP0 ($eq).
 Removed top 9 bits (of 12) from port B of cell cpu.$flatten\idec.$procmux$422_CMP0 ($eq).
-Removed top 24 bits (of 32) from wire cpu.$add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1121$76_Y.
-Removed top 21 bits (of 32) from wire cpu.$add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1327$155_Y.
+Removed top 24 bits (of 32) from wire cpu.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1121$76_Y.
+Removed top 21 bits (of 32) from wire cpu.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1327$155_Y.
 Removed top 5 bits (of 8) from wire cpu.$procmux$267_Y.
 Removed top 2 bits (of 8) from wire cpu.option.
 
@@ -765,24 +765,24 @@ Removed 0 unused cells and 4 unused wires.
 
 2.13. Executing ALUMACC pass (create $alu and $macc cells).
 Extracting $alu and $macc cells in module cpu:
-  creating $macc model for $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1121$76 ($add).
-  creating $macc model for $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1143$111 ($add).
-  creating $macc model for $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1327$155 ($add).
-  creating $macc model for $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:725$26 ($add).
-  creating $macc model for $flatten\alu.$add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:60$2 ($add).
-  creating $macc model for $flatten\alu.$sub$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:61$3 ($sub).
-  creating $alu model for $macc $flatten\alu.$sub$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:61$3.
-  creating $alu model for $macc $flatten\alu.$add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:60$2.
-  creating $alu model for $macc $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:725$26.
-  creating $alu model for $macc $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1327$155.
-  creating $alu model for $macc $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1143$111.
-  creating $alu model for $macc $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1121$76.
-  creating $alu cell for $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1121$76: $auto$alumacc.cc:485:replace_alu$635
-  creating $alu cell for $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1143$111: $auto$alumacc.cc:485:replace_alu$638
-  creating $alu cell for $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1327$155: $auto$alumacc.cc:485:replace_alu$641
-  creating $alu cell for $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:725$26: $auto$alumacc.cc:485:replace_alu$644
-  creating $alu cell for $flatten\alu.$add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:60$2: $auto$alumacc.cc:485:replace_alu$647
-  creating $alu cell for $flatten\alu.$sub$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:61$3: $auto$alumacc.cc:485:replace_alu$650
+  creating $macc model for $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1121$76 ($add).
+  creating $macc model for $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1143$111 ($add).
+  creating $macc model for $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1327$155 ($add).
+  creating $macc model for $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:725$26 ($add).
+  creating $macc model for $flatten\alu.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:60$2 ($add).
+  creating $macc model for $flatten\alu.$sub$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:61$3 ($sub).
+  creating $alu model for $macc $flatten\alu.$sub$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:61$3.
+  creating $alu model for $macc $flatten\alu.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:60$2.
+  creating $alu model for $macc $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:725$26.
+  creating $alu model for $macc $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1327$155.
+  creating $alu model for $macc $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1143$111.
+  creating $alu model for $macc $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1121$76.
+  creating $alu cell for $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1121$76: $auto$alumacc.cc:485:replace_alu$635
+  creating $alu cell for $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1143$111: $auto$alumacc.cc:485:replace_alu$638
+  creating $alu cell for $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1327$155: $auto$alumacc.cc:485:replace_alu$641
+  creating $alu cell for $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:725$26: $auto$alumacc.cc:485:replace_alu$644
+  creating $alu cell for $flatten\alu.$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:60$2: $auto$alumacc.cc:485:replace_alu$647
+  creating $alu cell for $flatten\alu.$sub$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:61$3: $auto$alumacc.cc:485:replace_alu$650
   created 6 $alu and 0 $macc cells.
 
 2.14. Executing SHARE pass (SAT-based resource sharing).
@@ -931,8 +931,8 @@ Removed 0 multiplexer ports.
       New ports: A=4'0000, B=305419896, Y=\regs.dram.address [6:3]
       New connections: \regs.dram.address [2:0] = \fileaddr [2:0]
     Consolidated identical input bits for $pmux cell $procmux$283:
-      Old ports: A=$add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1121$76_Y, B={ $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1121$76_Y $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1121$76_Y $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1121$76_Y $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1121$76_Y $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1121$76_Y $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1121$76_Y $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1121$76_Y $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1121$76_Y }, Y=$procmux$283_Y
-      New connections: $procmux$283_Y = $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1121$76_Y
+      Old ports: A=$add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1121$76_Y, B={ $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1121$76_Y $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1121$76_Y $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1121$76_Y $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1121$76_Y $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1121$76_Y $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1121$76_Y $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1121$76_Y $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1121$76_Y }, Y=$procmux$283_Y
+      New connections: $procmux$283_Y = $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/risc8.v:1121$76_Y
   Optimizing cells in module \cpu.
     Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:150:do_switch$161$rdmux[0][1][1]$674:
       Old ports: A=$memory$auto$proc_rom.cc:150:do_switch$161$rdmux[0][1][1]$a$675, B=$memory$auto$proc_rom.cc:150:do_switch$161$rdmux[0][1][1]$b$676, Y=$memory$auto$proc_rom.cc:150:do_switch$161$rdmux[0][0][0]$b$670
@@ -1102,8 +1102,8 @@ Optimizing module cpu.
 
 2.21. Executing TECHMAP pass (map to technology primitives).
 
-2.21.1. Executing Verilog-2005 frontend: /share/techmap.v
-Parsing Verilog input from `/share/techmap.v' to AST representation.
+2.21.1. Executing Verilog-2005 frontend: /usr/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/usr/bin/../share/yosys/techmap.v' to AST representation.
 Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
 Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
 Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
@@ -1131,6 +1131,7 @@ Generating RTLIL representation for module `\_90_lut'.
 Successfully finished Verilog frontend.
 
 2.21.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $sdff.
 Using extmapper simplemap for cells of type $mux.
 Using extmapper simplemap for cells of type $eq.
 Using extmapper simplemap for cells of type $dffe.
@@ -1141,7 +1142,6 @@ Using extmapper simplemap for cells of type $and.
 Using extmapper simplemap for cells of type $or.
 Using extmapper simplemap for cells of type $not.
 Using template $paramod$c3cd1564c35d873179656addd6052d7ea8b6d991\_90_alu for cells of type $alu.
-Using extmapper simplemap for cells of type $sdff.
 Using extmapper simplemap for cells of type $reduce_bool.
 Using extmapper simplemap for cells of type $sdffe.
 Using extmapper simplemap for cells of type $reduce_and.
@@ -1193,18 +1193,27 @@ Removed 37 unused cells and 1232 unused wires.
 Extracted 2080 gates and 2798 wires to a netlist network with 717 inputs and 163 outputs.
 
 2.23.1.1. Executing ABC.
-Running ABC command: "/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 13 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
 
 2.23.1.2. Re-integrating ABC results.
 ABC RESULTS:              XNOR cells:       16
-ABC RESULTS:               MUX cells:      630
-ABC RESULTS:               NOT cells:       56
+ABC RESULTS:               MUX cells:      629
+ABC RESULTS:               NOT cells:       53
 ABC RESULTS:               NOR cells:       86
-ABC RESULTS:             ORNOT cells:       83
-ABC RESULTS:                OR cells:      436
+ABC RESULTS:             ORNOT cells:       82
+ABC RESULTS:                OR cells:      435
 ABC RESULTS:              NAND cells:       34
 ABC RESULTS:            ANDNOT cells:      469
-ABC RESULTS:               AND cells:       77
+ABC RESULTS:               AND cells:       76
 ABC RESULTS:               XOR cells:       48
 ABC RESULTS:        internal signals:     1918
 ABC RESULTS:           input signals:      717
@@ -1215,18 +1224,18 @@ Removing temp directory.
 
 2.24.1. Executing OPT_EXPR pass (perform const folding).
 Optimizing module cpu.
-<suppressed ~139 debug messages>
+<suppressed ~147 debug messages>
 
 2.24.2. Executing OPT_MERGE pass (detect identical cells).
 Finding identical cells in module `\cpu'.
-<suppressed ~3 debug messages>
-Removed a total of 1 cells.
+<suppressed ~6 debug messages>
+Removed a total of 2 cells.
 
 2.24.3. Executing OPT_DFF pass (perform DFF optimizations).
 
 2.24.4. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \cpu..
-Removed 1 unused cells and 1596 unused wires.
+Removed 1 unused cells and 1597 unused wires.
 <suppressed ~20 debug messages>
 
 2.24.5. Finished fast OPT passes.
@@ -1244,23 +1253,23 @@ Removed 0 unused modules.
 
 === cpu ===
 
-   Number of wires:               2046
-   Number of wire bits:           2905
+   Number of wires:               2038
+   Number of wire bits:           2897
    Number of public wires:         158
    Number of public wire bits:     995
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:               2629
+   Number of cells:               2621
      $_ANDNOT_                     469
-     $_AND_                         77
+     $_AND_                         76
      $_DFFE_PP_                    579
-     $_MUX_                        630
+     $_MUX_                        629
      $_NAND_                        34
-     $_NOR_                         86
-     $_NOT_                         55
-     $_ORNOT_                       83
-     $_OR_                         435
+     $_NOR_                         85
+     $_NOT_                         52
+     $_ORNOT_                       82
+     $_OR_                         434
      $_SDFFE_PP0P_                  87
      $_SDFFE_PP1P_                  18
      $_SDFF_PN0_                     4
@@ -1307,149 +1316,197 @@ Mapping DFF cells in module `\cpu':
 4. Executing ABC pass (technology mapping using ABC).
 
 4.1. Extracting gate netlist of module `\cpu' to `<abc-temp-dir>/input.blif'..
-Extracted 2734 gates and 3461 wires to a netlist network with 725 inputs and 713 outputs.
+Extracted 2726 gates and 3453 wires to a netlist network with 725 inputs and 713 outputs.
 
 4.1.1. Executing ABC.
-Running ABC command: "/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_lib -w /Users/abdugad/dd2/DD2_Project1_student_pack/given/hd_usable.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.05 sec
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfsbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfsbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtn_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxbn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtp_1".
+ABC: Library "sky130_fd_sc_hd__tt_025C_1v80" from "/Users/abdugad/dd2/DD2_Project1_student_pack/given/hd_usable.lib" has 271 cells (36 skipped: 36 seq; 0 tri-state; 0 no func; 0 dont_use).  Time =     0.08 sec
+ABC: Memory =   15.96 MB. Time =     0.08 sec
+ABC: Warning: Detected 6 multi-output gates (for example, "sky130_fd_sc_hd__fa_1").
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf -R 1000 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
 
 4.1.2. Re-integrating ABC results.
 ABC RESULTS:   sky130_fd_sc_hd__and3b_1 cells:        1
 ABC RESULTS:   sky130_fd_sc_hd__a41o_1 cells:        1
 ABC RESULTS:   sky130_fd_sc_hd__a31o_1 cells:        1
-ABC RESULTS:   sky130_fd_sc_hd__a221o_1 cells:        2
-ABC RESULTS:   sky130_fd_sc_hd__maj3_1 cells:        1
-ABC RESULTS:   sky130_fd_sc_hd__nor2b_1 cells:        7
+ABC RESULTS:   sky130_fd_sc_hd__and4_1 cells:        1
 ABC RESULTS:   sky130_fd_sc_hd__a41oi_1 cells:        1
 ABC RESULTS:   sky130_fd_sc_hd__o2111ai_1 cells:        1
 ABC RESULTS:   sky130_fd_sc_hd__nor4bb_1 cells:        1
-ABC RESULTS:   sky130_fd_sc_hd__o221ai_1 cells:        1
-ABC RESULTS:   sky130_fd_sc_hd__o211ai_1 cells:        4
-ABC RESULTS:   sky130_fd_sc_hd__a2111oi_0 cells:        4
-ABC RESULTS:   sky130_fd_sc_hd__nand4b_1 cells:        1
-ABC RESULTS:   sky130_fd_sc_hd__a21boi_0 cells:        1
-ABC RESULTS:   sky130_fd_sc_hd__a221oi_1 cells:        9
-ABC RESULTS:   sky130_fd_sc_hd__o22ai_1 cells:       15
-ABC RESULTS:   sky130_fd_sc_hd__o22a_1 cells:        8
-ABC RESULTS:   sky130_fd_sc_hd__a21o_1 cells:       15
+ABC RESULTS:   sky130_fd_sc_hd__o22a_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a221o_1 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__maj3_1 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__a2bb2oi_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__o211ai_1 cells:        5
 ABC RESULTS:   sky130_fd_sc_hd__inv_1 cells:       31
-ABC RESULTS:   sky130_fd_sc_hd__nand2b_1 cells:       12
+ABC RESULTS:   sky130_fd_sc_hd__nand2b_1 cells:       17
+ABC RESULTS:   sky130_fd_sc_hd__nor2b_1 cells:        7
+ABC RESULTS:   sky130_fd_sc_hd__o22ai_1 cells:       10
+ABC RESULTS:   sky130_fd_sc_hd__a221oi_1 cells:       16
+ABC RESULTS:   sky130_fd_sc_hd__a21o_1 cells:       11
+ABC RESULTS:   sky130_fd_sc_hd__a2111oi_0 cells:        4
 ABC RESULTS:   sky130_fd_sc_hd__nand3b_1 cells:        2
 ABC RESULTS:   sky130_fd_sc_hd__or4_1 cells:        3
 ABC RESULTS:   sky130_fd_sc_hd__o221a_1 cells:        5
-ABC RESULTS:   sky130_fd_sc_hd__a222oi_1 cells:       53
+ABC RESULTS:   sky130_fd_sc_hd__a222oi_1 cells:       27
 ABC RESULTS:   sky130_fd_sc_hd__nor4b_1 cells:        3
-ABC RESULTS:   sky130_fd_sc_hd__and2_0 cells:       11
-ABC RESULTS:   sky130_fd_sc_hd__o21a_1 cells:        1
-ABC RESULTS:   sky130_fd_sc_hd__o41ai_1 cells:        4
-ABC RESULTS:   sky130_fd_sc_hd__o311ai_0 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__and2_0 cells:       20
+ABC RESULTS:   sky130_fd_sc_hd__o21a_1 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__o41ai_1 cells:        9
+ABC RESULTS:   sky130_fd_sc_hd__o311ai_0 cells:        2
 ABC RESULTS:   sky130_fd_sc_hd__a311oi_1 cells:        5
 ABC RESULTS:   sky130_fd_sc_hd__mux4_2 cells:        1
-ABC RESULTS:   sky130_fd_sc_hd__o31ai_1 cells:        5
-ABC RESULTS:   sky130_fd_sc_hd__and3_1 cells:       19
-ABC RESULTS:   sky130_fd_sc_hd__or2_0 cells:       10
-ABC RESULTS:   sky130_fd_sc_hd__xnor2_1 cells:       19
+ABC RESULTS:   sky130_fd_sc_hd__o31ai_1 cells:        4
+ABC RESULTS:   sky130_fd_sc_hd__and3_1 cells:        9
+ABC RESULTS:   sky130_fd_sc_hd__or2_0 cells:       13
+ABC RESULTS:   sky130_fd_sc_hd__xnor2_1 cells:       21
 ABC RESULTS:   sky130_fd_sc_hd__or3_1 cells:        7
-ABC RESULTS:   sky130_fd_sc_hd__nand4_1 cells:        9
-ABC RESULTS:   sky130_fd_sc_hd__nor4_1 cells:       19
+ABC RESULTS:   sky130_fd_sc_hd__nand4_1 cells:       10
+ABC RESULTS:   sky130_fd_sc_hd__nor4_1 cells:       26
 ABC RESULTS:   sky130_fd_sc_hd__mux2i_1 cells:       34
 ABC RESULTS:   sky130_fd_sc_hd__nor3b_1 cells:        5
-ABC RESULTS:   sky130_fd_sc_hd__mux2_1 cells:       12
-ABC RESULTS:   sky130_fd_sc_hd__nor3_1 cells:       48
-ABC RESULTS:   sky130_fd_sc_hd__nand3_1 cells:      103
-ABC RESULTS:   sky130_fd_sc_hd__nand2_1 cells:      703
-ABC RESULTS:   sky130_fd_sc_hd__a22oi_1 cells:      211
+ABC RESULTS:   sky130_fd_sc_hd__mux2_1 cells:       13
+ABC RESULTS:   sky130_fd_sc_hd__nor3_1 cells:       69
+ABC RESULTS:   sky130_fd_sc_hd__nand3_1 cells:       97
+ABC RESULTS:   sky130_fd_sc_hd__nand2_1 cells:      686
+ABC RESULTS:   sky130_fd_sc_hd__a22oi_1 cells:      257
 ABC RESULTS:   sky130_fd_sc_hd__or3b_1 cells:        2
 ABC RESULTS:   sky130_fd_sc_hd__a31oi_1 cells:       27
-ABC RESULTS:   sky130_fd_sc_hd__a211o_1 cells:        4
-ABC RESULTS:   sky130_fd_sc_hd__xor2_1 cells:       12
-ABC RESULTS:   sky130_fd_sc_hd__a22o_1 cells:        2
-ABC RESULTS:   sky130_fd_sc_hd__nor2_1 cells:      242
-ABC RESULTS:   sky130_fd_sc_hd__a211oi_1 cells:       12
-ABC RESULTS:   sky130_fd_sc_hd__a21oi_1 cells:      287
-ABC RESULTS:   sky130_fd_sc_hd__o21ai_0 cells:      608
+ABC RESULTS:   sky130_fd_sc_hd__a211o_1 cells:        5
+ABC RESULTS:   sky130_fd_sc_hd__xor2_1 cells:       11
+ABC RESULTS:   sky130_fd_sc_hd__a22o_1 cells:        6
+ABC RESULTS:   sky130_fd_sc_hd__nor2_1 cells:      216
+ABC RESULTS:   sky130_fd_sc_hd__a211oi_1 cells:       10
+ABC RESULTS:   sky130_fd_sc_hd__a21oi_1 cells:      243
+ABC RESULTS:   sky130_fd_sc_hd__o21ai_0 cells:      619
 ABC RESULTS:   sky130_fd_sc_hd__buf_1 cells:       16
-ABC RESULTS:        internal signals:     2023
+ABC RESULTS:        internal signals:     2015
 ABC RESULTS:           input signals:      725
 ABC RESULTS:          output signals:      713
 Removing temp directory.
 
 5. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \cpu..
-Removed 0 unused cells and 3490 unused wires.
+Removed 0 unused cells and 3482 unused wires.
 <suppressed ~60 debug messages>
 
 6. Printing statistics.
 
 === cpu ===
 
-   Number of wires:               2706
-   Number of wire bits:           3362
+   Number of wires:               2682
+   Number of wire bits:           3338
    Number of public wires:          99
    Number of public wire bits:     755
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:               3320
+   Number of cells:               3296
      sky130_fd_sc_hd__a2111oi_0      4
-     sky130_fd_sc_hd__a211o_1        4
-     sky130_fd_sc_hd__a211oi_1      12
-     sky130_fd_sc_hd__a21boi_0       1
-     sky130_fd_sc_hd__a21o_1        15
-     sky130_fd_sc_hd__a21oi_1      287
-     sky130_fd_sc_hd__a221o_1        2
-     sky130_fd_sc_hd__a221oi_1       9
-     sky130_fd_sc_hd__a222oi_1      53
-     sky130_fd_sc_hd__a22o_1         2
-     sky130_fd_sc_hd__a22oi_1      211
+     sky130_fd_sc_hd__a211o_1        5
+     sky130_fd_sc_hd__a211oi_1      10
+     sky130_fd_sc_hd__a21o_1        11
+     sky130_fd_sc_hd__a21oi_1      243
+     sky130_fd_sc_hd__a221o_1        3
+     sky130_fd_sc_hd__a221oi_1      16
+     sky130_fd_sc_hd__a222oi_1      27
+     sky130_fd_sc_hd__a22o_1         6
+     sky130_fd_sc_hd__a22oi_1      257
+     sky130_fd_sc_hd__a2bb2oi_1      1
      sky130_fd_sc_hd__a311oi_1       5
      sky130_fd_sc_hd__a31o_1         1
      sky130_fd_sc_hd__a31oi_1       27
      sky130_fd_sc_hd__a41o_1         1
      sky130_fd_sc_hd__a41oi_1        1
-     sky130_fd_sc_hd__and2_0        11
-     sky130_fd_sc_hd__and3_1        19
+     sky130_fd_sc_hd__and2_0        20
+     sky130_fd_sc_hd__and3_1         9
      sky130_fd_sc_hd__and3b_1        1
+     sky130_fd_sc_hd__and4_1         1
      sky130_fd_sc_hd__buf_1         16
      sky130_fd_sc_hd__dfxtp_1      696
      sky130_fd_sc_hd__inv_1         31
-     sky130_fd_sc_hd__maj3_1         1
-     sky130_fd_sc_hd__mux2_1        12
+     sky130_fd_sc_hd__maj3_1         2
+     sky130_fd_sc_hd__mux2_1        13
      sky130_fd_sc_hd__mux2i_1       34
      sky130_fd_sc_hd__mux4_2         1
-     sky130_fd_sc_hd__nand2_1      703
-     sky130_fd_sc_hd__nand2b_1      12
-     sky130_fd_sc_hd__nand3_1      103
+     sky130_fd_sc_hd__nand2_1      686
+     sky130_fd_sc_hd__nand2b_1      17
+     sky130_fd_sc_hd__nand3_1       97
      sky130_fd_sc_hd__nand3b_1       2
-     sky130_fd_sc_hd__nand4_1        9
-     sky130_fd_sc_hd__nand4b_1       1
-     sky130_fd_sc_hd__nor2_1       242
+     sky130_fd_sc_hd__nand4_1       10
+     sky130_fd_sc_hd__nor2_1       216
      sky130_fd_sc_hd__nor2b_1        7
-     sky130_fd_sc_hd__nor3_1        48
+     sky130_fd_sc_hd__nor3_1        69
      sky130_fd_sc_hd__nor3b_1        5
-     sky130_fd_sc_hd__nor4_1        19
+     sky130_fd_sc_hd__nor4_1        26
      sky130_fd_sc_hd__nor4b_1        3
      sky130_fd_sc_hd__nor4bb_1       1
      sky130_fd_sc_hd__o2111ai_1      1
-     sky130_fd_sc_hd__o211ai_1       4
-     sky130_fd_sc_hd__o21a_1         1
-     sky130_fd_sc_hd__o21ai_0      608
+     sky130_fd_sc_hd__o211ai_1       5
+     sky130_fd_sc_hd__o21a_1         2
+     sky130_fd_sc_hd__o21ai_0      619
      sky130_fd_sc_hd__o221a_1        5
-     sky130_fd_sc_hd__o221ai_1       1
-     sky130_fd_sc_hd__o22a_1         8
-     sky130_fd_sc_hd__o22ai_1       15
-     sky130_fd_sc_hd__o311ai_0       3
-     sky130_fd_sc_hd__o31ai_1        5
-     sky130_fd_sc_hd__o41ai_1        4
-     sky130_fd_sc_hd__or2_0         10
+     sky130_fd_sc_hd__o22a_1         1
+     sky130_fd_sc_hd__o22ai_1       10
+     sky130_fd_sc_hd__o311ai_0       2
+     sky130_fd_sc_hd__o31ai_1        4
+     sky130_fd_sc_hd__o41ai_1        9
+     sky130_fd_sc_hd__or2_0         13
      sky130_fd_sc_hd__or3_1          7
      sky130_fd_sc_hd__or3b_1         2
      sky130_fd_sc_hd__or4_1          3
-     sky130_fd_sc_hd__xnor2_1       19
-     sky130_fd_sc_hd__xor2_1        12
+     sky130_fd_sc_hd__xnor2_1       21
+     sky130_fd_sc_hd__xor2_1        11
 
-   Chip area for module '\cpu': 27531.404800
+   Chip area for module '\cpu': 27501.376000
 
 Warnings: 3 unique messages, 3 total
-End of script. Logfile hash: d8e0c6185a, CPU: user 3.71s system 0.00s
-Yosys 0.33 (git sha1 2584903a0, ccache clang 14.0.0-1ubuntu1.1 -Os -flto -flto)
-Time spent: 27% 2x abc (1 sec), 17% 2x stat (0 sec), ...
+End of script. Logfile hash: d6303373a9, CPU: user 0.88s system 0.01s, MEM: 39.08 MB peak
+Yosys 0.33 (git sha1 2584903a060)
+Time spent: 44% 2x abc (0 sec), 13% 25x opt_expr (0 sec), ...

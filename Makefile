@@ -10,11 +10,12 @@
 SHELL   := /bin/bash
 PY      ?= python3
 YOSYS   ?= yosys
+ABC     ?= yosys-abc
 PACK    ?= $(HOME)/DD2_Project1_student_pack
 PDK_ROOT ?= $(HOME)/.ciel
 HD_LIB_SRC ?= $(PDK_ROOT)/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 REQUIRED := cpu8 dsp8 arlet6502 uart_apb risc8 fir10
-export YOSYS
+export YOSYS ABC
 
 .PHONY: setup check test all demo clean selftest hd-classes aigs stats table1 test-aigs area-model candidates
 
@@ -29,20 +30,19 @@ setup:
 check:
 	@$(PY) -c 'import sys; assert sys.version_info >= (3, 11), sys.version; print("python", sys.version.split()[0])'
 	@$(PY) -c 'import numpy; print("numpy", numpy.__version__)'
-	@$(YOSYS) -V
+	@$(YOSYS) -V | grep "^Yosys 0\.33 " || (echo "need Yosys 0.33 (handout Table 1): run in the student pack image dd2-layout-tools"; exit 1)
 	@test -s build/pdk/sky130_fd_sc_hd__tt_025C_1v80.lib || (echo "HD Liberty missing: run make setup"; exit 1)
 	@$(PY) -c 'import hashlib; print("HD Liberty sha256", hashlib.sha256(open("build/pdk/sky130_fd_sc_hd__tt_025C_1v80.lib","rb").read()).hexdigest())'
 	@for f in hd_reduced.lib hd_usable.lib scripts/map.sh; do \
 	  if [ -e build/given/$$f ]; then echo "ok   given/$$f"; else echo "MISSING given/$$f (make setup PACK=...)"; fi; done
 
 test:
-	$(PY) -m unittest -v tests/test_all.py tests/test_candidates.py
+	$(PY) -m unittest -v tests/test_all.py tests/test_candidates.py tests/test_abc_after.py
 
 # regenerate the small test AIGs from our own test designs
 test-aigs:
 	src/make_aig.sh tests/designs/csa8.v csa8 tests/aig/csa8.aag
 	src/make_aig.sh tests/designs/mux_alu4.v mux_alu4 tests/aig/mux_alu4.aag
-	$(YOSYS) -q -p "read_verilog tests/designs/csa8.v; synth -flatten -top csa8; async2sync; dffunmap; aigmap; opt_clean; write_aiger tests/aig/csa8.aig"
 
 selftest:
 	@mkdir -p results
@@ -51,16 +51,17 @@ selftest:
 hd-classes:
 	$(PY) src/hd_class_table.py
 
-# step 1: one AIG per required design (needs the student pack)
+# step 1: one AIG per required design, and the same graph after ABC strash; dch (needs the student pack)
 aigs:
 	@for d in $(REQUIRED); do \
 	  top=$$($(PY) -c "import sys; sys.path.insert(0,'src'); from designs import DESIGNS, files; print(DESIGNS['$$d'][0])"); \
 	  fl=$$($(PY) -c "import sys; sys.path.insert(0,'src'); from designs import files; print(' '.join(files('$$d')))"); \
-	  echo "== $$d (top $$top)"; src/make_aig.sh "$$fl" $$top build/aig/$$d.aag || exit 1; done
+	  echo "== $$d (top $$top)"; src/make_aig.sh "$$fl" $$top build/aig/$$d.aag || exit 1; \
+	  src/abc_after.sh build/aig/$$d.aig build/aig/$${d}_abc.aig || exit 1; done
 
-# step 2: cuts, their check, and the per-design counts
+# step 2: cuts, their check, and the per-design counts, before and after ABC (handout 9.2)
 stats:
-	$(PY) src/design_stats.py $(addprefix build/aig/,$(addsuffix .aag,$(REQUIRED)))
+	$(PY) src/design_stats.py $(foreach d,$(REQUIRED),build/aig/$(d).aag build/aig/$(d)_abc.aig)
 
 table1:
 	$(PY) src/table1.py

@@ -4,7 +4,7 @@
 Abdelrahman Rashed, 900231248 · Ziad Khairaldin, 900225292 · Option 2 · AI used as a development aid
 
 ## 2. Quick start
-Tools used: Python 3.13 (3.11 or newer), numpy 2.x, Yosys 0.33 (git sha1 2584903a0),
+Tools used: Python 3.12 (3.11 or newer), numpy 1.26, native Yosys 0.33 (git sha1 2584903a060, Ubuntu 24.04 apt),
 HD Liberty `sky130_fd_sc_hd__tt_025C_1v80.lib` from open_pdks `bdc9412b3e468c102d01b7cf6337be06ec6e9c9a`
 (installed with `volare enable --pdk sky130 --include-libraries sky130_fd_sc_hd <version>`;
 sha256 `e66aab4e0a3eef8d0b13eb5b75aaadb725ba78b032203342eb1e419a2c111baf`).
@@ -16,6 +16,15 @@ sha256 `e66aab4e0a3eef8d0b13eb5b75aaadb725ba78b032203342eb1e419a2c111baf`).
 
 `YOSYS=<command>` selects the Yosys binary (default `yosys`).
 
+Table 1 needs native Yosys 0.33, the version in Ubuntu 24.04's apt (Homebrew's newer
+builds and `yowasp-yosys` give different script A areas). We run the flow in the student
+pack's course image (`container/Dockerfile`, Ubuntu 24.04) with `yosys python3-numpy` added
+to its apt line, mounting the repo and pack at their real paths so the `build/` links resolve
+(run from the repo root; `-w "$PWD"` is the directory `make` runs in):
+
+    docker build -t dd2-layout-tools <pack>/container
+    docker run --rm -v "$HOME/dd2:$HOME/dd2" -w "$PWD" dd2-layout-tools make all   # prints TABLE 1 REPRODUCED
+
 ## 3. What the tool does
 It turns each synthesized design into an and-inverter graph (AIG), lists every
 cut of up to 4 inputs with its truth table, groups the tables into classes, and
@@ -23,7 +32,9 @@ checks each class against every single-output combinational HD cell. Later steps
 (checkpoint 2 and after) cost and rank the classes HD lacks, add them to a
 Liberty file, and measure the area saving. Order of the steps:
 
-1. `src/make_aig.sh`: design -> AIG (Yosys: synth, async2sync, dffunmap, aigmap, write_aiger)
+1. `src/make_aig.sh`: design -> AIG (Yosys: synth, async2sync, dffunmap, aigmap, write_aiger -zinit;
+   reproduces the handout's Table 2 AND counts exactly), and the same AIG after ABC's
+   `strash; dch` (`src/abc_after.sh`; a final `strash` drops dch's choice nodes), checked with `cec`
 2. `src/cuts.py`: cut enumeration, truth tables, and the cut check
 3. `src/tt.py`: classes up to input order (P), input order and output inversion (PO), and NPN
 4. `src/cmos.py`: transistors of one CMOS stage, at most 3 in series
@@ -34,12 +45,12 @@ Liberty file, and measure the area saving. Order of the steps:
 | Command | Input | Output |
 |---|---|---|
 | `make setup` | `PACK`, `PDK_ROOT` | links in `build/pdk/` and `build/given/` |
-| `make check` | | tool versions, Liberty hash, given files present |
+| `make check` | | tool versions (fails unless Yosys 0.33), Liberty hash, given files present |
 | `make test` | `tests/` | every check and every broken case |
 | `make selftest` | HD Liberty | `results/table4_selftest.txt` |
 | `make hd-classes` | HD Liberty | `results/hd_class_table.{csv,md}` |
-| `make aigs` | student-pack designs | `build/aig/<design>.aag` |
-| `make stats` | AIGs | `results/design_stats.csv`, `results/cuts/<design>.json` |
+| `make aigs` | student-pack designs | `build/aig/<design>.aag`, and `<design>_abc.aig` after ABC `strash; dch` (checked with `cec`) |
+| `make stats` | AIGs | `results/design_stats.csv` (before/after ABC), `results/cuts/<design>[_abc].json` |
 | `make table1` | designs, `hd_usable.lib`, `hd_reduced.lib` | `results/table1.{csv,md}`, `results/logs/table1/` |
 | `make all` | | all of the above |
 | `make demo IN=<design.v> TOP=<top>` | a design | AIG, cut check, most frequent functions and their HD class |
@@ -60,11 +71,25 @@ Liberty file, and measure the area saving. Order of the steps:
   and New one-stage 9 reproduced; New one-stage within 3-in-series and 12 T: **6, handout 5**
   (see Limitations).
 - `results/hd_class_table.md`: 258 HD cells with <= 4 inputs in 29 PO classes, 13 NPN classes.
-- `results/design_stats.csv`: AIG size, cuts and classes per design (needs the student pack).
-- `results/table1.md`: Table 1 reproduced (needs the student pack).
+- `results/design_stats.csv`: AIG size, cuts and classes per design, before and after ABC's
+  `strash; dch` (rows `before`, `after_abc`; needs the student pack). The `before` AND counts
+  equal handout Table 2 (1,265 / 1,973 / 3,221 / 4,673 / 7,750 / 8,795). The `latches` column is
+  Table 2's flip-flops plus one: the latch `-zinit` adds to mark the first cycle (82 -> 83 for cpu8). `after_abc` is checked
+  equivalent to `before` with ABC's `cec` (`build/aig/<design>_abc.log`).
+- `results/table1.md`: Table 1 reproduced exactly, all 24 areas (needs the student pack).
+
+**Checkpoint 1 corrected after tag `cp1` (4 Nov 2026).** At `cp1`, Table 1 differed from the
+handout (up to 6.6%, script A) and the AIGs had 3 fewer AND nodes per flip-flop than Table 2.
+Fixes, all on `main` and in `cp2` (the `cp1` tag is not moved):
+- Yosys: native 0.33 in the student pack's image instead of `yowasp-yosys` (mistake M-04);
+  `make check` now requires 0.33. Table 1 is reproduced exactly.
+- Step 1: `write_aiger -zinit` and no `opt_clean`, as in the handout; AND counts equal Table 2
+  (mistake M-05). The after-ABC graph of step 1 was missing and is added (`src/abc_after.sh`).
+- Every result was regenerated from the corrected checkpoint 1, including the checkpoint 2
+  candidates: the ranking changed (top candidate 0xEEFA, 36.7 um2, was 0xAABF, 250.0 um2).
 
 ## 7. Tests
-`make test` runs `tests/test_all.py`:
+`make test` runs `tests/test_all.py`, `tests/test_candidates.py` and `tests/test_abc_after.py`:
 | Check | Broken case (in `tests/broken/`) |
 |---|---|
 | Truth tables: Appendix A example is 0x077F; 3,984 P and 222 NPN classes | |
@@ -73,6 +98,7 @@ Liberty file, and measure the area saving. Order of the steps:
 | Cut check: the leaves really cut the node off from the inputs | `not_a_cut.json`: a dropped leaf must be caught |
 | Binary and ASCII AIGER give the same cuts | |
 | Redundancy self-test: every HD cell -> Exists, Table 4 class rows | `hd_missing_cells.json`: without a22oi, Table 4 must not match |
+| After-ABC AIG equals the original (`src/aig_equiv.sh`, ABC `cec`; `tests/test_abc_after.py`) | in the test file: csa8 with AND 40's first input inverted must be rejected |
 
 ## 8. AI use
 AGENTS.md · ai/use_log.md · ai/mistakes_log.md · report/ai_report.pdf
@@ -81,13 +107,16 @@ AGENTS.md · ai/use_log.md · ai/mistakes_log.md · report/ai_report.pdf
 - Table 4, row "New, one stage, at most 3 transistors in series and at most 12 transistors":
   we count 6, the handout 5. The self-test prints a 12-transistor pull-down formula for
   each of our 6 classes with its series counts, checked by re-reading the formula. The
-  6 form three dual pairs (swap the pull-up and pull-down networks), so an even count is
-  expected. Question for the TA: which network does the reference reject?
-- Table 1 with `yowasp-yosys` 0.33 (Yosys and ABC compiled to WebAssembly): script B matches
-  the handout exactly for cpu8, dsp8, uart_apb and fir10, and within 0.2% for arlet6502 and risc8;
-  script A differs by up to 6.6% (fir10). Native Yosys 0.70 also differs (cpu8 A 4169.0 vs 4186.5),
-  so the handout's numbers need a native Yosys 0.33 build. Question for the TA: which Yosys/ABC build
-  produced Table 1?
+  6 form three dual pairs (0x0017/0x17FF, 0x011F/0x077F, 0x013F/0x037F: swap the pull-up and
+  pull-down networks), so any rule that treats nMOS and pMOS alike gives an even count. Limiting
+  only the nMOS stack, only the pMOS stack, or one of them to 4 still gives 6; algebraic
+  factoring of the minimal SOP (no x&x = x) gives 4, losing 0x0017 and 0x013F, whose only
+  12-transistor forms within 3 in series need Boolean factoring. No rule we tried gives 5.
+  Question for the TA: which of the six does the reference reject, and by which test?
+- Table 1 reproduces exactly (all 24 areas) only with native Yosys 0.33 (Ubuntu 24.04 apt, in the
+  student pack's course image). `yowasp-yosys` 0.33 reports the same version but differs in script A by up to
+  6.6% (fir10); native Yosys 0.70 also differs (cpu8 A 4169.0 vs 4186.5). The AIGs (and so the
+  risc8 cut counts) also depend on the build; all results here come from that image.
 - Cuts are fully enumerated (no limit per node); `--max-cuts` exists if a large design is slow.
 
 ## 10. Third-party files

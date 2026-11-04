@@ -1,5 +1,11 @@
 # Person A, checkpoint 2: find, cost and rank candidate cells
 
+> **Checkpoint 1 corrected (4 Nov 2026).** The AIGs (`-zinit`, Table 2 exact) and the Table 1
+> logs (native Yosys 0.33, Table 1 exact) this code reads were wrong at `cp1`. The code is
+> unchanged; every output in `results/` was regenerated from the corrected inputs. The ranking
+> changed (top: 0xEEFA, 36.7 um2; was 0xAABF, 250.0 um2), so anything done with the old ranking,
+> such as remapping the top 5 cells, must be redone. See README section 6.
+
 Copy these files over your repository (the Makefile replaces yours; it only adds the
 targets `area-model` and `candidates`, adds `tests/test_candidates.py` to `make test`,
 and adds `candidates` to `make all`). Nothing here edits an existing test, broken case

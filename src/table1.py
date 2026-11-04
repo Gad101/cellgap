@@ -68,7 +68,7 @@ def main(argv):
             key = "%s_%s" % (script, lib)
             row[key] = round(area, 1)
             if ref:
-                d = (area - ref[i]) / ref[i]
+                d = (row[key] - ref[i]) / ref[i]   # at the handout's 0.1 um2 precision
                 row[key + "_handout"] = ref[i]
                 row[key + "_diff_pct"] = round(100 * d, 3)
                 all_ok &= abs(d) <= TOLERANCE
@@ -85,7 +85,8 @@ def main(argv):
         w.writeheader()
         w.writerows(out_rows)
     with open(os.path.join(ROOT, "results", "table1.md"), "w") as f:
-        f.write("# Table 1 reproduced (um2), Yosys %s\n\n" % YOSYS)
+        ver = subprocess.run([YOSYS, "-V"], capture_output=True, text=True).stdout.strip()
+        f.write("# Table 1 reproduced (um2), %s\n\n" % ver)   # handout: Yosys 0.33
         f.write("| Design | A usable | A reduced | B usable | B reduced | max diff vs handout |\n|---|---|---|---|---|---|\n")
         for r in out_rows:
             diffs = [abs(r.get(k + "_diff_pct", 0)) for k in ("A_usable", "A_reduced", "B_usable", "B_reduced")]

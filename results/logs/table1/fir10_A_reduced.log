@@ -19,13 +19,13 @@
  |                                                                            |
  \----------------------------------------------------------------------------/
 
- Yosys 0.33 (git sha1 2584903a0, ccache clang 14.0.0-1ubuntu1.1 -Os -flto -flto)
+ Yosys 0.33 (git sha1 2584903a060)
 
 
--- Executing script file `/Users/ziadtaher/cellgap/results/logs/table1/fir10_A_reduced.ys' --
+-- Executing script file `/Users/abdugad/dd2/cellgap/results/logs/table1/fir10_A_reduced.ys' --
 
-1. Executing Verilog-2005 frontend: /Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v
-Parsing Verilog input from `/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v' to AST representation.
+1. Executing Verilog-2005 frontend: /Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v
+Parsing Verilog input from `/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v' to AST representation.
 Generating RTLIL representation for module `\fir10'.
 Successfully finished Verilog frontend.
 
@@ -46,7 +46,7 @@ Removed 0 unused modules.
 Cleaned up 0 empty switches.
 
 2.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
-Marked 2 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:40$20 in module fir10.
+Marked 2 switch rules as full_case in process $proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:40$20 in module fir10.
 Removed a total of 0 dead cases.
 
 2.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
@@ -62,7 +62,7 @@ Converted 0 switches.
 <suppressed ~2 debug messages>
 
 2.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
-Creating decoders for process `\fir10.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:40$20'.
+Creating decoders for process `\fir10.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:40$20'.
      1/21: $0\c9[7:0]
      2/21: $0\c8[7:0]
      3/21: $0\c7[7:0]
@@ -88,54 +88,54 @@ Creating decoders for process `\fir10.$proc$/Users/ziadtaher/dd2/DD2_Project1_st
 2.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
 
 2.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
-Creating register for signal `\fir10.\acc' using process `\fir10.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:40$20'.
+Creating register for signal `\fir10.\acc' using process `\fir10.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:40$20'.
   created $dff cell `$procdff$148' with positive edge clock.
-Creating register for signal `\fir10.\s0' using process `\fir10.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:40$20'.
+Creating register for signal `\fir10.\s0' using process `\fir10.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:40$20'.
   created $dff cell `$procdff$149' with positive edge clock.
-Creating register for signal `\fir10.\s1' using process `\fir10.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:40$20'.
+Creating register for signal `\fir10.\s1' using process `\fir10.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:40$20'.
   created $dff cell `$procdff$150' with positive edge clock.
-Creating register for signal `\fir10.\s2' using process `\fir10.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:40$20'.
+Creating register for signal `\fir10.\s2' using process `\fir10.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:40$20'.
   created $dff cell `$procdff$151' with positive edge clock.
-Creating register for signal `\fir10.\s3' using process `\fir10.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:40$20'.
+Creating register for signal `\fir10.\s3' using process `\fir10.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:40$20'.
   created $dff cell `$procdff$152' with positive edge clock.
-Creating register for signal `\fir10.\s4' using process `\fir10.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:40$20'.
+Creating register for signal `\fir10.\s4' using process `\fir10.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:40$20'.
   created $dff cell `$procdff$153' with positive edge clock.
-Creating register for signal `\fir10.\s5' using process `\fir10.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:40$20'.
+Creating register for signal `\fir10.\s5' using process `\fir10.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:40$20'.
   created $dff cell `$procdff$154' with positive edge clock.
-Creating register for signal `\fir10.\s6' using process `\fir10.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:40$20'.
+Creating register for signal `\fir10.\s6' using process `\fir10.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:40$20'.
   created $dff cell `$procdff$155' with positive edge clock.
-Creating register for signal `\fir10.\s7' using process `\fir10.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:40$20'.
+Creating register for signal `\fir10.\s7' using process `\fir10.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:40$20'.
   created $dff cell `$procdff$156' with positive edge clock.
-Creating register for signal `\fir10.\s8' using process `\fir10.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:40$20'.
+Creating register for signal `\fir10.\s8' using process `\fir10.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:40$20'.
   created $dff cell `$procdff$157' with positive edge clock.
-Creating register for signal `\fir10.\s9' using process `\fir10.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:40$20'.
+Creating register for signal `\fir10.\s9' using process `\fir10.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:40$20'.
   created $dff cell `$procdff$158' with positive edge clock.
-Creating register for signal `\fir10.\c0' using process `\fir10.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:40$20'.
+Creating register for signal `\fir10.\c0' using process `\fir10.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:40$20'.
   created $dff cell `$procdff$159' with positive edge clock.
-Creating register for signal `\fir10.\c1' using process `\fir10.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:40$20'.
+Creating register for signal `\fir10.\c1' using process `\fir10.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:40$20'.
   created $dff cell `$procdff$160' with positive edge clock.
-Creating register for signal `\fir10.\c2' using process `\fir10.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:40$20'.
+Creating register for signal `\fir10.\c2' using process `\fir10.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:40$20'.
   created $dff cell `$procdff$161' with positive edge clock.
-Creating register for signal `\fir10.\c3' using process `\fir10.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:40$20'.
+Creating register for signal `\fir10.\c3' using process `\fir10.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:40$20'.
   created $dff cell `$procdff$162' with positive edge clock.
-Creating register for signal `\fir10.\c4' using process `\fir10.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:40$20'.
+Creating register for signal `\fir10.\c4' using process `\fir10.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:40$20'.
   created $dff cell `$procdff$163' with positive edge clock.
-Creating register for signal `\fir10.\c5' using process `\fir10.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:40$20'.
+Creating register for signal `\fir10.\c5' using process `\fir10.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:40$20'.
   created $dff cell `$procdff$164' with positive edge clock.
-Creating register for signal `\fir10.\c6' using process `\fir10.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:40$20'.
+Creating register for signal `\fir10.\c6' using process `\fir10.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:40$20'.
   created $dff cell `$procdff$165' with positive edge clock.
-Creating register for signal `\fir10.\c7' using process `\fir10.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:40$20'.
+Creating register for signal `\fir10.\c7' using process `\fir10.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:40$20'.
   created $dff cell `$procdff$166' with positive edge clock.
-Creating register for signal `\fir10.\c8' using process `\fir10.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:40$20'.
+Creating register for signal `\fir10.\c8' using process `\fir10.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:40$20'.
   created $dff cell `$procdff$167' with positive edge clock.
-Creating register for signal `\fir10.\c9' using process `\fir10.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:40$20'.
+Creating register for signal `\fir10.\c9' using process `\fir10.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:40$20'.
   created $dff cell `$procdff$168' with positive edge clock.
 
 2.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
 
 2.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
-Found and cleaned up 2 empty switches in `\fir10.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:40$20'.
-Removing empty process `fir10.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:40$20'.
+Found and cleaned up 2 empty switches in `\fir10.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:40$20'.
+Removing empty process `fir10.$proc$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:40$20'.
 Cleaned up 2 empty switches.
 
 2.2.12. Executing OPT_EXPR pass (perform const folding).
@@ -276,7 +276,7 @@ Adding EN signal on $auto$ff.cc:266:slice$205 ($sdff) from module fir10 (D = \s0
 Adding SRST signal on $procdff$149 ($dff) from module fir10 (D = $procmux$137_Y, Q = \s0, rval = 8'00000000).
 Adding EN signal on $auto$ff.cc:266:slice$207 ($sdff) from module fir10 (D = \din, Q = \s0).
 Adding SRST signal on $procdff$148 ($dff) from module fir10 (D = $procmux$143_Y, Q = \acc, rval = 16'0000000000000000).
-Adding EN signal on $auto$ff.cc:266:slice$209 ($sdff) from module fir10 (D = $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:85$21_Y, Q = \acc).
+Adding EN signal on $auto$ff.cc:266:slice$209 ($sdff) from module fir10 (D = $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:85$21_Y, Q = \acc).
 
 2.9.7. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \fir10..
@@ -321,109 +321,109 @@ Finding unused cells or wires in module \fir10..
 
 2.13. Executing ALUMACC pass (create $alu and $macc cells).
 Extracting $alu and $macc cells in module fir10:
-  creating $macc model for $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:30$11 ($add).
-  creating $macc model for $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:31$12 ($add).
-  creating $macc model for $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:32$13 ($add).
-  creating $macc model for $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:33$14 ($add).
-  creating $macc model for $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:34$15 ($add).
-  creating $macc model for $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:35$16 ($add).
-  creating $macc model for $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:36$17 ($add).
-  creating $macc model for $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:37$18 ($add).
-  creating $macc model for $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:38$19 ($add).
-  creating $macc model for $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:85$21 ($add).
-  creating $macc model for $mul$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:20$1 ($mul).
-  creating $macc model for $mul$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:21$2 ($mul).
-  creating $macc model for $mul$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:22$3 ($mul).
-  creating $macc model for $mul$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:23$4 ($mul).
-  creating $macc model for $mul$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:24$5 ($mul).
-  creating $macc model for $mul$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:25$6 ($mul).
-  creating $macc model for $mul$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:26$7 ($mul).
-  creating $macc model for $mul$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:27$8 ($mul).
-  creating $macc model for $mul$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:28$9 ($mul).
-  creating $macc model for $mul$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:29$10 ($mul).
-  merging $macc model for $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:38$19 into $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:85$21.
-  merging $macc model for $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:37$18 into $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:85$21.
-  merging $macc model for $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:35$16 into $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:85$21.
-  merging $macc model for $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:30$11 into $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:85$21.
-  merging $macc model for $mul$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:20$1 into $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:85$21.
-  merging $macc model for $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:34$15 into $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:85$21.
-  merging $macc model for $mul$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:28$9 into $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:85$21.
-  merging $macc model for $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:36$17 into $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:85$21.
-  merging $macc model for $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:32$13 into $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:85$21.
-  merging $macc model for $mul$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:24$5 into $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:85$21.
-  merging $macc model for $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:31$12 into $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:85$21.
-  merging $macc model for $mul$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:22$3 into $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:85$21.
-  merging $macc model for $mul$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:21$2 into $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:85$21.
-  merging $macc model for $mul$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:29$10 into $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:85$21.
-  merging $macc model for $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:33$14 into $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:85$21.
-  merging $macc model for $mul$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:26$7 into $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:85$21.
-  merging $macc model for $mul$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:25$6 into $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:85$21.
-  merging $macc model for $mul$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:23$4 into $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:85$21.
-  merging $macc model for $mul$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:27$8 into $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:85$21.
-  creating $macc cell for $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:85$21: $auto$alumacc.cc:365:replace_macc$211
+  creating $macc model for $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:30$11 ($add).
+  creating $macc model for $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:31$12 ($add).
+  creating $macc model for $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:32$13 ($add).
+  creating $macc model for $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:33$14 ($add).
+  creating $macc model for $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:34$15 ($add).
+  creating $macc model for $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:35$16 ($add).
+  creating $macc model for $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:36$17 ($add).
+  creating $macc model for $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:37$18 ($add).
+  creating $macc model for $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:38$19 ($add).
+  creating $macc model for $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:85$21 ($add).
+  creating $macc model for $mul$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:20$1 ($mul).
+  creating $macc model for $mul$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:21$2 ($mul).
+  creating $macc model for $mul$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:22$3 ($mul).
+  creating $macc model for $mul$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:23$4 ($mul).
+  creating $macc model for $mul$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:24$5 ($mul).
+  creating $macc model for $mul$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:25$6 ($mul).
+  creating $macc model for $mul$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:26$7 ($mul).
+  creating $macc model for $mul$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:27$8 ($mul).
+  creating $macc model for $mul$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:28$9 ($mul).
+  creating $macc model for $mul$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:29$10 ($mul).
+  merging $macc model for $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:38$19 into $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:85$21.
+  merging $macc model for $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:37$18 into $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:85$21.
+  merging $macc model for $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:35$16 into $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:85$21.
+  merging $macc model for $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:30$11 into $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:85$21.
+  merging $macc model for $mul$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:20$1 into $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:85$21.
+  merging $macc model for $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:34$15 into $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:85$21.
+  merging $macc model for $mul$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:28$9 into $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:85$21.
+  merging $macc model for $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:36$17 into $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:85$21.
+  merging $macc model for $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:32$13 into $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:85$21.
+  merging $macc model for $mul$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:24$5 into $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:85$21.
+  merging $macc model for $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:31$12 into $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:85$21.
+  merging $macc model for $mul$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:22$3 into $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:85$21.
+  merging $macc model for $mul$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:21$2 into $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:85$21.
+  merging $macc model for $mul$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:29$10 into $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:85$21.
+  merging $macc model for $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:33$14 into $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:85$21.
+  merging $macc model for $mul$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:26$7 into $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:85$21.
+  merging $macc model for $mul$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:25$6 into $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:85$21.
+  merging $macc model for $mul$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:23$4 into $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:85$21.
+  merging $macc model for $mul$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:27$8 into $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:85$21.
+  creating $macc cell for $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:85$21: $auto$alumacc.cc:365:replace_macc$211
   created 0 $alu and 1 $macc cells.
 
 2.14. Executing SHARE pass (SAT-based resource sharing).
 Found 10 cells in module fir10 that may be considered for resource sharing.
-  Analyzing resource sharing options for $mul$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:29$10 ($mul):
-    Found cell that is never activated: $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:38$19
-    Found cell that is never activated: $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:34$15
-    Found cell that is never activated: $mul$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:29$10
+  Analyzing resource sharing options for $mul$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:29$10 ($mul):
+    Found cell that is never activated: $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:38$19
+    Found cell that is never activated: $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:34$15
+    Found cell that is never activated: $mul$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:29$10
     Cell is never active. Sharing is pointless, we simply remove it.
-  Analyzing resource sharing options for $mul$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:28$9 ($mul):
-    Found cell that is never activated: $mul$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:28$9
+  Analyzing resource sharing options for $mul$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:28$9 ($mul):
+    Found cell that is never activated: $mul$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:28$9
     Cell is never active. Sharing is pointless, we simply remove it.
-  Analyzing resource sharing options for $mul$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:27$8 ($mul):
-    Found cell that is never activated: $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:37$18
-    Found cell that is never activated: $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:36$17
-    Found cell that is never activated: $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:33$14
-    Found cell that is never activated: $mul$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:27$8
+  Analyzing resource sharing options for $mul$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:27$8 ($mul):
+    Found cell that is never activated: $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:37$18
+    Found cell that is never activated: $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:36$17
+    Found cell that is never activated: $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:33$14
+    Found cell that is never activated: $mul$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:27$8
     Cell is never active. Sharing is pointless, we simply remove it.
-  Analyzing resource sharing options for $mul$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:26$7 ($mul):
-    Found cell that is never activated: $mul$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:26$7
+  Analyzing resource sharing options for $mul$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:26$7 ($mul):
+    Found cell that is never activated: $mul$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:26$7
     Cell is never active. Sharing is pointless, we simply remove it.
-  Analyzing resource sharing options for $mul$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:25$6 ($mul):
-    Found cell that is never activated: $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:32$13
-    Found cell that is never activated: $mul$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:25$6
+  Analyzing resource sharing options for $mul$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:25$6 ($mul):
+    Found cell that is never activated: $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:32$13
+    Found cell that is never activated: $mul$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:25$6
     Cell is never active. Sharing is pointless, we simply remove it.
-  Analyzing resource sharing options for $mul$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:24$5 ($mul):
-    Found cell that is never activated: $mul$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:24$5
+  Analyzing resource sharing options for $mul$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:24$5 ($mul):
+    Found cell that is never activated: $mul$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:24$5
     Cell is never active. Sharing is pointless, we simply remove it.
-  Analyzing resource sharing options for $mul$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:23$4 ($mul):
-    Found cell that is never activated: $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:35$16
-    Found cell that is never activated: $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:31$12
-    Found cell that is never activated: $mul$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:23$4
+  Analyzing resource sharing options for $mul$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:23$4 ($mul):
+    Found cell that is never activated: $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:35$16
+    Found cell that is never activated: $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:31$12
+    Found cell that is never activated: $mul$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:23$4
     Cell is never active. Sharing is pointless, we simply remove it.
-  Analyzing resource sharing options for $mul$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:22$3 ($mul):
-    Found cell that is never activated: $mul$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:22$3
+  Analyzing resource sharing options for $mul$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:22$3 ($mul):
+    Found cell that is never activated: $mul$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:22$3
     Cell is never active. Sharing is pointless, we simply remove it.
-  Analyzing resource sharing options for $mul$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:21$2 ($mul):
-    Found cell that is never activated: $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:30$11
-    Found cell that is never activated: $mul$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:21$2
+  Analyzing resource sharing options for $mul$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:21$2 ($mul):
+    Found cell that is never activated: $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:30$11
+    Found cell that is never activated: $mul$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:21$2
     Cell is never active. Sharing is pointless, we simply remove it.
-  Analyzing resource sharing options for $mul$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:20$1 ($mul):
-    Found cell that is never activated: $mul$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:20$1
+  Analyzing resource sharing options for $mul$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:20$1 ($mul):
+    Found cell that is never activated: $mul$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:20$1
     Cell is never active. Sharing is pointless, we simply remove it.
 Removing 19 cells in module fir10:
-  Removing cell $mul$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:20$1 ($mul).
-  Removing cell $mul$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:21$2 ($mul).
-  Removing cell $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:30$11 ($add).
-  Removing cell $mul$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:22$3 ($mul).
-  Removing cell $mul$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:23$4 ($mul).
-  Removing cell $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:31$12 ($add).
-  Removing cell $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:35$16 ($add).
-  Removing cell $mul$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:24$5 ($mul).
-  Removing cell $mul$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:25$6 ($mul).
-  Removing cell $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:32$13 ($add).
-  Removing cell $mul$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:26$7 ($mul).
-  Removing cell $mul$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:27$8 ($mul).
-  Removing cell $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:33$14 ($add).
-  Removing cell $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:36$17 ($add).
-  Removing cell $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:37$18 ($add).
-  Removing cell $mul$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:28$9 ($mul).
-  Removing cell $mul$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:29$10 ($mul).
-  Removing cell $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:34$15 ($add).
-  Removing cell $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/fir10.v:38$19 ($add).
+  Removing cell $mul$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:20$1 ($mul).
+  Removing cell $mul$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:21$2 ($mul).
+  Removing cell $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:30$11 ($add).
+  Removing cell $mul$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:22$3 ($mul).
+  Removing cell $mul$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:23$4 ($mul).
+  Removing cell $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:31$12 ($add).
+  Removing cell $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:35$16 ($add).
+  Removing cell $mul$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:24$5 ($mul).
+  Removing cell $mul$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:25$6 ($mul).
+  Removing cell $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:32$13 ($add).
+  Removing cell $mul$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:26$7 ($mul).
+  Removing cell $mul$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:27$8 ($mul).
+  Removing cell $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:33$14 ($add).
+  Removing cell $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:36$17 ($add).
+  Removing cell $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:37$18 ($add).
+  Removing cell $mul$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:28$9 ($mul).
+  Removing cell $mul$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:29$10 ($mul).
+  Removing cell $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:34$15 ($add).
+  Removing cell $add$/Users/abdugad/dd2/DD2_Project1_student_pack/given/designs/fir10.v:38$19 ($add).
 
 2.15. Executing OPT pass (performing simple optimizations).
 
@@ -543,8 +543,8 @@ Optimizing module fir10.
 
 2.21. Executing TECHMAP pass (map to technology primitives).
 
-2.21.1. Executing Verilog-2005 frontend: /share/techmap.v
-Parsing Verilog input from `/share/techmap.v' to AST representation.
+2.21.1. Executing Verilog-2005 frontend: /usr/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/usr/bin/../share/yosys/techmap.v' to AST representation.
 Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
 Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
 Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
@@ -623,7 +623,16 @@ Removed 77 unused cells and 832 unused wires.
 Extracted 4219 gates and 4395 wires to a netlist network with 176 inputs and 16 outputs.
 
 2.23.1.1. Executing ABC.
-Running ABC command: "/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 13 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
 
 2.23.1.2. Re-integrating ABC results.
 ABC RESULTS:               NOT cells:       83
@@ -732,34 +741,64 @@ Mapping DFF cells in module `\fir10':
 Extracted 4654 gates and 4841 wires to a netlist network with 186 inputs and 176 outputs.
 
 4.1.1. Executing ABC.
-Running ABC command: "/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_lib -w /Users/abdugad/dd2/DD2_Project1_student_pack/given/hd_reduced.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.03 sec
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfsbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxbn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtp_1".
+ABC: Library "sky130_fd_sc_hd__tt_025C_1v80" from "/Users/abdugad/dd2/DD2_Project1_student_pack/given/hd_reduced.lib" has 172 cells (17 skipped: 17 seq; 0 tri-state; 0 no func; 0 dont_use).  Time =     0.05 sec
+ABC: Memory =    9.94 MB. Time =     0.05 sec
+ABC: Warning: Detected 2 multi-output gates (for example, "sky130_fd_sc_hd__fa_1").
+ABC: + strash 
+ABC: + dch -f 
+ABC: + amap 
+ABC: + topo 
+ABC: + write_blif <abc-temp-dir>/output.blif 
 
 4.1.2. Re-integrating ABC results.
-ABC RESULTS:   sky130_fd_sc_hd__o41ai_1 cells:        1
-ABC RESULTS:   sky130_fd_sc_hd__o32a_1 cells:        1
-ABC RESULTS:   sky130_fd_sc_hd__a221o_1 cells:        1
-ABC RESULTS:   sky130_fd_sc_hd__or3_1 cells:        8
-ABC RESULTS:   sky130_fd_sc_hd__a211oi_1 cells:        1
-ABC RESULTS:   sky130_fd_sc_hd__a21boi_1 cells:        1
-ABC RESULTS:   sky130_fd_sc_hd__a22o_1 cells:       73
-ABC RESULTS:   sky130_fd_sc_hd__or2_1 cells:       74
-ABC RESULTS:   sky130_fd_sc_hd__nand3b_1 cells:        6
-ABC RESULTS:   sky130_fd_sc_hd__nand3_1 cells:       11
-ABC RESULTS:   sky130_fd_sc_hd__and3_1 cells:        3
-ABC RESULTS:   sky130_fd_sc_hd__a31oi_1 cells:        2
-ABC RESULTS:   sky130_fd_sc_hd__nand4_1 cells:       76
-ABC RESULTS:   sky130_fd_sc_hd__a31o_1 cells:        1
-ABC RESULTS:   sky130_fd_sc_hd__a21o_1 cells:     1122
-ABC RESULTS:   sky130_fd_sc_hd__and2_1 cells:       56
-ABC RESULTS:   sky130_fd_sc_hd__nor3_1 cells:        9
-ABC RESULTS:   sky130_fd_sc_hd__o22ai_1 cells:        8
-ABC RESULTS:   sky130_fd_sc_hd__o21ai_1 cells:       88
-ABC RESULTS:   sky130_fd_sc_hd__nand2_1 cells:      778
+ABC RESULTS:   sky130_fd_sc_hd__or2_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a32oi_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__o221a_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__o31ai_1 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__o31a_1 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__o221ai_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a31oi_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__nor4_1 cells:       11
+ABC RESULTS:   sky130_fd_sc_hd__o22ai_1 cells:       19
+ABC RESULTS:   sky130_fd_sc_hd__inv_1 cells:      259
+ABC RESULTS:   sky130_fd_sc_hd__and3_1 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__a31o_1 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__nor3_1 cells:       13
+ABC RESULTS:   sky130_fd_sc_hd__o21a_1 cells:      497
+ABC RESULTS:   sky130_fd_sc_hd__a21o_1 cells:       33
+ABC RESULTS:   sky130_fd_sc_hd__a211oi_1 cells:        6
+ABC RESULTS:   sky130_fd_sc_hd__and2_1 cells:       12
+ABC RESULTS:   sky130_fd_sc_hd__xnor2_1 cells:        6
+ABC RESULTS:   sky130_fd_sc_hd__xor2_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__o21ai_1 cells:      743
+ABC RESULTS:   sky130_fd_sc_hd__nand2_1 cells:     1265
 ABC RESULTS:   sky130_fd_sc_hd__nor2b_1 cells:        8
-ABC RESULTS:   sky130_fd_sc_hd__a21oi_1 cells:      164
-ABC RESULTS:   sky130_fd_sc_hd__inv_2 cells:       45
-ABC RESULTS:   sky130_fd_sc_hd__a22oi_1 cells:      160
-ABC RESULTS:   sky130_fd_sc_hd__nor2_1 cells:     1938
+ABC RESULTS:   sky130_fd_sc_hd__a21oi_1 cells:      481
+ABC RESULTS:   sky130_fd_sc_hd__a22oi_1 cells:      183
+ABC RESULTS:   sky130_fd_sc_hd__nor2_1 cells:     1241
 ABC RESULTS:        internal signals:     4479
 ABC RESULTS:           input signals:      186
 ABC RESULTS:          output signals:      176
@@ -774,43 +813,43 @@ Removed 0 unused cells and 4849 unused wires.
 
 === fir10 ===
 
-   Number of wires:               4660
-   Number of wire bits:           4822
+   Number of wires:               4816
+   Number of wire bits:           4978
    Number of public wires:          25
    Number of public wire bits:     187
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:               4811
-     sky130_fd_sc_hd__a211oi_1       1
-     sky130_fd_sc_hd__a21boi_1       1
-     sky130_fd_sc_hd__a21o_1      1122
-     sky130_fd_sc_hd__a21oi_1      164
-     sky130_fd_sc_hd__a221o_1        1
-     sky130_fd_sc_hd__a22o_1        73
-     sky130_fd_sc_hd__a22oi_1      160
-     sky130_fd_sc_hd__a31o_1         1
-     sky130_fd_sc_hd__a31oi_1        2
-     sky130_fd_sc_hd__and2_1        56
-     sky130_fd_sc_hd__and3_1         3
+   Number of cells:               4967
+     sky130_fd_sc_hd__a211oi_1       6
+     sky130_fd_sc_hd__a21o_1        33
+     sky130_fd_sc_hd__a21oi_1      481
+     sky130_fd_sc_hd__a22oi_1      183
+     sky130_fd_sc_hd__a31o_1         2
+     sky130_fd_sc_hd__a31oi_1        1
+     sky130_fd_sc_hd__a32oi_1        1
+     sky130_fd_sc_hd__and2_1        12
+     sky130_fd_sc_hd__and3_1         2
      sky130_fd_sc_hd__dfxtp_1      176
-     sky130_fd_sc_hd__inv_2         45
-     sky130_fd_sc_hd__nand2_1      778
-     sky130_fd_sc_hd__nand3_1       11
-     sky130_fd_sc_hd__nand3b_1       6
-     sky130_fd_sc_hd__nand4_1       76
-     sky130_fd_sc_hd__nor2_1      1938
+     sky130_fd_sc_hd__inv_1        259
+     sky130_fd_sc_hd__nand2_1     1265
+     sky130_fd_sc_hd__nor2_1      1241
      sky130_fd_sc_hd__nor2b_1        8
-     sky130_fd_sc_hd__nor3_1         9
-     sky130_fd_sc_hd__o21ai_1       88
-     sky130_fd_sc_hd__o22ai_1        8
-     sky130_fd_sc_hd__o32a_1         1
-     sky130_fd_sc_hd__o41ai_1        1
-     sky130_fd_sc_hd__or2_1         74
-     sky130_fd_sc_hd__or3_1          8
+     sky130_fd_sc_hd__nor3_1        13
+     sky130_fd_sc_hd__nor4_1        11
+     sky130_fd_sc_hd__o21a_1       497
+     sky130_fd_sc_hd__o21ai_1      743
+     sky130_fd_sc_hd__o221a_1        1
+     sky130_fd_sc_hd__o221ai_1       1
+     sky130_fd_sc_hd__o22ai_1       19
+     sky130_fd_sc_hd__o31a_1         2
+     sky130_fd_sc_hd__o31ai_1        2
+     sky130_fd_sc_hd__or2_1          1
+     sky130_fd_sc_hd__xnor2_1        6
+     sky130_fd_sc_hd__xor2_1         1
 
-   Chip area for module '\fir10': 27079.721600
+   Chip area for module '\fir10': 25968.656000
 
-End of script. Logfile hash: eb2c56bc9e, CPU: user 2.79s system 0.00s
-Yosys 0.33 (git sha1 2584903a0, ccache clang 14.0.0-1ubuntu1.1 -Os -flto -flto)
-Time spent: 43% 2x abc (1 sec), 16% 1x dfflibmap (0 sec), ...
+End of script. Logfile hash: 32f51a8129, CPU: user 0.56s system 0.02s, MEM: 32.85 MB peak
+Yosys 0.33 (git sha1 2584903a060)
+Time spent: 54% 2x abc (0 sec), 10% 16x opt_expr (0 sec), ...
