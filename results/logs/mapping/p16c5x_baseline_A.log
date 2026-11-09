@@ -1,0 +1,1811 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.33 (git sha1 2584903a060)
+
+
+-- Executing script file `/Users/ziadtaher/cellgap/results/logs/mapping/p16c5x_baseline_A.ys' --
+
+1. Executing Verilog-2005 frontend: /Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v
+Parsing Verilog input from `/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v' to AST representation.
+Generating RTLIL representation for module `\P16C5x_ALU'.
+/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:199: Warning: Identifier `\C_In' is implicitly declared.
+/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:200: Warning: Identifier `\B_Inv' is implicitly declared.
+/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:201: Warning: Identifier `\B_Sel' is implicitly declared.
+/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:202: Warning: Identifier `\A_Sel' is implicitly declared.
+/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:246: Warning: Identifier `\Set' is implicitly declared.
+/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:247: Warning: Identifier `\Tst' is implicitly declared.
+/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:298: Warning: Identifier `\WE_W' is implicitly declared.
+/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:310: Warning: Identifier `\Z_Sel' is implicitly declared.
+/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:324: Warning: Identifier `\DC_Sel' is implicitly declared.
+/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:337: Warning: Identifier `\C_Sel' is implicitly declared.
+/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:338: Warning: Identifier `\S_Dir' is implicitly declared.
+/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:339: Warning: Identifier `\C_Drv' is implicitly declared.
+Generating RTLIL representation for module `\P16C5x_IDec'.
+Generating RTLIL representation for module `\P16C5x'.
+/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1221: Warning: Identifier `\LITERAL' is implicitly declared.
+/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1225: Warning: Identifier `\Tst' is implicitly declared.
+/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1236: Warning: Identifier `\INDF' is implicitly declared.
+/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1243: Warning: Identifier `\WE_F' is implicitly declared.
+/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1283: Warning: Identifier `\Ld_PCL' is implicitly declared.
+/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1385: Warning: Identifier `\WE_RAMA' is implicitly declared.
+/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1396: Warning: Identifier `\WE_RAMB' is implicitly declared.
+/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1467: Warning: Identifier `\WDT_Rst' is implicitly declared.
+/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1522: Warning: Identifier `\Tmr0_CS' is implicitly declared.
+/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1528: Warning: Identifier `\Rst_PSC' is implicitly declared.
+/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1529: Warning: Identifier `\CE_PSCntr' is implicitly declared.
+/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1573: Warning: Identifier `\CE_Tmr0' is implicitly declared.
+Successfully finished Verilog frontend.
+
+2. Executing SYNTH pass.
+
+2.1. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1.1. Analyzing design hierarchy..
+Top module:  \P16C5x
+Used module:     \P16C5x_ALU
+Used module:     \P16C5x_IDec
+
+2.1.2. Analyzing design hierarchy..
+Top module:  \P16C5x
+Used module:     \P16C5x_ALU
+Used module:     \P16C5x_IDec
+Removed 0 unused modules.
+
+2.2. Executing PROC pass (convert processes to netlists).
+
+2.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+2.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 2 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1575$252 in module P16C5x.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1557$248 in module P16C5x.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1541$247 in module P16C5x.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1531$245 in module P16C5x.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1506$235 in module P16C5x.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1479$232 in module P16C5x.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1469$230 in module P16C5x.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1431$222 in module P16C5x.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1417$218 in module P16C5x.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1409$216 in module P16C5x.
+Marked 2 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1398$206 in module P16C5x.
+Marked 2 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1387$195 in module P16C5x.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1369$190 in module P16C5x.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1357$188 in module P16C5x.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1343$184 in module P16C5x.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1329$177 in module P16C5x.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1317$174 in module P16C5x.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1305$172 in module P16C5x.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1297$169 in module P16C5x.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1285$163 in module P16C5x.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1156$105 in module P16C5x.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1146$104 in module P16C5x.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:890$97 in module P16C5x_IDec.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:880$95 in module P16C5x_IDec.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:870$91 in module P16C5x_IDec.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:856$83 in module P16C5x_IDec.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:762$55 in module P16C5x_IDec.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:736$54 in module P16C5x_IDec.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:708$49 in module P16C5x_IDec.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:342$45 in module P16C5x_ALU.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:326$36 in module P16C5x_ALU.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:313$32 in module P16C5x_ALU.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:300$28 in module P16C5x_ALU.
+Marked 2 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:273$27 in module P16C5x_ALU.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:249$16 in module P16C5x_ALU.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:233$15 in module P16C5x_ALU.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:219$10 in module P16C5x_ALU.
+Removed a total of 0 dead cases.
+
+2.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 13 redundant assignments.
+Promoted 7 assignments to connections.
+
+2.2.4. Executing PROC_INIT pass (extract init attributes).
+
+2.2.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \Rst_M16C5x in `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1146$104'.
+
+2.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 4 switches.
+<suppressed ~58 debug messages>
+
+2.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1575$252'.
+     1/1: $0\TMR0[7:0]
+Creating decoders for process `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1557$248'.
+     1/2: $0\dPSC_Out[1:0] [1]
+     2/2: $0\dPSC_Out[1:0] [0]
+Creating decoders for process `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1541$247'.
+     1/1: $0\PSC_Out[0:0]
+Creating decoders for process `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1531$245'.
+     1/1: $0\PSCntr[7:0]
+Creating decoders for process `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1506$235'.
+     1/3: $0\dT0CKI[2:0] [2]
+     2/3: $0\dT0CKI[2:0] [1]
+     3/3: $0\dT0CKI[2:0] [0]
+Creating decoders for process `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1479$232'.
+     1/1: $0\WDT_TC[0:0]
+Creating decoders for process `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1469$230'.
+     1/1: $0\WDT[19:0]
+Creating decoders for process `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1431$222'.
+     1/1: $0\SFR[7:0]
+Creating decoders for process `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1417$218'.
+     1/1: $0\FSR[7:0]
+Creating decoders for process `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1409$216'.
+     1/1: $0\PA[2:0]
+Creating decoders for process `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1398$206'.
+     1/6: $2$memwr$\RAMB$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1402$99_EN[7:0]$215
+     2/6: $2$memwr$\RAMB$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1402$99_DATA[7:0]$214
+     3/6: $2$memwr$\RAMB$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1402$99_ADDR[5:0]$213
+     4/6: $1$memwr$\RAMB$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1402$99_EN[7:0]$212
+     5/6: $1$memwr$\RAMB$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1402$99_DATA[7:0]$211
+     6/6: $1$memwr$\RAMB$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1402$99_ADDR[5:0]$210
+Creating decoders for process `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1387$195'.
+     1/6: $2$memwr$\RAMA$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1391$98_EN[7:0]$204
+     2/6: $2$memwr$\RAMA$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1391$98_DATA[7:0]$203
+     3/6: $2$memwr$\RAMA$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1391$98_ADDR[2:0]$202
+     4/6: $1$memwr$\RAMA$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1391$98_EN[7:0]$201
+     5/6: $1$memwr$\RAMA$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1391$98_DATA[7:0]$200
+     6/6: $1$memwr$\RAMA$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1391$98_ADDR[2:0]$199
+Creating decoders for process `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1369$190'.
+     1/1: $0\PwrDn[0:0]
+Creating decoders for process `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1357$188'.
+     1/1: $0\PD[0:0]
+Creating decoders for process `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1343$184'.
+     1/1: $0\TO[0:0]
+Creating decoders for process `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1329$177'.
+     1/1: $0\WDTClr[0:0]
+Creating decoders for process `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1317$174'.
+     1/1: $0\OPTION[5:0]
+Creating decoders for process `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1305$172'.
+     1/1: $0\NOS[11:0]
+Creating decoders for process `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1297$169'.
+     1/1: $0\TOS[11:0]
+Creating decoders for process `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1285$163'.
+     1/1: $0\PC[11:0]
+Creating decoders for process `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1227$106'.
+Creating decoders for process `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1156$105'.
+     1/1: $0\IR[11:0]
+Creating decoders for process `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1146$104'.
+     1/1: $0\Rst[0:0]
+Creating decoders for process `\P16C5x_IDec.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:890$97'.
+     1/1: $0\Err[0:0]
+Creating decoders for process `\P16C5x_IDec.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:880$95'.
+     1/1: $0\KI[8:0]
+Creating decoders for process `\P16C5x_IDec.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:870$91'.
+     1/1: $0\ALU_Op[11:0]
+Creating decoders for process `\P16C5x_IDec.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:856$83'.
+     1/1: $0\dIR[9:0]
+Creating decoders for process `\P16C5x_IDec.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:762$55'.
+     1/1: $0\ROM3[11:0]
+Creating decoders for process `\P16C5x_IDec.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:736$54'.
+     1/1: $0\ROM2[11:0]
+Creating decoders for process `\P16C5x_IDec.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:708$49'.
+     1/1: $0\ROM1[9:0]
+Creating decoders for process `\P16C5x_ALU.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:342$45'.
+     1/1: $0\C[0:0]
+Creating decoders for process `\P16C5x_ALU.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:326$36'.
+     1/1: $0\DC[0:0]
+Creating decoders for process `\P16C5x_ALU.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:313$32'.
+     1/1: $0\Z[0:0]
+Creating decoders for process `\P16C5x_ALU.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:300$28'.
+     1/1: $0\W[7:0]
+Creating decoders for process `\P16C5x_ALU.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:273$27'.
+     1/1: $0\DO[7:0]
+Creating decoders for process `\P16C5x_ALU.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:249$16'.
+     1/1: $0\Msk[7:0]
+Creating decoders for process `\P16C5x_ALU.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:233$15'.
+     1/1: $0\S[7:0]
+Creating decoders for process `\P16C5x_ALU.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:219$10'.
+     1/1: $0\V[7:0]
+
+2.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\P16C5x.\PSC_Out' from process `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1541$247'.
+No latch inferred for signal `\P16C5x.\SFR' from process `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1431$222'.
+No latch inferred for signal `\P16C5x.\Skip' from process `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1227$106'.
+No latch inferred for signal `\P16C5x_IDec.\ROM3' from process `\P16C5x_IDec.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:762$55'.
+No latch inferred for signal `\P16C5x_IDec.\ROM2' from process `\P16C5x_IDec.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:736$54'.
+No latch inferred for signal `\P16C5x_IDec.\ROM1' from process `\P16C5x_IDec.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:708$49'.
+No latch inferred for signal `\P16C5x_ALU.\Msk' from process `\P16C5x_ALU.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:249$16'.
+No latch inferred for signal `\P16C5x_ALU.\S' from process `\P16C5x_ALU.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:233$15'.
+No latch inferred for signal `\P16C5x_ALU.\V' from process `\P16C5x_ALU.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:219$10'.
+
+2.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\P16C5x.\TMR0' using process `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1575$252'.
+  created $dff cell `$procdff$495' with positive edge clock.
+Creating register for signal `\P16C5x.\dPSC_Out' using process `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1557$248'.
+  created $dff cell `$procdff$496' with positive edge clock.
+Creating register for signal `\P16C5x.\PSCntr' using process `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1531$245'.
+  created $dff cell `$procdff$497' with positive edge clock.
+Creating register for signal `\P16C5x.\dT0CKI' using process `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1506$235'.
+  created $dff cell `$procdff$498' with positive edge clock.
+Creating register for signal `\P16C5x.\WDT_TC' using process `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1479$232'.
+  created $dff cell `$procdff$499' with positive edge clock.
+Creating register for signal `\P16C5x.\WDT' using process `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1469$230'.
+  created $dff cell `$procdff$500' with positive edge clock.
+Creating register for signal `\P16C5x.\FSR' using process `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1417$218'.
+  created $dff cell `$procdff$501' with positive edge clock.
+Creating register for signal `\P16C5x.\PA' using process `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1409$216'.
+  created $dff cell `$procdff$502' with positive edge clock.
+Creating register for signal `\P16C5x.$memwr$\RAMB$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1402$99_ADDR' using process `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1398$206'.
+  created $dff cell `$procdff$503' with positive edge clock.
+Creating register for signal `\P16C5x.$memwr$\RAMB$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1402$99_DATA' using process `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1398$206'.
+  created $dff cell `$procdff$504' with positive edge clock.
+Creating register for signal `\P16C5x.$memwr$\RAMB$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1402$99_EN' using process `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1398$206'.
+  created $dff cell `$procdff$505' with positive edge clock.
+Creating register for signal `\P16C5x.$memwr$\RAMA$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1391$98_ADDR' using process `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1387$195'.
+  created $dff cell `$procdff$506' with positive edge clock.
+Creating register for signal `\P16C5x.$memwr$\RAMA$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1391$98_DATA' using process `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1387$195'.
+  created $dff cell `$procdff$507' with positive edge clock.
+Creating register for signal `\P16C5x.$memwr$\RAMA$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1391$98_EN' using process `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1387$195'.
+  created $dff cell `$procdff$508' with positive edge clock.
+Creating register for signal `\P16C5x.\PwrDn' using process `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1369$190'.
+  created $dff cell `$procdff$509' with positive edge clock.
+Creating register for signal `\P16C5x.\PD' using process `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1357$188'.
+  created $dff cell `$procdff$510' with positive edge clock.
+Creating register for signal `\P16C5x.\TO' using process `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1343$184'.
+  created $dff cell `$procdff$511' with positive edge clock.
+Creating register for signal `\P16C5x.\WDTClr' using process `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1329$177'.
+  created $dff cell `$procdff$512' with positive edge clock.
+Creating register for signal `\P16C5x.\OPTION' using process `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1317$174'.
+  created $dff cell `$procdff$513' with positive edge clock.
+Creating register for signal `\P16C5x.\NOS' using process `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1305$172'.
+  created $dff cell `$procdff$514' with positive edge clock.
+Creating register for signal `\P16C5x.\TOS' using process `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1297$169'.
+  created $dff cell `$procdff$515' with positive edge clock.
+Creating register for signal `\P16C5x.\PC' using process `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1285$163'.
+  created $dff cell `$procdff$516' with positive edge clock.
+Creating register for signal `\P16C5x.\IR' using process `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1156$105'.
+  created $dff cell `$procdff$517' with positive edge clock.
+Creating register for signal `\P16C5x.\Rst' using process `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1146$104'.
+  created $adff cell `$procdff$518' with positive edge clock and positive level reset.
+Creating register for signal `\P16C5x_IDec.\Err' using process `\P16C5x_IDec.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:890$97'.
+  created $dff cell `$procdff$519' with positive edge clock.
+Creating register for signal `\P16C5x_IDec.\KI' using process `\P16C5x_IDec.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:880$95'.
+  created $dff cell `$procdff$520' with positive edge clock.
+Creating register for signal `\P16C5x_IDec.\ALU_Op' using process `\P16C5x_IDec.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:870$91'.
+  created $dff cell `$procdff$521' with positive edge clock.
+Creating register for signal `\P16C5x_IDec.\dIR' using process `\P16C5x_IDec.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:856$83'.
+  created $dff cell `$procdff$522' with positive edge clock.
+Creating register for signal `\P16C5x_ALU.\C' using process `\P16C5x_ALU.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:342$45'.
+  created $dff cell `$procdff$523' with positive edge clock.
+Creating register for signal `\P16C5x_ALU.\DC' using process `\P16C5x_ALU.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:326$36'.
+  created $dff cell `$procdff$524' with positive edge clock.
+Creating register for signal `\P16C5x_ALU.\Z' using process `\P16C5x_ALU.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:313$32'.
+  created $dff cell `$procdff$525' with positive edge clock.
+Creating register for signal `\P16C5x_ALU.\W' using process `\P16C5x_ALU.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:300$28'.
+  created $dff cell `$procdff$526' with positive edge clock.
+Creating register for signal `\P16C5x_ALU.\DO' using process `\P16C5x_ALU.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:273$27'.
+  created $dff cell `$procdff$527' with positive edge clock.
+
+2.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+2.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 3 empty switches in `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1575$252'.
+Removing empty process `P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1575$252'.
+Found and cleaned up 1 empty switch in `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1557$248'.
+Removing empty process `P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1557$248'.
+Found and cleaned up 1 empty switch in `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1541$247'.
+Removing empty process `P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1541$247'.
+Found and cleaned up 2 empty switches in `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1531$245'.
+Removing empty process `P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1531$245'.
+Found and cleaned up 1 empty switch in `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1506$235'.
+Removing empty process `P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1506$235'.
+Found and cleaned up 1 empty switch in `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1479$232'.
+Removing empty process `P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1479$232'.
+Found and cleaned up 2 empty switches in `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1469$230'.
+Removing empty process `P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1469$230'.
+Found and cleaned up 1 empty switch in `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1431$222'.
+Removing empty process `P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1431$222'.
+Found and cleaned up 2 empty switches in `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1417$218'.
+Removing empty process `P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1417$218'.
+Found and cleaned up 2 empty switches in `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1409$216'.
+Removing empty process `P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1409$216'.
+Found and cleaned up 2 empty switches in `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1398$206'.
+Removing empty process `P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1398$206'.
+Found and cleaned up 2 empty switches in `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1387$195'.
+Removing empty process `P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1387$195'.
+Found and cleaned up 2 empty switches in `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1369$190'.
+Removing empty process `P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1369$190'.
+Found and cleaned up 2 empty switches in `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1357$188'.
+Removing empty process `P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1357$188'.
+Found and cleaned up 2 empty switches in `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1343$184'.
+Removing empty process `P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1343$184'.
+Found and cleaned up 1 empty switch in `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1329$177'.
+Removing empty process `P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1329$177'.
+Found and cleaned up 2 empty switches in `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1317$174'.
+Removing empty process `P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1317$174'.
+Found and cleaned up 2 empty switches in `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1305$172'.
+Removing empty process `P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1305$172'.
+Found and cleaned up 2 empty switches in `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1297$169'.
+Removing empty process `P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1297$169'.
+Found and cleaned up 2 empty switches in `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1285$163'.
+Removing empty process `P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1285$163'.
+Removing empty process `P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1227$106'.
+Found and cleaned up 2 empty switches in `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1156$105'.
+Removing empty process `P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1156$105'.
+Found and cleaned up 1 empty switch in `\P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1146$104'.
+Removing empty process `P16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1146$104'.
+Found and cleaned up 2 empty switches in `\P16C5x_IDec.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:890$97'.
+Removing empty process `P16C5x_IDec.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:890$97'.
+Found and cleaned up 2 empty switches in `\P16C5x_IDec.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:880$95'.
+Removing empty process `P16C5x_IDec.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:880$95'.
+Found and cleaned up 2 empty switches in `\P16C5x_IDec.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:870$91'.
+Removing empty process `P16C5x_IDec.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:870$91'.
+Found and cleaned up 2 empty switches in `\P16C5x_IDec.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:856$83'.
+Removing empty process `P16C5x_IDec.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:856$83'.
+Found and cleaned up 1 empty switch in `\P16C5x_IDec.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:762$55'.
+Removing empty process `P16C5x_IDec.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:762$55'.
+Found and cleaned up 1 empty switch in `\P16C5x_IDec.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:736$54'.
+Removing empty process `P16C5x_IDec.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:736$54'.
+Found and cleaned up 1 empty switch in `\P16C5x_IDec.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:708$49'.
+Removing empty process `P16C5x_IDec.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:708$49'.
+Found and cleaned up 2 empty switches in `\P16C5x_ALU.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:342$45'.
+Removing empty process `P16C5x_ALU.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:342$45'.
+Found and cleaned up 2 empty switches in `\P16C5x_ALU.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:326$36'.
+Removing empty process `P16C5x_ALU.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:326$36'.
+Found and cleaned up 2 empty switches in `\P16C5x_ALU.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:313$32'.
+Removing empty process `P16C5x_ALU.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:313$32'.
+Found and cleaned up 2 empty switches in `\P16C5x_ALU.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:300$28'.
+Removing empty process `P16C5x_ALU.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:300$28'.
+Found and cleaned up 2 empty switches in `\P16C5x_ALU.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:273$27'.
+Removing empty process `P16C5x_ALU.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:273$27'.
+Found and cleaned up 1 empty switch in `\P16C5x_ALU.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:249$16'.
+Removing empty process `P16C5x_ALU.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:249$16'.
+Found and cleaned up 1 empty switch in `\P16C5x_ALU.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:233$15'.
+Removing empty process `P16C5x_ALU.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:233$15'.
+Found and cleaned up 1 empty switch in `\P16C5x_ALU.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:219$10'.
+Removing empty process `P16C5x_ALU.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:219$10'.
+Cleaned up 62 empty switches.
+
+2.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module P16C5x.
+<suppressed ~4 debug messages>
+Optimizing module P16C5x_IDec.
+Optimizing module P16C5x_ALU.
+<suppressed ~3 debug messages>
+
+2.3. Executing FLATTEN pass (flatten design).
+Deleting now unused module P16C5x_IDec.
+Deleting now unused module P16C5x_ALU.
+<suppressed ~2 debug messages>
+
+2.4. Executing OPT_EXPR pass (perform const folding).
+Optimizing module P16C5x.
+
+2.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \P16C5x..
+Removed 6 unused cells and 192 unused wires.
+<suppressed ~12 debug messages>
+
+2.6. Executing CHECK pass (checking for obvious problems).
+Checking module P16C5x...
+Found and reported 0 problems.
+
+2.7. Executing OPT pass (performing simple optimizations).
+
+2.7.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module P16C5x.
+
+2.7.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\P16C5x'.
+<suppressed ~60 debug messages>
+Removed a total of 20 cells.
+
+2.7.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \P16C5x..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+      Replacing known input bits on port B of cell $flatten\IDEC.$ternary$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:730$52: \ROM [11] -> 1'1
+      Replacing known input bits on port A of cell $ternary$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1238$115: { 3'000 \IDEC.KI [4:0] } -> { 4'0000 \IDEC.KI [3:0] }
+      Replacing known input bits on port B of cell $ternary$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1238$115: { 1'0 \FSR [6:5] \IDEC.KI [4:0] } -> { 1'0 \FSR [6:5] 1'1 \IDEC.KI [3:0] }
+  Analyzing evaluation results.
+    dead port 2/2 on $mux $flatten\ALU.$ternary$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:266$26.
+    dead port 2/2 on $mux $procmux$338.
+    dead port 2/2 on $mux $procmux$344.
+    dead port 2/2 on $mux $procmux$350.
+    dead port 2/2 on $mux $procmux$365.
+    dead port 2/2 on $mux $procmux$371.
+    dead port 2/2 on $mux $procmux$377.
+Removed 7 multiplexer ports.
+<suppressed ~52 debug messages>
+
+2.7.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \P16C5x.
+    New ctrl vector for $pmux cell $procmux$315: { $procmux$323_CMP $procmux$322_CMP $procmux$321_CMP $procmux$320_CMP $procmux$319_CMP $auto$opt_reduce.cc:134:opt_pmux$531 }
+    Consolidated identical input bits for $mux cell $procmux$336:
+      Old ports: A=8'00000000, B=8'11111111, Y=$procmux$336_Y
+      New ports: A=1'0, B=1'1, Y=$procmux$336_Y [0]
+      New connections: $procmux$336_Y [7:1] = { $procmux$336_Y [0] $procmux$336_Y [0] $procmux$336_Y [0] $procmux$336_Y [0] $procmux$336_Y [0] $procmux$336_Y [0] $procmux$336_Y [0] }
+    Consolidated identical input bits for $mux cell $procmux$363:
+      Old ports: A=8'00000000, B=8'11111111, Y=$procmux$363_Y
+      New ports: A=1'0, B=1'1, Y=$procmux$363_Y [0]
+      New connections: $procmux$363_Y [7:1] = { $procmux$363_Y [0] $procmux$363_Y [0] $procmux$363_Y [0] $procmux$363_Y [0] $procmux$363_Y [0] $procmux$363_Y [0] $procmux$363_Y [0] }
+  Optimizing cells in module \P16C5x.
+    Consolidated identical input bits for $mux cell $procmux$353:
+      Old ports: A=8'00000000, B=$2$memwr$\RAMB$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1402$99_EN[7:0]$215, Y=$0$memwr$\RAMB$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1402$99_EN[7:0]$209
+      New ports: A=1'0, B=$procmux$336_Y [0], Y=$0$memwr$\RAMB$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1402$99_EN[7:0]$209 [0]
+      New connections: $0$memwr$\RAMB$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1402$99_EN[7:0]$209 [7:1] = { $0$memwr$\RAMB$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1402$99_EN[7:0]$209 [0] $0$memwr$\RAMB$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1402$99_EN[7:0]$209 [0] $0$memwr$\RAMB$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1402$99_EN[7:0]$209 [0] $0$memwr$\RAMB$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1402$99_EN[7:0]$209 [0] $0$memwr$\RAMB$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1402$99_EN[7:0]$209 [0] $0$memwr$\RAMB$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1402$99_EN[7:0]$209 [0] $0$memwr$\RAMB$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1402$99_EN[7:0]$209 [0] }
+    Consolidated identical input bits for $mux cell $procmux$380:
+      Old ports: A=8'00000000, B=$2$memwr$\RAMA$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1391$98_EN[7:0]$204, Y=$0$memwr$\RAMA$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1391$98_EN[7:0]$198
+      New ports: A=1'0, B=$procmux$363_Y [0], Y=$0$memwr$\RAMA$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1391$98_EN[7:0]$198 [0]
+      New connections: $0$memwr$\RAMA$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1391$98_EN[7:0]$198 [7:1] = { $0$memwr$\RAMA$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1391$98_EN[7:0]$198 [0] $0$memwr$\RAMA$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1391$98_EN[7:0]$198 [0] $0$memwr$\RAMA$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1391$98_EN[7:0]$198 [0] $0$memwr$\RAMA$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1391$98_EN[7:0]$198 [0] $0$memwr$\RAMA$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1391$98_EN[7:0]$198 [0] $0$memwr$\RAMA$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1391$98_EN[7:0]$198 [0] $0$memwr$\RAMA$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1391$98_EN[7:0]$198 [0] }
+  Optimizing cells in module \P16C5x.
+Performed a total of 5 changes.
+
+2.7.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\P16C5x'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+2.7.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.7.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \P16C5x..
+Removed 0 unused cells and 27 unused wires.
+<suppressed ~1 debug messages>
+
+2.7.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module P16C5x.
+
+2.7.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.7.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \P16C5x..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~51 debug messages>
+
+2.7.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \P16C5x.
+Performed a total of 0 changes.
+
+2.7.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\P16C5x'.
+Removed a total of 0 cells.
+
+2.7.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.7.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \P16C5x..
+
+2.7.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module P16C5x.
+
+2.7.16. Finished OPT passes. (There is nothing left to do.)
+
+2.8. Executing FSM pass (extract and optimize FSM).
+
+2.8.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+2.8.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+2.8.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+2.8.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \P16C5x..
+
+2.8.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+2.8.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+2.8.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+2.8.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+2.9. Executing OPT pass (performing simple optimizations).
+
+2.9.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module P16C5x.
+
+2.9.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\P16C5x'.
+Removed a total of 0 cells.
+
+2.9.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \P16C5x..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~51 debug messages>
+
+2.9.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \P16C5x.
+Performed a total of 0 changes.
+
+2.9.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\P16C5x'.
+Removed a total of 0 cells.
+
+2.9.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $procdff$518 ($adff) from module P16C5x (D = 1'0, Q = \Rst).
+Adding SRST signal on $procdff$517 ($dff) from module P16C5x (D = $procmux$426_Y, Q = \IR, rval = 12'000000000000).
+Adding EN signal on $auto$ff.cc:266:slice$533 ($sdff) from module P16C5x (D = \ROM, Q = \IR).
+Adding SRST signal on $procdff$516 ($dff) from module P16C5x (D = $procmux$421_Y, Q = \PC, rval = 12'011111111111).
+Adding EN signal on $auto$ff.cc:266:slice$535 ($sdff) from module P16C5x (D = $ternary$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1290$168_Y [11:0], Q = \PC).
+Adding SRST signal on $procdff$515 ($dff) from module P16C5x (D = $procmux$416_Y, Q = \TOS, rval = 12'011111111111).
+Adding EN signal on $auto$ff.cc:266:slice$537 ($sdff) from module P16C5x (D = $ternary$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1302$171_Y, Q = \TOS).
+Adding SRST signal on $procdff$514 ($dff) from module P16C5x (D = $procmux$411_Y, Q = \NOS, rval = 12'011111111111).
+Adding EN signal on $auto$ff.cc:266:slice$543 ($sdff) from module P16C5x (D = \TOS, Q = \NOS).
+Adding SRST signal on $procdff$513 ($dff) from module P16C5x (D = $procmux$406_Y, Q = \OPTION, rval = 6'111111).
+Adding EN signal on $auto$ff.cc:266:slice$547 ($sdff) from module P16C5x (D = \ALU.W [5:0], Q = \OPTION).
+Adding SRST signal on $procdff$512 ($dff) from module P16C5x (D = $and$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1334$180_Y, Q = \WDTClr, rval = 1'0).
+Adding SRST signal on $procdff$511 ($dff) from module P16C5x (D = $procmux$398_Y, Q = \TO, rval = 1'0).
+Adding EN signal on $auto$ff.cc:266:slice$552 ($sdff) from module P16C5x (D = 1'1, Q = \TO).
+Adding SRST signal on $procdff$510 ($dff) from module P16C5x (D = $procmux$393_Y, Q = \PD, rval = 1'0).
+Adding EN signal on $auto$ff.cc:266:slice$554 ($sdff) from module P16C5x (D = 1'1, Q = \PD).
+Adding SRST signal on $procdff$509 ($dff) from module P16C5x (D = $procmux$388_Y, Q = \PwrDn, rval = 1'0).
+Adding EN signal on $auto$ff.cc:266:slice$558 ($sdff) from module P16C5x (D = 1'1, Q = \PwrDn).
+Adding SRST signal on $procdff$502 ($dff) from module P16C5x (D = $procmux$329_Y, Q = \PA, rval = 3'000).
+Adding EN signal on $auto$ff.cc:266:slice$562 ($sdff) from module P16C5x (D = \ALU.DO [7:5], Q = \PA).
+Adding SRST signal on $procdff$501 ($dff) from module P16C5x (D = $procmux$324_Y, Q = \FSR, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:266:slice$566 ($sdff) from module P16C5x (D = \ALU.DO, Q = \FSR).
+Adding SRST signal on $procdff$500 ($dff) from module P16C5x (D = $procmux$310_Y, Q = \WDT, rval = 20'00000000000000000000).
+Adding EN signal on $auto$ff.cc:266:slice$570 ($sdff) from module P16C5x (D = $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1474$231_Y [19:0], Q = \WDT).
+Adding SRST signal on $procdff$499 ($dff) from module P16C5x (D = $reduce_and$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1484$233_Y, Q = \WDT_TC, rval = 1'0).
+Adding SRST signal on $procdff$498 ($dff) from module P16C5x (D = { $ternary$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1513$240_Y \dT0CKI [0] \T0CKI }, Q = \dT0CKI, rval = 3'000).
+Adding SRST signal on $procdff$497 ($dff) from module P16C5x (D = $procmux$293_Y, Q = \PSCntr, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:266:slice$574 ($sdff) from module P16C5x (D = $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1536$246_Y [7:0], Q = \PSCntr).
+Adding SRST signal on $procdff$496 ($dff) from module P16C5x (D = { $and$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1563$250_Y \PSC_Out }, Q = \dPSC_Out, rval = 2'00).
+Adding SRST signal on $procdff$495 ($dff) from module P16C5x (D = $procmux$273_Y, Q = \TMR0, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:266:slice$577 ($sdff) from module P16C5x (D = $procmux$273_Y, Q = \TMR0).
+Adding SRST signal on $flatten\IDEC.$procdff$522 ($dff) from module P16C5x (D = $flatten\IDEC.$procmux$448_Y, Q = \IDEC.dIR, rval = 10'0000000000).
+Adding EN signal on $auto$ff.cc:266:slice$581 ($sdff) from module P16C5x (D = $flatten\IDEC.$ternary$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:861$86_Y [9:0], Q = \IDEC.dIR).
+Adding SRST signal on $flatten\IDEC.$procdff$521 ($dff) from module P16C5x (D = $flatten\IDEC.$procmux$443_Y, Q = \IDEC.ALU_Op, rval = 12'000000000000).
+Adding EN signal on $auto$ff.cc:266:slice$583 ($sdff) from module P16C5x (D = $flatten\IDEC.$ternary$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:875$94_Y [11:0], Q = \IDEC.ALU_Op).
+Adding SRST signal on $flatten\IDEC.$procdff$520 ($dff) from module P16C5x (D = $flatten\IDEC.$procmux$438_Y, Q = \IDEC.KI, rval = 9'000000000).
+Adding EN signal on $auto$ff.cc:266:slice$585 ($sdff) from module P16C5x (D = \ROM [8:0], Q = \IDEC.KI).
+Adding SRST signal on $flatten\IDEC.$procdff$519 ($dff) from module P16C5x (D = $flatten\IDEC.$procmux$433_Y, Q = \IDEC.Err, rval = 1'0).
+Adding EN signal on $auto$ff.cc:266:slice$591 ($sdff) from module P16C5x (D = \IDEC.dErr, Q = \IDEC.Err).
+Adding SRST signal on $flatten\ALU.$procdff$527 ($dff) from module P16C5x (D = $flatten\ALU.$procmux$476_Y, Q = \ALU.DO, rval = 8'00000000).
+Adding SRST signal on $flatten\ALU.$procdff$526 ($dff) from module P16C5x (D = $flatten\ALU.$procmux$471_Y, Q = \ALU.W, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:266:slice$594 ($sdff) from module P16C5x (D = \ALU.DO, Q = \ALU.W).
+Adding SRST signal on $flatten\ALU.$procdff$525 ($dff) from module P16C5x (D = $flatten\ALU.$procmux$466_Y, Q = \ALU.Z, rval = 1'0).
+Adding EN signal on $auto$ff.cc:266:slice$598 ($sdff) from module P16C5x (D = $flatten\ALU.$ternary$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:318$34_Y, Q = \ALU.Z).
+Adding SRST signal on $flatten\ALU.$procdff$524 ($dff) from module P16C5x (D = $flatten\ALU.$procmux$461_Y, Q = \ALU.DC, rval = 1'0).
+Adding EN signal on $auto$ff.cc:266:slice$604 ($sdff) from module P16C5x (D = $flatten\ALU.$ternary$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:331$38_Y, Q = \ALU.DC).
+Adding SRST signal on $flatten\ALU.$procdff$523 ($dff) from module P16C5x (D = $flatten\ALU.$procmux$456_Y, Q = \ALU.C, rval = 1'0).
+Adding EN signal on $auto$ff.cc:266:slice$610 ($sdff) from module P16C5x (D = $flatten\ALU.$ternary$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:347$47_Y, Q = \ALU.C).
+
+2.9.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \P16C5x..
+Removed 58 unused cells and 55 unused wires.
+<suppressed ~59 debug messages>
+
+2.9.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module P16C5x.
+<suppressed ~5 debug messages>
+
+2.9.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.9.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \P16C5x..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~31 debug messages>
+
+2.9.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \P16C5x.
+Performed a total of 0 changes.
+
+2.9.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\P16C5x'.
+Removed a total of 0 cells.
+
+2.9.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.9.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \P16C5x..
+
+2.9.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module P16C5x.
+
+2.9.16. Finished OPT passes. (There is nothing left to do.)
+
+2.10. Executing WREDUCE pass (reducing word size of cells).
+Removed top 29 address bits (of 32) from memory init port P16C5x.$flatten\ALU.$auto$mem.cc:319:emit$269 ($flatten\ALU.$auto$proc_rom.cc:150:do_switch$267).
+Removed top 26 address bits (of 32) from memory init port P16C5x.$flatten\IDEC.$auto$mem.cc:319:emit$257 ($flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255).
+Removed top 28 address bits (of 32) from memory init port P16C5x.$flatten\IDEC.$auto$mem.cc:319:emit$261 ($flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259).
+Removed top 28 address bits (of 32) from memory init port P16C5x.$flatten\IDEC.$auto$mem.cc:319:emit$265 ($flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263).
+Removed top 1 bits (of 8) from mux cell P16C5x.$ternary$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1238$115 ($mux).
+Removed top 4 bits (of 5) from port B of cell P16C5x.$eq$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1247$117 ($eq).
+Removed top 3 bits (of 5) from port B of cell P16C5x.$eq$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1248$119 ($eq).
+Removed top 3 bits (of 5) from port B of cell P16C5x.$eq$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1249$121 ($eq).
+Removed top 2 bits (of 5) from port B of cell P16C5x.$eq$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1250$123 ($eq).
+Removed top 2 bits (of 5) from port B of cell P16C5x.$eq$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1261$125 ($eq).
+Removed top 2 bits (of 5) from port B of cell P16C5x.$eq$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1262$129 ($eq).
+Removed top 2 bits (of 5) from port B of cell P16C5x.$eq$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1263$133 ($eq).
+Removed top 31 bits (of 32) from port B of cell P16C5x.$add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1292$164 ($add).
+Removed top 19 bits (of 32) from port Y of cell P16C5x.$add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1292$164 ($add).
+Removed top 19 bits (of 32) from mux cell P16C5x.$ternary$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1292$166 ($mux).
+Removed top 19 bits (of 32) from mux cell P16C5x.$ternary$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1291$167 ($mux).
+Removed top 20 bits (of 32) from mux cell P16C5x.$ternary$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1290$168 ($mux).
+Removed top 31 bits (of 32) from port B of cell P16C5x.$add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1474$231 ($add).
+Removed top 12 bits (of 32) from port Y of cell P16C5x.$add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1474$231 ($add).
+Removed top 31 bits (of 32) from port B of cell P16C5x.$add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1536$246 ($add).
+Removed top 24 bits (of 32) from port Y of cell P16C5x.$add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1536$246 ($add).
+Removed top 31 bits (of 32) from port B of cell P16C5x.$add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1582$253 ($add).
+Removed top 24 bits (of 32) from port Y of cell P16C5x.$add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1582$253 ($add).
+Removed top 1 bits (of 3) from port B of cell P16C5x.$procmux$289_CMP0 ($eq).
+Removed top 1 bits (of 3) from port B of cell P16C5x.$procmux$290_CMP0 ($eq).
+Removed top 2 bits (of 3) from port B of cell P16C5x.$procmux$291_CMP0 ($eq).
+Removed top 1 bits (of 3) from port B of cell P16C5x.$procmux$320_CMP0 ($eq).
+Removed top 1 bits (of 3) from port B of cell P16C5x.$procmux$321_CMP0 ($eq).
+Removed top 2 bits (of 3) from port B of cell P16C5x.$procmux$322_CMP0 ($eq).
+Removed top 20 bits (of 32) from mux cell P16C5x.$flatten\IDEC.$ternary$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:875$94 ($mux).
+Removed top 22 bits (of 32) from mux cell P16C5x.$flatten\IDEC.$ternary$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:861$86 ($mux).
+Removed top 22 bits (of 32) from mux cell P16C5x.$flatten\IDEC.$ternary$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:862$85 ($mux).
+Removed top 1 bits (of 2) from port B of cell P16C5x.$flatten\ALU.$procmux$488_CMP0 ($eq).
+Removed top 1 bits (of 2) from port B of cell P16C5x.$flatten\ALU.$procmux$479_CMP0 ($eq).
+Removed top 24 bits (of 32) from mux cell P16C5x.$flatten\ALU.$ternary$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:207$3 ($mux).
+Removed top 1 bits (of 13) from mux cell P16C5x.$ternary$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1291$167 ($mux).
+Removed top 1 bits (of 13) from mux cell P16C5x.$ternary$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1292$166 ($mux).
+Removed top 1 bits (of 13) from port Y of cell P16C5x.$add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1292$164 ($add).
+Removed top 20 bits (of 32) from wire P16C5x.$add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1292$164_Y.
+Removed top 12 bits (of 32) from wire P16C5x.$add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1474$231_Y.
+Removed top 24 bits (of 32) from wire P16C5x.$add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1536$246_Y.
+Removed top 24 bits (of 32) from wire P16C5x.$add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1582$253_Y.
+
+2.11. Executing PEEPOPT pass (run peephole optimizers).
+
+2.12. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \P16C5x..
+Removed 0 unused cells and 5 unused wires.
+<suppressed ~1 debug messages>
+
+2.13. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module P16C5x:
+  creating $macc model for $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1292$164 ($add).
+  creating $macc model for $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1474$231 ($add).
+  creating $macc model for $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1536$246 ($add).
+  creating $macc model for $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1582$253 ($add).
+  creating $macc model for $flatten\ALU.$add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:212$6 ($add).
+  creating $macc model for $flatten\ALU.$add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:212$7 ($add).
+  creating $macc model for $flatten\ALU.$add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:213$8 ($add).
+  creating $macc model for $flatten\ALU.$add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:213$9 ($add).
+  merging $macc model for $flatten\ALU.$add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:213$8 into $flatten\ALU.$add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:213$9.
+  merging $macc model for $flatten\ALU.$add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:212$6 into $flatten\ALU.$add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:212$7.
+  creating $alu model for $macc $flatten\ALU.$add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:212$7.
+  creating $alu model for $macc $flatten\ALU.$add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:213$9.
+  creating $alu model for $macc $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1582$253.
+  creating $alu model for $macc $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1536$246.
+  creating $alu model for $macc $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1474$231.
+  creating $alu model for $macc $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1292$164.
+  creating $alu cell for $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1292$164: $auto$alumacc.cc:485:replace_alu$620
+  creating $alu cell for $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1474$231: $auto$alumacc.cc:485:replace_alu$623
+  creating $alu cell for $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1536$246: $auto$alumacc.cc:485:replace_alu$626
+  creating $alu cell for $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1582$253: $auto$alumacc.cc:485:replace_alu$629
+  creating $alu cell for $flatten\ALU.$add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:213$9: $auto$alumacc.cc:485:replace_alu$632
+  creating $alu cell for $flatten\ALU.$add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:212$7: $auto$alumacc.cc:485:replace_alu$635
+  created 6 $alu and 0 $macc cells.
+
+2.14. Executing SHARE pass (SAT-based resource sharing).
+Found 6 cells in module P16C5x that may be considered for resource sharing.
+  Analyzing resource sharing options for $memrd$\RAMB$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1447$223 ($memrd):
+    Found 1 activation_patterns using ctrl signal \FA [4].
+    No candidates found.
+  Analyzing resource sharing options for $memrd$\RAMA$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1447$224 ($memrd):
+    Found 1 activation_patterns using ctrl signal \FA [4:3].
+    No candidates found.
+  Analyzing resource sharing options for $flatten\IDEC.$auto$mem.cc:273:emit$264 ($memrd_v2):
+    Found 1 activation_patterns using ctrl signal { \IDEC.Skip \IDEC.ROM1_Valid }.
+    No candidates found.
+  Analyzing resource sharing options for $flatten\IDEC.$auto$mem.cc:273:emit$260 ($memrd_v2):
+    Found 1 activation_patterns using ctrl signal { \IDEC.ROM1_Valid $flatten\IDEC.$or$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:875$92_Y }.
+    No candidates found.
+  Analyzing resource sharing options for $flatten\IDEC.$auto$mem.cc:273:emit$256 ($memrd_v2):
+    Found 1 activation_patterns using ctrl signal { \IDEC.ROM1_Valid $flatten\IDEC.$or$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:875$92_Y }.
+    No candidates found.
+  Analyzing resource sharing options for $flatten\ALU.$auto$mem.cc:273:emit$268 ($memrd_v2):
+    Found 2 activation_patterns using ctrl signal { $flatten\ALU.$procmux$477_CMP \IDEC.ALU_Op [8] $and$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1230$108_Y }.
+    No candidates found.
+
+2.15. Executing OPT pass (performing simple optimizations).
+
+2.15.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module P16C5x.
+
+2.15.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\P16C5x'.
+Removed a total of 0 cells.
+
+2.15.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \P16C5x..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~31 debug messages>
+
+2.15.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \P16C5x.
+Performed a total of 0 changes.
+
+2.15.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\P16C5x'.
+Removed a total of 0 cells.
+
+2.15.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.15.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \P16C5x..
+Removed 2 unused cells and 2 unused wires.
+<suppressed ~3 debug messages>
+
+2.15.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module P16C5x.
+
+2.15.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.15.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \P16C5x..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~31 debug messages>
+
+2.15.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \P16C5x.
+Performed a total of 0 changes.
+
+2.15.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\P16C5x'.
+Removed a total of 0 cells.
+
+2.15.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.15.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \P16C5x..
+
+2.15.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module P16C5x.
+
+2.15.16. Finished OPT passes. (There is nothing left to do.)
+
+2.16. Executing MEMORY pass.
+
+2.16.1. Executing OPT_MEM pass (optimize memories).
+P16C5x.$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259: removing const-0 lane 4
+P16C5x.$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259: removing const-0 lane 7
+P16C5x.$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259: removing const-0 lane 8
+P16C5x.$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259: removing const-0 lane 10
+P16C5x.$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259: removing const-0 lane 11
+Performed a total of 1 transformations.
+
+2.16.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+2.16.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+  Analyzing P16C5x.RAMA write port 0.
+  Analyzing P16C5x.RAMB write port 0.
+
+2.16.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+2.16.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+Checking read port `$flatten\ALU.$auto$proc_rom.cc:150:do_switch$267'[0] in module `\P16C5x': no output FF found.
+Checking read port `$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255'[0] in module `\P16C5x': no output FF found.
+Checking read port `$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259'[0] in module `\P16C5x': FF found, but with a mux select that doesn't seem to correspond to transparency logic.
+Checking read port `$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263'[0] in module `\P16C5x': FF found, but with a mux select that doesn't seem to correspond to transparency logic.
+Checking read port `\RAMA'[0] in module `\P16C5x': no output FF found.
+Checking read port `\RAMB'[0] in module `\P16C5x': no output FF found.
+Checking read port address `$flatten\ALU.$auto$proc_rom.cc:150:do_switch$267'[0] in module `\P16C5x': merged address FF to cell.
+Checking read port address `$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255'[0] in module `\P16C5x': no address FF found.
+Checking read port address `$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259'[0] in module `\P16C5x': no address FF found.
+Checking read port address `$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263'[0] in module `\P16C5x': no address FF found.
+Checking read port address `\RAMA'[0] in module `\P16C5x': no address FF found.
+Checking read port address `\RAMB'[0] in module `\P16C5x': no address FF found.
+
+2.16.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \P16C5x..
+
+2.16.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+2.16.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+2.16.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \P16C5x..
+
+2.16.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+2.17. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \P16C5x..
+
+2.18. Executing OPT pass (performing simple optimizations).
+
+2.18.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module P16C5x.
+<suppressed ~24 debug messages>
+
+2.18.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\P16C5x'.
+Removed a total of 0 cells.
+
+2.18.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.18.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \P16C5x..
+Removed 4 unused cells and 20 unused wires.
+<suppressed ~5 debug messages>
+
+2.18.5. Finished fast OPT passes.
+
+2.19. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+Mapping memory $flatten\ALU.$auto$proc_rom.cc:150:do_switch$267 in module \P16C5x:
+  created 8 $dff cells and 0 static cells of width 8.
+Extracted data FF from read port 0 of P16C5x.$flatten\ALU.$auto$proc_rom.cc:150:do_switch$267: $$flatten\ALU.$auto$proc_rom.cc:150:do_switch$267$rdreg[0]
+  read interface: 1 $dff and 7 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255 in module \P16C5x:
+  created 64 $dff cells and 0 static cells of width 12.
+  read interface: 0 $dff and 63 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259 in module \P16C5x:
+  created 16 $dff cells and 0 static cells of width 7.
+  read interface: 0 $dff and 15 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263 in module \P16C5x:
+  created 16 $dff cells and 0 static cells of width 10.
+  read interface: 0 $dff and 15 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory \RAMA in module \P16C5x:
+  created 8 $dff cells and 0 static cells of width 8.
+  read interface: 0 $dff and 7 $mux cells.
+  write interface: 8 write mux blocks.
+Mapping memory \RAMB in module \P16C5x:
+  created 64 $dff cells and 0 static cells of width 8.
+  read interface: 0 $dff and 63 $mux cells.
+  write interface: 64 write mux blocks.
+
+2.20. Executing OPT pass (performing simple optimizations).
+
+2.20.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module P16C5x.
+<suppressed ~25 debug messages>
+
+2.20.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\P16C5x'.
+Removed a total of 0 cells.
+
+2.20.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \P16C5x..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~99 debug messages>
+
+2.20.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \P16C5x.
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][3][4]$942:
+      Old ports: A=10'1000000100, B=10'1000000010, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][2][2]$a$925
+      New ports: A=2'10, B=2'01, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][2][2]$a$925 [2:1]
+      New connections: { $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][2][2]$a$925 [9:3] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][2][2]$a$925 [0] } = 8'10000000
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][3][3]$939:
+      Old ports: A=10'0001000000, B=10'0010000000, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][2][1]$b$923
+      New ports: A=2'01, B=2'10, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][2][1]$b$923 [7:6]
+      New connections: { $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][2][1]$b$923 [9:8] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][2][1]$b$923 [5:0] } = 8'00000000
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][3][2]$936:
+      Old ports: A=10'0000010000, B=10'0000100000, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][2][1]$a$922
+      New ports: A=2'01, B=2'10, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][2][1]$a$922 [5:4]
+      New connections: { $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][2][1]$a$922 [9:6] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][2][1]$a$922 [3:0] } = 8'00000000
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][3][1]$933:
+      Old ports: A=10'0100000000, B=10'0000001000, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][2][0]$b$920
+      New ports: A=2'10, B=2'01, Y={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][2][0]$b$920 [8] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][2][0]$b$920 [3] }
+      New connections: { $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][2][0]$b$920 [9] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][2][0]$b$920 [7:4] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][2][0]$b$920 [2:0] } = 8'00000000
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259$rdmux[0][3][6]$903:
+      Old ports: A=7'1001000, B=7'1111101, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259$rdmux[0][2][3]$a$883
+      New ports: A=1'0, B=1'1, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259$rdmux[0][2][3]$a$883 [0]
+      New connections: $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259$rdmux[0][2][3]$a$883 [6:1] = { 1'1 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259$rdmux[0][2][3]$a$883 [0] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259$rdmux[0][2][3]$a$883 [0] 1'1 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259$rdmux[0][2][3]$a$883 [0] 1'0 }
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259$rdmux[0][3][4]$897:
+      Old ports: A=7'1001000, B=7'0001000, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259$rdmux[0][2][2]$a$880
+      New ports: A=1'1, B=1'0, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259$rdmux[0][2][2]$a$880 [6]
+      New connections: $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259$rdmux[0][2][2]$a$880 [5:0] = 6'001000
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][5][30]$858:
+      Old ports: A=12'010111001100, B=12'010111001101, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][15]$a$766
+      New ports: A=1'0, B=1'1, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][15]$a$766 [0]
+      New connections: $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][15]$a$766 [11:1] = 11'01011100110
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][5][29]$855:
+      Old ports: A=12'010111001010, B=12'010111001011, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][14]$b$764
+      New ports: A=1'0, B=1'1, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][14]$b$764 [0]
+      New connections: $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][14]$b$764 [11:1] = 11'01011100101
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][5][28]$852:
+      Old ports: A=12'010111001000, B=12'010111001001, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][14]$a$763
+      New ports: A=1'0, B=1'1, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][14]$a$763 [0]
+      New connections: $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][14]$a$763 [11:1] = 11'01011100100
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][5][27]$849:
+      Old ports: A=12'010111000110, B=12'010111000111, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][13]$b$761
+      New ports: A=1'0, B=1'1, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][13]$b$761 [0]
+      New connections: $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][13]$b$761 [11:1] = 11'01011100011
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][5][26]$846:
+      Old ports: A=12'010111000100, B=12'010111000101, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][13]$a$760
+      New ports: A=1'0, B=1'1, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][13]$a$760 [0]
+      New connections: $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][13]$a$760 [11:1] = 11'01011100010
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][5][25]$843:
+      Old ports: A=12'010111000010, B=12'010111000011, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][12]$b$758
+      New ports: A=1'0, B=1'1, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][12]$b$758 [0]
+      New connections: $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][12]$b$758 [11:1] = 11'01011100001
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][5][24]$840:
+      Old ports: A=12'010111000000, B=12'010111000001, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][12]$a$757
+      New ports: A=1'0, B=1'1, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][12]$a$757 [0]
+      New connections: $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][12]$a$757 [11:1] = 11'01011100000
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][5][23]$837:
+      Old ports: A=12'110011001110, B=12'110011001111, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][11]$b$755
+      New ports: A=1'0, B=1'1, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][11]$b$755 [0]
+      New connections: $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][11]$b$755 [11:1] = 11'11001100111
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][5][22]$834:
+      Old ports: A=12'110011001100, B=12'110011001101, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][11]$a$754
+      New ports: A=1'0, B=1'1, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][11]$a$754 [0]
+      New connections: $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][11]$a$754 [11:1] = 11'11001100110
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][5][21]$831:
+      Old ports: A=12'110011001010, B=12'110011001011, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][10]$b$752
+      New ports: A=1'0, B=1'1, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][10]$b$752 [0]
+      New connections: $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][10]$b$752 [11:1] = 11'11001100101
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][5][20]$828:
+      Old ports: A=12'110011001000, B=12'110011001001, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][10]$a$751
+      New ports: A=1'0, B=1'1, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][10]$a$751 [0]
+      New connections: $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][10]$a$751 [11:1] = 11'11001100100
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][5][19]$825:
+      Old ports: A=12'110011000110, B=12'110011000111, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][9]$b$749
+      New ports: A=1'0, B=1'1, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][9]$b$749 [0]
+      New connections: $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][9]$b$749 [11:1] = 11'11001100011
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][5][18]$822:
+      Old ports: A=12'110011000100, B=12'110011000101, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][9]$a$748
+      New ports: A=1'0, B=1'1, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][9]$a$748 [0]
+      New connections: $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][9]$a$748 [11:1] = 11'11001100010
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][5][17]$819:
+      Old ports: A=12'110011000010, B=12'110011000011, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][8]$b$746
+      New ports: A=1'0, B=1'1, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][8]$b$746 [0]
+      New connections: $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][8]$b$746 [11:1] = 11'11001100001
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][5][16]$816:
+      Old ports: A=12'110011000000, B=12'110011000001, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][8]$a$745
+      New ports: A=1'0, B=1'1, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][8]$a$745 [0]
+      New connections: $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][8]$a$745 [11:1] = 11'11001100000
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][5][15]$813:
+      Old ports: A=12'011100000001, B=12'110100000001, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][7]$b$743
+      New ports: A=2'01, B=2'10, Y={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][7]$b$743 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][7]$b$743 [9] }
+      New connections: { $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][7]$b$743 [10] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][7]$b$743 [8:0] } = 10'1100000001
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][5][14]$810:
+      Old ports: A=12'011010000001, B=12'110010000001, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][7]$a$742
+      New ports: A=2'01, B=2'10, Y={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][7]$a$742 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][7]$a$742 [9] }
+      New connections: { $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][7]$a$742 [10] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][7]$a$742 [8:0] } = 10'1010000001
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][5][13]$807:
+      Old ports: A=12'011010010011, B=12'100110010011, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][6]$b$740
+      New ports: A=2'10, B=2'01, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][6]$b$740 [9:8]
+      New connections: { $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][6]$b$740 [11:10] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][6]$b$740 [7:0] } = { $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][6]$b$740 [8] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][6]$b$740 [9] 8'10010011 }
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][5][12]$804:
+      Old ports: A=12'011010010010, B=12'110010010010, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][6]$a$739
+      New ports: A=2'01, B=2'10, Y={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][6]$a$739 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][6]$a$739 [9] }
+      New connections: { $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][6]$a$739 [10] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][6]$a$739 [8:0] } = 10'1010010010
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][5][11]$801:
+      Old ports: A=12'011100000010, B=12'110100000010, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][5]$b$737
+      New ports: A=2'01, B=2'10, Y={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][5]$b$737 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][5]$b$737 [9] }
+      New connections: { $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][5]$b$737 [10] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][5]$b$737 [8:0] } = 10'1100000010
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][5][10]$798:
+      Old ports: A=12'011000100001, B=12'110000100001, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][5]$a$736
+      New ports: A=2'01, B=2'10, Y={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][5]$a$736 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][5]$a$736 [9] }
+      New connections: { $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][5]$a$736 [10] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][5]$a$736 [8:0] } = 10'1000100001
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][5][9]$795:
+      Old ports: A=12'011001000000, B=12'110001000000, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][4]$b$734
+      New ports: A=2'01, B=2'10, Y={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][4]$b$734 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][4]$b$734 [9] }
+      New connections: { $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][4]$b$734 [10] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][4]$b$734 [8:0] } = 10'1001000000
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][5][8]$792:
+      Old ports: A=12'011000100000, B=12'110000100000, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][4]$a$733
+      New ports: A=2'01, B=2'10, Y={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][4]$a$733 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][4]$a$733 [9] }
+      New connections: { $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][4]$a$733 [10] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][4]$a$733 [8:0] } = 10'1000100000
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][5][7]$789:
+      Old ports: A=12'011000110100, B=12'110000110100, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][3]$b$731
+      New ports: A=2'01, B=2'10, Y={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][3]$b$731 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][3]$b$731 [9] }
+      New connections: { $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][3]$b$731 [10] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][3]$b$731 [8:0] } = 10'1000110100
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][5][6]$786:
+      Old ports: A=12'011001100111, B=12'110001100111, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][3]$a$730
+      New ports: A=2'01, B=2'10, Y={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][3]$a$730 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][3]$a$730 [9] }
+      New connections: { $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][3]$a$730 [10] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][3]$a$730 [8:0] } = 10'1001100111
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][5][5]$783:
+      Old ports: A=12'011001100110, B=12'110001100110, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][2]$b$728
+      New ports: A=2'01, B=2'10, Y={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][2]$b$728 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][2]$b$728 [9] }
+      New connections: { $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][2]$b$728 [10] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][2]$b$728 [8:0] } = 10'1001100110
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][5][4]$780:
+      Old ports: A=12'011001100101, B=12'110001100101, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][2]$a$727
+      New ports: A=2'01, B=2'10, Y={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][2]$a$727 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][2]$a$727 [9] }
+      New connections: { $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][2]$a$727 [10] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][2]$a$727 [8:0] } = 10'1001100101
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][5][3]$777:
+      Old ports: A=12'011000100010, B=12'110000100010, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][1]$b$725
+      New ports: A=2'01, B=2'10, Y={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][1]$b$725 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][1]$b$725 [9] }
+      New connections: { $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][1]$b$725 [10] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][1]$b$725 [8:0] } = 10'1000100010
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][5][2]$774:
+      Old ports: A=12'011000110111, B=12'110000110111, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][1]$a$724
+      New ports: A=2'01, B=2'10, Y={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][1]$a$724 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][1]$a$724 [9] }
+      New connections: { $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][1]$a$724 [10] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][1]$a$724 [8:0] } = 10'1000110111
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][5][1]$771:
+      Old ports: A=12'001010000000, B=12'110010000000, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][0]$b$722
+      New ports: A=2'01, B=2'10, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][0]$b$722 [10:9]
+      New connections: { $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][0]$b$722 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][0]$b$722 [8:0] } = { $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][0]$b$722 [10] 9'010000000 }
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][5][0]$768:
+      Old ports: A=12'000000000000, B=12'110010000100, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][0]$a$721
+      New ports: A=1'0, B=1'1, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][0]$a$721 [2]
+      New connections: { $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][0]$a$721 [11:3] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][0]$a$721 [1:0] } = { $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][0]$a$721 [2] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][0]$a$721 [2] 2'00 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][0]$a$721 [2] 6'000000 }
+    Consolidated identical input bits for $mux cell $memory$flatten\ALU.$auto$proc_rom.cc:150:do_switch$267$rdmux[0][2][2]$669:
+      Old ports: A=8'00010000, B=8'00100000, Y=$memory$flatten\ALU.$auto$proc_rom.cc:150:do_switch$267$rdmux[0][1][1]$a$661
+      New ports: A=2'01, B=2'10, Y=$memory$flatten\ALU.$auto$proc_rom.cc:150:do_switch$267$rdmux[0][1][1]$a$661 [5:4]
+      New connections: { $memory$flatten\ALU.$auto$proc_rom.cc:150:do_switch$267$rdmux[0][1][1]$a$661 [7:6] $memory$flatten\ALU.$auto$proc_rom.cc:150:do_switch$267$rdmux[0][1][1]$a$661 [3:0] } = 6'000000
+    Consolidated identical input bits for $mux cell $memory$flatten\ALU.$auto$proc_rom.cc:150:do_switch$267$rdmux[0][2][1]$666:
+      Old ports: A=8'00000100, B=8'00001000, Y=$memory$flatten\ALU.$auto$proc_rom.cc:150:do_switch$267$rdmux[0][1][0]$b$659
+      New ports: A=2'01, B=2'10, Y=$memory$flatten\ALU.$auto$proc_rom.cc:150:do_switch$267$rdmux[0][1][0]$b$659 [3:2]
+      New connections: { $memory$flatten\ALU.$auto$proc_rom.cc:150:do_switch$267$rdmux[0][1][0]$b$659 [7:4] $memory$flatten\ALU.$auto$proc_rom.cc:150:do_switch$267$rdmux[0][1][0]$b$659 [1:0] } = 6'000000
+    Consolidated identical input bits for $mux cell $memory$flatten\ALU.$auto$proc_rom.cc:150:do_switch$267$rdmux[0][2][0]$663:
+      Old ports: A=8'00000001, B=8'00000010, Y=$memory$flatten\ALU.$auto$proc_rom.cc:150:do_switch$267$rdmux[0][1][0]$a$658
+      New ports: A=2'01, B=2'10, Y=$memory$flatten\ALU.$auto$proc_rom.cc:150:do_switch$267$rdmux[0][1][0]$a$658 [1:0]
+      New connections: $memory$flatten\ALU.$auto$proc_rom.cc:150:do_switch$267$rdmux[0][1][0]$a$658 [7:2] = 6'000000
+    Consolidated identical input bits for $mux cell $memory$flatten\ALU.$auto$proc_rom.cc:150:do_switch$267$rdmux[0][2][3]$672:
+      Old ports: A=8'01000000, B=8'10000000, Y=$memory$flatten\ALU.$auto$proc_rom.cc:150:do_switch$267$rdmux[0][1][1]$b$662
+      New ports: A=2'01, B=2'10, Y=$memory$flatten\ALU.$auto$proc_rom.cc:150:do_switch$267$rdmux[0][1][1]$b$662 [7:6]
+      New connections: $memory$flatten\ALU.$auto$proc_rom.cc:150:do_switch$267$rdmux[0][1][1]$b$662 [5:0] = 6'000000
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][5][31]$861:
+      Old ports: A=12'010111001110, B=12'010111001111, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][15]$b$767
+      New ports: A=1'0, B=1'1, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][15]$b$767 [0]
+      New connections: $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][15]$b$767 [11:1] = 11'01011100111
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259$rdmux[0][3][7]$906:
+      Old ports: A=7'1111110, B=7'1111111, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259$rdmux[0][2][3]$b$884
+      New ports: A=1'0, B=1'1, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259$rdmux[0][2][3]$b$884 [0]
+      New connections: $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259$rdmux[0][2][3]$b$884 [6:1] = 6'111111
+    Consolidated identical input bits for $mux cell $ternary$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1238$115:
+      Old ports: A={ 3'000 \IDEC.KI [3:0] }, B={ \FSR [6:5] 1'1 \IDEC.KI [3:0] }, Y=$ternary$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1238$115_Y [6:0]
+      New ports: A=3'000, B={ \FSR [6:5] 1'1 }, Y=$ternary$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1238$115_Y [6:4]
+      New connections: $ternary$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v:1238$115_Y [3:0] = \IDEC.KI [3:0]
+  Optimizing cells in module \P16C5x.
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][2][2]$924:
+      Old ports: A=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][2][2]$a$925, B=10'1000000001, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][1][1]$a$916
+      New ports: A={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][2][2]$a$925 [2:1] 1'0 }, B=3'001, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][1][1]$a$916 [2:0]
+      New connections: $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][1][1]$a$916 [9:3] = 7'1000000
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][2][1]$921:
+      Old ports: A=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][2][1]$a$922, B=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][2][1]$b$923, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][1][0]$b$914
+      New ports: A={ 2'00 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][2][1]$a$922 [5:4] }, B={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][2][1]$b$923 [7:6] 2'00 }, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][1][0]$b$914 [7:4]
+      New connections: { $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][1][0]$b$914 [9:8] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][1][0]$b$914 [3:0] } = 6'000000
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][2][0]$918:
+      Old ports: A=10'0000000000, B=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][2][0]$b$920, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][1][0]$a$913
+      New ports: A=2'00, B={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][2][0]$b$920 [8] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][2][0]$b$920 [3] }, Y={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][1][0]$a$913 [8] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][1][0]$a$913 [3] }
+      New connections: { $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][1][0]$a$913 [9] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][1][0]$a$913 [7:4] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][1][0]$a$913 [2:0] } = 8'00000000
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259$rdmux[0][2][3]$882:
+      Old ports: A=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259$rdmux[0][2][3]$a$883, B=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259$rdmux[0][2][3]$b$884, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259$rdmux[0][1][1]$b$872
+      New ports: A={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259$rdmux[0][2][3]$a$883 [0] 1'0 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259$rdmux[0][2][3]$a$883 [0] }, B={ 2'11 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259$rdmux[0][2][3]$b$884 [0] }, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259$rdmux[0][1][1]$b$872 [2:0]
+      New connections: $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259$rdmux[0][1][1]$b$872 [6:3] = { 1'1 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259$rdmux[0][1][1]$b$872 [2] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259$rdmux[0][1][1]$b$872 [2] 1'1 }
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259$rdmux[0][2][2]$879:
+      Old ports: A=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259$rdmux[0][2][2]$a$880, B=7'0000000, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259$rdmux[0][1][1]$a$871
+      New ports: A={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259$rdmux[0][2][2]$a$880 [6] 1'1 }, B=2'00, Y={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259$rdmux[0][1][1]$a$871 [6] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259$rdmux[0][1][1]$a$871 [3] }
+      New connections: { $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259$rdmux[0][1][1]$a$871 [5:4] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259$rdmux[0][1][1]$a$871 [2:0] } = 5'00000
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][15]$765:
+      Old ports: A=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][15]$a$766, B=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][15]$b$767, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][7]$b$719
+      New ports: A={ 1'0 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][15]$a$766 [0] }, B={ 1'1 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][15]$b$767 [0] }, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][7]$b$719 [1:0]
+      New connections: $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][7]$b$719 [11:2] = 10'0101110011
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][14]$762:
+      Old ports: A=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][14]$a$763, B=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][14]$b$764, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][7]$a$718
+      New ports: A={ 1'0 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][14]$a$763 [0] }, B={ 1'1 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][14]$b$764 [0] }, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][7]$a$718 [1:0]
+      New connections: $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][7]$a$718 [11:2] = 10'0101110010
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][13]$759:
+      Old ports: A=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][13]$a$760, B=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][13]$b$761, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][6]$b$716
+      New ports: A={ 1'0 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][13]$a$760 [0] }, B={ 1'1 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][13]$b$761 [0] }, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][6]$b$716 [1:0]
+      New connections: $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][6]$b$716 [11:2] = 10'0101110001
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][12]$756:
+      Old ports: A=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][12]$a$757, B=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][12]$b$758, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][6]$a$715
+      New ports: A={ 1'0 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][12]$a$757 [0] }, B={ 1'1 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][12]$b$758 [0] }, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][6]$a$715 [1:0]
+      New connections: $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][6]$a$715 [11:2] = 10'0101110000
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][11]$753:
+      Old ports: A=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][11]$a$754, B=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][11]$b$755, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][5]$b$713
+      New ports: A={ 1'0 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][11]$a$754 [0] }, B={ 1'1 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][11]$b$755 [0] }, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][5]$b$713 [1:0]
+      New connections: $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][5]$b$713 [11:2] = 10'1100110011
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][10]$750:
+      Old ports: A=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][10]$a$751, B=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][10]$b$752, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][5]$a$712
+      New ports: A={ 1'0 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][10]$a$751 [0] }, B={ 1'1 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][10]$b$752 [0] }, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][5]$a$712 [1:0]
+      New connections: $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][5]$a$712 [11:2] = 10'1100110010
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][9]$747:
+      Old ports: A=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][9]$a$748, B=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][9]$b$749, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][4]$b$710
+      New ports: A={ 1'0 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][9]$a$748 [0] }, B={ 1'1 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][9]$b$749 [0] }, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][4]$b$710 [1:0]
+      New connections: $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][4]$b$710 [11:2] = 10'1100110001
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][8]$744:
+      Old ports: A=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][8]$a$745, B=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][8]$b$746, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][4]$a$709
+      New ports: A={ 1'0 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][8]$a$745 [0] }, B={ 1'1 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][8]$b$746 [0] }, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][4]$a$709 [1:0]
+      New connections: $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][4]$a$709 [11:2] = 10'1100110000
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][7]$741:
+      Old ports: A=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][7]$a$742, B=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][7]$b$743, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][3]$b$707
+      New ports: A={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][7]$a$742 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][7]$a$742 [9] 2'01 }, B={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][7]$b$743 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][7]$b$743 [9] 2'10 }, Y={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][3]$b$707 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][3]$b$707 [9:7] }
+      New connections: { $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][3]$b$707 [10] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][3]$b$707 [6:0] } = 8'10000001
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][6]$738:
+      Old ports: A=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][6]$a$739, B=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][6]$b$740, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][3]$a$706
+      New ports: A={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][6]$a$739 [11] 1'1 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][6]$a$739 [9] 2'00 }, B={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][6]$b$740 [8] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][6]$b$740 [9] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][6]$b$740 [9:8] 1'1 }, Y={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][3]$a$706 [11:8] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][3]$a$706 [0] }
+      New connections: $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][3]$a$706 [7:1] = 7'1001001
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][5]$735:
+      Old ports: A=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][5]$a$736, B=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][5]$b$737, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][2]$b$704
+      New ports: A={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][5]$a$736 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][5]$a$736 [9] 2'01 }, B={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][5]$b$737 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][5]$b$737 [9] 2'10 }, Y={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][2]$b$704 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][2]$b$704 [9] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][2]$b$704 [1:0] }
+      New connections: { $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][2]$b$704 [10] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][2]$b$704 [8:2] } = { 1'1 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][2]$b$704 [1] 2'00 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][2]$b$704 [0] 3'000 }
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][4]$732:
+      Old ports: A=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][4]$a$733, B=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][4]$b$734, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][2]$a$703
+      New ports: A={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][4]$a$733 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][4]$a$733 [9] 2'01 }, B={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][4]$b$734 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][4]$b$734 [9] 2'10 }, Y={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][2]$a$703 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][2]$a$703 [9] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][2]$a$703 [6:5] }
+      New connections: { $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][2]$a$703 [10] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][2]$a$703 [8:7] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][2]$a$703 [4:0] } = 8'10000000
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][3]$729:
+      Old ports: A=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][3]$a$730, B=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][3]$b$731, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$b$701
+      New ports: A={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][3]$a$730 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][3]$a$730 [9] 2'01 }, B={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][3]$b$731 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][3]$b$731 [9] 2'10 }, Y={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$b$701 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$b$701 [9] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$b$701 [4] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$b$701 [0] }
+      New connections: { $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$b$701 [10] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$b$701 [8:5] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$b$701 [3:1] } = { 3'100 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$b$701 [0] 3'101 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$b$701 [0] }
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][2]$726:
+      Old ports: A=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][2]$a$727, B=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][2]$b$728, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$a$700
+      New ports: A={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][2]$a$727 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][2]$a$727 [9] 2'01 }, B={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][2]$b$728 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][2]$b$728 [9] 2'10 }, Y={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$a$700 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$a$700 [9] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$a$700 [1:0] }
+      New connections: { $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$a$700 [10] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$a$700 [8:2] } = 8'10011001
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][1]$723:
+      Old ports: A=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][1]$a$724, B=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][1]$b$725, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][0]$b$698
+      New ports: A={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][1]$a$724 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][1]$a$724 [9] 1'1 }, B={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][1]$b$725 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][1]$b$725 [9] 1'0 }, Y={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][0]$b$698 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][0]$b$698 [9] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][0]$b$698 [0] }
+      New connections: { $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][0]$b$698 [10] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][0]$b$698 [8:1] } = { 5'10001 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][0]$b$698 [0] 1'0 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][0]$b$698 [0] 1'1 }
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][0]$720:
+      Old ports: A=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][0]$a$721, B=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][0]$b$722, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][0]$a$697
+      New ports: A={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][0]$a$721 [2] 1'0 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][0]$a$721 [2] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][0]$a$721 [2] }, B={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][0]$b$722 [10:9] 2'10 }, Y={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][0]$a$697 [10:9] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][0]$a$697 [7] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][0]$a$697 [2] }
+      New connections: { $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][0]$a$697 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][0]$a$697 [8] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][0]$a$697 [6:3] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][0]$a$697 [1:0] } = { $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][0]$a$697 [10] 7'0000000 }
+    Consolidated identical input bits for $mux cell $memory$flatten\ALU.$auto$proc_rom.cc:150:do_switch$267$rdmux[0][1][1]$660:
+      Old ports: A=$memory$flatten\ALU.$auto$proc_rom.cc:150:do_switch$267$rdmux[0][1][1]$a$661, B=$memory$flatten\ALU.$auto$proc_rom.cc:150:do_switch$267$rdmux[0][1][1]$b$662, Y=$memory$flatten\ALU.$auto$proc_rom.cc:150:do_switch$267$rdmux[0][0][0]$b$656
+      New ports: A={ 2'00 $memory$flatten\ALU.$auto$proc_rom.cc:150:do_switch$267$rdmux[0][1][1]$a$661 [5:4] }, B={ $memory$flatten\ALU.$auto$proc_rom.cc:150:do_switch$267$rdmux[0][1][1]$b$662 [7:6] 2'00 }, Y=$memory$flatten\ALU.$auto$proc_rom.cc:150:do_switch$267$rdmux[0][0][0]$b$656 [7:4]
+      New connections: $memory$flatten\ALU.$auto$proc_rom.cc:150:do_switch$267$rdmux[0][0][0]$b$656 [3:0] = 4'0000
+    Consolidated identical input bits for $mux cell $memory$flatten\ALU.$auto$proc_rom.cc:150:do_switch$267$rdmux[0][1][0]$657:
+      Old ports: A=$memory$flatten\ALU.$auto$proc_rom.cc:150:do_switch$267$rdmux[0][1][0]$a$658, B=$memory$flatten\ALU.$auto$proc_rom.cc:150:do_switch$267$rdmux[0][1][0]$b$659, Y=$memory$flatten\ALU.$auto$proc_rom.cc:150:do_switch$267$rdmux[0][0][0]$a$655
+      New ports: A={ 2'00 $memory$flatten\ALU.$auto$proc_rom.cc:150:do_switch$267$rdmux[0][1][0]$a$658 [1:0] }, B={ $memory$flatten\ALU.$auto$proc_rom.cc:150:do_switch$267$rdmux[0][1][0]$b$659 [3:2] 2'00 }, Y=$memory$flatten\ALU.$auto$proc_rom.cc:150:do_switch$267$rdmux[0][0][0]$a$655 [3:0]
+      New connections: $memory$flatten\ALU.$auto$proc_rom.cc:150:do_switch$267$rdmux[0][0][0]$a$655 [7:4] = 4'0000
+  Optimizing cells in module \P16C5x.
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][1][1]$915:
+      Old ports: A=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][1][1]$a$916, B=10'1000000000, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][0][0]$b$911
+      New ports: A=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][1][1]$a$916 [2:0], B=3'000, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][0][0]$b$911 [2:0]
+      New connections: $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][0][0]$b$911 [9:3] = 7'1000000
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][1][0]$912:
+      Old ports: A=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][1][0]$a$913, B=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][1][0]$b$914, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][0][0]$a$910
+      New ports: A={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][1][0]$a$913 [8] 4'0000 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][1][0]$a$913 [3] }, B={ 1'0 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][1][0]$b$914 [7:4] 1'0 }, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][0][0]$a$910 [8:3]
+      New connections: { $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][0][0]$a$910 [9] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$263$rdmux[0][0][0]$a$910 [2:0] } = 4'0000
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259$rdmux[0][1][1]$870:
+      Old ports: A=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259$rdmux[0][1][1]$a$871, B=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259$rdmux[0][1][1]$b$872, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259$rdmux[0][0][0]$b$866
+      New ports: A={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259$rdmux[0][1][1]$a$871 [6] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259$rdmux[0][1][1]$a$871 [3] 3'000 }, B={ 2'11 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259$rdmux[0][1][1]$b$872 [2:0] }, Y={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259$rdmux[0][0][0]$b$866 [6] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259$rdmux[0][0][0]$b$866 [3:0] }
+      New connections: $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259$rdmux[0][0][0]$b$866 [5:4] = { $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259$rdmux[0][0][0]$b$866 [2] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259$rdmux[0][0][0]$b$866 [2] }
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][7]$717:
+      Old ports: A=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][7]$a$718, B=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][7]$b$719, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][3]$b$695
+      New ports: A={ 1'0 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][7]$a$718 [1:0] }, B={ 1'1 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][7]$b$719 [1:0] }, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][3]$b$695 [2:0]
+      New connections: $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][3]$b$695 [11:3] = 9'010111001
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][6]$714:
+      Old ports: A=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][6]$a$715, B=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][6]$b$716, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][3]$a$694
+      New ports: A={ 1'0 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][6]$a$715 [1:0] }, B={ 1'1 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][6]$b$716 [1:0] }, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][3]$a$694 [2:0]
+      New connections: $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][3]$a$694 [11:3] = 9'010111000
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][5]$711:
+      Old ports: A=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][5]$a$712, B=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][5]$b$713, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][2]$b$692
+      New ports: A={ 1'0 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][5]$a$712 [1:0] }, B={ 1'1 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][5]$b$713 [1:0] }, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][2]$b$692 [2:0]
+      New connections: $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][2]$b$692 [11:3] = 9'110011001
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][4]$708:
+      Old ports: A=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][4]$a$709, B=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][4]$b$710, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][2]$a$691
+      New ports: A={ 1'0 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][4]$a$709 [1:0] }, B={ 1'1 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][4]$b$710 [1:0] }, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][2]$a$691 [2:0]
+      New connections: $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][2]$a$691 [11:3] = 9'110011000
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][3]$705:
+      Old ports: A=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][3]$a$706, B=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][3]$b$707, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][1]$b$689
+      New ports: A={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][3]$a$706 [11:8] 2'11 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][3]$a$706 [0] }, B={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][3]$b$707 [11] 1'1 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][3]$b$707 [9:7] 2'01 }, Y={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][1]$b$689 [11:7] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][1]$b$689 [1:0] }
+      New connections: $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][1]$b$689 [6:2] = { 2'00 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][1]$b$689 [1] 2'00 }
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][2]$702:
+      Old ports: A=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][2]$a$703, B=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][2]$b$704, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][1]$a$688
+      New ports: A={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][2]$a$703 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][2]$a$703 [9] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][2]$a$703 [6:5] 2'00 }, B={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][2]$b$704 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][2]$b$704 [9] 1'0 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][2]$b$704 [0] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][2]$b$704 [1:0] }, Y={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][1]$a$688 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][1]$a$688 [9] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][1]$a$688 [6:5] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][1]$a$688 [1:0] }
+      New connections: { $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][1]$a$688 [10] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][1]$a$688 [8:7] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][1]$a$688 [4:2] } = { 1'1 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][1]$a$688 [1] 4'0000 }
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$699:
+      Old ports: A=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$a$700, B=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$b$701, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][0]$b$686
+      New ports: A={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$a$700 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$a$700 [9] 2'10 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$a$700 [1:0] }, B={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$b$701 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$b$701 [9] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$b$701 [0] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$b$701 [4] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$b$701 [0] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$b$701 [0] }, Y={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][0]$b$686 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][0]$b$686 [9] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][0]$b$686 [6] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][0]$b$686 [4] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][0]$b$686 [1:0] }
+      New connections: { $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][0]$b$686 [10] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][0]$b$686 [8:7] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][0]$b$686 [5] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][0]$b$686 [3:2] } = 6'100101
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][0]$696:
+      Old ports: A=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][0]$a$697, B=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][0]$b$698, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][0]$a$685
+      New ports: A={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][0]$a$697 [10] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][0]$a$697 [10:9] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][0]$a$697 [7] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][0]$a$697 [2] 2'00 }, B={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][0]$b$698 [11] 1'1 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][0]$b$698 [9] 1'0 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][0]$b$698 [0] 1'1 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][0]$b$698 [0] }, Y={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][0]$a$685 [11:9] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][0]$a$685 [7] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][0]$a$685 [2:0] }
+      New connections: { $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][0]$a$685 [8] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][0]$a$685 [6:3] } = { 2'00 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][0]$a$685 [1:0] 1'0 }
+  Optimizing cells in module \P16C5x.
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259$rdmux[0][0][0]$864:
+      Old ports: A=7'0000000, B=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259$rdmux[0][0][0]$b$866, Y={ \IDEC.ROM2 [9] \IDEC.ROM2 [6:5] \IDEC.ROM2 [3:0] }
+      New ports: A=5'00000, B={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259$rdmux[0][0][0]$b$866 [6] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259$rdmux[0][0][0]$b$866 [3:0] }, Y={ \IDEC.ROM2 [9] \IDEC.ROM2 [3:0] }
+      New connections: \IDEC.ROM2 [6:5] = { \IDEC.ROM2 [2] \IDEC.ROM2 [2] }
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][3]$693:
+      Old ports: A=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][3]$a$694, B=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][3]$b$695, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][1][1]$b$683
+      New ports: A={ 1'0 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][3]$a$694 [2:0] }, B={ 1'1 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][3]$b$695 [2:0] }, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][1][1]$b$683 [3:0]
+      New connections: $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][1][1]$b$683 [11:4] = 8'01011100
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][2]$690:
+      Old ports: A=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][2]$a$691, B=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][2]$b$692, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][1][1]$a$682
+      New ports: A={ 1'0 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][2]$a$691 [2:0] }, B={ 1'1 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][2]$b$692 [2:0] }, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][1][1]$a$682 [3:0]
+      New connections: $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][1][1]$a$682 [11:4] = 8'11001100
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][1]$687:
+      Old ports: A=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][1]$a$688, B=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][1]$b$689, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][1][0]$b$680
+      New ports: A={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][1]$a$688 [11] 1'1 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][1]$a$688 [9] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][1]$a$688 [1] 1'0 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][1]$a$688 [6:5] 1'0 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][1]$a$688 [1:0] }, B={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][1]$b$689 [11:7] 2'00 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][1]$b$689 [1] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][1]$b$689 [1:0] }, Y={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][1][0]$b$680 [11:4] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][1][0]$b$680 [1:0] }
+      New connections: $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][1][0]$b$680 [3:2] = 2'00
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][0]$684:
+      Old ports: A=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][0]$a$685, B=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][0]$b$686, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][1][0]$a$679
+      New ports: A={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][0]$a$685 [11:9] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][0]$a$685 [7] 1'0 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][0]$a$685 [1:0] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][0]$a$685 [2:0] }, B={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][0]$b$686 [11] 1'1 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][0]$b$686 [9] 1'0 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][0]$b$686 [6] 1'1 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][0]$b$686 [4] 1'1 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][0]$b$686 [1:0] }, Y={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][1][0]$a$679 [11:9] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][1][0]$a$679 [7:4] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][1][0]$a$679 [2:0] }
+      New connections: { $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][1][0]$a$679 [8] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][1][0]$a$679 [3] } = 2'00
+  Optimizing cells in module \P16C5x.
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][1][1]$681:
+      Old ports: A=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][1][1]$a$682, B=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][1][1]$b$683, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][0][0]$b$677
+      New ports: A={ 2'10 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][1][1]$a$682 [3:0] }, B={ 2'01 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][1][1]$b$683 [3:0] }, Y={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][0][0]$b$677 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][0][0]$b$677 [8] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][0][0]$b$677 [3:0] }
+      New connections: { $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][0][0]$b$677 [10:9] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][0][0]$b$677 [7:4] } = 6'101100
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][1][0]$678:
+      Old ports: A=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][1][0]$a$679, B=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][1][0]$b$680, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][0][0]$a$676
+      New ports: A={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][1][0]$a$679 [11:9] 1'0 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][1][0]$a$679 [7:4] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][1][0]$a$679 [2:0] }, B={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][1][0]$b$680 [11:4] 1'0 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][1][0]$b$680 [1:0] }, Y={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][0][0]$a$676 [11:4] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][0][0]$a$676 [2:0] }
+      New connections: $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][0][0]$a$676 [3] = 1'0
+  Optimizing cells in module \P16C5x.
+Performed a total of 85 changes.
+
+2.20.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\P16C5x'.
+<suppressed ~153 debug messages>
+Removed a total of 51 cells.
+
+2.20.6. Executing OPT_SHARE pass.
+
+2.20.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.20.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \P16C5x..
+Removed 0 unused cells and 318 unused wires.
+<suppressed ~1 debug messages>
+
+2.20.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module P16C5x.
+<suppressed ~3 debug messages>
+
+2.20.10. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.20.11. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \P16C5x..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~102 debug messages>
+
+2.20.12. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \P16C5x.
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][1][1]$681:
+      Old ports: A={ 2'10 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][1][1]$a$682 [3:0] }, B={ 2'01 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][1][1]$a$682 [3:0] }, Y={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][0][0]$b$677 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][0][0]$b$677 [8] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][0][0]$b$677 [3:0] }
+      New ports: A=2'10, B=2'01, Y={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][0][0]$b$677 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][0][0]$b$677 [8] }
+      New connections: $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][0][0]$b$677 [3:0] = $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][1][1]$a$682 [3:0]
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][3]$693:
+      Old ports: A={ 1'0 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][2]$a$691 [2:0] }, B={ 1'1 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][2]$a$691 [2:0] }, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][1][1]$a$682 [3:0]
+      New ports: A=1'0, B=1'1, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][1][1]$a$682 [3]
+      New connections: $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][1][1]$a$682 [2:0] = $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][2]$a$691 [2:0]
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$699:
+      Old ports: A={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$a$700 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$a$700 [9] 2'10 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$a$700 [1:0] }, B={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$a$700 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$a$700 [9] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$a$700 [0] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$a$700 [1:0] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$a$700 [0] }, Y={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][0]$b$686 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][0]$b$686 [9] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][0]$b$686 [6] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][0]$b$686 [4] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][0]$b$686 [1:0] }
+      New ports: A={ 2'10 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$a$700 [1] }, B={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$a$700 [0] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$a$700 [1:0] }, Y={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][0]$b$686 [6] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][0]$b$686 [4] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][0]$b$686 [1] }
+      New connections: { $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][0]$b$686 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][0]$b$686 [9] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][0]$b$686 [0] } = { $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$a$700 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$a$700 [9] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$a$700 [0] }
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][2]$702:
+      Old ports: A={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$a$700 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$a$700 [9] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$a$700 [1:0] 2'00 }, B={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$a$700 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$a$700 [9] 1'0 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$a$700 [0] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$a$700 [1:0] }, Y={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][1]$a$688 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][1]$a$688 [9] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][1]$a$688 [6:5] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][1]$a$688 [8] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][1]$a$688 [0] }
+      New ports: A={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$a$700 [1] 2'00 }, B={ 1'0 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$a$700 [1:0] }, Y={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][1]$a$688 [6] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][1]$a$688 [8] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][1]$a$688 [0] }
+      New connections: { $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][1]$a$688 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][1]$a$688 [9] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][1]$a$688 [5] } = { $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$a$700 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$a$700 [9] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$a$700 [0] }
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][7]$717:
+      Old ports: A={ 1'0 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][4]$a$709 [1:0] }, B={ 1'1 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][4]$a$709 [1:0] }, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][2]$a$691 [2:0]
+      New ports: A=1'0, B=1'1, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][2]$a$691 [2]
+      New connections: $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][2][2]$a$691 [1:0] = $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][4]$a$709 [1:0]
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][15]$765:
+      Old ports: A={ 1'0 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][0]$a$721 [11] }, B={ 1'1 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][0]$a$721 [11] }, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][4]$a$709 [1:0]
+      New ports: A=1'0, B=1'1, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][4]$a$709 [1]
+      New connections: $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][4]$a$709 [0] = \ROM [5]
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][1]$723:
+      Old ports: A={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][0]$b$722 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][0]$b$722 [9] 1'1 }, B={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][0]$b$722 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][0]$b$722 [9] 1'0 }, Y={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][0]$b$698 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][0]$b$698 [9] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][0]$b$698 [4] }
+      New ports: A=1'1, B=1'0, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][0]$b$698 [4]
+      New connections: { $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][0]$b$698 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][0]$b$698 [9] } = { $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][0]$b$722 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][0]$b$722 [9] }
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][7]$741:
+      Old ports: A={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][0]$b$722 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][0]$b$722 [9] 2'01 }, B={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][0]$b$722 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][0]$b$722 [9] 2'10 }, Y={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$a$700 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$a$700 [9] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$a$700 [1:0] }
+      New ports: A=2'01, B=2'10, Y=$memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$a$700 [1:0]
+      New connections: { $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$a$700 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][3][1]$a$700 [9] } = { $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][0]$b$722 [11] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$255$rdmux[0][4][0]$b$722 [9] }
+    Consolidated identical input bits for $mux cell $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259$rdmux[0][2][3]$882:
+      Old ports: A={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259$rdmux[0][2][3]$a$883 [5] 1'0 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259$rdmux[0][2][3]$a$883 [5] }, B={ 2'11 $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259$rdmux[0][2][3]$a$883 [5] }, Y={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259$rdmux[0][1][1]$b$872 [5] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259$rdmux[0][1][1]$b$872 [1:0] }
+      New ports: A={ \IDEC.ROM1_Addr [0] 1'0 }, B=2'11, Y={ $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259$rdmux[0][1][1]$b$872 [5] $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259$rdmux[0][1][1]$b$872 [1] }
+      New connections: $memory$flatten\IDEC.$auto$proc_rom.cc:150:do_switch$259$rdmux[0][1][1]$b$872 [0] = \IDEC.ROM1_Addr [0]
+  Optimizing cells in module \P16C5x.
+Performed a total of 9 changes.
+
+2.20.13. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\P16C5x'.
+Removed a total of 0 cells.
+
+2.20.14. Executing OPT_SHARE pass.
+
+2.20.15. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $memory\RAMB[9]$1077 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[9]).
+Adding EN signal on $memory\RAMB[8]$1075 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[8]).
+Adding EN signal on $memory\RAMB[7]$1073 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[7]).
+Adding EN signal on $memory\RAMB[6]$1071 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[6]).
+Adding EN signal on $memory\RAMB[63]$1185 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[63]).
+Adding EN signal on $memory\RAMB[62]$1183 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[62]).
+Adding EN signal on $memory\RAMB[61]$1181 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[61]).
+Adding EN signal on $memory\RAMB[60]$1179 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[60]).
+Adding EN signal on $memory\RAMB[5]$1069 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[5]).
+Adding EN signal on $memory\RAMB[59]$1177 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[59]).
+Adding EN signal on $memory\RAMB[58]$1175 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[58]).
+Adding EN signal on $memory\RAMB[57]$1173 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[57]).
+Adding EN signal on $memory\RAMB[56]$1171 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[56]).
+Adding EN signal on $memory\RAMB[55]$1169 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[55]).
+Adding EN signal on $memory\RAMB[54]$1167 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[54]).
+Adding EN signal on $memory\RAMB[53]$1165 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[53]).
+Adding EN signal on $memory\RAMB[52]$1163 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[52]).
+Adding EN signal on $memory\RAMB[51]$1161 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[51]).
+Adding EN signal on $memory\RAMB[50]$1159 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[50]).
+Adding EN signal on $memory\RAMB[4]$1067 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[4]).
+Adding EN signal on $memory\RAMB[49]$1157 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[49]).
+Adding EN signal on $memory\RAMB[48]$1155 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[48]).
+Adding EN signal on $memory\RAMB[47]$1153 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[47]).
+Adding EN signal on $memory\RAMB[46]$1151 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[46]).
+Adding EN signal on $memory\RAMB[45]$1149 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[45]).
+Adding EN signal on $memory\RAMB[44]$1147 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[44]).
+Adding EN signal on $memory\RAMB[43]$1145 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[43]).
+Adding EN signal on $memory\RAMB[42]$1143 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[42]).
+Adding EN signal on $memory\RAMB[41]$1141 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[41]).
+Adding EN signal on $memory\RAMB[40]$1139 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[40]).
+Adding EN signal on $memory\RAMB[3]$1065 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[3]).
+Adding EN signal on $memory\RAMB[39]$1137 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[39]).
+Adding EN signal on $memory\RAMB[38]$1135 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[38]).
+Adding EN signal on $memory\RAMB[37]$1133 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[37]).
+Adding EN signal on $memory\RAMB[36]$1131 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[36]).
+Adding EN signal on $memory\RAMB[35]$1129 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[35]).
+Adding EN signal on $memory\RAMB[34]$1127 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[34]).
+Adding EN signal on $memory\RAMB[33]$1125 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[33]).
+Adding EN signal on $memory\RAMB[32]$1123 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[32]).
+Adding EN signal on $memory\RAMB[31]$1121 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[31]).
+Adding EN signal on $memory\RAMB[30]$1119 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[30]).
+Adding EN signal on $memory\RAMB[2]$1063 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[2]).
+Adding EN signal on $memory\RAMB[29]$1117 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[29]).
+Adding EN signal on $memory\RAMB[28]$1115 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[28]).
+Adding EN signal on $memory\RAMB[27]$1113 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[27]).
+Adding EN signal on $memory\RAMB[26]$1111 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[26]).
+Adding EN signal on $memory\RAMB[25]$1109 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[25]).
+Adding EN signal on $memory\RAMB[24]$1107 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[24]).
+Adding EN signal on $memory\RAMB[23]$1105 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[23]).
+Adding EN signal on $memory\RAMB[22]$1103 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[22]).
+Adding EN signal on $memory\RAMB[21]$1101 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[21]).
+Adding EN signal on $memory\RAMB[20]$1099 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[20]).
+Adding EN signal on $memory\RAMB[1]$1061 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[1]).
+Adding EN signal on $memory\RAMB[19]$1097 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[19]).
+Adding EN signal on $memory\RAMB[18]$1095 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[18]).
+Adding EN signal on $memory\RAMB[17]$1093 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[17]).
+Adding EN signal on $memory\RAMB[16]$1091 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[16]).
+Adding EN signal on $memory\RAMB[15]$1089 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[15]).
+Adding EN signal on $memory\RAMB[14]$1087 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[14]).
+Adding EN signal on $memory\RAMB[13]$1085 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[13]).
+Adding EN signal on $memory\RAMB[12]$1083 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[12]).
+Adding EN signal on $memory\RAMB[11]$1081 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[11]).
+Adding EN signal on $memory\RAMB[10]$1079 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[10]).
+Adding EN signal on $memory\RAMB[0]$1059 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMB[0]).
+Adding EN signal on $memory\RAMA[7]$968 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMA[7]).
+Adding EN signal on $memory\RAMA[6]$966 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMA[6]).
+Adding EN signal on $memory\RAMA[5]$964 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMA[5]).
+Adding EN signal on $memory\RAMA[4]$962 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMA[4]).
+Adding EN signal on $memory\RAMA[3]$960 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMA[3]).
+Adding EN signal on $memory\RAMA[2]$958 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMA[2]).
+Adding EN signal on $memory\RAMA[1]$956 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMA[1]).
+Adding EN signal on $memory\RAMA[0]$954 ($dff) from module P16C5x (D = \ALU.DO, Q = \RAMA[0]).
+Adding SRST signal on $$flatten\ALU.$auto$proc_rom.cc:150:do_switch$267$rdreg[0] ($dff) from module P16C5x (D = $memory$flatten\ALU.$auto$proc_rom.cc:150:do_switch$267$rdmux[0][0][0]$a$655 [3:0], Q = \ALU.Msk [7:4], rval = 4'0000).
+Adding SRST signal on $$flatten\ALU.$auto$proc_rom.cc:150:do_switch$267$rdreg[0] ($dff) from module P16C5x (D = $memory$flatten\ALU.$auto$proc_rom.cc:150:do_switch$267$rdmux[0][0][0]$a$655 [3:0], Q = \ALU.Msk [3:0], rval = 4'0000).
+
+2.20.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \P16C5x..
+Removed 73 unused cells and 79 unused wires.
+<suppressed ~74 debug messages>
+
+2.20.17. Executing OPT_EXPR pass (perform const folding).
+Optimizing module P16C5x.
+<suppressed ~4 debug messages>
+
+2.20.18. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.20.19. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \P16C5x..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~30 debug messages>
+
+2.20.20. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \P16C5x.
+Performed a total of 0 changes.
+
+2.20.21. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\P16C5x'.
+Removed a total of 0 cells.
+
+2.20.22. Executing OPT_SHARE pass.
+
+2.20.23. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.20.24. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \P16C5x..
+
+2.20.25. Executing OPT_EXPR pass (perform const folding).
+Optimizing module P16C5x.
+
+2.20.26. Finished OPT passes. (There is nothing left to do.)
+
+2.21. Executing TECHMAP pass (map to technology primitives).
+
+2.21.1. Executing Verilog-2005 frontend: /usr/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/usr/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+2.21.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $dffe.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $or.
+Using extmapper simplemap for cells of type $eq.
+Using extmapper simplemap for cells of type $reduce_and.
+Using extmapper simplemap for cells of type $adffe.
+Using extmapper simplemap for cells of type $reduce_bool.
+Using extmapper simplemap for cells of type $logic_not.
+Using template $paramod$ce0ec84be7047712840b0952f343ee9e63ef75d1\_90_alu for cells of type $alu.
+Using template $paramod$8f780356cb6cdb52f6a744190131b65634639c4e\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $reduce_or.
+Using template $paramod$c3cd1564c35d873179656addd6052d7ea8b6d991\_90_alu for cells of type $alu.
+Using template $paramod$b85fbb3374a1d9ba7ee4f4d6323c30f939df3ada\_90_alu for cells of type $alu.
+Using template $paramod$bf541dd3c0ba8228982b61e7bfbc350a2c253f4c\_90_pmux for cells of type $pmux.
+Using extmapper simplemap for cells of type $sdff.
+Using template $paramod$f42569e367821ad1b7d52f2d157a44ce80c766dc\_90_pmux for cells of type $pmux.
+Using extmapper simplemap for cells of type $sdffe.
+Using template $paramod$645fe0cc96ae5edb83bff90cc2c78f4a20ca3e3c\_90_pmux for cells of type $pmux.
+Using extmapper simplemap for cells of type $xor.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000010100 for cells of type $lcu.
+Using extmapper simplemap for cells of type $pos.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000001100 for cells of type $lcu.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000001000 for cells of type $lcu.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000000101 for cells of type $lcu.
+No more expansions possible.
+<suppressed ~1545 debug messages>
+
+2.22. Executing OPT pass (performing simple optimizations).
+
+2.22.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module P16C5x.
+<suppressed ~395 debug messages>
+
+2.22.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\P16C5x'.
+<suppressed ~360 debug messages>
+Removed a total of 120 cells.
+
+2.22.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.22.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \P16C5x..
+Removed 53 unused cells and 596 unused wires.
+<suppressed ~54 debug messages>
+
+2.22.5. Finished fast OPT passes.
+
+2.23. Executing ABC pass (technology mapping using ABC).
+
+2.23.1. Extracting gate netlist of module `\P16C5x' to `<abc-temp-dir>/input.blif'..
+Extracted 1728 gates and 2487 wires to a netlist network with 757 inputs and 230 outputs.
+
+2.23.1.1. Executing ABC.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 13 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+2.23.1.2. Re-integrating ABC results.
+ABC RESULTS:              XNOR cells:        2
+ABC RESULTS:               NOT cells:       76
+ABC RESULTS:               MUX cells:      739
+ABC RESULTS:               NOR cells:       23
+ABC RESULTS:             ORNOT cells:       56
+ABC RESULTS:               AND cells:       57
+ABC RESULTS:               XOR cells:       75
+ABC RESULTS:              NAND cells:       42
+ABC RESULTS:                OR cells:      254
+ABC RESULTS:            ANDNOT cells:      359
+ABC RESULTS:        internal signals:     1500
+ABC RESULTS:           input signals:      757
+ABC RESULTS:          output signals:      230
+Removing temp directory.
+
+2.24. Executing OPT pass (performing simple optimizations).
+
+2.24.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module P16C5x.
+<suppressed ~232 debug messages>
+
+2.24.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\P16C5x'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+2.24.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.24.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \P16C5x..
+Removed 3 unused cells and 1426 unused wires.
+<suppressed ~36 debug messages>
+
+2.24.5. Finished fast OPT passes.
+
+2.25. Executing HIERARCHY pass (managing design hierarchy).
+
+2.25.1. Analyzing design hierarchy..
+Top module:  \P16C5x
+
+2.25.2. Analyzing design hierarchy..
+Top module:  \P16C5x
+Removed 0 unused modules.
+
+2.26. Printing statistics.
+
+=== P16C5x ===
+
+   Number of wires:               1792
+   Number of wire bits:           2684
+   Number of public wires:         187
+   Number of public wire bits:    1001
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               2426
+     $_ANDNOT_                     359
+     $_AND_                         57
+     $_DFFE_PP1P_                    1
+     $_DFFE_PP_                    576
+     $_MUX_                        739
+     $_NAND_                        41
+     $_NOR_                         23
+     $_NOT_                         73
+     $_ORNOT_                       56
+     $_OR_                         254
+     $_SDFFE_PP0P_                 108
+     $_SDFFE_PP1P_                  39
+     $_SDFF_PN0_                     4
+     $_SDFF_PP0_                    19
+     $_XNOR_                         2
+     $_XOR_                         75
+
+2.27. Executing CHECK pass (checking for obvious problems).
+Checking module P16C5x...
+Found and reported 0 problems.
+
+3. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+  cell sky130_fd_sc_hd__dfxtp_1 (noninv, pins=3, area=20.02) is a direct match for cell type $_DFF_P_.
+  cell sky130_fd_sc_hd__dfrtn_1 (noninv, pins=4, area=25.02) is a direct match for cell type $_DFF_NN0_.
+  cell sky130_fd_sc_hd__dfrtp_1 (noninv, pins=4, area=25.02) is a direct match for cell type $_DFF_PN0_.
+  cell sky130_fd_sc_hd__dfstp_1 (noninv, pins=4, area=26.28) is a direct match for cell type $_DFF_PN1_.
+  cell sky130_fd_sc_hd__dfbbn_1 (noninv, pins=6, area=32.53) is a direct match for cell type $_DFFSR_NNN_.
+  cell sky130_fd_sc_hd__dfbbp_1 (noninv, pins=6, area=32.53) is a direct match for cell type $_DFFSR_PNN_.
+  final dff cell mappings:
+    unmapped dff cell: $_DFF_N_
+    \sky130_fd_sc_hd__dfxtp_1 _DFF_P_ (.CLK( C), .D( D), .Q( Q));
+    \sky130_fd_sc_hd__dfrtn_1 _DFF_NN0_ (.CLK_N( C), .D( D), .Q( Q), .RESET_B( R));
+    unmapped dff cell: $_DFF_NN1_
+    unmapped dff cell: $_DFF_NP0_
+    unmapped dff cell: $_DFF_NP1_
+    \sky130_fd_sc_hd__dfrtp_1 _DFF_PN0_ (.CLK( C), .D( D), .Q( Q), .RESET_B( R));
+    \sky130_fd_sc_hd__dfstp_1 _DFF_PN1_ (.CLK( C), .D( D), .Q( Q), .SET_B( R));
+    unmapped dff cell: $_DFF_PP0_
+    unmapped dff cell: $_DFF_PP1_
+    \sky130_fd_sc_hd__dfbbn_1 _DFFSR_NNN_ (.CLK_N( C), .D( D), .Q( Q), .Q_N(~Q), .RESET_B( R), .SET_B( S));
+    unmapped dff cell: $_DFFSR_NNP_
+    unmapped dff cell: $_DFFSR_NPN_
+    unmapped dff cell: $_DFFSR_NPP_
+    \sky130_fd_sc_hd__dfbbp_1 _DFFSR_PNN_ (.CLK( C), .D( D), .Q( Q), .Q_N(~Q), .RESET_B( R), .SET_B( S));
+    unmapped dff cell: $_DFFSR_PNP_
+    unmapped dff cell: $_DFFSR_PPN_
+    unmapped dff cell: $_DFFSR_PPP_
+
+3.1. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+Mapping DFF cells in module `\P16C5x':
+  mapped 1 $_DFF_PN1_ cells to \sky130_fd_sc_hd__dfstp_1 cells.
+  mapped 746 $_DFF_P_ cells to \sky130_fd_sc_hd__dfxtp_1 cells.
+
+4. Executing ABC pass (technology mapping using ABC).
+
+4.1. Extracting gate netlist of module `\P16C5x' to `<abc-temp-dir>/input.blif'..
+Extracted 2574 gates and 3348 wires to a netlist network with 772 inputs and 782 outputs.
+
+4.1.1. Executing ABC.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_lib -w /Users/ziadtaher/dd2/DD2_Project1_student_pack/given/hd_reduced.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.04 sec
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfsbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxbn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtp_1".
+ABC: Library "sky130_fd_sc_hd__tt_025C_1v80" from "/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/hd_reduced.lib" has 172 cells (17 skipped: 17 seq; 0 tri-state; 0 no func; 0 dont_use).  Time =     0.05 sec
+ABC: Memory =    9.94 MB. Time =     0.05 sec
+ABC: Warning: Detected 2 multi-output gates (for example, "sky130_fd_sc_hd__fa_1").
+ABC: + strash 
+ABC: + dch -f 
+ABC: + amap 
+ABC: + topo 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+4.1.2. Re-integrating ABC results.
+ABC RESULTS:   sky130_fd_sc_hd__a32o_1 cells:       74
+ABC RESULTS:   sky130_fd_sc_hd__a221o_1 cells:       64
+ABC RESULTS:   sky130_fd_sc_hd__a222oi_1 cells:      102
+ABC RESULTS:   sky130_fd_sc_hd__nand4b_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a22o_1 cells:       15
+ABC RESULTS:   sky130_fd_sc_hd__o311ai_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__nand2b_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__and2_1 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__o21bai_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__o31ai_1 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__o41ai_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__o2111a_1 cells:        6
+ABC RESULTS:   sky130_fd_sc_hd__nor3b_1 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__nor2b_1 cells:        5
+ABC RESULTS:   sky130_fd_sc_hd__nand4_1 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__o211a_1 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__nor4b_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__o221a_1 cells:        6
+ABC RESULTS:   sky130_fd_sc_hd__a2111oi_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__nand3_1 cells:      101
+ABC RESULTS:   sky130_fd_sc_hd__o211ai_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a221oi_1 cells:       31
+ABC RESULTS:   sky130_fd_sc_hd__o221ai_1 cells:       29
+ABC RESULTS:   sky130_fd_sc_hd__xnor2_1 cells:        6
+ABC RESULTS:   sky130_fd_sc_hd__a211oi_1 cells:       17
+ABC RESULTS:   sky130_fd_sc_hd__or2_1 cells:       12
+ABC RESULTS:   sky130_fd_sc_hd__or3_1 cells:       12
+ABC RESULTS:   sky130_fd_sc_hd__a32oi_1 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__o32a_1 cells:        4
+ABC RESULTS:   sky130_fd_sc_hd__a311oi_1 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__o21a_1 cells:        7
+ABC RESULTS:   sky130_fd_sc_hd__o2111ai_1 cells:        5
+ABC RESULTS:   sky130_fd_sc_hd__o22ai_1 cells:       98
+ABC RESULTS:   sky130_fd_sc_hd__nor3_1 cells:       39
+ABC RESULTS:   sky130_fd_sc_hd__nor4_1 cells:        9
+ABC RESULTS:   sky130_fd_sc_hd__o21ai_1 cells:       80
+ABC RESULTS:   sky130_fd_sc_hd__inv_1 cells:      156
+ABC RESULTS:   sky130_fd_sc_hd__nand2_1 cells:       70
+ABC RESULTS:   sky130_fd_sc_hd__a31oi_1 cells:       40
+ABC RESULTS:   sky130_fd_sc_hd__a22oi_1 cells:       66
+ABC RESULTS:   sky130_fd_sc_hd__o22a_1 cells:        6
+ABC RESULTS:   sky130_fd_sc_hd__a21oi_1 cells:      671
+ABC RESULTS:   sky130_fd_sc_hd__nor2_1 cells:      879
+ABC RESULTS:        internal signals:     1794
+ABC RESULTS:           input signals:      772
+ABC RESULTS:          output signals:      782
+Removing temp directory.
+
+5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \P16C5x..
+Removed 0 unused cells and 3372 unused wires.
+<suppressed ~67 debug messages>
+
+6. Printing statistics.
+
+=== P16C5x ===
+
+   Number of wires:               2721
+   Number of wire bits:           3412
+   Number of public wires:         121
+   Number of public wire bits:     812
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               3381
+     sky130_fd_sc_hd__a2111oi_1      1
+     sky130_fd_sc_hd__a211oi_1      17
+     sky130_fd_sc_hd__a21oi_1      671
+     sky130_fd_sc_hd__a221o_1       64
+     sky130_fd_sc_hd__a221oi_1      31
+     sky130_fd_sc_hd__a222oi_1     102
+     sky130_fd_sc_hd__a22o_1        15
+     sky130_fd_sc_hd__a22oi_1       66
+     sky130_fd_sc_hd__a311oi_1       2
+     sky130_fd_sc_hd__a31oi_1       40
+     sky130_fd_sc_hd__a32o_1        74
+     sky130_fd_sc_hd__a32oi_1        2
+     sky130_fd_sc_hd__and2_1         2
+     sky130_fd_sc_hd__dfstp_1        1
+     sky130_fd_sc_hd__dfxtp_1      746
+     sky130_fd_sc_hd__inv_1        156
+     sky130_fd_sc_hd__nand2_1       70
+     sky130_fd_sc_hd__nand2b_1       1
+     sky130_fd_sc_hd__nand3_1      101
+     sky130_fd_sc_hd__nand4_1        3
+     sky130_fd_sc_hd__nand4b_1       1
+     sky130_fd_sc_hd__nor2_1       879
+     sky130_fd_sc_hd__nor2b_1        5
+     sky130_fd_sc_hd__nor3_1        39
+     sky130_fd_sc_hd__nor3b_1        2
+     sky130_fd_sc_hd__nor4_1         9
+     sky130_fd_sc_hd__nor4b_1        1
+     sky130_fd_sc_hd__o2111a_1       6
+     sky130_fd_sc_hd__o2111ai_1      5
+     sky130_fd_sc_hd__o211a_1        2
+     sky130_fd_sc_hd__o211ai_1       1
+     sky130_fd_sc_hd__o21a_1         7
+     sky130_fd_sc_hd__o21ai_1       80
+     sky130_fd_sc_hd__o21bai_1       1
+     sky130_fd_sc_hd__o221a_1        6
+     sky130_fd_sc_hd__o221ai_1      29
+     sky130_fd_sc_hd__o22a_1         6
+     sky130_fd_sc_hd__o22ai_1       98
+     sky130_fd_sc_hd__o311ai_1       1
+     sky130_fd_sc_hd__o31ai_1        3
+     sky130_fd_sc_hd__o32a_1         4
+     sky130_fd_sc_hd__o41ai_1        1
+     sky130_fd_sc_hd__or2_1         12
+     sky130_fd_sc_hd__or3_1         12
+     sky130_fd_sc_hd__xnor2_1        6
+
+   Chip area for module '\P16C5x': 28917.734400
+
+7. Executing Verilog backend.
+
+7.1. Executing BMUXMAP pass.
+
+7.2. Executing DEMUXMAP pass.
+Dumping module `\P16C5x'.
+
+Warnings: 23 unique messages, 24 total
+End of script. Logfile hash: 4cda2ddf8e, CPU: user 0.90s system 0.01s, MEM: 30.58 MB peak
+Yosys 0.33 (git sha1 2584903a060)
+Time spent: 49% 2x abc (0 sec), 10% 26x opt_expr (0 sec), ...

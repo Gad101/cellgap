@@ -1,0 +1,47 @@
+{
+ "group": "gb2",
+ "designs": [
+  "p16c5x"
+ ],
+ "area_per_and_um2": {
+  "p16c5x": 1.709
+ },
+ "area_per_and_source": {
+  "p16c5x": "table1 logs"
+ },
+ "candidates": [
+  {
+   "request_id": "C-001",
+   "name": "dd2_gb2__f07ff_1",
+   "inputs": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "output": "Y",
+   "expression": "!((D & (C | (A & B))))",
+   "truth_table": "0x07FF",
+   "sizing": "hd",
+   "estimated_area_um2": 7.5072,
+   "rank": 1,
+   "class_table": "0x07FF",
+   "cost": {
+    "transistors": 8,
+    "stages": 1,
+    "inverters": 0
+   },
+   "estimated_saving_um2": 72.63,
+   "cuts_in_designs": 71,
+   "and_nodes_replaced": 350,
+   "per_design": {
+    "p16c5x": {
+     "cuts": 71,
+     "used": 70,
+     "and_nodes_replaced": 350,
+     "saving_um2": 72.63
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,1566 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.33 (git sha1 2584903a060)
+
+
+-- Executing script file `/Users/ziadtaher/cellgap/results/logs/mapping/pic16_baseline_B.ys' --
+
+1. Executing Verilog-2005 frontend: /Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v
+Parsing Verilog input from `/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v' to AST representation.
+Generating RTLIL representation for module `\PIC16C5x'.
+/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:823: Warning: Identifier `\Ld_PCL' is implicitly declared.
+/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:930: Warning: Identifier `\WE_RAMA' is implicitly declared.
+/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:931: Warning: Identifier `\WE_RAMB' is implicitly declared.
+/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:932: Warning: Identifier `\WE_RAMC' is implicitly declared.
+/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:933: Warning: Identifier `\WE_RAMD' is implicitly declared.
+/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:934: Warning: Identifier `\WE_RAME' is implicitly declared.
+Note: Assuming pure combinatorial block at /Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:947.1-955.4 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:978: Warning: Identifier `\PA_DO' is implicitly declared.
+/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:979: Warning: Identifier `\PB_DO' is implicitly declared.
+/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:980: Warning: Identifier `\PC_DO' is implicitly declared.
+/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1020: Warning: Identifier `\WDT_Rst' is implicitly declared.
+/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1075: Warning: Identifier `\Tmr0_CS' is implicitly declared.
+/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1081: Warning: Identifier `\Rst_PSC' is implicitly declared.
+/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1082: Warning: Identifier `\CE_PSCntr' is implicitly declared.
+/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1126: Warning: Identifier `\CE_Tmr0' is implicitly declared.
+Successfully finished Verilog frontend.
+
+2. Executing SYNTH pass.
+
+2.1. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1.1. Analyzing design hierarchy..
+Top module:  \PIC16C5x
+
+2.1.2. Analyzing design hierarchy..
+Top module:  \PIC16C5x
+Removed 0 unused modules.
+
+2.2. Executing PROC pass (convert processes to netlists).
+
+2.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+2.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 2 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1128$305 in module PIC16C5x.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1110$301 in module PIC16C5x.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1094$300 in module PIC16C5x.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1084$298 in module PIC16C5x.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1059$288 in module PIC16C5x.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1032$285 in module PIC16C5x.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1022$283 in module PIC16C5x.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:988$272 in module PIC16C5x.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:961$263 in module PIC16C5x.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:947$258 in module PIC16C5x.
+Marked 6 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:936$212 in module PIC16C5x.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:917$192 in module PIC16C5x.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:905$191 in module PIC16C5x.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:890$187 in module PIC16C5x.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:876$180 in module PIC16C5x.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:857$179 in module PIC16C5x.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:845$177 in module PIC16C5x.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:837$174 in module PIC16C5x.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:825$168 in module PIC16C5x.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:756$135 in module PIC16C5x.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:742$126 in module PIC16C5x.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:730$122 in module PIC16C5x.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:717$118 in module PIC16C5x.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:703$116 in module PIC16C5x.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:680$105 in module PIC16C5x.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:664$104 in module PIC16C5x.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:650$99 in module PIC16C5x.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:551$88 in module PIC16C5x.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:541$86 in module PIC16C5x.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:531$84 in module PIC16C5x.
+Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:517$82 in module PIC16C5x.
+Removed a total of 0 dead cases.
+
+2.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 11 redundant assignments.
+Promoted 16 assignments to connections.
+
+2.2.4. Executing PROC_INIT pass (extract init attributes).
+
+2.2.5. Executing PROC_ARST pass (detect async resets in processes).
+
+2.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 1 switch.
+<suppressed ~64 debug messages>
+
+2.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1128$305'.
+     1/1: $0\TMR0[7:0]
+Creating decoders for process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1110$301'.
+     1/2: $0\dPSC_Out[1:0] [1]
+     2/2: $0\dPSC_Out[1:0] [0]
+Creating decoders for process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1094$300'.
+     1/1: $0\PSC_Out[0:0]
+Creating decoders for process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1084$298'.
+     1/1: $0\PSCntr[7:0]
+Creating decoders for process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1059$288'.
+     1/3: $0\dT0CKI[2:0] [2]
+     2/3: $0\dT0CKI[2:0] [1]
+     3/3: $0\dT0CKI[2:0] [0]
+Creating decoders for process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1032$285'.
+     1/1: $0\WDT_TC[0:0]
+Creating decoders for process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1022$283'.
+     1/1: $0\WDT[19:0]
+Creating decoders for process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:988$272'.
+     1/1: $0\SFR[7:0]
+Creating decoders for process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:961$263'.
+     1/5: $0\PA[2:0]
+     2/5: $0\FSR[7:0]
+     3/5: $0\PORTC[7:0]
+     4/5: $0\PORTB[7:0]
+     5/5: $0\PORTA[3:0]
+Creating decoders for process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:947$258'.
+     1/1: $0\XDO[7:0]
+Creating decoders for process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:936$212'.
+     1/30: $2$memwr$\RAME$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:943$5_EN[7:0]$257
+     2/30: $2$memwr$\RAME$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:943$5_DATA[7:0]$256
+     3/30: $2$memwr$\RAME$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:943$5_ADDR[3:0]$255
+     4/30: $2$memwr$\RAMD$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:942$4_EN[7:0]$254
+     5/30: $2$memwr$\RAMD$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:942$4_DATA[7:0]$253
+     6/30: $2$memwr$\RAMD$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:942$4_ADDR[3:0]$252
+     7/30: $2$memwr$\RAMC$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:941$3_EN[7:0]$251
+     8/30: $2$memwr$\RAMC$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:941$3_DATA[7:0]$250
+     9/30: $2$memwr$\RAMC$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:941$3_ADDR[3:0]$249
+    10/30: $2$memwr$\RAMB$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:940$2_EN[7:0]$248
+    11/30: $2$memwr$\RAMB$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:940$2_DATA[7:0]$247
+    12/30: $2$memwr$\RAMB$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:940$2_ADDR[3:0]$246
+    13/30: $2$memwr$\RAMA$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:939$1_EN[7:0]$245
+    14/30: $2$memwr$\RAMA$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:939$1_DATA[7:0]$244
+    15/30: $2$memwr$\RAMA$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:939$1_ADDR[3:0]$243
+    16/30: $1$memwr$\RAME$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:943$5_EN[7:0]$242
+    17/30: $1$memwr$\RAME$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:943$5_DATA[7:0]$241
+    18/30: $1$memwr$\RAME$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:943$5_ADDR[3:0]$240
+    19/30: $1$memwr$\RAMD$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:942$4_EN[7:0]$239
+    20/30: $1$memwr$\RAMD$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:942$4_DATA[7:0]$238
+    21/30: $1$memwr$\RAMD$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:942$4_ADDR[3:0]$237
+    22/30: $1$memwr$\RAMC$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:941$3_EN[7:0]$236
+    23/30: $1$memwr$\RAMC$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:941$3_DATA[7:0]$235
+    24/30: $1$memwr$\RAMC$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:941$3_ADDR[3:0]$234
+    25/30: $1$memwr$\RAMB$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:940$2_EN[7:0]$233
+    26/30: $1$memwr$\RAMB$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:940$2_DATA[7:0]$232
+    27/30: $1$memwr$\RAMB$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:940$2_ADDR[3:0]$231
+    28/30: $1$memwr$\RAMA$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:939$1_EN[7:0]$230
+    29/30: $1$memwr$\RAMA$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:939$1_DATA[7:0]$229
+    30/30: $1$memwr$\RAMA$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:939$1_ADDR[3:0]$228
+Creating decoders for process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:917$192'.
+     1/1: $0\PwrDn[0:0]
+Creating decoders for process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:905$191'.
+     1/1: $0\PD[0:0]
+Creating decoders for process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:890$187'.
+     1/1: $0\TO[0:0]
+Creating decoders for process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:876$180'.
+     1/1: $0\WDTClr[0:0]
+Creating decoders for process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:857$179'.
+     1/4: $0\OPTION[5:0]
+     2/4: $0\TRISC[7:0]
+     3/4: $0\TRISB[7:0]
+     4/4: $0\TRISA[3:0]
+Creating decoders for process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:845$177'.
+     1/1: $0\NOS[11:0]
+Creating decoders for process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:837$174'.
+     1/1: $0\TOS[11:0]
+Creating decoders for process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:825$168'.
+     1/1: $0\PC[11:0]
+Creating decoders for process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:783$138'.
+Creating decoders for process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:756$135'.
+     1/1: $0\C[0:0]
+Creating decoders for process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:742$126'.
+     1/1: $0\DC[0:0]
+Creating decoders for process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:730$122'.
+     1/1: $0\Z[0:0]
+Creating decoders for process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:717$118'.
+     1/1: $0\W[7:0]
+Creating decoders for process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:703$116'.
+     1/1: $0\DO[7:0]
+Creating decoders for process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:680$105'.
+     1/1: $0\Msk[7:0]
+Creating decoders for process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:664$104'.
+     1/1: $0\S[7:0]
+Creating decoders for process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:650$99'.
+     1/1: $0\V[7:0]
+Creating decoders for process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:551$88'.
+     1/1: $0\Err[0:0]
+Creating decoders for process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:541$86'.
+     1/1: $0\KI[8:0]
+Creating decoders for process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:531$84'.
+     1/1: $0\ALU_Op[11:0]
+Creating decoders for process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:517$82'.
+     1/1: $0\dIR[8:0]
+
+2.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\PIC16C5x.\PSC_Out' from process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1094$300'.
+No latch inferred for signal `\PIC16C5x.\SFR' from process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:988$272'.
+No latch inferred for signal `\PIC16C5x.\XDO' from process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:947$258'.
+No latch inferred for signal `\PIC16C5x.\Skip' from process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:783$138'.
+No latch inferred for signal `\PIC16C5x.\DO' from process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:703$116'.
+No latch inferred for signal `\PIC16C5x.\Msk' from process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:680$105'.
+No latch inferred for signal `\PIC16C5x.\S' from process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:664$104'.
+No latch inferred for signal `\PIC16C5x.\V' from process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:650$99'.
+
+2.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\PIC16C5x.\TMR0' using process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1128$305'.
+  created $dff cell `$procdff$657' with positive edge clock.
+Creating register for signal `\PIC16C5x.\dPSC_Out' using process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1110$301'.
+  created $dff cell `$procdff$658' with positive edge clock.
+Creating register for signal `\PIC16C5x.\PSCntr' using process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1084$298'.
+  created $dff cell `$procdff$659' with positive edge clock.
+Creating register for signal `\PIC16C5x.\dT0CKI' using process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1059$288'.
+  created $dff cell `$procdff$660' with positive edge clock.
+Creating register for signal `\PIC16C5x.\WDT_TC' using process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1032$285'.
+  created $dff cell `$procdff$661' with positive edge clock.
+Creating register for signal `\PIC16C5x.\WDT' using process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1022$283'.
+  created $dff cell `$procdff$662' with positive edge clock.
+Creating register for signal `\PIC16C5x.\PORTA' using process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:961$263'.
+  created $dff cell `$procdff$663' with positive edge clock.
+Creating register for signal `\PIC16C5x.\PORTB' using process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:961$263'.
+  created $dff cell `$procdff$664' with positive edge clock.
+Creating register for signal `\PIC16C5x.\PORTC' using process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:961$263'.
+  created $dff cell `$procdff$665' with positive edge clock.
+Creating register for signal `\PIC16C5x.\FSR' using process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:961$263'.
+  created $dff cell `$procdff$666' with positive edge clock.
+Creating register for signal `\PIC16C5x.\PA' using process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:961$263'.
+  created $dff cell `$procdff$667' with positive edge clock.
+Creating register for signal `\PIC16C5x.$memwr$\RAMA$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:939$1_ADDR' using process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:936$212'.
+  created $dff cell `$procdff$668' with positive edge clock.
+Creating register for signal `\PIC16C5x.$memwr$\RAMA$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:939$1_DATA' using process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:936$212'.
+  created $dff cell `$procdff$669' with positive edge clock.
+Creating register for signal `\PIC16C5x.$memwr$\RAMA$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:939$1_EN' using process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:936$212'.
+  created $dff cell `$procdff$670' with positive edge clock.
+Creating register for signal `\PIC16C5x.$memwr$\RAMB$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:940$2_ADDR' using process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:936$212'.
+  created $dff cell `$procdff$671' with positive edge clock.
+Creating register for signal `\PIC16C5x.$memwr$\RAMB$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:940$2_DATA' using process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:936$212'.
+  created $dff cell `$procdff$672' with positive edge clock.
+Creating register for signal `\PIC16C5x.$memwr$\RAMB$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:940$2_EN' using process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:936$212'.
+  created $dff cell `$procdff$673' with positive edge clock.
+Creating register for signal `\PIC16C5x.$memwr$\RAMC$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:941$3_ADDR' using process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:936$212'.
+  created $dff cell `$procdff$674' with positive edge clock.
+Creating register for signal `\PIC16C5x.$memwr$\RAMC$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:941$3_DATA' using process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:936$212'.
+  created $dff cell `$procdff$675' with positive edge clock.
+Creating register for signal `\PIC16C5x.$memwr$\RAMC$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:941$3_EN' using process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:936$212'.
+  created $dff cell `$procdff$676' with positive edge clock.
+Creating register for signal `\PIC16C5x.$memwr$\RAMD$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:942$4_ADDR' using process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:936$212'.
+  created $dff cell `$procdff$677' with positive edge clock.
+Creating register for signal `\PIC16C5x.$memwr$\RAMD$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:942$4_DATA' using process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:936$212'.
+  created $dff cell `$procdff$678' with positive edge clock.
+Creating register for signal `\PIC16C5x.$memwr$\RAMD$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:942$4_EN' using process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:936$212'.
+  created $dff cell `$procdff$679' with positive edge clock.
+Creating register for signal `\PIC16C5x.$memwr$\RAME$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:943$5_ADDR' using process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:936$212'.
+  created $dff cell `$procdff$680' with positive edge clock.
+Creating register for signal `\PIC16C5x.$memwr$\RAME$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:943$5_DATA' using process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:936$212'.
+  created $dff cell `$procdff$681' with positive edge clock.
+Creating register for signal `\PIC16C5x.$memwr$\RAME$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:943$5_EN' using process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:936$212'.
+  created $dff cell `$procdff$682' with positive edge clock.
+Creating register for signal `\PIC16C5x.\PwrDn' using process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:917$192'.
+  created $dff cell `$procdff$683' with positive edge clock.
+Creating register for signal `\PIC16C5x.\PD' using process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:905$191'.
+  created $dff cell `$procdff$684' with positive edge clock.
+Creating register for signal `\PIC16C5x.\TO' using process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:890$187'.
+  created $dff cell `$procdff$685' with positive edge clock.
+Creating register for signal `\PIC16C5x.\WDTClr' using process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:876$180'.
+  created $dff cell `$procdff$686' with positive edge clock.
+Creating register for signal `\PIC16C5x.\TRISA' using process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:857$179'.
+  created $dff cell `$procdff$687' with positive edge clock.
+Creating register for signal `\PIC16C5x.\TRISB' using process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:857$179'.
+  created $dff cell `$procdff$688' with positive edge clock.
+Creating register for signal `\PIC16C5x.\TRISC' using process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:857$179'.
+  created $dff cell `$procdff$689' with positive edge clock.
+Creating register for signal `\PIC16C5x.\OPTION' using process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:857$179'.
+  created $dff cell `$procdff$690' with positive edge clock.
+Creating register for signal `\PIC16C5x.\NOS' using process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:845$177'.
+  created $dff cell `$procdff$691' with positive edge clock.
+Creating register for signal `\PIC16C5x.\TOS' using process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:837$174'.
+  created $dff cell `$procdff$692' with positive edge clock.
+Creating register for signal `\PIC16C5x.\PC' using process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:825$168'.
+  created $dff cell `$procdff$693' with positive edge clock.
+Creating register for signal `\PIC16C5x.\C' using process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:756$135'.
+  created $dff cell `$procdff$694' with positive edge clock.
+Creating register for signal `\PIC16C5x.\DC' using process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:742$126'.
+  created $dff cell `$procdff$695' with positive edge clock.
+Creating register for signal `\PIC16C5x.\Z' using process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:730$122'.
+  created $dff cell `$procdff$696' with positive edge clock.
+Creating register for signal `\PIC16C5x.\W' using process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:717$118'.
+  created $dff cell `$procdff$697' with positive edge clock.
+Creating register for signal `\PIC16C5x.\Err' using process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:551$88'.
+  created $dff cell `$procdff$698' with positive edge clock.
+Creating register for signal `\PIC16C5x.\KI' using process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:541$86'.
+  created $dff cell `$procdff$699' with positive edge clock.
+Creating register for signal `\PIC16C5x.\ALU_Op' using process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:531$84'.
+  created $dff cell `$procdff$700' with positive edge clock.
+Creating register for signal `\PIC16C5x.\dIR' using process `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:517$82'.
+  created $dff cell `$procdff$701' with positive edge clock.
+
+2.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+2.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 3 empty switches in `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1128$305'.
+Removing empty process `PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1128$305'.
+Found and cleaned up 1 empty switch in `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1110$301'.
+Removing empty process `PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1110$301'.
+Found and cleaned up 1 empty switch in `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1094$300'.
+Removing empty process `PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1094$300'.
+Found and cleaned up 2 empty switches in `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1084$298'.
+Removing empty process `PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1084$298'.
+Found and cleaned up 1 empty switch in `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1059$288'.
+Removing empty process `PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1059$288'.
+Found and cleaned up 1 empty switch in `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1032$285'.
+Removing empty process `PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1032$285'.
+Found and cleaned up 2 empty switches in `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1022$283'.
+Removing empty process `PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1022$283'.
+Found and cleaned up 1 empty switch in `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:988$272'.
+Removing empty process `PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:988$272'.
+Found and cleaned up 7 empty switches in `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:961$263'.
+Removing empty process `PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:961$263'.
+Found and cleaned up 1 empty switch in `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:947$258'.
+Removing empty process `PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:947$258'.
+Found and cleaned up 6 empty switches in `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:936$212'.
+Removing empty process `PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:936$212'.
+Found and cleaned up 2 empty switches in `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:917$192'.
+Removing empty process `PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:917$192'.
+Found and cleaned up 2 empty switches in `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:905$191'.
+Removing empty process `PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:905$191'.
+Found and cleaned up 2 empty switches in `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:890$187'.
+Removing empty process `PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:890$187'.
+Found and cleaned up 1 empty switch in `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:876$180'.
+Removing empty process `PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:876$180'.
+Found and cleaned up 6 empty switches in `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:857$179'.
+Removing empty process `PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:857$179'.
+Found and cleaned up 2 empty switches in `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:845$177'.
+Removing empty process `PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:845$177'.
+Found and cleaned up 2 empty switches in `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:837$174'.
+Removing empty process `PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:837$174'.
+Found and cleaned up 2 empty switches in `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:825$168'.
+Removing empty process `PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:825$168'.
+Removing empty process `PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:783$138'.
+Found and cleaned up 2 empty switches in `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:756$135'.
+Removing empty process `PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:756$135'.
+Found and cleaned up 2 empty switches in `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:742$126'.
+Removing empty process `PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:742$126'.
+Found and cleaned up 2 empty switches in `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:730$122'.
+Removing empty process `PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:730$122'.
+Found and cleaned up 2 empty switches in `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:717$118'.
+Removing empty process `PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:717$118'.
+Found and cleaned up 1 empty switch in `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:703$116'.
+Removing empty process `PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:703$116'.
+Found and cleaned up 1 empty switch in `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:680$105'.
+Removing empty process `PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:680$105'.
+Found and cleaned up 1 empty switch in `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:664$104'.
+Removing empty process `PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:664$104'.
+Found and cleaned up 1 empty switch in `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:650$99'.
+Removing empty process `PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:650$99'.
+Found and cleaned up 2 empty switches in `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:551$88'.
+Removing empty process `PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:551$88'.
+Found and cleaned up 2 empty switches in `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:541$86'.
+Removing empty process `PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:541$86'.
+Found and cleaned up 2 empty switches in `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:531$84'.
+Removing empty process `PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:531$84'.
+Found and cleaned up 2 empty switches in `\PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:517$82'.
+Removing empty process `PIC16C5x.$proc$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:517$82'.
+Cleaned up 65 empty switches.
+
+2.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module PIC16C5x.
+<suppressed ~10 debug messages>
+
+2.3. Executing FLATTEN pass (flatten design).
+
+2.4. Executing OPT_EXPR pass (perform const folding).
+Optimizing module PIC16C5x.
+
+2.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \PIC16C5x..
+Removed 15 unused cells and 318 unused wires.
+<suppressed ~19 debug messages>
+
+2.6. Executing CHECK pass (checking for obvious problems).
+Checking module PIC16C5x...
+Found and reported 0 problems.
+
+2.7. Executing OPT pass (performing simple optimizations).
+
+2.7.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module PIC16C5x.
+
+2.7.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\PIC16C5x'.
+<suppressed ~48 debug messages>
+Removed a total of 16 cells.
+
+2.7.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \PIC16C5x..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+      Replacing known input bits on port A of cell $ternary$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:793$147: { 3'000 \KI [4:0] } -> { 4'0000 \KI [3:0] }
+      Replacing known input bits on port B of cell $ternary$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:793$147: { 1'0 \FSR [6:5] \KI [4:0] } -> { 1'0 \FSR [6:5] 1'1 \KI [3:0] }
+  Analyzing evaluation results.
+    dead port 2/2 on $mux $procmux$409.
+    dead port 2/2 on $mux $procmux$415.
+    dead port 2/2 on $mux $procmux$421.
+    dead port 2/2 on $mux $procmux$427.
+    dead port 2/2 on $mux $procmux$433.
+    dead port 2/2 on $mux $procmux$439.
+    dead port 2/2 on $mux $procmux$445.
+    dead port 2/2 on $mux $procmux$451.
+    dead port 2/2 on $mux $procmux$457.
+    dead port 2/2 on $mux $procmux$463.
+    dead port 2/2 on $mux $procmux$469.
+    dead port 2/2 on $mux $procmux$475.
+    dead port 2/2 on $mux $procmux$481.
+    dead port 2/2 on $mux $procmux$487.
+    dead port 2/2 on $mux $procmux$493.
+    dead port 2/2 on $mux $ternary$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:697$115.
+Removed 16 multiplexer ports.
+<suppressed ~61 debug messages>
+
+2.7.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \PIC16C5x.
+    New input vector for $reduce_or cell $reduce_or$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:490$64: { $and$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:490$63_Y \dXORLW \dANDLW \dIORLW \dMOVLW \dRETLW \dCLRW }
+    New input vector for $reduce_or cell $reduce_or$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:485$52: { \dBTFSS \dBTFSC \dBSF \dBCF \dINCFSZ \dSWAPF \dRLF \dRRF \dDECFSZ \dINCF \dCOMF \dMOVF \dADDWF \dXORWF \dANDWF \dIORWF \dDECF \dSUBWF \dCLRF \dMOVWF }
+    New input vector for $reduce_or cell $reduce_or$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:489$59: { $and$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:489$58_Y \dBTFSS \dBTFSC \dBSF \dBCF \dCLRF \dMOVWF }
+    Consolidated identical input bits for $mux cell $procmux$407:
+      Old ports: A=8'00000000, B=8'11111111, Y=$procmux$407_Y
+      New ports: A=1'0, B=1'1, Y=$procmux$407_Y [0]
+      New connections: $procmux$407_Y [7:1] = { $procmux$407_Y [0] $procmux$407_Y [0] $procmux$407_Y [0] $procmux$407_Y [0] $procmux$407_Y [0] $procmux$407_Y [0] $procmux$407_Y [0] }
+    Consolidated identical input bits for $mux cell $procmux$425:
+      Old ports: A=8'00000000, B=8'11111111, Y=$procmux$425_Y
+      New ports: A=1'0, B=1'1, Y=$procmux$425_Y [0]
+      New connections: $procmux$425_Y [7:1] = { $procmux$425_Y [0] $procmux$425_Y [0] $procmux$425_Y [0] $procmux$425_Y [0] $procmux$425_Y [0] $procmux$425_Y [0] $procmux$425_Y [0] }
+    Consolidated identical input bits for $mux cell $procmux$443:
+      Old ports: A=8'00000000, B=8'11111111, Y=$procmux$443_Y
+      New ports: A=1'0, B=1'1, Y=$procmux$443_Y [0]
+      New connections: $procmux$443_Y [7:1] = { $procmux$443_Y [0] $procmux$443_Y [0] $procmux$443_Y [0] $procmux$443_Y [0] $procmux$443_Y [0] $procmux$443_Y [0] $procmux$443_Y [0] }
+    Consolidated identical input bits for $mux cell $procmux$461:
+      Old ports: A=8'00000000, B=8'11111111, Y=$procmux$461_Y
+      New ports: A=1'0, B=1'1, Y=$procmux$461_Y [0]
+      New connections: $procmux$461_Y [7:1] = { $procmux$461_Y [0] $procmux$461_Y [0] $procmux$461_Y [0] $procmux$461_Y [0] $procmux$461_Y [0] $procmux$461_Y [0] $procmux$461_Y [0] }
+    Consolidated identical input bits for $mux cell $procmux$479:
+      Old ports: A=8'00000000, B=8'11111111, Y=$procmux$479_Y
+      New ports: A=1'0, B=1'1, Y=$procmux$479_Y [0]
+      New connections: $procmux$479_Y [7:1] = { $procmux$479_Y [0] $procmux$479_Y [0] $procmux$479_Y [0] $procmux$479_Y [0] $procmux$479_Y [0] $procmux$479_Y [0] $procmux$479_Y [0] }
+  Optimizing cells in module \PIC16C5x.
+    Consolidated identical input bits for $mux cell $procmux$496:
+      Old ports: A=8'00000000, B=$2$memwr$\RAME$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:943$5_EN[7:0]$257, Y=$0$memwr$\RAME$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:943$5_EN[7:0]$227
+      New ports: A=1'0, B=$procmux$407_Y [0], Y=$0$memwr$\RAME$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:943$5_EN[7:0]$227 [0]
+      New connections: $0$memwr$\RAME$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:943$5_EN[7:0]$227 [7:1] = { $0$memwr$\RAME$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:943$5_EN[7:0]$227 [0] $0$memwr$\RAME$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:943$5_EN[7:0]$227 [0] $0$memwr$\RAME$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:943$5_EN[7:0]$227 [0] $0$memwr$\RAME$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:943$5_EN[7:0]$227 [0] $0$memwr$\RAME$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:943$5_EN[7:0]$227 [0] $0$memwr$\RAME$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:943$5_EN[7:0]$227 [0] $0$memwr$\RAME$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:943$5_EN[7:0]$227 [0] }
+    Consolidated identical input bits for $mux cell $procmux$505:
+      Old ports: A=8'00000000, B=$2$memwr$\RAMD$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:942$4_EN[7:0]$254, Y=$0$memwr$\RAMD$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:942$4_EN[7:0]$224
+      New ports: A=1'0, B=$procmux$425_Y [0], Y=$0$memwr$\RAMD$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:942$4_EN[7:0]$224 [0]
+      New connections: $0$memwr$\RAMD$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:942$4_EN[7:0]$224 [7:1] = { $0$memwr$\RAMD$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:942$4_EN[7:0]$224 [0] $0$memwr$\RAMD$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:942$4_EN[7:0]$224 [0] $0$memwr$\RAMD$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:942$4_EN[7:0]$224 [0] $0$memwr$\RAMD$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:942$4_EN[7:0]$224 [0] $0$memwr$\RAMD$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:942$4_EN[7:0]$224 [0] $0$memwr$\RAMD$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:942$4_EN[7:0]$224 [0] $0$memwr$\RAMD$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:942$4_EN[7:0]$224 [0] }
+    Consolidated identical input bits for $mux cell $procmux$514:
+      Old ports: A=8'00000000, B=$2$memwr$\RAMC$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:941$3_EN[7:0]$251, Y=$0$memwr$\RAMC$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:941$3_EN[7:0]$221
+      New ports: A=1'0, B=$procmux$443_Y [0], Y=$0$memwr$\RAMC$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:941$3_EN[7:0]$221 [0]
+      New connections: $0$memwr$\RAMC$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:941$3_EN[7:0]$221 [7:1] = { $0$memwr$\RAMC$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:941$3_EN[7:0]$221 [0] $0$memwr$\RAMC$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:941$3_EN[7:0]$221 [0] $0$memwr$\RAMC$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:941$3_EN[7:0]$221 [0] $0$memwr$\RAMC$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:941$3_EN[7:0]$221 [0] $0$memwr$\RAMC$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:941$3_EN[7:0]$221 [0] $0$memwr$\RAMC$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:941$3_EN[7:0]$221 [0] $0$memwr$\RAMC$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:941$3_EN[7:0]$221 [0] }
+    Consolidated identical input bits for $mux cell $procmux$523:
+      Old ports: A=8'00000000, B=$2$memwr$\RAMB$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:940$2_EN[7:0]$248, Y=$0$memwr$\RAMB$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:940$2_EN[7:0]$218
+      New ports: A=1'0, B=$procmux$461_Y [0], Y=$0$memwr$\RAMB$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:940$2_EN[7:0]$218 [0]
+      New connections: $0$memwr$\RAMB$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:940$2_EN[7:0]$218 [7:1] = { $0$memwr$\RAMB$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:940$2_EN[7:0]$218 [0] $0$memwr$\RAMB$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:940$2_EN[7:0]$218 [0] $0$memwr$\RAMB$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:940$2_EN[7:0]$218 [0] $0$memwr$\RAMB$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:940$2_EN[7:0]$218 [0] $0$memwr$\RAMB$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:940$2_EN[7:0]$218 [0] $0$memwr$\RAMB$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:940$2_EN[7:0]$218 [0] $0$memwr$\RAMB$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:940$2_EN[7:0]$218 [0] }
+    Consolidated identical input bits for $mux cell $procmux$532:
+      Old ports: A=8'00000000, B=$2$memwr$\RAMA$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:939$1_EN[7:0]$245, Y=$0$memwr$\RAMA$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:939$1_EN[7:0]$215
+      New ports: A=1'0, B=$procmux$479_Y [0], Y=$0$memwr$\RAMA$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:939$1_EN[7:0]$215 [0]
+      New connections: $0$memwr$\RAMA$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:939$1_EN[7:0]$215 [7:1] = { $0$memwr$\RAMA$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:939$1_EN[7:0]$215 [0] $0$memwr$\RAMA$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:939$1_EN[7:0]$215 [0] $0$memwr$\RAMA$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:939$1_EN[7:0]$215 [0] $0$memwr$\RAMA$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:939$1_EN[7:0]$215 [0] $0$memwr$\RAMA$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:939$1_EN[7:0]$215 [0] $0$memwr$\RAMA$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:939$1_EN[7:0]$215 [0] $0$memwr$\RAMA$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:939$1_EN[7:0]$215 [0] }
+  Optimizing cells in module \PIC16C5x.
+Performed a total of 13 changes.
+
+2.7.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\PIC16C5x'.
+Removed a total of 0 cells.
+
+2.7.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.7.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \PIC16C5x..
+Removed 1 unused cells and 33 unused wires.
+<suppressed ~3 debug messages>
+
+2.7.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module PIC16C5x.
+
+2.7.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.7.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \PIC16C5x..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~61 debug messages>
+
+2.7.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \PIC16C5x.
+Performed a total of 0 changes.
+
+2.7.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\PIC16C5x'.
+Removed a total of 0 cells.
+
+2.7.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.7.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \PIC16C5x..
+
+2.7.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module PIC16C5x.
+
+2.7.16. Finished OPT passes. (There is nothing left to do.)
+
+2.8. Executing FSM pass (extract and optimize FSM).
+
+2.8.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+2.8.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+2.8.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+2.8.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \PIC16C5x..
+
+2.8.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+2.8.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+2.8.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+2.8.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+2.9. Executing OPT pass (performing simple optimizations).
+
+2.9.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module PIC16C5x.
+
+2.9.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\PIC16C5x'.
+Removed a total of 0 cells.
+
+2.9.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \PIC16C5x..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~61 debug messages>
+
+2.9.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \PIC16C5x.
+Performed a total of 0 changes.
+
+2.9.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\PIC16C5x'.
+Removed a total of 0 cells.
+
+2.9.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $procdff$701 ($dff) from module PIC16C5x (D = $procmux$652_Y, Q = \dIR, rval = 9'000000000).
+Adding EN signal on $auto$ff.cc:266:slice$707 ($sdff) from module PIC16C5x (D = $ternary$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:522$83_Y, Q = \dIR).
+Adding SRST signal on $procdff$700 ($dff) from module PIC16C5x (D = $procmux$647_Y, Q = \ALU_Op, rval = 12'000000000000).
+Adding EN signal on $auto$ff.cc:266:slice$709 ($sdff) from module PIC16C5x (D = $ternary$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:536$85_Y, Q = \ALU_Op).
+Adding SRST signal on $procdff$699 ($dff) from module PIC16C5x (D = $procmux$642_Y, Q = \KI, rval = 9'000000000).
+Adding EN signal on $auto$ff.cc:266:slice$711 ($sdff) from module PIC16C5x (D = \IR [8:0], Q = \KI).
+Adding SRST signal on $procdff$698 ($dff) from module PIC16C5x (D = $procmux$637_Y, Q = \Err, rval = 1'0).
+Adding EN signal on $auto$ff.cc:266:slice$717 ($sdff) from module PIC16C5x (D = \dErr, Q = \Err).
+Adding SRST signal on $procdff$697 ($dff) from module PIC16C5x (D = $procmux$616_Y, Q = \W, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:266:slice$719 ($sdff) from module PIC16C5x (D = \DO, Q = \W).
+Adding SRST signal on $procdff$696 ($dff) from module PIC16C5x (D = $procmux$611_Y, Q = \Z, rval = 1'0).
+Adding EN signal on $auto$ff.cc:266:slice$723 ($sdff) from module PIC16C5x (D = $ternary$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:735$124_Y, Q = \Z).
+Adding SRST signal on $procdff$695 ($dff) from module PIC16C5x (D = $procmux$606_Y, Q = \DC, rval = 1'0).
+Adding EN signal on $auto$ff.cc:266:slice$729 ($sdff) from module PIC16C5x (D = $ternary$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:747$128_Y, Q = \DC).
+Adding SRST signal on $procdff$694 ($dff) from module PIC16C5x (D = $procmux$601_Y, Q = \C, rval = 1'0).
+Adding EN signal on $auto$ff.cc:266:slice$735 ($sdff) from module PIC16C5x (D = $ternary$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:761$137_Y, Q = \C).
+Adding SRST signal on $procdff$693 ($dff) from module PIC16C5x (D = $procmux$596_Y, Q = \PC, rval = 12'111111111111).
+Adding EN signal on $auto$ff.cc:266:slice$741 ($sdff) from module PIC16C5x (D = $ternary$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:830$173_Y [11:0], Q = \PC).
+Adding SRST signal on $procdff$692 ($dff) from module PIC16C5x (D = $procmux$591_Y, Q = \TOS, rval = 12'000000000000).
+Adding EN signal on $auto$ff.cc:266:slice$743 ($sdff) from module PIC16C5x (D = $ternary$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:842$176_Y, Q = \TOS).
+Adding SRST signal on $procdff$691 ($dff) from module PIC16C5x (D = $procmux$586_Y, Q = \NOS, rval = 12'000000000000).
+Adding EN signal on $auto$ff.cc:266:slice$749 ($sdff) from module PIC16C5x (D = \TOS, Q = \NOS).
+Adding SRST signal on $procdff$690 ($dff) from module PIC16C5x (D = $procmux$560_Y, Q = \OPTION, rval = 6'111111).
+Adding EN signal on $auto$ff.cc:266:slice$753 ($sdff) from module PIC16C5x (D = \W [5:0], Q = \OPTION).
+Adding SRST signal on $procdff$689 ($dff) from module PIC16C5x (D = $procmux$567_Y, Q = \TRISC, rval = 8'11111111).
+Adding EN signal on $auto$ff.cc:266:slice$757 ($sdff) from module PIC16C5x (D = \W, Q = \TRISC).
+Adding SRST signal on $procdff$688 ($dff) from module PIC16C5x (D = $procmux$574_Y, Q = \TRISB, rval = 8'11111111).
+Adding EN signal on $auto$ff.cc:266:slice$761 ($sdff) from module PIC16C5x (D = \W, Q = \TRISB).
+Adding SRST signal on $procdff$687 ($dff) from module PIC16C5x (D = $procmux$581_Y, Q = \TRISA, rval = 4'1111).
+Adding EN signal on $auto$ff.cc:266:slice$765 ($sdff) from module PIC16C5x (D = \W [3:0], Q = \TRISA).
+Adding SRST signal on $procdff$686 ($dff) from module PIC16C5x (D = $and$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:881$183_Y, Q = \WDTClr, rval = 1'0).
+Adding SRST signal on $procdff$685 ($dff) from module PIC16C5x (D = $procmux$550_Y, Q = \TO, rval = 1'0).
+Adding EN signal on $auto$ff.cc:266:slice$770 ($sdff) from module PIC16C5x (D = 1'1, Q = \TO).
+Adding SRST signal on $procdff$684 ($dff) from module PIC16C5x (D = $procmux$545_Y, Q = \PD, rval = 1'0).
+Adding EN signal on $auto$ff.cc:266:slice$772 ($sdff) from module PIC16C5x (D = 1'1, Q = \PD).
+Adding SRST signal on $procdff$683 ($dff) from module PIC16C5x (D = $procmux$540_Y, Q = \PwrDn, rval = 1'0).
+Adding EN signal on $auto$ff.cc:266:slice$774 ($sdff) from module PIC16C5x (D = 1'1, Q = \PwrDn).
+Adding SRST signal on $procdff$667 ($dff) from module PIC16C5x (D = $procmux$367_Y, Q = \PA, rval = 3'000).
+Adding EN signal on $auto$ff.cc:266:slice$776 ($sdff) from module PIC16C5x (D = \DO [7:5], Q = \PA).
+Adding SRST signal on $procdff$666 ($dff) from module PIC16C5x (D = $procmux$374_Y, Q = \FSR, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:266:slice$780 ($sdff) from module PIC16C5x (D = \DO, Q = \FSR).
+Adding SRST signal on $procdff$665 ($dff) from module PIC16C5x (D = $procmux$381_Y, Q = \PORTC, rval = 8'11111111).
+Adding EN signal on $auto$ff.cc:266:slice$784 ($sdff) from module PIC16C5x (D = \DO, Q = \PORTC).
+Adding SRST signal on $procdff$664 ($dff) from module PIC16C5x (D = $procmux$388_Y, Q = \PORTB, rval = 8'11111111).
+Adding EN signal on $auto$ff.cc:266:slice$788 ($sdff) from module PIC16C5x (D = \DO, Q = \PORTB).
+Adding SRST signal on $procdff$663 ($dff) from module PIC16C5x (D = $procmux$395_Y, Q = \PORTA, rval = 4'1111).
+Adding EN signal on $auto$ff.cc:266:slice$792 ($sdff) from module PIC16C5x (D = \DO [3:0], Q = \PORTA).
+Adding SRST signal on $procdff$662 ($dff) from module PIC16C5x (D = $procmux$351_Y, Q = \WDT, rval = 20'00000000000000000000).
+Adding EN signal on $auto$ff.cc:266:slice$796 ($sdff) from module PIC16C5x (D = $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1027$284_Y [19:0], Q = \WDT).
+Adding SRST signal on $procdff$661 ($dff) from module PIC16C5x (D = $reduce_and$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1037$286_Y, Q = \WDT_TC, rval = 1'0).
+Adding SRST signal on $procdff$660 ($dff) from module PIC16C5x (D = { $ternary$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1066$293_Y \dT0CKI [0] \T0CKI }, Q = \dT0CKI, rval = 3'000).
+Adding SRST signal on $procdff$659 ($dff) from module PIC16C5x (D = $procmux$334_Y, Q = \PSCntr, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:266:slice$800 ($sdff) from module PIC16C5x (D = $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1089$299_Y [7:0], Q = \PSCntr).
+Adding SRST signal on $procdff$658 ($dff) from module PIC16C5x (D = { $and$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1116$303_Y \PSC_Out }, Q = \dPSC_Out, rval = 2'00).
+Adding SRST signal on $procdff$657 ($dff) from module PIC16C5x (D = $procmux$314_Y, Q = \TMR0, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:266:slice$803 ($sdff) from module PIC16C5x (D = $procmux$314_Y, Q = \TMR0).
+
+2.9.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \PIC16C5x..
+Removed 70 unused cells and 67 unused wires.
+<suppressed ~71 debug messages>
+
+2.9.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module PIC16C5x.
+<suppressed ~5 debug messages>
+
+2.9.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.9.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \PIC16C5x..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~37 debug messages>
+
+2.9.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \PIC16C5x.
+Performed a total of 0 changes.
+
+2.9.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\PIC16C5x'.
+Removed a total of 0 cells.
+
+2.9.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.9.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \PIC16C5x..
+
+2.9.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module PIC16C5x.
+
+2.9.16. Finished OPT passes. (There is nothing left to do.)
+
+2.10. Executing WREDUCE pass (reducing word size of cells).
+Removed top 29 address bits (of 32) from memory init port PIC16C5x.$auto$mem.cc:319:emit$310 ($auto$proc_rom.cc:150:do_switch$308).
+Removed top 10 bits (of 12) from port A of cell PIC16C5x.$eq$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:435$11 ($eq).
+Removed top 10 bits (of 12) from port A of cell PIC16C5x.$eq$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:436$12 ($eq).
+Removed top 9 bits (of 12) from port A of cell PIC16C5x.$eq$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:437$13 ($eq).
+Removed top 9 bits (of 12) from port A of cell PIC16C5x.$eq$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:438$14 ($eq).
+Removed top 9 bits (of 12) from port A of cell PIC16C5x.$eq$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:439$15 ($eq).
+Removed top 9 bits (of 12) from port A of cell PIC16C5x.$eq$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:440$16 ($eq).
+Removed top 6 bits (of 7) from port A of cell PIC16C5x.$eq$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:441$17 ($eq).
+Removed top 5 bits (of 12) from port A of cell PIC16C5x.$eq$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:442$18 ($eq).
+Removed top 5 bits (of 7) from port A of cell PIC16C5x.$eq$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:443$19 ($eq).
+Removed top 4 bits (of 6) from port A of cell PIC16C5x.$eq$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:444$20 ($eq).
+Removed top 4 bits (of 6) from port A of cell PIC16C5x.$eq$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:445$21 ($eq).
+Removed top 3 bits (of 6) from port A of cell PIC16C5x.$eq$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:446$22 ($eq).
+Removed top 3 bits (of 6) from port A of cell PIC16C5x.$eq$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:447$23 ($eq).
+Removed top 3 bits (of 6) from port A of cell PIC16C5x.$eq$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:448$24 ($eq).
+Removed top 3 bits (of 6) from port A of cell PIC16C5x.$eq$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:449$25 ($eq).
+Removed top 2 bits (of 6) from port A of cell PIC16C5x.$eq$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:450$26 ($eq).
+Removed top 2 bits (of 6) from port A of cell PIC16C5x.$eq$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:451$27 ($eq).
+Removed top 2 bits (of 6) from port A of cell PIC16C5x.$eq$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:452$28 ($eq).
+Removed top 2 bits (of 6) from port A of cell PIC16C5x.$eq$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:453$29 ($eq).
+Removed top 2 bits (of 6) from port A of cell PIC16C5x.$eq$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:454$30 ($eq).
+Removed top 2 bits (of 6) from port A of cell PIC16C5x.$eq$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:455$31 ($eq).
+Removed top 2 bits (of 6) from port A of cell PIC16C5x.$eq$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:456$32 ($eq).
+Removed top 2 bits (of 6) from port A of cell PIC16C5x.$eq$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:457$33 ($eq).
+Removed top 1 bits (of 4) from port A of cell PIC16C5x.$eq$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:458$34 ($eq).
+Removed top 1 bits (of 4) from port A of cell PIC16C5x.$eq$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:459$35 ($eq).
+Removed top 1 bits (of 4) from port A of cell PIC16C5x.$eq$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:460$36 ($eq).
+Removed top 1 bits (of 4) from port A of cell PIC16C5x.$eq$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:461$37 ($eq).
+Removed top 1 bits (of 9) from mux cell PIC16C5x.$ternary$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:637$90 ($mux).
+Removed top 24 bits (of 32) from mux cell PIC16C5x.$ternary$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:638$92 ($mux).
+Removed top 1 bits (of 8) from mux cell PIC16C5x.$ternary$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:793$147 ($mux).
+Removed top 1 bits (of 8) from mux cell PIC16C5x.$ternary$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:793$148 ($mux).
+Removed top 4 bits (of 5) from port B of cell PIC16C5x.$eq$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:801$149 ($eq).
+Removed top 3 bits (of 5) from port B of cell PIC16C5x.$eq$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:802$151 ($eq).
+Removed top 3 bits (of 5) from port B of cell PIC16C5x.$eq$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:803$153 ($eq).
+Removed top 2 bits (of 5) from port B of cell PIC16C5x.$eq$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:804$155 ($eq).
+Removed top 2 bits (of 5) from port B of cell PIC16C5x.$eq$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:805$157 ($eq).
+Removed top 2 bits (of 5) from port B of cell PIC16C5x.$eq$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:806$159 ($eq).
+Removed top 2 bits (of 5) from port B of cell PIC16C5x.$eq$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:807$161 ($eq).
+Removed top 31 bits (of 32) from port B of cell PIC16C5x.$add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:832$169 ($add).
+Removed top 19 bits (of 32) from port Y of cell PIC16C5x.$add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:832$169 ($add).
+Removed top 19 bits (of 32) from mux cell PIC16C5x.$ternary$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:832$171 ($mux).
+Removed top 19 bits (of 32) from mux cell PIC16C5x.$ternary$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:831$172 ($mux).
+Removed top 20 bits (of 32) from mux cell PIC16C5x.$ternary$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:830$173 ($mux).
+Removed top 3 bits (of 4) from port Y of cell PIC16C5x.$and$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:978$265 ($and).
+Removed top 3 bits (of 4) from port A of cell PIC16C5x.$and$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:978$265 ($and).
+Removed top 3 bits (of 4) from port B of cell PIC16C5x.$and$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:978$265 ($and).
+Removed top 7 bits (of 8) from port Y of cell PIC16C5x.$and$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:979$267 ($and).
+Removed top 7 bits (of 8) from port A of cell PIC16C5x.$and$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:979$267 ($and).
+Removed top 7 bits (of 8) from port B of cell PIC16C5x.$and$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:979$267 ($and).
+Removed top 7 bits (of 8) from port Y of cell PIC16C5x.$and$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:980$269 ($and).
+Removed top 7 bits (of 8) from port A of cell PIC16C5x.$and$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:980$269 ($and).
+Removed top 7 bits (of 8) from port B of cell PIC16C5x.$and$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:980$269 ($and).
+Removed top 31 bits (of 32) from port B of cell PIC16C5x.$add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1027$284 ($add).
+Removed top 12 bits (of 32) from port Y of cell PIC16C5x.$add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1027$284 ($add).
+Removed top 31 bits (of 32) from port B of cell PIC16C5x.$add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1089$299 ($add).
+Removed top 24 bits (of 32) from port Y of cell PIC16C5x.$add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1089$299 ($add).
+Removed top 31 bits (of 32) from port B of cell PIC16C5x.$add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1135$306 ($add).
+Removed top 24 bits (of 32) from port Y of cell PIC16C5x.$add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1135$306 ($add).
+Removed top 1 bits (of 3) from port B of cell PIC16C5x.$procmux$330_CMP0 ($eq).
+Removed top 1 bits (of 3) from port B of cell PIC16C5x.$procmux$331_CMP0 ($eq).
+Removed top 2 bits (of 3) from port B of cell PIC16C5x.$procmux$332_CMP0 ($eq).
+Removed top 1 bits (of 3) from port B of cell PIC16C5x.$procmux$361_CMP0 ($eq).
+Removed top 1 bits (of 3) from port B of cell PIC16C5x.$procmux$362_CMP0 ($eq).
+Removed top 2 bits (of 3) from port B of cell PIC16C5x.$procmux$363_CMP0 ($eq).
+Removed top 1 bits (of 2) from port B of cell PIC16C5x.$procmux$403_CMP0 ($eq).
+Removed top 1 bits (of 2) from port B of cell PIC16C5x.$procmux$624_CMP0 ($eq).
+Removed top 1 bits (of 2) from port B of cell PIC16C5x.$procmux$630_CMP0 ($eq).
+Removed top 1 bits (of 13) from mux cell PIC16C5x.$ternary$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:831$172 ($mux).
+Removed top 3 bits (of 4) from port Y of cell PIC16C5x.$not$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:978$264 ($not).
+Removed top 3 bits (of 4) from port A of cell PIC16C5x.$not$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:978$264 ($not).
+Removed top 7 bits (of 8) from port Y of cell PIC16C5x.$not$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:979$266 ($not).
+Removed top 7 bits (of 8) from port A of cell PIC16C5x.$not$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:979$266 ($not).
+Removed top 7 bits (of 8) from port Y of cell PIC16C5x.$not$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:980$268 ($not).
+Removed top 7 bits (of 8) from port A of cell PIC16C5x.$not$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:980$268 ($not).
+Removed top 1 bits (of 13) from mux cell PIC16C5x.$ternary$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:832$171 ($mux).
+Removed top 1 bits (of 13) from port Y of cell PIC16C5x.$add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:832$169 ($add).
+Removed top 12 bits (of 32) from wire PIC16C5x.$add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1027$284_Y.
+Removed top 24 bits (of 32) from wire PIC16C5x.$add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1089$299_Y.
+Removed top 24 bits (of 32) from wire PIC16C5x.$add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1135$306_Y.
+Removed top 20 bits (of 32) from wire PIC16C5x.$add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:832$169_Y.
+Removed top 3 bits (of 4) from wire PIC16C5x.$not$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:978$264_Y.
+Removed top 7 bits (of 8) from wire PIC16C5x.$not$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:979$266_Y.
+Removed top 7 bits (of 8) from wire PIC16C5x.$not$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:980$268_Y.
+Removed top 20 bits (of 32) from wire PIC16C5x.$ternary$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:830$173_Y.
+Removed top 20 bits (of 32) from wire PIC16C5x.$ternary$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:831$172_Y.
+Removed top 20 bits (of 32) from wire PIC16C5x.$ternary$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:832$171_Y.
+
+2.11. Executing PEEPOPT pass (run peephole optimizers).
+
+2.12. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \PIC16C5x..
+Removed 0 unused cells and 16 unused wires.
+<suppressed ~1 debug messages>
+
+2.13. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module PIC16C5x:
+  creating $macc model for $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1027$284 ($add).
+  creating $macc model for $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1089$299 ($add).
+  creating $macc model for $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1135$306 ($add).
+  creating $macc model for $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:643$95 ($add).
+  creating $macc model for $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:643$96 ($add).
+  creating $macc model for $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:644$97 ($add).
+  creating $macc model for $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:644$98 ($add).
+  creating $macc model for $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:832$169 ($add).
+  merging $macc model for $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:644$97 into $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:644$98.
+  merging $macc model for $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:643$95 into $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:643$96.
+  creating $alu model for $macc $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:644$98.
+  creating $alu model for $macc $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:643$96.
+  creating $alu model for $macc $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:832$169.
+  creating $alu model for $macc $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1135$306.
+  creating $alu model for $macc $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1089$299.
+  creating $alu model for $macc $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1027$284.
+  creating $alu cell for $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1027$284: $auto$alumacc.cc:485:replace_alu$817
+  creating $alu cell for $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1089$299: $auto$alumacc.cc:485:replace_alu$820
+  creating $alu cell for $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1135$306: $auto$alumacc.cc:485:replace_alu$823
+  creating $alu cell for $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:832$169: $auto$alumacc.cc:485:replace_alu$826
+  creating $alu cell for $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:643$96: $auto$alumacc.cc:485:replace_alu$829
+  creating $alu cell for $add$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:644$98: $auto$alumacc.cc:485:replace_alu$832
+  created 6 $alu and 0 $macc cells.
+
+2.14. Executing SHARE pass (SAT-based resource sharing).
+Found 6 cells in module PIC16C5x that may be considered for resource sharing.
+  Analyzing resource sharing options for $memrd$\RAME$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:953$262 ($memrd):
+    Found 1 activation_patterns using ctrl signal { $procmux$401_CMP \FA [4] }.
+    No candidates found.
+  Analyzing resource sharing options for $memrd$\RAMD$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:952$261 ($memrd):
+    Found 1 activation_patterns using ctrl signal { $procmux$402_CMP \FA [4] }.
+    No candidates found.
+  Analyzing resource sharing options for $memrd$\RAMC$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:951$260 ($memrd):
+    Found 1 activation_patterns using ctrl signal { $procmux$403_CMP \FA [4] }.
+    No candidates found.
+  Analyzing resource sharing options for $memrd$\RAMB$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:950$259 ($memrd):
+    Found 1 activation_patterns using ctrl signal { $procmux$404_CMP \FA [4] }.
+    No candidates found.
+  Analyzing resource sharing options for $memrd$\RAMA$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:1004$279 ($memrd):
+    Found 1 activation_patterns using ctrl signal \FA [4:3].
+    No candidates found.
+  Analyzing resource sharing options for $auto$mem.cc:273:emit$309 ($memrd_v2):
+    Found 2 activation_patterns using ctrl signal { $procmux$622_CMP $and$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:786$140_Y \ALU_Op [8] }.
+    No candidates found.
+
+2.15. Executing OPT pass (performing simple optimizations).
+
+2.15.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module PIC16C5x.
+
+2.15.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\PIC16C5x'.
+Removed a total of 0 cells.
+
+2.15.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \PIC16C5x..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~37 debug messages>
+
+2.15.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \PIC16C5x.
+Performed a total of 0 changes.
+
+2.15.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\PIC16C5x'.
+Removed a total of 0 cells.
+
+2.15.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.15.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \PIC16C5x..
+Removed 2 unused cells and 2 unused wires.
+<suppressed ~3 debug messages>
+
+2.15.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module PIC16C5x.
+
+2.15.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.15.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \PIC16C5x..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~37 debug messages>
+
+2.15.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \PIC16C5x.
+Performed a total of 0 changes.
+
+2.15.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\PIC16C5x'.
+Removed a total of 0 cells.
+
+2.15.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.15.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \PIC16C5x..
+
+2.15.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module PIC16C5x.
+
+2.15.16. Finished OPT passes. (There is nothing left to do.)
+
+2.16. Executing MEMORY pass.
+
+2.16.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+2.16.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+2.16.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+  Analyzing PIC16C5x.RAMA write port 0.
+  Analyzing PIC16C5x.RAMB write port 0.
+  Analyzing PIC16C5x.RAMC write port 0.
+  Analyzing PIC16C5x.RAMD write port 0.
+  Analyzing PIC16C5x.RAME write port 0.
+
+2.16.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+2.16.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+Checking read port `$auto$proc_rom.cc:150:do_switch$308'[0] in module `\PIC16C5x': no output FF found.
+Checking read port `\RAMA'[0] in module `\PIC16C5x': no output FF found.
+Checking read port `\RAMB'[0] in module `\PIC16C5x': no output FF found.
+Checking read port `\RAMC'[0] in module `\PIC16C5x': no output FF found.
+Checking read port `\RAMD'[0] in module `\PIC16C5x': no output FF found.
+Checking read port `\RAME'[0] in module `\PIC16C5x': no output FF found.
+Checking read port address `$auto$proc_rom.cc:150:do_switch$308'[0] in module `\PIC16C5x': merged address FF to cell.
+Checking read port address `\RAMA'[0] in module `\PIC16C5x': no address FF found.
+Checking read port address `\RAMB'[0] in module `\PIC16C5x': no address FF found.
+Checking read port address `\RAMC'[0] in module `\PIC16C5x': no address FF found.
+Checking read port address `\RAMD'[0] in module `\PIC16C5x': no address FF found.
+Checking read port address `\RAME'[0] in module `\PIC16C5x': no address FF found.
+
+2.16.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \PIC16C5x..
+
+2.16.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+2.16.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+2.16.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \PIC16C5x..
+
+2.16.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+2.17. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \PIC16C5x..
+
+2.18. Executing OPT pass (performing simple optimizations).
+
+2.18.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module PIC16C5x.
+<suppressed ~57 debug messages>
+
+2.18.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\PIC16C5x'.
+Removed a total of 0 cells.
+
+2.18.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.18.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \PIC16C5x..
+Removed 5 unused cells and 42 unused wires.
+<suppressed ~6 debug messages>
+
+2.18.5. Finished fast OPT passes.
+
+2.19. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+Mapping memory $auto$proc_rom.cc:150:do_switch$308 in module \PIC16C5x:
+  created 8 $dff cells and 0 static cells of width 8.
+Extracted data FF from read port 0 of PIC16C5x.$auto$proc_rom.cc:150:do_switch$308: $$auto$proc_rom.cc:150:do_switch$308$rdreg[0]
+  read interface: 1 $dff and 7 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory \RAMA in module \PIC16C5x:
+  created 16 $dff cells and 0 static cells of width 8.
+  read interface: 0 $dff and 15 $mux cells.
+  write interface: 16 write mux blocks.
+Mapping memory \RAMB in module \PIC16C5x:
+  created 16 $dff cells and 0 static cells of width 8.
+  read interface: 0 $dff and 15 $mux cells.
+  write interface: 16 write mux blocks.
+Mapping memory \RAMC in module \PIC16C5x:
+  created 16 $dff cells and 0 static cells of width 8.
+  read interface: 0 $dff and 15 $mux cells.
+  write interface: 16 write mux blocks.
+Mapping memory \RAMD in module \PIC16C5x:
+  created 16 $dff cells and 0 static cells of width 8.
+  read interface: 0 $dff and 15 $mux cells.
+  write interface: 16 write mux blocks.
+Mapping memory \RAME in module \PIC16C5x:
+  created 16 $dff cells and 0 static cells of width 8.
+  read interface: 0 $dff and 15 $mux cells.
+  write interface: 16 write mux blocks.
+
+2.20. Executing OPT pass (performing simple optimizations).
+
+2.20.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module PIC16C5x.
+<suppressed ~8 debug messages>
+
+2.20.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\PIC16C5x'.
+Removed a total of 0 cells.
+
+2.20.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \PIC16C5x..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 1/2 on $mux $memory\RAMA$rdmux[0][3][3]$943.
+    dead port 2/2 on $mux $memory\RAMA$rdmux[0][3][3]$943.
+    dead port 1/2 on $mux $memory\RAMA$rdmux[0][3][2]$940.
+    dead port 2/2 on $mux $memory\RAMA$rdmux[0][3][2]$940.
+    dead port 1/2 on $mux $memory\RAMA$rdmux[0][3][1]$937.
+    dead port 2/2 on $mux $memory\RAMA$rdmux[0][3][1]$937.
+    dead port 1/2 on $mux $memory\RAMA$rdmux[0][3][0]$934.
+    dead port 2/2 on $mux $memory\RAMA$rdmux[0][3][0]$934.
+    dead port 1/2 on $mux $memory\RAMA$rdmux[0][2][1]$925.
+    dead port 2/2 on $mux $memory\RAMA$rdmux[0][2][1]$925.
+    dead port 1/2 on $mux $memory\RAMA$rdmux[0][2][0]$922.
+    dead port 2/2 on $mux $memory\RAMA$rdmux[0][2][0]$922.
+    dead port 1/2 on $mux $memory\RAMA$rdmux[0][1][0]$916.
+    dead port 2/2 on $mux $memory\RAMA$rdmux[0][1][0]$916.
+    dead port 2/2 on $mux $memory\RAMA$rdmux[0][0][0]$913.
+Removed 15 multiplexer ports.
+<suppressed ~104 debug messages>
+
+2.20.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \PIC16C5x.
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:150:do_switch$308$rdmux[0][2][2]$875:
+      Old ports: A=8'00010000, B=8'00100000, Y=$memory$auto$proc_rom.cc:150:do_switch$308$rdmux[0][1][1]$a$867
+      New ports: A=2'01, B=2'10, Y=$memory$auto$proc_rom.cc:150:do_switch$308$rdmux[0][1][1]$a$867 [5:4]
+      New connections: { $memory$auto$proc_rom.cc:150:do_switch$308$rdmux[0][1][1]$a$867 [7:6] $memory$auto$proc_rom.cc:150:do_switch$308$rdmux[0][1][1]$a$867 [3:0] } = 6'000000
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:150:do_switch$308$rdmux[0][2][1]$872:
+      Old ports: A=8'00000100, B=8'00001000, Y=$memory$auto$proc_rom.cc:150:do_switch$308$rdmux[0][1][0]$b$865
+      New ports: A=2'01, B=2'10, Y=$memory$auto$proc_rom.cc:150:do_switch$308$rdmux[0][1][0]$b$865 [3:2]
+      New connections: { $memory$auto$proc_rom.cc:150:do_switch$308$rdmux[0][1][0]$b$865 [7:4] $memory$auto$proc_rom.cc:150:do_switch$308$rdmux[0][1][0]$b$865 [1:0] } = 6'000000
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:150:do_switch$308$rdmux[0][2][0]$869:
+      Old ports: A=8'00000001, B=8'00000010, Y=$memory$auto$proc_rom.cc:150:do_switch$308$rdmux[0][1][0]$a$864
+      New ports: A=2'01, B=2'10, Y=$memory$auto$proc_rom.cc:150:do_switch$308$rdmux[0][1][0]$a$864 [1:0]
+      New connections: $memory$auto$proc_rom.cc:150:do_switch$308$rdmux[0][1][0]$a$864 [7:2] = 6'000000
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:150:do_switch$308$rdmux[0][2][3]$878:
+      Old ports: A=8'01000000, B=8'10000000, Y=$memory$auto$proc_rom.cc:150:do_switch$308$rdmux[0][1][1]$b$868
+      New ports: A=2'01, B=2'10, Y=$memory$auto$proc_rom.cc:150:do_switch$308$rdmux[0][1][1]$b$868 [7:6]
+      New connections: $memory$auto$proc_rom.cc:150:do_switch$308$rdmux[0][1][1]$b$868 [5:0] = 6'000000
+    Consolidated identical input bits for $mux cell $ternary$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:793$147:
+      Old ports: A={ 3'000 \KI [3:0] }, B={ \FSR [6:5] 1'1 \KI [3:0] }, Y=$ternary$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:793$147_Y [6:0]
+      New ports: A=3'000, B={ \FSR [6:5] 1'1 }, Y=$ternary$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:793$147_Y [6:4]
+      New connections: $ternary$/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/pic16.v:793$147_Y [3:0] = \KI [3:0]
+  Optimizing cells in module \PIC16C5x.
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:150:do_switch$308$rdmux[0][1][1]$866:
+      Old ports: A=$memory$auto$proc_rom.cc:150:do_switch$308$rdmux[0][1][1]$a$867, B=$memory$auto$proc_rom.cc:150:do_switch$308$rdmux[0][1][1]$b$868, Y=$memory$auto$proc_rom.cc:150:do_switch$308$rdmux[0][0][0]$b$862
+      New ports: A={ 2'00 $memory$auto$proc_rom.cc:150:do_switch$308$rdmux[0][1][1]$a$867 [5:4] }, B={ $memory$auto$proc_rom.cc:150:do_switch$308$rdmux[0][1][1]$b$868 [7:6] 2'00 }, Y=$memory$auto$proc_rom.cc:150:do_switch$308$rdmux[0][0][0]$b$862 [7:4]
+      New connections: $memory$auto$proc_rom.cc:150:do_switch$308$rdmux[0][0][0]$b$862 [3:0] = 4'0000
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:150:do_switch$308$rdmux[0][1][0]$863:
+      Old ports: A=$memory$auto$proc_rom.cc:150:do_switch$308$rdmux[0][1][0]$a$864, B=$memory$auto$proc_rom.cc:150:do_switch$308$rdmux[0][1][0]$b$865, Y=$memory$auto$proc_rom.cc:150:do_switch$308$rdmux[0][0][0]$a$861
+      New ports: A={ 2'00 $memory$auto$proc_rom.cc:150:do_switch$308$rdmux[0][1][0]$a$864 [1:0] }, B={ $memory$auto$proc_rom.cc:150:do_switch$308$rdmux[0][1][0]$b$865 [3:2] 2'00 }, Y=$memory$auto$proc_rom.cc:150:do_switch$308$rdmux[0][0][0]$a$861 [3:0]
+      New connections: $memory$auto$proc_rom.cc:150:do_switch$308$rdmux[0][0][0]$a$861 [7:4] = 4'0000
+  Optimizing cells in module \PIC16C5x.
+Performed a total of 7 changes.
+
+2.20.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\PIC16C5x'.
+<suppressed ~12 debug messages>
+Removed a total of 4 cells.
+
+2.20.6. Executing OPT_SHARE pass.
+
+2.20.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.20.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \PIC16C5x..
+Removed 24 unused cells and 208 unused wires.
+<suppressed ~33 debug messages>
+
+2.20.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module PIC16C5x.
+
+2.20.10. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.20.11. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \PIC16C5x..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~96 debug messages>
+
+2.20.12. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \PIC16C5x.
+Performed a total of 0 changes.
+
+2.20.13. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\PIC16C5x'.
+Removed a total of 0 cells.
+
+2.20.14. Executing OPT_SHARE pass.
+
+2.20.15. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $memory\RAME[9]$1527 ($dff) from module PIC16C5x (D = \DO, Q = \RAME[9]).
+Adding EN signal on $memory\RAME[8]$1525 ($dff) from module PIC16C5x (D = \DO, Q = \RAME[8]).
+Adding EN signal on $memory\RAME[7]$1523 ($dff) from module PIC16C5x (D = \DO, Q = \RAME[7]).
+Adding EN signal on $memory\RAME[6]$1521 ($dff) from module PIC16C5x (D = \DO, Q = \RAME[6]).
+Adding EN signal on $memory\RAME[5]$1519 ($dff) from module PIC16C5x (D = \DO, Q = \RAME[5]).
+Adding EN signal on $memory\RAME[4]$1517 ($dff) from module PIC16C5x (D = \DO, Q = \RAME[4]).
+Adding EN signal on $memory\RAME[3]$1515 ($dff) from module PIC16C5x (D = \DO, Q = \RAME[3]).
+Adding EN signal on $memory\RAME[2]$1513 ($dff) from module PIC16C5x (D = \DO, Q = \RAME[2]).
+Adding EN signal on $memory\RAME[1]$1511 ($dff) from module PIC16C5x (D = \DO, Q = \RAME[1]).
+Adding EN signal on $memory\RAME[15]$1539 ($dff) from module PIC16C5x (D = \DO, Q = \RAME[15]).
+Adding EN signal on $memory\RAME[14]$1537 ($dff) from module PIC16C5x (D = \DO, Q = \RAME[14]).
+Adding EN signal on $memory\RAME[13]$1535 ($dff) from module PIC16C5x (D = \DO, Q = \RAME[13]).
+Adding EN signal on $memory\RAME[12]$1533 ($dff) from module PIC16C5x (D = \DO, Q = \RAME[12]).
+Adding EN signal on $memory\RAME[11]$1531 ($dff) from module PIC16C5x (D = \DO, Q = \RAME[11]).
+Adding EN signal on $memory\RAME[10]$1529 ($dff) from module PIC16C5x (D = \DO, Q = \RAME[10]).
+Adding EN signal on $memory\RAME[0]$1509 ($dff) from module PIC16C5x (D = \DO, Q = \RAME[0]).
+Adding EN signal on $memory\RAMD[9]$1386 ($dff) from module PIC16C5x (D = \DO, Q = \RAMD[9]).
+Adding EN signal on $memory\RAMD[8]$1384 ($dff) from module PIC16C5x (D = \DO, Q = \RAMD[8]).
+Adding EN signal on $memory\RAMD[7]$1382 ($dff) from module PIC16C5x (D = \DO, Q = \RAMD[7]).
+Adding EN signal on $memory\RAMD[6]$1380 ($dff) from module PIC16C5x (D = \DO, Q = \RAMD[6]).
+Adding EN signal on $memory\RAMD[5]$1378 ($dff) from module PIC16C5x (D = \DO, Q = \RAMD[5]).
+Adding EN signal on $memory\RAMD[4]$1376 ($dff) from module PIC16C5x (D = \DO, Q = \RAMD[4]).
+Adding EN signal on $memory\RAMD[3]$1374 ($dff) from module PIC16C5x (D = \DO, Q = \RAMD[3]).
+Adding EN signal on $memory\RAMD[2]$1372 ($dff) from module PIC16C5x (D = \DO, Q = \RAMD[2]).
+Adding EN signal on $memory\RAMD[1]$1370 ($dff) from module PIC16C5x (D = \DO, Q = \RAMD[1]).
+Adding EN signal on $memory\RAMD[15]$1398 ($dff) from module PIC16C5x (D = \DO, Q = \RAMD[15]).
+Adding EN signal on $memory\RAMD[14]$1396 ($dff) from module PIC16C5x (D = \DO, Q = \RAMD[14]).
+Adding EN signal on $memory\RAMD[13]$1394 ($dff) from module PIC16C5x (D = \DO, Q = \RAMD[13]).
+Adding EN signal on $memory\RAMD[12]$1392 ($dff) from module PIC16C5x (D = \DO, Q = \RAMD[12]).
+Adding EN signal on $memory\RAMD[11]$1390 ($dff) from module PIC16C5x (D = \DO, Q = \RAMD[11]).
+Adding EN signal on $memory\RAMD[10]$1388 ($dff) from module PIC16C5x (D = \DO, Q = \RAMD[10]).
+Adding EN signal on $memory\RAMD[0]$1368 ($dff) from module PIC16C5x (D = \DO, Q = \RAMD[0]).
+Adding EN signal on $memory\RAMC[9]$1245 ($dff) from module PIC16C5x (D = \DO, Q = \RAMC[9]).
+Adding EN signal on $memory\RAMC[8]$1243 ($dff) from module PIC16C5x (D = \DO, Q = \RAMC[8]).
+Adding EN signal on $memory\RAMC[7]$1241 ($dff) from module PIC16C5x (D = \DO, Q = \RAMC[7]).
+Adding EN signal on $memory\RAMC[6]$1239 ($dff) from module PIC16C5x (D = \DO, Q = \RAMC[6]).
+Adding EN signal on $memory\RAMC[5]$1237 ($dff) from module PIC16C5x (D = \DO, Q = \RAMC[5]).
+Adding EN signal on $memory\RAMC[4]$1235 ($dff) from module PIC16C5x (D = \DO, Q = \RAMC[4]).
+Adding EN signal on $memory\RAMC[3]$1233 ($dff) from module PIC16C5x (D = \DO, Q = \RAMC[3]).
+Adding EN signal on $memory\RAMC[2]$1231 ($dff) from module PIC16C5x (D = \DO, Q = \RAMC[2]).
+Adding EN signal on $memory\RAMC[1]$1229 ($dff) from module PIC16C5x (D = \DO, Q = \RAMC[1]).
+Adding EN signal on $memory\RAMC[15]$1257 ($dff) from module PIC16C5x (D = \DO, Q = \RAMC[15]).
+Adding EN signal on $memory\RAMC[14]$1255 ($dff) from module PIC16C5x (D = \DO, Q = \RAMC[14]).
+Adding EN signal on $memory\RAMC[13]$1253 ($dff) from module PIC16C5x (D = \DO, Q = \RAMC[13]).
+Adding EN signal on $memory\RAMC[12]$1251 ($dff) from module PIC16C5x (D = \DO, Q = \RAMC[12]).
+Adding EN signal on $memory\RAMC[11]$1249 ($dff) from module PIC16C5x (D = \DO, Q = \RAMC[11]).
+Adding EN signal on $memory\RAMC[10]$1247 ($dff) from module PIC16C5x (D = \DO, Q = \RAMC[10]).
+Adding EN signal on $memory\RAMC[0]$1227 ($dff) from module PIC16C5x (D = \DO, Q = \RAMC[0]).
+Adding EN signal on $memory\RAMB[9]$1104 ($dff) from module PIC16C5x (D = \DO, Q = \RAMB[9]).
+Adding EN signal on $memory\RAMB[8]$1102 ($dff) from module PIC16C5x (D = \DO, Q = \RAMB[8]).
+Adding EN signal on $memory\RAMB[7]$1100 ($dff) from module PIC16C5x (D = \DO, Q = \RAMB[7]).
+Adding EN signal on $memory\RAMB[6]$1098 ($dff) from module PIC16C5x (D = \DO, Q = \RAMB[6]).
+Adding EN signal on $memory\RAMB[5]$1096 ($dff) from module PIC16C5x (D = \DO, Q = \RAMB[5]).
+Adding EN signal on $memory\RAMB[4]$1094 ($dff) from module PIC16C5x (D = \DO, Q = \RAMB[4]).
+Adding EN signal on $memory\RAMB[3]$1092 ($dff) from module PIC16C5x (D = \DO, Q = \RAMB[3]).
+Adding EN signal on $memory\RAMB[2]$1090 ($dff) from module PIC16C5x (D = \DO, Q = \RAMB[2]).
+Adding EN signal on $memory\RAMB[1]$1088 ($dff) from module PIC16C5x (D = \DO, Q = \RAMB[1]).
+Adding EN signal on $memory\RAMB[15]$1116 ($dff) from module PIC16C5x (D = \DO, Q = \RAMB[15]).
+Adding EN signal on $memory\RAMB[14]$1114 ($dff) from module PIC16C5x (D = \DO, Q = \RAMB[14]).
+Adding EN signal on $memory\RAMB[13]$1112 ($dff) from module PIC16C5x (D = \DO, Q = \RAMB[13]).
+Adding EN signal on $memory\RAMB[12]$1110 ($dff) from module PIC16C5x (D = \DO, Q = \RAMB[12]).
+Adding EN signal on $memory\RAMB[11]$1108 ($dff) from module PIC16C5x (D = \DO, Q = \RAMB[11]).
+Adding EN signal on $memory\RAMB[10]$1106 ($dff) from module PIC16C5x (D = \DO, Q = \RAMB[10]).
+Adding EN signal on $memory\RAMB[0]$1086 ($dff) from module PIC16C5x (D = \DO, Q = \RAMB[0]).
+Adding EN signal on $memory\RAMA[9]$899 ($dff) from module PIC16C5x (D = \DO, Q = \RAMA[9]).
+Adding EN signal on $memory\RAMA[8]$897 ($dff) from module PIC16C5x (D = \DO, Q = \RAMA[8]).
+Adding EN signal on $memory\RAMA[15]$911 ($dff) from module PIC16C5x (D = \DO, Q = \RAMA[15]).
+Adding EN signal on $memory\RAMA[14]$909 ($dff) from module PIC16C5x (D = \DO, Q = \RAMA[14]).
+Adding EN signal on $memory\RAMA[13]$907 ($dff) from module PIC16C5x (D = \DO, Q = \RAMA[13]).
+Adding EN signal on $memory\RAMA[12]$905 ($dff) from module PIC16C5x (D = \DO, Q = \RAMA[12]).
+Adding EN signal on $memory\RAMA[11]$903 ($dff) from module PIC16C5x (D = \DO, Q = \RAMA[11]).
+Adding EN signal on $memory\RAMA[10]$901 ($dff) from module PIC16C5x (D = \DO, Q = \RAMA[10]).
+Adding SRST signal on $$auto$proc_rom.cc:150:do_switch$308$rdreg[0] ($dff) from module PIC16C5x (D = $memory$auto$proc_rom.cc:150:do_switch$308$rdmux[0][0][0]$a$861 [3:0], Q = \Msk [7:4], rval = 4'0000).
+Adding SRST signal on $$auto$proc_rom.cc:150:do_switch$308$rdreg[0] ($dff) from module PIC16C5x (D = $memory$auto$proc_rom.cc:150:do_switch$308$rdmux[0][0][0]$a$861 [3:0], Q = \Msk [3:0], rval = 4'0000).
+
+2.20.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \PIC16C5x..
+Removed 73 unused cells and 73 unused wires.
+<suppressed ~74 debug messages>
+
+2.20.17. Executing OPT_EXPR pass (perform const folding).
+Optimizing module PIC16C5x.
+
+2.20.18. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.20.19. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \PIC16C5x..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~24 debug messages>
+
+2.20.20. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \PIC16C5x.
+Performed a total of 0 changes.
+
+2.20.21. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\PIC16C5x'.
+Removed a total of 0 cells.
+
+2.20.22. Executing OPT_SHARE pass.
+
+2.20.23. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.20.24. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \PIC16C5x..
+
+2.20.25. Executing OPT_EXPR pass (perform const folding).
+Optimizing module PIC16C5x.
+
+2.20.26. Finished OPT passes. (There is nothing left to do.)
+
+2.21. Executing TECHMAP pass (map to technology primitives).
+
+2.21.1. Executing Verilog-2005 frontend: /usr/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/usr/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+2.21.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $reduce_and.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $or.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $eq.
+Using extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $dffe.
+Using template $paramod$b85fbb3374a1d9ba7ee4f4d6323c30f939df3ada\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $xor.
+Using template $paramod$ce0ec84be7047712840b0952f343ee9e63ef75d1\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $sdff.
+Using extmapper simplemap for cells of type $reduce_bool.
+Using template $paramod$c3cd1564c35d873179656addd6052d7ea8b6d991\_90_alu for cells of type $alu.
+Using template $paramod$8f780356cb6cdb52f6a744190131b65634639c4e\_90_alu for cells of type $alu.
+Using template $paramod$bf541dd3c0ba8228982b61e7bfbc350a2c253f4c\_90_pmux for cells of type $pmux.
+Using template $paramod$d7387fdb214042e5ef2d69a3f74948694b4bb65e\_90_pmux for cells of type $pmux.
+Using template $paramod$645fe0cc96ae5edb83bff90cc2c78f4a20ca3e3c\_90_pmux for cells of type $pmux.
+Using extmapper simplemap for cells of type $sdffe.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000000101 for cells of type $lcu.
+Using extmapper simplemap for cells of type $pos.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000010100 for cells of type $lcu.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000001000 for cells of type $lcu.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000001100 for cells of type $lcu.
+No more expansions possible.
+<suppressed ~1513 debug messages>
+
+2.22. Executing OPT pass (performing simple optimizations).
+
+2.22.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module PIC16C5x.
+<suppressed ~616 debug messages>
+
+2.22.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\PIC16C5x'.
+<suppressed ~915 debug messages>
+Removed a total of 305 cells.
+
+2.22.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.22.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \PIC16C5x..
+Removed 53 unused cells and 803 unused wires.
+<suppressed ~54 debug messages>
+
+2.22.5. Finished fast OPT passes.
+
+2.23. Executing ABC pass (technology mapping using ABC).
+
+2.23.1. Extracting gate netlist of module `\PIC16C5x' to `<abc-temp-dir>/input.blif'..
+Extracted 1810 gates and 2593 wires to a netlist network with 782 inputs and 218 outputs.
+
+2.23.1.1. Executing ABC.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 13 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+2.23.1.2. Re-integrating ABC results.
+ABC RESULTS:              XNOR cells:        6
+ABC RESULTS:               NOT cells:      478
+ABC RESULTS:               MUX cells:      688
+ABC RESULTS:               NOR cells:       66
+ABC RESULTS:             ORNOT cells:       37
+ABC RESULTS:               AND cells:       83
+ABC RESULTS:               XOR cells:       71
+ABC RESULTS:              NAND cells:       61
+ABC RESULTS:                OR cells:      240
+ABC RESULTS:            ANDNOT cells:      385
+ABC RESULTS:        internal signals:     1593
+ABC RESULTS:           input signals:      782
+ABC RESULTS:          output signals:      218
+Removing temp directory.
+
+2.24. Executing OPT pass (performing simple optimizations).
+
+2.24.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module PIC16C5x.
+<suppressed ~18 debug messages>
+
+2.24.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\PIC16C5x'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+2.24.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.24.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \PIC16C5x..
+Removed 1 unused cells and 1509 unused wires.
+<suppressed ~84 debug messages>
+
+2.24.5. Finished fast OPT passes.
+
+2.25. Executing HIERARCHY pass (managing design hierarchy).
+
+2.25.1. Analyzing design hierarchy..
+Top module:  \PIC16C5x
+
+2.25.2. Analyzing design hierarchy..
+Top module:  \PIC16C5x
+Removed 0 unused modules.
+
+2.26. Printing statistics.
+
+=== PIC16C5x ===
+
+   Number of wires:               2212
+   Number of wire bits:           3010
+   Number of public wires:         159
+   Number of public wire bits:     886
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               2878
+     $_ANDNOT_                     385
+     $_AND_                         83
+     $_DFFE_PP_                    576
+     $_MUX_                        687
+     $_NAND_                        61
+     $_NOR_                         66
+     $_NOT_                        477
+     $_ORNOT_                       37
+     $_OR_                         240
+     $_SDFFE_PP0P_                 116
+     $_SDFFE_PP1P_                  58
+     $_SDFF_PN0_                     4
+     $_SDFF_PP0_                    11
+     $_XNOR_                         6
+     $_XOR_                         71
+
+2.27. Executing CHECK pass (checking for obvious problems).
+Checking module PIC16C5x...
+Found and reported 0 problems.
+
+3. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+  cell sky130_fd_sc_hd__dfxtp_1 (noninv, pins=3, area=20.02) is a direct match for cell type $_DFF_P_.
+  cell sky130_fd_sc_hd__dfrtn_1 (noninv, pins=4, area=25.02) is a direct match for cell type $_DFF_NN0_.
+  cell sky130_fd_sc_hd__dfrtp_1 (noninv, pins=4, area=25.02) is a direct match for cell type $_DFF_PN0_.
+  cell sky130_fd_sc_hd__dfstp_1 (noninv, pins=4, area=26.28) is a direct match for cell type $_DFF_PN1_.
+  cell sky130_fd_sc_hd__dfbbn_1 (noninv, pins=6, area=32.53) is a direct match for cell type $_DFFSR_NNN_.
+  cell sky130_fd_sc_hd__dfbbp_1 (noninv, pins=6, area=32.53) is a direct match for cell type $_DFFSR_PNN_.
+  final dff cell mappings:
+    unmapped dff cell: $_DFF_N_
+    \sky130_fd_sc_hd__dfxtp_1 _DFF_P_ (.CLK( C), .D( D), .Q( Q));
+    \sky130_fd_sc_hd__dfrtn_1 _DFF_NN0_ (.CLK_N( C), .D( D), .Q( Q), .RESET_B( R));
+    unmapped dff cell: $_DFF_NN1_
+    unmapped dff cell: $_DFF_NP0_
+    unmapped dff cell: $_DFF_NP1_
+    \sky130_fd_sc_hd__dfrtp_1 _DFF_PN0_ (.CLK( C), .D( D), .Q( Q), .RESET_B( R));
+    \sky130_fd_sc_hd__dfstp_1 _DFF_PN1_ (.CLK( C), .D( D), .Q( Q), .SET_B( R));
+    unmapped dff cell: $_DFF_PP0_
+    unmapped dff cell: $_DFF_PP1_
+    \sky130_fd_sc_hd__dfbbn_1 _DFFSR_NNN_ (.CLK_N( C), .D( D), .Q( Q), .Q_N(~Q), .RESET_B( R), .SET_B( S));
+    unmapped dff cell: $_DFFSR_NNP_
+    unmapped dff cell: $_DFFSR_NPN_
+    unmapped dff cell: $_DFFSR_NPP_
+    \sky130_fd_sc_hd__dfbbp_1 _DFFSR_PNN_ (.CLK( C), .D( D), .Q( Q), .Q_N(~Q), .RESET_B( R), .SET_B( S));
+    unmapped dff cell: $_DFFSR_PNP_
+    unmapped dff cell: $_DFFSR_PPN_
+    unmapped dff cell: $_DFFSR_PPP_
+
+3.1. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+Mapping DFF cells in module `\PIC16C5x':
+  mapped 765 $_DFF_P_ cells to \sky130_fd_sc_hd__dfxtp_1 cells.
+
+4. Executing ABC pass (technology mapping using ABC).
+
+4.1. Extracting gate netlist of module `\PIC16C5x' to `<abc-temp-dir>/input.blif'..
+Extracted 3052 gates and 3856 wires to a netlist network with 802 inputs and 792 outputs.
+
+4.1.1. Executing ABC.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_lib -w /Users/ziadtaher/dd2/DD2_Project1_student_pack/given/hd_reduced.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.04 sec
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfsbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxbn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxbp_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtp_1".
+ABC: Library "sky130_fd_sc_hd__tt_025C_1v80" from "/Users/ziadtaher/dd2/DD2_Project1_student_pack/given/hd_reduced.lib" has 172 cells (17 skipped: 17 seq; 0 tri-state; 0 no func; 0 dont_use).  Time =     0.05 sec
+ABC: Memory =    9.94 MB. Time =     0.05 sec
+ABC: Warning: Detected 2 multi-output gates (for example, "sky130_fd_sc_hd__fa_1").
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf -R 1000 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+4.1.2. Re-integrating ABC results.
+ABC RESULTS:   sky130_fd_sc_hd__o21a_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a32o_1 cells:        4
+ABC RESULTS:   sky130_fd_sc_hd__a222oi_1 cells:       11
+ABC RESULTS:   sky130_fd_sc_hd__o41ai_1 cells:        7
+ABC RESULTS:   sky130_fd_sc_hd__maj3_1 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__a221o_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__o221ai_1 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__a211oi_1 cells:       10
+ABC RESULTS:   sky130_fd_sc_hd__a221oi_1 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__o21bai_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__o2111ai_1 cells:        5
+ABC RESULTS:   sky130_fd_sc_hd__a22o_1 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__o31ai_1 cells:        4
+ABC RESULTS:   sky130_fd_sc_hd__mux4_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__or3b_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__nand3b_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__xnor2_1 cells:       17
+ABC RESULTS:   sky130_fd_sc_hd__inv_1 cells:       38
+ABC RESULTS:   sky130_fd_sc_hd__nor2b_1 cells:        7
+ABC RESULTS:   sky130_fd_sc_hd__a2111oi_1 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__or2_1 cells:        4
+ABC RESULTS:   sky130_fd_sc_hd__and3_1 cells:       27
+ABC RESULTS:   sky130_fd_sc_hd__nor3b_1 cells:        8
+ABC RESULTS:   sky130_fd_sc_hd__xor2_1 cells:       24
+ABC RESULTS:   sky130_fd_sc_hd__or3_1 cells:        7
+ABC RESULTS:   sky130_fd_sc_hd__and2_1 cells:       13
+ABC RESULTS:   sky130_fd_sc_hd__and4_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__nand2b_1 cells:       15
+ABC RESULTS:   sky130_fd_sc_hd__or4_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__o311ai_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a32oi_1 cells:       10
+ABC RESULTS:   sky130_fd_sc_hd__mux2i_1 cells:       44
+ABC RESULTS:   sky130_fd_sc_hd__o22ai_1 cells:      213
+ABC RESULTS:   sky130_fd_sc_hd__nor4_1 cells:       12
+ABC RESULTS:   sky130_fd_sc_hd__nand4_1 cells:       14
+ABC RESULTS:   sky130_fd_sc_hd__a31oi_1 cells:       15
+ABC RESULTS:   sky130_fd_sc_hd__o21ai_1 cells:      195
+ABC RESULTS:   sky130_fd_sc_hd__a211o_1 cells:        4
+ABC RESULTS:   sky130_fd_sc_hd__and4b_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__o211ai_1 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__a21o_1 cells:        6
+ABC RESULTS:   sky130_fd_sc_hd__nand4b_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a21oi_1 cells:      242
+ABC RESULTS:   sky130_fd_sc_hd__nand2_1 cells:      227
+ABC RESULTS:   sky130_fd_sc_hd__o31a_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a22oi_1 cells:       91
+ABC RESULTS:   sky130_fd_sc_hd__nand3_1 cells:       53
+ABC RESULTS:   sky130_fd_sc_hd__nor3_1 cells:       36
+ABC RESULTS:   sky130_fd_sc_hd__nor2_1 cells:      254
+ABC RESULTS:   sky130_fd_sc_hd__mux2_1 cells:      585
+ABC RESULTS:        internal signals:     2262
+ABC RESULTS:           input signals:      802
+ABC RESULTS:          output signals:      792
+Removing temp directory.
+
+5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \PIC16C5x..
+Removed 0 unused cells and 3863 unused wires.
+<suppressed ~43 debug messages>
+
+6. Printing statistics.
+
+=== PIC16C5x ===
+
+   Number of wires:               2321
+   Number of wire bits:           3036
+   Number of public wires:         117
+   Number of public wire bits:     832
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               2996
+     sky130_fd_sc_hd__a2111oi_1      3
+     sky130_fd_sc_hd__a211o_1        4
+     sky130_fd_sc_hd__a211oi_1      10
+     sky130_fd_sc_hd__a21o_1         6
+     sky130_fd_sc_hd__a21oi_1      242
+     sky130_fd_sc_hd__a221o_1        1
+     sky130_fd_sc_hd__a221oi_1       3
+     sky130_fd_sc_hd__a222oi_1      11
+     sky130_fd_sc_hd__a22o_1         3
+     sky130_fd_sc_hd__a22oi_1       91
+     sky130_fd_sc_hd__a31oi_1       15
+     sky130_fd_sc_hd__a32o_1         4
+     sky130_fd_sc_hd__a32oi_1       10
+     sky130_fd_sc_hd__and2_1        13
+     sky130_fd_sc_hd__and3_1        27
+     sky130_fd_sc_hd__and4_1         1
+     sky130_fd_sc_hd__and4b_1        1
+     sky130_fd_sc_hd__dfxtp_1      765
+     sky130_fd_sc_hd__inv_1         38
+     sky130_fd_sc_hd__maj3_1         2
+     sky130_fd_sc_hd__mux2_1       585
+     sky130_fd_sc_hd__mux2i_1       44
+     sky130_fd_sc_hd__mux4_2         2
+     sky130_fd_sc_hd__nand2_1      227
+     sky130_fd_sc_hd__nand2b_1      15
+     sky130_fd_sc_hd__nand3_1       53
+     sky130_fd_sc_hd__nand3b_1       1
+     sky130_fd_sc_hd__nand4_1       14
+     sky130_fd_sc_hd__nand4b_1       1
+     sky130_fd_sc_hd__nor2_1       254
+     sky130_fd_sc_hd__nor2b_1        7
+     sky130_fd_sc_hd__nor3_1        36
+     sky130_fd_sc_hd__nor3b_1        8
+     sky130_fd_sc_hd__nor4_1        12
+     sky130_fd_sc_hd__o2111ai_1      5
+     sky130_fd_sc_hd__o211ai_1       3
+     sky130_fd_sc_hd__o21a_1         1
+     sky130_fd_sc_hd__o21ai_1      195
+     sky130_fd_sc_hd__o21bai_1       1
+     sky130_fd_sc_hd__o221ai_1       2
+     sky130_fd_sc_hd__o22ai_1      213
+     sky130_fd_sc_hd__o311ai_1       1
+     sky130_fd_sc_hd__o31a_1         1
+     sky130_fd_sc_hd__o31ai_1        4
+     sky130_fd_sc_hd__o41ai_1        7
+     sky130_fd_sc_hd__or2_1          4
+     sky130_fd_sc_hd__or3_1          7
+     sky130_fd_sc_hd__or3b_1         1
+     sky130_fd_sc_hd__or4_1          1
+     sky130_fd_sc_hd__xnor2_1       17
+     sky130_fd_sc_hd__xor2_1        24
+
+   Chip area for module '\PIC16C5x': 30880.867200
+
+7. Executing Verilog backend.
+
+7.1. Executing BMUXMAP pass.
+
+7.2. Executing DEMUXMAP pass.
+Dumping module `\PIC16C5x'.
+
+Warnings: 14 unique messages, 14 total
+End of script. Logfile hash: e97319b8c1, CPU: user 0.92s system 0.01s, MEM: 31.03 MB peak
+Yosys 0.33 (git sha1 2584903a060)
+Time spent: 45% 2x abc (0 sec), 11% 26x opt_expr (0 sec), ...

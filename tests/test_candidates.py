@@ -60,8 +60,7 @@ class CostModel(unittest.TestCase):
 
     def test_broken_wrong_formula_is_rejected(self):
         """Broken case: a formula for a different function must fail the check."""
-        with open(os.path.join(HERE, "broken", "wrong_cost_expression.json")) as fh:
-            bad = json.load(fh)
+        bad = {"truth_table": "0x0707", "expression": "!(A & B)"}   # a formula for a different function
         t = int(bad["truth_table"], 16)
         fake = costmodel.Cost(4, 1, 0, bad["expression"])
         self.assertFalse(costmodel.verify(t, fake))

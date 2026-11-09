@@ -45,7 +45,7 @@ check:
 	  if [ -e build/given/$$f ]; then echo "ok   given/$$f"; else echo "MISSING given/$$f (make setup PACK=...)"; fi; done
 
 test:
-	$(PY) -m unittest -v tests/test_all.py tests/test_candidates.py tests/test_abc_after.py tests/test_liberty_with_new_cells.py tests/test_mapping_equivalence.py tests/test_gate_level_testbenches.py
+	$(PY) -m unittest -v tests/test_all.py tests/test_candidates.py tests/test_abc_after.py tests/test_liberty_with_new_cells.py tests/test_mapping_equivalence.py tests/test_gate_level_testbenches.py tests/test_final_set.py
 
 # regenerate the small test AIGs from our own test designs
 test-aigs:
@@ -127,3 +127,5 @@ demo:
 
 clean:
 	rm -rf build/aig build/demo build/smoke build/canon.npz src/__pycache__ tests/__pycache__
+
+-include final.mk

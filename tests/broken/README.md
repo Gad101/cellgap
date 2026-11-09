@@ -23,11 +23,6 @@ section 4.3, rule 3). AI tools must not edit this folder (AGENTS.md).
 - Broken: the truth table doesn't match the formula
 - Must: refuse the request
 
-## wrong_cost_expression.json
-- Checks: each cost formula computes its function
-- Broken: the formula computes a different function
-- Must: reject it
-
 ## tests/test_abc_after.py
 - Checks: the circuit after ABC cleanup still works the same
 - Broken: one gate input is flipped

@@ -1,0 +1,13 @@
+{
+ "group": "gb2",
+ "designs": [
+  "pic16"
+ ],
+ "area_per_and_um2": {
+  "pic16": 1.752
+ },
+ "area_per_and_source": {
+  "pic16": "table1 logs"
+ },
+ "candidates": []
+}

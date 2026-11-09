@@ -1,0 +1,5 @@
+ABC command line: "read_aiger /Users/ziadtaher/cellgap/build/mapping_equivalence/cpu8_final_est_ref.aig; zero; write_aiger /Users/ziadtaher/cellgap/build/mapping_equivalence/cpu8_final_est_ref_0.aig; read_aiger /Users/ziadtaher/cellgap/build/mapping_equivalence/cpu8_final_est_A.aig; zero; write_aiger /Users/ziadtaher/cellgap/build/mapping_equivalence/cpu8_final_est_A_0.aig; dsec /Users/ziadtaher/cellgap/build/mapping_equivalence/cpu8_final_est_ref_0.aig /Users/ziadtaher/cellgap/build/mapping_equivalence/cpu8_final_est_A_0.aig".
+
+Converting 82 flops from don't-care to zero initial value.
+Converting 82 flops from don't-care to zero initial value.
+Networks are equivalent.  Time =     0.04 sec

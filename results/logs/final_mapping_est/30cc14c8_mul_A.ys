@@ -1,0 +1,7 @@
+read_verilog  /Users/ziadtaher/work/dd2/tut2/mul.v
+synth -flatten -top mul
+dfflibmap -liberty /Users/ziadtaher/cellgap/libs/hd_reduced_plus_final_set_est.lib
+abc -liberty /Users/ziadtaher/cellgap/libs/hd_reduced_plus_final_set_est.lib -script +strash;dch,-f;amap;topo
+opt_clean -purge
+stat -liberty /Users/ziadtaher/cellgap/libs/hd_reduced_plus_final_set_est.lib
+write_verilog -noattr /Users/ziadtaher/cellgap/results/netlists/final_est/mul_A.v

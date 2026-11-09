@@ -1,0 +1,7 @@
+read_verilog  /Users/ziadtaher/dd2/DD2_Project1_student_pack/given/designs/p16c5x.v
+synth -flatten -top P16C5x
+dfflibmap -liberty /Users/ziadtaher/dd2/DD2_Project1_student_pack/given/hd_reduced.lib
+abc -liberty /Users/ziadtaher/dd2/DD2_Project1_student_pack/given/hd_reduced.lib -script +strash;&get,-n;&dch,-f;&nf,-R,1000;&put
+opt_clean -purge
+stat -liberty /Users/ziadtaher/dd2/DD2_Project1_student_pack/given/hd_reduced.lib
+write_verilog -noattr /Users/ziadtaher/cellgap/results/netlists/p16c5x_baseline_B.v

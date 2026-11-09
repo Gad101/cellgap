@@ -1,0 +1,5 @@
+cells,added_cell,total_um2,step_gain_um2,reduction_pct
+0,-,86245.2,0.0,0.0
+1,dd2_gb2__f17_1,86235.2,10.0,0.012
+2,dd2_gb2__f17ff_1,86234.0,1.2,0.013
+3,dd2_gb2__f07ff_1,86102.6,131.4,0.165

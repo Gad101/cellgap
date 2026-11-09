@@ -1,0 +1,17 @@
+design,library,script,area_um2,new_cell_instances,new_cells
+risc8,est,A,28252.1,3,dd2_gb2__f07ff_1:3
+risc8,est,B,27438.8,26,dd2_gb2__f07ff_1:23 dd2_gb2__f17_1:3
+fir10,est,A,25968.7,0,
+fir10,est,B,28446.0,241,dd2_gb2__f07ff_1:3 dd2_gb2__f17_1:237 dd2_gb2__f17ff_1:1
+cpu8,est,A,4186.5,1,dd2_gb2__f07ff_1:1
+cpu8,est,B,4282.9,5,dd2_gb2__f07ff_1:5
+dsp8,est,A,5914.4,10,dd2_gb2__f07ff_1:10
+dsp8,est,B,6169.7,60,dd2_gb2__f07ff_1:33 dd2_gb2__f17_1:27
+arlet6502,est,A,9654.3,3,dd2_gb2__f07ff_1:3
+arlet6502,est,B,9884.5,22,dd2_gb2__f07ff_1:17 dd2_gb2__f17_1:5
+uart_apb,est,A,12939.9,0,
+uart_apb,est,B,13170.1,4,dd2_gb2__f07ff_1:4
+spm,est,A,2869.0,0,
+spm,est,B,2907.8,0,
+mul,est,A,1756.7,0,
+mul,est,B,1920.6,16,dd2_gb2__f07ff_1:1 dd2_gb2__f17_1:15
