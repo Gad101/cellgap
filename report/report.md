@@ -343,9 +343,7 @@ amap ignores cells with a repeated input, and &nf -R 1000 relaxes delay. Changin
 
 Table 1 reproduces only with native Yosys 0.33; yowasp-yosys 0.33 and Yosys 0.70 give different areas. cellweaver needed its own qualified Magic and Netgen builds (container/Dockerfile).
 
-<u>**part 7: AI use**</u>
-
-<u>**part 8: contributions**</u>
+<u>**part 7: contributions**</u>
 
 **Who did what, agreed by every member.**
 
