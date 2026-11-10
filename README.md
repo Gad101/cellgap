@@ -24,6 +24,38 @@ to its apt line, mounting the repo and pack at their real paths so the `build/` 
 
     docker build -t dd2-layout-tools <pack>/container
     docker run --rm -v "$HOME/dd2:$HOME/dd2" -w "$PWD" dd2-layout-tools make all   # prints TABLE 1 REPRODUCED
+    docker run --rm -v "$HOME/dd2:$HOME/dd2" -w "$PWD" dd2-layout-tools make final # greedy set, curve, final Table 5, 30%, ISA
+
+**Interview demo** (any design, from a clean checkout after `make setup`; 5 s for csa8, 30 s for a 12k-AND design):
+
+    docker run --rm -v "$HOME/dd2:$HOME/dd2" -w "$PWD" dd2-layout-tools make demo IN=<design.v or folder> TOP=<top module> [FLAGS=-sv]
+
+If a real cell is wanted for the demo design itself (the demo already writes its Appendix A requests to
+`build/demo/<top>/cell_requests/`), one command sends them to the generator (~30-45 min per cell, in the
+tools image below):
+
+    docker run --rm -v "$HOME/dd2:$HOME/dd2" -v "$HOME/cellweaver:$HOME/cellweaver" -e PDK_ROOT=$HOME/dd2/pdk-cw -w "$PWD" \
+        dd2-layout-tools-sta python3 src/run_cellweaver.py --cellweaver $HOME/cellweaver --python /opt/cw/bin/python \
+        --netgen /opt/netgen-cw/bin/netgen --magic /opt/magic-cw/bin/magic --jobs 7 \
+        --requests-dir build/demo/<top>/cell_requests --only <cell name>
+
+**Real cells and worst delay** (step 11, section 7) need OpenSTA and the course's cell generator
+[cellweaver](https://github.com/shalan/cellweaver). `container/Dockerfile` adds both to the pack image
+(OpenSTA built from source at a fixed commit; cellweaver's pinned Python packages). cellweaver also needs
+the SKY130 device models (`sky130_fd_pr`), which our HD-only PDK lacks; we installed the same open_pdks
+version with them in a separate root, so the PDK the flow uses is unchanged:
+
+    git clone https://github.com/shalan/cellweaver $HOME/cellweaver
+    docker build -t dd2-layout-tools-sta -f container/Dockerfile $HOME/cellweaver
+    ciel enable --pdk-root $HOME/dd2/pdk-cw --pdk-family sky130 -l sky130_fd_sc_hd -l sky130_fd_pr bdc9412b3e468c102d01b7cf6337be06ec6e9c9a
+    docker run --rm -v "$HOME/dd2:$HOME/dd2" -v "$HOME/cellweaver:$HOME/cellweaver" -e PDK_ROOT=$HOME/dd2/pdk-cw -w "$PWD" \
+        dd2-layout-tools-sta make real-cells CELLWEAVER=$HOME/cellweaver JOBS=7     # ~30 min per cell
+    docker run --rm -v "$HOME/dd2:$HOME/dd2" -w "$PWD" dd2-layout-tools-sta \
+        bash -c "make real-lib && python3 src/final_table5.py && make curve-real"
+
+`src/run_cellweaver.py` truncates each SPICE waveform once its point is measured (the values live in the
+point's checkpoint), so the generator peaks well under 1 GB of disk per cell instead of ~10 GB;
+`--keep-waveforms` keeps the evidence files.
 
 ## 3. What the tool does
 It turns each synthesized design into an and-inverter graph (AIG), lists every
@@ -39,7 +71,16 @@ Liberty file, and measure the area saving. Order of the steps:
 3. `src/tt.py`: classes up to input order (P), input order and output inversion (PO), and NPN
 4. `src/cmos.py`: transistors of one CMOS stage, at most 3 in series
 5. `src/redundancy.py`: Exists / Exists with an inverter / Contained / New, and the self-test
-6. to 12. checkpoint 2 and 3
+6. `src/costmodel.py`: cost of each class (stages, inverters, transistors) and the area model fitted to HD's x1 cells
+7. `src/candidates.py`: Table 3 applied, exclusive cones, estimated saving, ranking
+8. `src/write_cell_requests.py`, `src/write_liberty_with_new_cells.py`: Appendix A requests and the Liberty file
+9. `src/map_with_and_without_new_cells.py`, `src/check_mapping_equivalence.py`: mapping (scripts A and B) and cec/dsec against the RTL
+10. `src/select_final_set.py`: greedy final set by remapping
+11. `src/run_cellweaver.py`, `src/real_lib.py`: real cells from the course generator in place of the estimates
+12. `src/sensitivity.py`: one final cell 30% smaller, remapped
+
+`src/final_table5.py` writes the final Table 5 (with `src/worst_delay.py`, OpenSTA), `src/make_curve.py` the
+cell-by-cell curve; `src/demo.py` runs steps 1 to 10 on one new design (`make demo`).
 
 ## 4. Commands
 | Command | Input | Output |
@@ -60,15 +101,25 @@ Liberty file, and measure the area saving. Order of the steps:
 | `make gate-level-testbenches` (**on the host**, Icarus Verilog 13) | SPM and mul netlists, Tutorial 4 / 2 testbenches, PDK cell models | `results/gate_level_testbenches.csv`, `results/logs/gate_level_testbenches/`: SPM_tb, mul_tb, mul_exhaustive_tb with Tutorial 4's iverilog command |
 | `make table5-estimated` | `results/mapping_areas.csv`, `results/mapping_equivalence.csv` | `results/table5_estimated.{md,csv}`: handout Table 5 with estimated areas, best of both per design, total over the required designs |
 | `make all` | | all of the above |
-| `make demo IN=<design.v> TOP=<top>` | a design | AIG, cut check, most frequent functions and their HD class |
+| `make final-set` | `results/cell_requests/` | step 10, greedy: `results/greedy_log.csv` (every try), `results/final_set.json` (kept cells, total after each), `libs/hd_reduced_plus_final_set_est.lib` |
+| `make curve` | `results/final_set.json` | `results/curve.{csv,md,svg}`: total best-of-both area after each final cell |
+| `make real-cells CELLWEAVER=<clone>` (**tools image**, see Quick start) | `results/final_set.json` | step 11: each final cell built by the course's generator (cellweaver: DRC, LVS, abutment, extracted-RC characterization); `libs/real/<cell>.lib`, `results/real_cells/`, `cells/<cell>/` with the Appendix A response |
+| `make real-lib` | `libs/real/` | `libs/hd_reduced_plus_final_set_real.lib` (estimated cells replaced by the real ones; Yosys imports 189 + N), `results/real_vs_estimated_area.csv` |
+| `make final-table5` | final libraries, baseline mappings | `results/table5_final_{est,real}.{md,csv}`, `results/final/`, `results/netlists/final_{est,real}/`, `results/logs/final_*`; with OpenSTA (`sta`) on the PATH also `results/worst_delay.csv` (`src/worst_delay.py`) |
+| `make sensitivity` | final set | step 12: `results/sensitivity_30pct.{md,csv}` (one final cell 30% smaller, remapped) |
+| `make isa` | risc8, pic16, p16c5x | `results/isa_compare.{md,csv}`, `results/isa/`: do the three PIC16C5x designs favour the same cells? |
+| `make final` | | `final-set curve final-table5 sensitivity isa` |
+| `make demo IN=<design> TOP=<top> [FLAGS=-sv]` | a design: one `.v`/`.sv`, a folder, or `"a.v b.v"` | **the interview run**: steps 1 to 10 on that design alone (AIG before/after ABC, cut check, classes, redundancy, ranking, requests, Liberty, mapping with and without the new cells, equivalence, greedy set), then the design mapped with the project's final set (estimated and real); `build/demo/<top>/` with `table5_demo.md`; PASS/FAIL |
 | `make clean` | | removes `build/` outputs |
 | `python3 src/request.py check <req.json>` | a cell request | PASS or REFUSED |
 
 ## 5. Layout
 - `src/`: the tool
+- `container/`: the tools image for step 11 and OpenSTA (the pack image plus OpenSTA and cellweaver's packages)
 - `tests/`: `test_all.py`; `designs/` (our own small test designs); `aig/` (their AIGs); `broken/` (broken cases)
 - `results/`: every table and log the reports use
-- `libs/`: the Liberty files the tool writes (from checkpoint 2)
+- `libs/`: the Liberty files the tool writes; `libs/real/` the generator's characterized cells
+- `cells/`: one folder per real cell (overview Appendix A): cell.gds/.lef/.lib/.v/.mag/.spice, the generator's report.json, and response.json in the Appendix A response format
 - `ai/`: AI use log and AI mistakes log
 - `report/`: report.pdf and ai_report.pdf with sources
 
@@ -115,11 +166,26 @@ Fixes, all on `main` and in `cp2` (the `cp1` tag is not moved):
   designs: 86,245.3 -> 86,157.7 um2, **0.10%** smaller; largest per design arlet6502 0.49%. With
   script B alone fir10 is 1.89% smaller, but 0.00% against the best of both, because script A
   without new cells is smaller still; SPM with script B is 1.33% larger.
-- Not yet: OpenSTA worst delay per design, greedy selection, real cells, the 30% experiment
-  (checkpoint 3).
+### Checkpoint 3 (final set, real cells, delay, 30%, ISA)
+- `results/final_set.json`, `results/greedy_log.csv`: step 10's greedy selection over the 11 ranked
+  candidates, remapping the 6 required designs per try. Kept: `dd2_gb2__f17_1`, `dd2_gb2__f17ff_1`,
+  `dd2_gb2__f07ff_1` (all three single-stage). Estimated total: 86,245.2 -> 86,102.6 um2 (**0.165%**).
+- `results/table5_final_est.{md,csv}`: Table 5 with estimated areas, all 32 mappings cec/dsec pass,
+  worst delay per design from OpenSTA (`results/worst_delay.csv`, `src/worst_delay.py`).
+- `results/real_cells/`, `libs/real/`: the three cells built by the course generator (cellweaver, single
+  height), each passing Magic DRC, Netgen LVS, abutment and extracted-RC characterization; OpenSTA
+  validates each Liberty. Real areas are 2.0x / 3.0x / 2.17x the estimates
+  (`results/real_vs_estimated_area.csv`).
+- `results/table5_final_real.{md,csv}`: Table 5 with real areas. ABC almost never picks the real cells
+  (fir10 B: 2 instances); best-of-both total 86,245.3 -> 86,239.0 um2 (**0.01%**): the estimated saving
+  all but disappears with real areas (see the report's discussion).
+- `results/curve.{csv,md,svg}` and `results/curve_real.*`: the cell-by-cell curve, estimated and real.
+- `results/sensitivity_30pct.{md,csv}`: step 12, `dd2_gb2__f17_1` 30% smaller and remapped.
+- `results/isa_compare.{md,csv}`: risc8 / pic16 / p16c5x candidate overlap.
+- `results/gate_level_testbenches.csv`: 24 of 24 runs pass (baseline, est, final est, final real).
 
 ## 7. Tests
-`make test` runs `tests/test_all.py`, `tests/test_candidates.py`, `tests/test_abc_after.py`, `tests/test_liberty_with_new_cells.py`, `tests/test_mapping_equivalence.py` and `tests/test_gate_level_testbenches.py` (needs Icarus, so it runs on the host and skips in the image):
+`make test` (63 tests; 2 skip in the image) runs `tests/test_all.py`, `tests/test_candidates.py`, `tests/test_abc_after.py`, `tests/test_liberty_with_new_cells.py`, `tests/test_mapping_equivalence.py`, `tests/test_gate_level_testbenches.py` (needs Icarus, so it runs on the host and skips in the image) and `tests/test_final_set.py`:
 | Check | Broken case (in `tests/broken/`) |
 |---|---|
 | Truth tables: Appendix A example is 0x077F; 3,984 P and 222 NPN classes | |
@@ -134,7 +200,10 @@ Fixes, all on `main` and in `cp2` (the `cp1` tag is not moved):
 | Yosys imports 189 + N cell types | in `tests/test_liberty_with_new_cells.py`: a missing brace; Yosys 0.33 reads it without error but imports 190, so the count must fail |
 | Each new cell's function equals its request's truth table | in `tests/test_liberty_with_new_cells.py`: a function using a pin the cell lacks must be reported |
 | Every mapped netlist equals the RTL (`src/check_mapping_equivalence.py`: ABC `cec`, or `dsec` with flip-flops; `tests/test_mapping_equivalence.py`) | in `tests/test_mapping_equivalence.py`: one nand2_1 swapped for a nor2_1 in mul (cec) and in cpu8 (dsec) must be rejected |
-| SPM and mul netlists pass Tutorial 4's gate-level testbenches (`src/run_gate_level_testbenches.py`; `tests/test_gate_level_testbenches.py`, host only) | in `tests/test_gate_level_testbenches.py`: mul with one nand2_1 swapped for a nor2_1 must fail mul_exhaustive_tb |
+| Cost formula computes its class (`costmodel.verify`, `tests/test_candidates.py`) | in `tests/test_candidates.py`: a formula for another function (0x0707 with `!(A & B)`) must be rejected |
+| Greedy rule keeps a cell only if the best-of-both total drops by > 0.05 um2 (`tests/test_final_set.py`) | a cell that makes the total larger, and a gain below rounding, must both be dropped |
+| Final Table 5: best of both, totals over the required designs, equivalence carried through (`tests/test_final_set.py`) | a failed equivalence must show as FAIL; a real Liberty file with a missing or unbalanced cell group must be refused |
+| SPM and mul netlists (baseline, est, final est, final real) pass Tutorial 4's gate-level testbenches (`src/run_gate_level_testbenches.py`; `tests/test_gate_level_testbenches.py`, host only) | in `tests/test_gate_level_testbenches.py`: mul with one nand2_1 swapped for a nor2_1 must fail mul_exhaustive_tb |
 
 ## 8. AI use
 AGENTS.md · ai/use_log.md · ai/mistakes_log.md · report/ai_report.pdf
