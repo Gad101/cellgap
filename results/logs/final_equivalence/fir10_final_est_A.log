@@ -1,5 +1,5 @@
-ABC command line: "read_aiger /Users/ziadtaher/cellgap/build/mapping_equivalence/fir10_final_est_ref.aig; zero; write_aiger /Users/ziadtaher/cellgap/build/mapping_equivalence/fir10_final_est_ref_0.aig; read_aiger /Users/ziadtaher/cellgap/build/mapping_equivalence/fir10_final_est_A.aig; zero; write_aiger /Users/ziadtaher/cellgap/build/mapping_equivalence/fir10_final_est_A_0.aig; dsec /Users/ziadtaher/cellgap/build/mapping_equivalence/fir10_final_est_ref_0.aig /Users/ziadtaher/cellgap/build/mapping_equivalence/fir10_final_est_A_0.aig".
+ABC command line: "read_aiger /Users/abdugad/dd2/cellgap/build/mapping_equivalence/fir10_final_est_ref.aig; zero; write_aiger /Users/abdugad/dd2/cellgap/build/mapping_equivalence/fir10_final_est_ref_0.aig; read_aiger /Users/abdugad/dd2/cellgap/build/mapping_equivalence/fir10_final_est_A.aig; zero; write_aiger /Users/abdugad/dd2/cellgap/build/mapping_equivalence/fir10_final_est_A_0.aig; dsec /Users/abdugad/dd2/cellgap/build/mapping_equivalence/fir10_final_est_ref_0.aig /Users/abdugad/dd2/cellgap/build/mapping_equivalence/fir10_final_est_A_0.aig".
 
 Converting 176 flops from don't-care to zero initial value.
 Converting 176 flops from don't-care to zero initial value.
-Networks are equivalent.  Time =     0.82 sec
+Networks are equivalent.  Time =     0.75 sec

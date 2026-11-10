@@ -5,7 +5,7 @@
 #   make check
 #   make test
 #   make all
-#   make demo IN=tests/designs/csa8.v TOP=csa8
+#   make demo IN=tests/designs/csa8.v TOP=csa8   (any design: IN=<file or folder> TOP=<module>)
 
 SHELL   := /bin/bash
 PY      ?= python3
@@ -70,6 +70,7 @@ aigs:
 # step 2: cuts, their check, and the per-design counts, before and after ABC (handout 9.2)
 stats:
 	$(PY) src/design_stats.py $(foreach d,$(ANALYSED),build/aig/$(d).aag build/aig/$(d)_abc.aig)
+	$(PY) src/class_counts.py
 
 table1:
 	$(PY) src/table1.py
@@ -120,10 +121,12 @@ table5-estimated: mapping-equivalence
 
 all: hd-classes selftest aigs stats table1 candidates cell-requests liberty-with-new-cells mapping mapping-equivalence new-cell-verilog-sims table5-estimated
 
+# the whole flow (steps 1-10) on one design: IN = a .v file, a folder, or "a.v b.v"; FLAGS for read_verilog (e.g. -sv)
 IN  ?= tests/designs/csa8.v
 TOP ?= csa8
+FLAGS ?=
 demo:
-	$(PY) src/demo.py $(IN) $(TOP)
+	$(PY) src/demo.py "$(IN)" $(TOP) "$(FLAGS)"
 
 clean:
 	rm -rf build/aig build/demo build/smoke build/canon.npz src/__pycache__ tests/__pycache__

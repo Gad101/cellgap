@@ -8,8 +8,9 @@ and writes results/final/mapping_areas_final.csv, results/final/mapping_equivale
 results/table5_final_<label>.{md,csv}.
 Baseline areas and their equivalence results are read from results/mapping_areas.csv and
 results/mapping_equivalence.csv (make mapping-equivalence).
-Optional worst delay: results/worst_delay.csv with columns design,library,script,worst_delay_ns
-(library = baseline, est or real), from OpenSTA. Without it the column says "n/a".
+Worst delay (section 7): when OpenSTA (`sta`) is on the PATH, every baseline and final netlist is timed with
+src/worst_delay.py and results/worst_delay.csv (design,library,script,worst_delay_ns) is rewritten; without
+`sta` that file is read as it is, and a missing value says "n/a".
 Exits 1 if any equivalence check fails.
 """
 from __future__ import annotations
@@ -24,6 +25,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import check_mapping_equivalence as ck                         # noqa: E402
 import final_flow as ff                                        # noqa: E402
+import worst_delay as wd                                       # noqa: E402
 from designs import ANALYSED, REQUIRED, ROOT                   # noqa: E402
 
 RES = os.path.join(ROOT, "results")
@@ -97,6 +99,11 @@ def main(argv=None) -> int:
     base_eq = {(r["design"], r["script"]): r["equivalence"] for r in read_csv(os.path.join(RES, "mapping_equivalence.csv"))
                if r["library"] == "baseline"}
     dl, bad, area_rows, eq_rows = delays(), 0, [], []
+    if wd.available():
+        dl.update(wd.measure(ck.LIBS["baseline"], {(d, s): os.path.join(RES, "netlists", "%s_baseline_%s.v" % (d, s))
+                                                   for d in ANALYSED for s in "AB"}, "baseline"))
+    else:
+        print("OpenSTA (sta) not found: the worst-delay columns keep results/worst_delay.csv or say n/a")
     for label, lib in LABELS.items():
         if not os.path.exists(lib):
             print("%s: %s not found, skipped" % (label, os.path.relpath(lib, ROOT)))
@@ -120,11 +127,15 @@ def main(argv=None) -> int:
                               "new_cells": " ".join("%s:%d" % kv for kv in sorted(cells.items()))})
             eq_rows.append({"design": d, "library": label, "script": s, "method": method, "equivalence": eq[d, s][0]})
             print("%-10s %-5s script %s %10.1f um2  %s %s" % (d, label, s, area, method, eq[d, s][0]), flush=True)
+        if wd.available():
+            dl.update(wd.measure(lib, {(d, s): os.path.join(netdir, "%s_%s.v" % (d, s)) for d, s in areas}, label))
         rows, best, tot = build_rows(base_area, base_eq, {k: (round(v[0], 1), v[1]) for k, v in areas.items()},
                                      eq, dl, label)
         write_table(rows, best, tot, label)
         print("results/table5_final_%s.md: total over the required designs %.1f -> %.1f um2 (%.2f%%)"
               % (label, tot[0], tot[1], pct(*tot)))
+    if wd.available():
+        wd.write_csv(os.path.join(RES, "worst_delay.csv"), dl)
     for name, rows in (("mapping_areas_final.csv", area_rows), ("mapping_equivalence_final.csv", eq_rows)):
         if rows:
             with open(os.path.join(OUT, name), "w", newline="") as f:

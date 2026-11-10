@@ -3,7 +3,8 @@
     python3 src/run_gate_level_testbenches.py
 Runs on the host with Icarus Verilog 13 (overview Table 1); the student pack's
 image has no Icarus. Each mapped netlist of SPM and mul (baseline and with new
-cells, scripts A and B; results/netlists from make mapping) is simulated with
+cells, scripts A and B, from make mapping; and the final est and real netlists from
+make final-table5, when they exist) is simulated with
 the iverilog command of Tutorial 4's Makefile (gls, mul-gls, mul-exh): the
 testbench, the netlist, the PDK cell models, and libs/new_cell_verilog_sims.v
 for the new cells. A run passes when vvp exits 0, prints PASS, and prints no
@@ -60,10 +61,15 @@ def main() -> int:
     os.makedirs(logs, exist_ok=True)
     rows = []
     for design, tbs in TESTBENCHES.items():
-        for lib in ("baseline", "est"):
+        for lib in ("baseline", "est", "final_est", "final_real"):
             for script in "AB":
                 tag = "%s_%s_%s" % (design, lib, script)
-                net = os.path.join(ROOT, "results", "netlists", tag + ".v")
+                if lib.startswith("final"):      # make final-table5 writes these; skip if not made yet
+                    net = os.path.join(ROOT, "results", "netlists", lib, "%s_%s.v" % (design, script))
+                    if not os.path.exists(net):
+                        continue
+                else:
+                    net = os.path.join(ROOT, "results", "netlists", tag + ".v")
                 for top, tb, flags in tbs:
                     ok, text = simulate(net, top, tb, flags, "%s_%s" % (tag, top))
                     with open(os.path.join(logs, "%s_%s.log" % (tag, top)), "w") as f:

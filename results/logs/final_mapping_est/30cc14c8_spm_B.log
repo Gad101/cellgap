@@ -22,20 +22,20 @@
  Yosys 0.33 (git sha1 2584903a060)
 
 
--- Executing script file `/Users/ziadtaher/cellgap/results/logs/final_mapping_est/30cc14c8_spm_B.ys' --
+-- Executing script file `/Users/abdugad/dd2/cellgap/results/logs/final_mapping_est/30cc14c8_spm_B.ys' --
 
-1. Executing Verilog-2005 frontend: /Users/ziadtaher/work/dd2/tut4/SPM.v
-Parsing Verilog input from `/Users/ziadtaher/work/dd2/tut4/SPM.v' to AST representation.
+1. Executing Verilog-2005 frontend: /Users/abdugad/dd2/tutorials/tut4/SPM.v
+Parsing Verilog input from `/Users/abdugad/dd2/tutorials/tut4/SPM.v' to AST representation.
 Generating RTLIL representation for module `\SPM'.
 Successfully finished Verilog frontend.
 
-2. Executing Verilog-2005 frontend: /Users/ziadtaher/work/dd2/tut4/CSADD.v
-Parsing Verilog input from `/Users/ziadtaher/work/dd2/tut4/CSADD.v' to AST representation.
+2. Executing Verilog-2005 frontend: /Users/abdugad/dd2/tutorials/tut4/CSADD.v
+Parsing Verilog input from `/Users/abdugad/dd2/tutorials/tut4/CSADD.v' to AST representation.
 Generating RTLIL representation for module `\CSADD'.
 Successfully finished Verilog frontend.
 
-3. Executing Verilog-2005 frontend: /Users/ziadtaher/work/dd2/tut4/TCMP.v
-Parsing Verilog input from `/Users/ziadtaher/work/dd2/tut4/TCMP.v' to AST representation.
+3. Executing Verilog-2005 frontend: /Users/abdugad/dd2/tutorials/tut4/TCMP.v
+Parsing Verilog input from `/Users/abdugad/dd2/tutorials/tut4/TCMP.v' to AST representation.
 Generating RTLIL representation for module `\TCMP'.
 Successfully finished Verilog frontend.
 
@@ -60,8 +60,8 @@ Removed 0 unused modules.
 Cleaned up 0 empty switches.
 
 4.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
-Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/work/dd2/tut4/TCMP.v:32$39 in module TCMP.
-Marked 1 switch rules as full_case in process $proc$/Users/ziadtaher/work/dd2/tut4/CSADD.v:41$37 in module CSADD.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/tutorials/tut4/TCMP.v:32$39 in module TCMP.
+Marked 1 switch rules as full_case in process $proc$/Users/abdugad/dd2/tutorials/tut4/CSADD.v:41$37 in module CSADD.
 Removed a total of 0 dead cases.
 
 4.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
@@ -71,37 +71,37 @@ Promoted 0 assignments to connections.
 4.2.4. Executing PROC_INIT pass (extract init attributes).
 
 4.2.5. Executing PROC_ARST pass (detect async resets in processes).
-Found async reset \rst in `\TCMP.$proc$/Users/ziadtaher/work/dd2/tut4/TCMP.v:32$39'.
-Found async reset \rst in `\CSADD.$proc$/Users/ziadtaher/work/dd2/tut4/CSADD.v:41$37'.
+Found async reset \rst in `\TCMP.$proc$/Users/abdugad/dd2/tutorials/tut4/TCMP.v:32$39'.
+Found async reset \rst in `\CSADD.$proc$/Users/abdugad/dd2/tutorials/tut4/CSADD.v:41$37'.
 
 4.2.6. Executing PROC_ROM pass (convert switches to ROMs).
 Converted 0 switches.
 
 4.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
-Creating decoders for process `\TCMP.$proc$/Users/ziadtaher/work/dd2/tut4/TCMP.v:32$39'.
+Creating decoders for process `\TCMP.$proc$/Users/abdugad/dd2/tutorials/tut4/TCMP.v:32$39'.
      1/2: $0\s[0:0]
      2/2: $0\z[0:0]
-Creating decoders for process `\CSADD.$proc$/Users/ziadtaher/work/dd2/tut4/CSADD.v:41$37'.
+Creating decoders for process `\CSADD.$proc$/Users/abdugad/dd2/tutorials/tut4/CSADD.v:41$37'.
      1/2: $0\sc[0:0]
      2/2: $0\sum[0:0]
 
 4.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
 
 4.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
-Creating register for signal `\TCMP.\s' using process `\TCMP.$proc$/Users/ziadtaher/work/dd2/tut4/TCMP.v:32$39'.
+Creating register for signal `\TCMP.\s' using process `\TCMP.$proc$/Users/abdugad/dd2/tutorials/tut4/TCMP.v:32$39'.
   created $adff cell `$procdff$42' with positive edge clock and positive level reset.
-Creating register for signal `\TCMP.\z' using process `\TCMP.$proc$/Users/ziadtaher/work/dd2/tut4/TCMP.v:32$39'.
+Creating register for signal `\TCMP.\z' using process `\TCMP.$proc$/Users/abdugad/dd2/tutorials/tut4/TCMP.v:32$39'.
   created $adff cell `$procdff$43' with positive edge clock and positive level reset.
-Creating register for signal `\CSADD.\sum' using process `\CSADD.$proc$/Users/ziadtaher/work/dd2/tut4/CSADD.v:41$37'.
+Creating register for signal `\CSADD.\sum' using process `\CSADD.$proc$/Users/abdugad/dd2/tutorials/tut4/CSADD.v:41$37'.
   created $adff cell `$procdff$44' with positive edge clock and positive level reset.
-Creating register for signal `\CSADD.\sc' using process `\CSADD.$proc$/Users/ziadtaher/work/dd2/tut4/CSADD.v:41$37'.
+Creating register for signal `\CSADD.\sc' using process `\CSADD.$proc$/Users/abdugad/dd2/tutorials/tut4/CSADD.v:41$37'.
   created $adff cell `$procdff$45' with positive edge clock and positive level reset.
 
 4.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
 
 4.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
-Removing empty process `TCMP.$proc$/Users/ziadtaher/work/dd2/tut4/TCMP.v:32$39'.
-Removing empty process `CSADD.$proc$/Users/ziadtaher/work/dd2/tut4/CSADD.v:41$37'.
+Removing empty process `TCMP.$proc$/Users/abdugad/dd2/tutorials/tut4/TCMP.v:32$39'.
+Removing empty process `CSADD.$proc$/Users/abdugad/dd2/tutorials/tut4/CSADD.v:41$37'.
 Cleaned up 0 empty switches.
 
 4.2.12. Executing OPT_EXPR pass (perform const folding).
@@ -515,8 +515,8 @@ Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script
 ABC: ABC command line: "source <abc-temp-dir>/abc.script".
 ABC: 
 ABC: + read_blif <abc-temp-dir>/input.blif 
-ABC: + read_lib -w /Users/ziadtaher/cellgap/libs/hd_reduced_plus_final_set_est.lib 
-ABC: Parsing finished successfully.  Parsing time =     0.04 sec
+ABC: + read_lib -w /Users/abdugad/dd2/cellgap/libs/hd_reduced_plus_final_set_est.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.05 sec
 ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbn_1".
 ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbp_1".
 ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrbp_1".
@@ -534,8 +534,8 @@ ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxbn_1".
 ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxbp_1".
 ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_1".
 ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtp_1".
-ABC: Library "sky130_fd_sc_hd__tt_025C_1v80" from "/Users/ziadtaher/cellgap/libs/hd_reduced_plus_final_set_est.lib" has 175 cells (17 skipped: 17 seq; 0 tri-state; 0 no func; 0 dont_use).  Time =     0.06 sec
-ABC: Memory =    9.95 MB. Time =     0.06 sec
+ABC: Library "sky130_fd_sc_hd__tt_025C_1v80" from "/Users/abdugad/dd2/cellgap/libs/hd_reduced_plus_final_set_est.lib" has 175 cells (17 skipped: 17 seq; 0 tri-state; 0 no func; 0 dont_use).  Time =     0.07 sec
+ABC: Memory =    9.95 MB. Time =     0.07 sec
 ABC: Warning: Detected 2 multi-output gates (for example, "sky130_fd_sc_hd__fa_1").
 ABC: + strash 
 ABC: + &get -n 
@@ -596,6 +596,6 @@ Removed 0 unused cells and 447 unused wires.
 9.2. Executing DEMUXMAP pass.
 Dumping module `\SPM'.
 
-End of script. Logfile hash: 5119a9f5b3, CPU: user 0.27s system 0.01s, MEM: 24.30 MB peak
+End of script. Logfile hash: b8d45e77d8, CPU: user 0.34s system 0.02s, MEM: 24.56 MB peak
 Yosys 0.33 (git sha1 2584903a060)
-Time spent: 33% 2x abc (0 sec), 16% 1x dfflibmap (0 sec), ...
+Time spent: 33% 2x abc (0 sec), 12% 1x dfflibmap (0 sec), ...

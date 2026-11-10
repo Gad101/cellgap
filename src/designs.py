@@ -7,6 +7,7 @@ holding several files.
 from __future__ import annotations
 
 import glob
+import json
 import os
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -55,9 +56,31 @@ SCRIPTS = {
     "B": "+strash;&get,-n;&dch,-f;&nf,-R,1000;&put",
 }
 
+# A design given on the day (make demo). Kept in the environment so worker processes see it too.
+_EXTRA = "CELLGAP_EXTRA_DESIGN"
+
+
+def register(name: str, top: str, paths: list[str], flags: str = "") -> None:
+    """Add a design outside Table 2, so the mapping and equivalence code can use it by name."""
+    os.environ[_EXTRA] = json.dumps([name, top, [os.path.realpath(p) for p in paths], flags])
+    _load_extra()
+
+
+def _load_extra() -> None:
+    if os.environ.get(_EXTRA):
+        name, top, _, flags = json.loads(os.environ[_EXTRA])
+        DESIGNS[name] = (top, False, flags)
+
+
+_load_extra()
+
 
 def files(name: str) -> list[str]:
     """Verilog files of a design."""
+    if os.environ.get(_EXTRA):
+        extra = json.loads(os.environ[_EXTRA])
+        if extra[0] == name:
+            return extra[2]
     if name in TUTORIAL:
         tut, names = TUTORIAL[name]
         d = os.path.realpath(os.path.join(ROOT, "build", tut))

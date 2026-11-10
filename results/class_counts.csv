@@ -1,0 +1,3 @@
+graph,designs,po,npn,po_4in,npn_4in
+before,cpu8 dsp8 arlet6502 uart_apb risc8 fir10 spm mul,362,91,326,78
+after_abc,cpu8 dsp8 arlet6502 uart_apb risc8 fir10 spm mul,316,86,285,75

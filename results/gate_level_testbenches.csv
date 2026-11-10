@@ -3,6 +3,10 @@ spm,baseline,A,SPM_tb,pass,PASS: SPM behaves as a signed 32x32 multiplier
 spm,baseline,B,SPM_tb,pass,PASS: SPM behaves as a signed 32x32 multiplier
 spm,est,A,SPM_tb,pass,PASS: SPM behaves as a signed 32x32 multiplier
 spm,est,B,SPM_tb,pass,PASS: SPM behaves as a signed 32x32 multiplier
+spm,final_est,A,SPM_tb,pass,PASS: SPM behaves as a signed 32x32 multiplier
+spm,final_est,B,SPM_tb,pass,PASS: SPM behaves as a signed 32x32 multiplier
+spm,final_real,A,SPM_tb,pass,PASS: SPM behaves as a signed 32x32 multiplier
+spm,final_real,B,SPM_tb,pass,PASS: SPM behaves as a signed 32x32 multiplier
 mul,baseline,A,mul_tb,pass,PASS: 7/7 tests passed
 mul,baseline,A,mul_exhaustive_tb,pass,PASS: all 65536 signed input pairs correct
 mul,baseline,B,mul_tb,pass,PASS: 7/7 tests passed
@@ -11,3 +15,11 @@ mul,est,A,mul_tb,pass,PASS: 7/7 tests passed
 mul,est,A,mul_exhaustive_tb,pass,PASS: all 65536 signed input pairs correct
 mul,est,B,mul_tb,pass,PASS: 7/7 tests passed
 mul,est,B,mul_exhaustive_tb,pass,PASS: all 65536 signed input pairs correct
+mul,final_est,A,mul_tb,pass,PASS: 7/7 tests passed
+mul,final_est,A,mul_exhaustive_tb,pass,PASS: all 65536 signed input pairs correct
+mul,final_est,B,mul_tb,pass,PASS: 7/7 tests passed
+mul,final_est,B,mul_exhaustive_tb,pass,PASS: all 65536 signed input pairs correct
+mul,final_real,A,mul_tb,pass,PASS: 7/7 tests passed
+mul,final_real,A,mul_exhaustive_tb,pass,PASS: all 65536 signed input pairs correct
+mul,final_real,B,mul_tb,pass,PASS: 7/7 tests passed
+mul,final_real,B,mul_exhaustive_tb,pass,PASS: all 65536 signed input pairs correct

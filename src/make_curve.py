@@ -1,13 +1,19 @@
 """Cell-by-cell curve (handout section 7): total best-of-both area after each final cell is added.
 
-    python3 src/make_curve.py
+    python3 src/make_curve.py [--real] [--jobs N]
 Reads results/final_set.json (written by select_final_set.py, cells in the order the tool chose
 them). Writes results/curve.csv, results/curve.md and results/curve.svg (a plain SVG, no
 plotting library). Every number is copied from final_set.json.
+With --real it draws the same curve with the generator's real cells (handout section 7, "give
+everything twice"): the cells are added in the same order the tool chose, but each point is a new
+mapping of the required designs with a library in which those cells' estimated groups are replaced
+by their real ones (libs/real/, src/real_lib.py). Writes results/curve_real.{csv,md,svg}.
 """
 from __future__ import annotations
 
+import argparse
 import csv
+import hashlib
 import json
 import os
 import sys
@@ -30,7 +36,40 @@ def points(fs: dict) -> list[dict]:
     return pts
 
 
-def svg(pts: list[dict], w: int = 640, h: int = 360) -> str:
+def real_points(fs: dict, jobs: int | None) -> list[dict]:
+    """Baseline, then one remap per prefix of the final set with real cells in place of the estimates."""
+    import final_flow as ff
+    import real_lib
+    work = os.path.join(ROOT, "build", "curve_real")
+    os.makedirs(work, exist_ok=True)
+    real = {}
+    for name in fs["cells"]:
+        path = os.path.join(ROOT, "libs", "real", name + ".lib")
+        if not os.path.exists(path):
+            sys.exit("missing %s: run `make real-cells` first" % path)
+        text = open(path).read()
+        a, b = real_lib.group(text, name)
+        real[name] = text[a:b]
+    pts = []
+    for k in range(len(fs["requests"]) + 1):
+        reqs = fs["requests"][:k]
+        lib = os.path.join(work, "lib_%d.lib" % k)
+        sha = ff.build_lib(reqs, lib)
+        if k:
+            text = real_lib.replace_cells(open(lib).read(), {r["name"]: real[r["name"]] for r in reqs})
+            open(lib, "w").write(text)
+            sha = hashlib.sha256(text.encode()).hexdigest()
+        areas = ff.map_all(lib, sha, fs["designs"], os.path.join(work, "logs"), jobs=jobs)
+        tot = round(ff.best_total(areas, fs["designs"]), 1)
+        base = pts[0]["total_um2"] if pts else tot
+        prev = pts[-1]["total_um2"] if pts else tot
+        pts.append({"cells": k, "added_cell": fs["requests"][k - 1]["name"] if k else "-", "total_um2": tot,
+                    "step_gain_um2": round(prev - tot, 1), "reduction_pct": round(100 * (base - tot) / base, 3)})
+        print("%d cells: %.1f um2" % (k, tot), flush=True)
+    return pts
+
+
+def svg(pts: list[dict], w: int = 640, h: int = 360, label: str = "estimated areas") -> str:
     """Line chart of total area against number of cells, axis not forced to zero (said on the chart)."""
     lo, hi = min(p["total_um2"] for p in pts), max(p["total_um2"] for p in pts)
     pad = (hi - lo) * 0.15 or 1.0
@@ -42,7 +81,7 @@ def svg(pts: list[dict], w: int = 640, h: int = 360) -> str:
     out = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d %d" font-family="sans-serif" font-size="12">' % (w, h),
            '<rect width="100%" height="100%" fill="white"/>',
            '<text x="%d" y="18" font-size="14">Total best-of-both area of the required designs (um2), '
-           'estimated areas</text>' % L]
+           '%s</text>' % (L, label)]
     for k in range(5):
         v = lo + (hi - lo) * k / 4
         out.append('<line x1="%d" x2="%d" y1="%.1f" y2="%.1f" stroke="#ddd"/>' % (L, w - R, y(v), y(v)))
@@ -58,21 +97,26 @@ def svg(pts: list[dict], w: int = 640, h: int = 360) -> str:
     return "\n".join(out) + "\n</svg>\n"
 
 
-def main() -> int:
+def main(argv=None) -> int:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--real", action="store_true", help="the curve with the generator's real cells")
+    ap.add_argument("--jobs", type=int, default=None)
+    a = ap.parse_args(argv)
     fs = json.load(open(os.path.join(RES, "final_set.json")))
-    pts = points(fs)
-    with open(os.path.join(RES, "curve.csv"), "w", newline="") as f:
+    tag, label = ("curve_real", "real cells") if a.real else ("curve", "estimated areas")
+    pts = real_points(fs, a.jobs) if a.real else points(fs)
+    with open(os.path.join(RES, tag + ".csv"), "w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=list(pts[0]))
         w.writeheader()
         w.writerows(pts)
-    md = ["# Cell-by-cell curve (estimated areas)", "",
+    md = ["# Cell-by-cell curve (%s)" % label, "",
           "| Cells added | Cell added | Total best-of-both area (um2) | Gain of this cell (um2) | Reduction vs baseline |",
           "|---|---|---|---|---|"]
     md += ["| %d | %s | %.1f | %.1f | %.3f%% |" % (p["cells"], p["added_cell"], p["total_um2"], p["step_gain_um2"],
                                                   p["reduction_pct"]) for p in pts]
-    open(os.path.join(RES, "curve.md"), "w").write("\n".join(md) + "\n")
-    open(os.path.join(RES, "curve.svg"), "w").write(svg(pts))
-    print("results/curve.{csv,md,svg}: %d points, %.1f -> %.1f um2" % (len(pts), pts[0]["total_um2"], pts[-1]["total_um2"]))
+    open(os.path.join(RES, tag + ".md"), "w").write("\n".join(md) + "\n")
+    open(os.path.join(RES, tag + ".svg"), "w").write(svg(pts, label=label))
+    print("results/%s.{csv,md,svg}: %d points, %.1f -> %.1f um2" % (tag, len(pts), pts[0]["total_um2"], pts[-1]["total_um2"]))
     return 0
 
 

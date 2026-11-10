@@ -132,17 +132,23 @@ def baseline_area_per_and(design: str, n_ands: int) -> tuple[float | None, str]:
                 log = os.path.join(RESULTS, "logs", "mapping", "%s_baseline_%s.log" % (design, script))
             if not os.path.exists(log):
                 continue
-            text = open(log).read()
-            block = text[text.rindex("Number of cells"):]
-            comb = 0.0
-            for name, n in re.findall(r"^\s+(sky130_fd_sc_hd__\S+)\s+(\d+)\s*$", block, re.M):
-                a, seq = area[name]
-                if not seq:
-                    comb += a * int(n)
+            comb = comb_area(log, area)
             best = comb if best is None else min(best, comb)
     if best is None:
         return None, "no Table 1 log"
     return best / n_ands, "table1 logs"
+
+
+def comb_area(log: str, area: dict) -> float:
+    """Area of the combinational HD cells in the last stat of a mapping log (flip-flops left out)."""
+    text = open(log).read()
+    block = text[text.rindex("Number of cells"):]
+    comb = 0.0
+    for name, n in re.findall(r"^\s+(sky130_fd_sc_hd__\S+)\s+(\d+)\s*$", block, re.M):
+        a, seq = area[name]
+        if not seq:
+            comb += a * int(n)
+    return comb
 
 
 # ---- one design ----------------------------------------------------------------

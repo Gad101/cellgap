@@ -1,0 +1,31 @@
+{
+ "request_id": "C-003",
+ "status": "pass",
+ "reason": null,
+ "cell": "dd2_gb2__f17_1",
+ "transistors": 10,
+ "width_sites": 14,
+ "area_um2": 17.5168,
+ "files": {
+  "gds": "cells/dd2_gb2__f17_1/cell.gds",
+  "liberty": "cells/dd2_gb2__f17_1/cell.lib",
+  "verilog": "cells/dd2_gb2__f17_1/cell.v",
+  "report": "cells/dd2_gb2__f17_1/report.json"
+ },
+ "checks": {
+  "drc": "pass",
+  "lvs": "pass",
+  "abutment": "pass",
+  "simulation": "not_run",
+  "router_pin_access": "not_run",
+  "characterization": "not_run",
+  "switch_level": "pass",
+  "geometry": "pass",
+  "stress_extraction": "pass",
+  "rc_extraction": "pass",
+  "simulation_rc": "not_run",
+  "characterization_rc": "pass"
+ },
+ "ngspice_sha256": "4993be8a7d88a19909d8e249f522338a32553af947bd6ad416545cd1a192089f",
+ "tool_version": "git:e7fd28e"
+}

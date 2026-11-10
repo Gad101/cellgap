@@ -1,0 +1,772 @@
+{
+  "cell": "dd2_gb2__f17ff_1",
+  "width_um": 11.04,
+  "height_um": 2.72,
+  "height_rows": 1,
+  "site_count": 24,
+  "function": "~((D & ((A & B) | (C & (A | B)))))",
+  "ports": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "VGND",
+    "VNB",
+    "VPB",
+    "VPWR",
+    "Y"
+  ],
+  "transistor_count": 12,
+  "devices": [
+    {
+      "name": "M0",
+      "kind": "n",
+      "gate": "D",
+      "left": "Y",
+      "right": "_net1",
+      "width": 420
+    },
+    {
+      "name": "M1",
+      "kind": "n",
+      "gate": "A",
+      "left": "_net1",
+      "right": "_net2",
+      "width": 420
+    },
+    {
+      "name": "M2",
+      "kind": "n",
+      "gate": "B",
+      "left": "_net2",
+      "right": "VGND",
+      "width": 420
+    },
+    {
+      "name": "M3",
+      "kind": "n",
+      "gate": "C",
+      "left": "_net1",
+      "right": "_net3",
+      "width": 420
+    },
+    {
+      "name": "M4",
+      "kind": "n",
+      "gate": "A",
+      "left": "_net3",
+      "right": "VGND",
+      "width": 420
+    },
+    {
+      "name": "M5",
+      "kind": "n",
+      "gate": "B",
+      "left": "_net3",
+      "right": "VGND",
+      "width": 420
+    },
+    {
+      "name": "M6",
+      "kind": "p",
+      "gate": "D",
+      "left": "Y",
+      "right": "VPWR",
+      "width": 1000
+    },
+    {
+      "name": "M7",
+      "kind": "p",
+      "gate": "A",
+      "left": "Y",
+      "right": "_net4",
+      "width": 1000
+    },
+    {
+      "name": "M8",
+      "kind": "p",
+      "gate": "B",
+      "left": "Y",
+      "right": "_net4",
+      "width": 1000
+    },
+    {
+      "name": "M9",
+      "kind": "p",
+      "gate": "C",
+      "left": "_net4",
+      "right": "VPWR",
+      "width": 1000
+    },
+    {
+      "name": "M10",
+      "kind": "p",
+      "gate": "A",
+      "left": "_net4",
+      "right": "_net5",
+      "width": 1000
+    },
+    {
+      "name": "M11",
+      "kind": "p",
+      "gate": "B",
+      "left": "_net5",
+      "right": "VPWR",
+      "width": 1000
+    }
+  ],
+  "sizing": "Base Wn=0.42, Wp=1 um; exact parallel folding; no stack compensation",
+  "reference_spice": null,
+  "reference_cell": null,
+  "routing": {
+    "A": [
+      "met3",
+      340
+    ],
+    "B": [
+      "met3",
+      1020
+    ],
+    "C": [
+      "met3",
+      1700
+    ],
+    "D": [
+      "met3",
+      340
+    ],
+    "Y": [
+      "met1",
+      920
+    ],
+    "_net1": [
+      "met1",
+      1360
+    ],
+    "_net3": [
+      "met1",
+      1800
+    ],
+    "_net4": [
+      "met1",
+      1360
+    ]
+  },
+  "routing_spans_nm": {
+    "_net3": {
+      "0": [
+        1905,
+        8215
+      ]
+    },
+    "_net1": {
+      "0": [
+        6505,
+        10515
+      ]
+    },
+    "B": {
+      "0": [
+        985,
+        7755
+      ]
+    },
+    "A": {
+      "0": [
+        2825,
+        6375
+      ]
+    },
+    "C": {
+      "0": [
+        1445,
+        7295
+      ]
+    },
+    "Y": {
+      "0": [
+        3745,
+        9595
+      ]
+    },
+    "D": {
+      "0": [
+        8345,
+        10055
+      ]
+    },
+    "_net4": {
+      "0": [
+        2365,
+        5455
+      ]
+    }
+  },
+  "accesses": [
+    {
+      "net": "B",
+      "row": 0,
+      "x_nm": 1150,
+      "anchor_y_nm": 545
+    },
+    {
+      "net": "A",
+      "row": 0,
+      "x_nm": 2990,
+      "anchor_y_nm": 545
+    },
+    {
+      "net": "B",
+      "row": 0,
+      "x_nm": 4370,
+      "anchor_y_nm": 545
+    },
+    {
+      "net": "A",
+      "row": 0,
+      "x_nm": 5750,
+      "anchor_y_nm": 545
+    },
+    {
+      "net": "C",
+      "row": 0,
+      "x_nm": 7130,
+      "anchor_y_nm": 545
+    },
+    {
+      "net": "_net3",
+      "row": 0,
+      "x_nm": 2070,
+      "anchor_y_nm": 545
+    },
+    {
+      "net": "_net1",
+      "row": 0,
+      "x_nm": 6670,
+      "anchor_y_nm": 545
+    },
+    {
+      "net": "_net3",
+      "row": 0,
+      "x_nm": 8050,
+      "anchor_y_nm": 545
+    },
+    {
+      "net": "D",
+      "row": 0,
+      "x_nm": 9890,
+      "anchor_y_nm": 545
+    },
+    {
+      "net": "Y",
+      "row": 0,
+      "x_nm": 8970,
+      "anchor_y_nm": 545
+    },
+    {
+      "net": "_net1",
+      "row": 0,
+      "x_nm": 10350,
+      "anchor_y_nm": 545
+    },
+    {
+      "net": "C",
+      "row": 0,
+      "x_nm": 1610,
+      "anchor_y_nm": 2175
+    },
+    {
+      "net": "B",
+      "row": 0,
+      "x_nm": 3450,
+      "anchor_y_nm": 2175
+    },
+    {
+      "net": "A",
+      "row": 0,
+      "x_nm": 4830,
+      "anchor_y_nm": 2175
+    },
+    {
+      "net": "A",
+      "row": 0,
+      "x_nm": 6210,
+      "anchor_y_nm": 2175
+    },
+    {
+      "net": "B",
+      "row": 0,
+      "x_nm": 7590,
+      "anchor_y_nm": 2175
+    },
+    {
+      "net": "D",
+      "row": 0,
+      "x_nm": 8510,
+      "anchor_y_nm": 2175
+    },
+    {
+      "net": "_net4",
+      "row": 0,
+      "x_nm": 2530,
+      "anchor_y_nm": 2175
+    },
+    {
+      "net": "Y",
+      "row": 0,
+      "x_nm": 3910,
+      "anchor_y_nm": 2175
+    },
+    {
+      "net": "_net4",
+      "row": 0,
+      "x_nm": 5290,
+      "anchor_y_nm": 2175
+    },
+    {
+      "net": "Y",
+      "row": 0,
+      "x_nm": 9430,
+      "anchor_y_nm": 2175
+    }
+  ],
+  "truth_table": [
+    {
+      "inputs": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "Y": 1
+    },
+    {
+      "inputs": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 1
+      },
+      "Y": 1
+    },
+    {
+      "inputs": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 0
+      },
+      "Y": 1
+    },
+    {
+      "inputs": {
+        "A": 0,
+        "B": 0,
+        "C": 1,
+        "D": 1
+      },
+      "Y": 1
+    },
+    {
+      "inputs": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 0
+      },
+      "Y": 1
+    },
+    {
+      "inputs": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 1
+      },
+      "Y": 1
+    },
+    {
+      "inputs": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 0
+      },
+      "Y": 1
+    },
+    {
+      "inputs": {
+        "A": 0,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "Y": 0
+    },
+    {
+      "inputs": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "Y": 1
+    },
+    {
+      "inputs": {
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "D": 1
+      },
+      "Y": 1
+    },
+    {
+      "inputs": {
+        "A": 1,
+        "B": 0,
+        "C": 1,
+        "D": 0
+      },
+      "Y": 1
+    },
+    {
+      "inputs": {
+        "A": 1,
+        "B": 0,
+        "C": 1,
+        "D": 1
+      },
+      "Y": 0
+    },
+    {
+      "inputs": {
+        "A": 1,
+        "B": 1,
+        "C": 0,
+        "D": 0
+      },
+      "Y": 1
+    },
+    {
+      "inputs": {
+        "A": 1,
+        "B": 1,
+        "C": 0,
+        "D": 1
+      },
+      "Y": 0
+    },
+    {
+      "inputs": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "D": 0
+      },
+      "Y": 1
+    },
+    {
+      "inputs": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "D": 1
+      },
+      "Y": 0
+    }
+  ],
+  "pdk": {
+    "root": "/Users/abdugad/dd2/pdk-cw/sky130A",
+    "resolved_root": "/Users/abdugad/dd2/pdk-cw/ciel/sky130/versions/bdc9412b3e468c102d01b7cf6337be06ec6e9c9a/sky130A",
+    "sha256": {
+      "libs.tech/magic/sky130A.tech": "3f6ea5e2c863169b544b623f59837a6f341e00c9322a9c11c971b402ee4311ee",
+      "libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef": "1a18b353fb5457caf0eca5b3cb28b2c0c9bbacdbbdeee7c4fc64a115932066c2",
+      "libs.tech/netgen/sky130A_setup.tcl": "1bb40f342f949b699d3e5c49323aff8c4816cb9c7e85b5d8dc6c180926fb7010",
+      "libs.ref/sky130_fd_sc_hd/mag/sky130_fd_sc_hd__inv_1.mag": "8c9dcbf799f28cd0193bbd5d26a7a24115a2c747a449c7d9f503c3f71ac819fc",
+      "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8__tt.pm3.spice": "7f99085edc5ca0215d49585a75889b5fdb2b8c23b220eb0325124a3ca6915122",
+      "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8_hvt__tt.pm3.spice": "5d88d956a7199f9043862582561ba1d1c649b0ffdd145f42760b69373253aa75"
+    }
+  },
+  "architecture": "Independent minimum-trail N/P diffusion chains; M2 accesses and M1/M3 interval routing.",
+  "lef_signal_port_policy": "Complete connected GDS conductors on each existing pin layer, including via pads; no bounding-box fill",
+  "body_connection": "External HD tap cells required; no internal taps",
+  "checks": {
+    "drc": {
+      "status": "pass",
+      "standalone_error_count": 9,
+      "style": "drc(full)",
+      "deck": "/Users/abdugad/dd2/pdk-cw/sky130A/libs.tech/magic/sky130A.tech",
+      "command": [
+        "/opt/magic-cw/bin/magic",
+        "-dnull",
+        "-noconsole",
+        "-rcfile",
+        "/Users/abdugad/dd2/pdk-cw/sky130A/libs.tech/magic/sky130A.magicrc",
+        "/Users/abdugad/dd2/cellgap/build/cellweaver/dd2_gb2__f17ff_1/verify.tcl"
+      ],
+      "log": "magic.log",
+      "errors": "drc-errors.txt",
+      "standalone_local_error_count": 0,
+      "scope": "Local geometry plus full DRC in four tap-equipped HD row contexts; standalone tap-distance findings retained"
+    },
+    "lvs": {
+      "status": "pass",
+      "command": [
+        "/opt/netgen-cw/bin/netgen",
+        "-batch",
+        "lvs",
+        "/Users/abdugad/dd2/cellgap/build/cellweaver/dd2_gb2__f17ff_1/dd2_gb2__f17ff_1.extracted.spice dd2_gb2__f17ff_1",
+        "/Users/abdugad/dd2/cellgap/build/cellweaver/dd2_gb2__f17ff_1/dd2_gb2__f17ff_1.spice dd2_gb2__f17ff_1",
+        "/Users/abdugad/dd2/pdk-cw/sky130A/libs.tech/netgen/sky130A_setup.tcl",
+        "/Users/abdugad/dd2/cellgap/build/cellweaver/dd2_gb2__f17ff_1/lvs.log",
+        "-json"
+      ],
+      "log": "lvs.log"
+    },
+    "abutment": {
+      "status": "pass",
+      "cases": [
+        {
+          "orientation": "R0",
+          "error_count": 0,
+          "command": [
+            "/opt/magic-cw/bin/magic",
+            "-dnull",
+            "-noconsole",
+            "-rcfile",
+            "/Users/abdugad/dd2/pdk-cw/sky130A/libs.tech/magic/sky130A.magicrc",
+            "/Users/abdugad/dd2/cellgap/build/cellweaver/dd2_gb2__f17ff_1/abut_R0.tcl"
+          ],
+          "log": "abut_R0.log",
+          "errors": "abut_R0.errors"
+        },
+        {
+          "orientation": "MX",
+          "error_count": 0,
+          "command": [
+            "/opt/magic-cw/bin/magic",
+            "-dnull",
+            "-noconsole",
+            "-rcfile",
+            "/Users/abdugad/dd2/pdk-cw/sky130A/libs.tech/magic/sky130A.magicrc",
+            "/Users/abdugad/dd2/cellgap/build/cellweaver/dd2_gb2__f17ff_1/abut_MX.tcl"
+          ],
+          "log": "abut_MX.log",
+          "errors": "abut_MX.errors"
+        },
+        {
+          "orientation": "MY",
+          "error_count": 0,
+          "command": [
+            "/opt/magic-cw/bin/magic",
+            "-dnull",
+            "-noconsole",
+            "-rcfile",
+            "/Users/abdugad/dd2/pdk-cw/sky130A/libs.tech/magic/sky130A.magicrc",
+            "/Users/abdugad/dd2/cellgap/build/cellweaver/dd2_gb2__f17ff_1/abut_MY.tcl"
+          ],
+          "log": "abut_MY.log",
+          "errors": "abut_MY.errors"
+        },
+        {
+          "orientation": "R180",
+          "error_count": 0,
+          "command": [
+            "/opt/magic-cw/bin/magic",
+            "-dnull",
+            "-noconsole",
+            "-rcfile",
+            "/Users/abdugad/dd2/pdk-cw/sky130A/libs.tech/magic/sky130A.magicrc",
+            "/Users/abdugad/dd2/cellgap/build/cellweaver/dd2_gb2__f17ff_1/abut_R180.tcl"
+          ],
+          "log": "abut_R180.log",
+          "errors": "abut_R180.errors"
+        }
+      ],
+      "tap_pitch_um_in_neighbor_rows": 4.6,
+      "reference_cells": [
+        "nand2_1",
+        "inv_1",
+        "fill_1",
+        "tapvpwrvgnd_1"
+      ]
+    },
+    "simulation": {
+      "status": "not_run"
+    },
+    "router_pin_access": {
+      "status": "not_run"
+    },
+    "characterization": {
+      "status": "not_run"
+    },
+    "switch_level": {
+      "status": "pass",
+      "vectors": 16
+    },
+    "geometry": {
+      "status": "pass",
+      "errors": [],
+      "channel_counts": {
+        "n": 6,
+        "p": 6
+      },
+      "grid_nm": 5,
+      "scope": "GDS placement boundary, polygon grid, and physical channel counts/W/L; DRC/LVS remain required"
+    },
+    "stress_extraction": {
+      "status": "pass",
+      "summary": "stress/summary.json"
+    },
+    "rc_extraction": {
+      "status": "pass",
+      "summary": "/Users/abdugad/dd2/cellgap/build/cellweaver/dd2_gb2__f17ff_1/rc_extraction/summary.json",
+      "scope": "Magic extracted signal/supply interconnect, contact, poly and diffusion-access resistance; original PEX capacitance matrix lumped at named ports or nearest extracted internal node; ideal VNB/VPB body ports; nominal extraction, no distributed coupling or substrate resistance"
+    },
+    "simulation_rc": {
+      "status": "not_run"
+    },
+    "characterization_rc": {
+      "status": "pass",
+      "summary": "/Users/abdugad/dd2/cellgap/build/cellweaver/dd2_gb2__f17ff_1/characterization_rc/summary.json",
+      "scope": "Conditional NLDM, effective input capacitance and state leakage; Magic extracted signal/supply interconnect, contact, poly and diffusion-access resistance; original PEX capacitance matrix lumped at named ports or nearest extracted internal node; ideal VNB/VPB body ports; nominal extraction, no distributed coupling or substrate resistance; no internal-power tables",
+      "corners": {
+        "tt": {
+          "status": "pass",
+          "liberty": "/Users/abdugad/dd2/cellgap/build/cellweaver/dd2_gb2__f17ff_1/characterization_rc/tt/dd2_gb2__f17ff_1.lib",
+          "sha256": "827a866b5c55ed86e16692cc730ebc2e4ff1851decdcd0574ce3844ef76574cb",
+          "conditional_arcs": 10,
+          "power_groups": 0,
+          "dc_vectors": 16,
+          "reader": {
+            "status": "pass",
+            "log": "/Users/abdugad/dd2/cellgap/build/cellweaver/dd2_gb2__f17ff_1/characterization_rc/tt/sta.log"
+          }
+        }
+      }
+    }
+  },
+  "layout_backend": "shared",
+  "output_access_layer": "met2",
+  "diffusion_breaks": 1,
+  "minimum_graph_trails": {
+    "n": 2,
+    "p": 1
+  },
+  "diffusion_segments": 3,
+  "topology_required_breaks_single_height": 1,
+  "diffusion_chains": [
+    {
+      "row": 0,
+      "kind": "n",
+      "nodes_x": [
+        690,
+        2070,
+        3450,
+        4830,
+        6670,
+        8050
+      ],
+      "gates_x": [
+        1150,
+        2990,
+        4370,
+        5750,
+        7130
+      ],
+      "paired": false,
+      "compacted": true,
+      "devices": [
+        "M5",
+        "M4",
+        "M2",
+        "M1",
+        "M3"
+      ],
+      "nodes": [
+        "VGND",
+        "_net3",
+        "VGND",
+        "_net2",
+        "_net1",
+        "_net3"
+      ]
+    },
+    {
+      "row": 0,
+      "kind": "n",
+      "nodes_x": [
+        8970,
+        10350
+      ],
+      "gates_x": [
+        9890
+      ],
+      "paired": false,
+      "compacted": true,
+      "devices": [
+        "M0"
+      ],
+      "nodes": [
+        "Y",
+        "_net1"
+      ]
+    },
+    {
+      "row": 0,
+      "kind": "p",
+      "nodes_x": [
+        690,
+        2530,
+        3910,
+        5290,
+        6670,
+        8050,
+        9430
+      ],
+      "gates_x": [
+        1610,
+        3450,
+        4830,
+        6210,
+        7590,
+        8510
+      ],
+      "paired": false,
+      "compacted": true,
+      "devices": [
+        "M9",
+        "M8",
+        "M7",
+        "M10",
+        "M11",
+        "M6"
+      ],
+      "nodes": [
+        "VPWR",
+        "_net4",
+        "Y",
+        "_net4",
+        "_net5",
+        "VPWR",
+        "Y"
+      ]
+    }
+  ],
+  "placement_priority": [
+    "minimum diffusion breaks",
+    "minimum width",
+    "minimum cross-row nets"
+  ],
+  "contact_policy": "Pack vertical contact rows on contacted signal and supply terminals using the smaller adjacent diffusion width",
+  "cross_row_bridges_nm": {},
+  "routing_states": 9,
+  "paired_euler_unavailable": "A transistor row has more than two odd-degree diffusion nodes",
+  "verified_gds_sha256": "185d4430ea3b8db990d3d24b6fe88e05206611852c97cd30932a9795f78d329b",
+  "verified_reference_sha256": "afbf76861244b83f402fbad2ac3fdbde4ed6c50c99c96dbce573b9559c4a282d",
+  "verified_spec_sha256": "9af1f9165d549af68f80554f45e6e4d02c76f18fe514355ff0ff75a88ed00cfa",
+  "verified_extracted_sha256": "4836ccf408a9209bf3b7e2dd478afa61ef11ff75da92aa31393745ed071d3e94",
+  "verified_pex_sha256": "10939207972dbc396c0eb4092368c336310fe9268a803b141c22985ce43a6235",
+  "verified_rc_sha256": "2bdddb778075cb9762f32918a737ac0c5d1bf40f0d4cb52a87097c0b20d89141"
+}

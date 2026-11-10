@@ -1,0 +1,17 @@
+design,script,baseline_um2,with_new_cells_um2,reduction_pct,new_cell_instances,equivalence,method,worst_delay_base_ns,worst_delay_new_ns
+cpu8,A,4186.5,4186.5,0.0,0,pass,dsec,4.1754,4.1754
+cpu8,B,4359.2,4279.1,1.84,0,pass,dsec,4.1108,4.2652
+dsp8,A,5928.2,5928.2,0.0,0,pass,dsec,5.2175,5.2175
+dsp8,B,6214.7,6216.0,-0.02,0,pass,dsec,5.6287,5.4544
+arlet6502,A,9701.8,9701.8,0.0,0,pass,dsec,7.1104,7.1104
+arlet6502,B,9995.8,9930.8,0.65,0,pass,dsec,8.6488,6.2703
+uart_apb,A,12948.7,12948.7,0.0,0,pass,dsec,6.7771,6.7771
+uart_apb,B,13180.1,13183.9,-0.03,0,pass,dsec,4.4893,4.4893
+risc8,A,28263.4,28263.4,0.0,0,pass,dsec,15.9846,15.9846
+risc8,B,27511.4,27505.1,0.02,0,pass,dsec,13.3222,13.5038
+fir10,A,25968.7,25968.7,0.0,0,pass,dsec,6.2563,6.2563
+fir10,B,29055.4,29044.1,0.04,2,pass,dsec,6.2349,6.3212
+spm,A,2869.0,2869.0,0.0,0,pass,dsec,0.7430,0.7430
+spm,B,2907.8,2907.8,0.0,0,pass,dsec,0.6585,0.6585
+mul,A,1756.7,1756.7,0.0,0,pass,cec,4.2691,4.2691
+mul,B,1948.1,1988.2,-2.06,0,pass,cec,4.7852,5.0705

@@ -22,10 +22,10 @@
  Yosys 0.33 (git sha1 2584903a060)
 
 
--- Executing script file `/Users/ziadtaher/cellgap/results/logs/final_mapping_est/30cc14c8_mul_B.ys' --
+-- Executing script file `/Users/abdugad/dd2/cellgap/results/logs/final_mapping_est/30cc14c8_mul_B.ys' --
 
-1. Executing Verilog-2005 frontend: /Users/ziadtaher/work/dd2/tut2/mul.v
-Parsing Verilog input from `/Users/ziadtaher/work/dd2/tut2/mul.v' to AST representation.
+1. Executing Verilog-2005 frontend: /Users/abdugad/dd2/tutorials/tut2/student/mul.v
+Parsing Verilog input from `/Users/abdugad/dd2/tutorials/tut2/student/mul.v' to AST representation.
 Generating RTLIL representation for module `\mul'.
 Successfully finished Verilog frontend.
 
@@ -101,8 +101,8 @@ Removed a total of 0 cells.
 Running muxtree optimizer on module \mul..
   Creating internal representation of mux trees.
   Evaluating internal representation of mux trees.
-      Replacing known input bits on port A of cell $ternary$/Users/ziadtaher/work/dd2/tut2/mul.v:16$3: \mp -> { 1'0 \mp [6:0] }
-      Replacing known input bits on port A of cell $ternary$/Users/ziadtaher/work/dd2/tut2/mul.v:17$6: \mc -> { 1'0 \mc [6:0] }
+      Replacing known input bits on port A of cell $ternary$/Users/abdugad/dd2/tutorials/tut2/student/mul.v:16$3: \mp -> { 1'0 \mp [6:0] }
+      Replacing known input bits on port A of cell $ternary$/Users/abdugad/dd2/tutorials/tut2/student/mul.v:17$6: \mc -> { 1'0 \mc [6:0] }
   Analyzing evaluation results.
 Removed 0 multiplexer ports.
 <suppressed ~3 debug messages>
@@ -188,17 +188,17 @@ Finding unused cells or wires in module \mul..
 
 2.13. Executing ALUMACC pass (create $alu and $macc cells).
 Extracting $alu and $macc cells in module mul:
-  creating $macc model for $add$/Users/ziadtaher/work/dd2/tut2/mul.v:16$2 ($add).
-  creating $macc model for $add$/Users/ziadtaher/work/dd2/tut2/mul.v:17$5 ($add).
-  creating $macc model for $add$/Users/ziadtaher/work/dd2/tut2/mul.v:28$11 ($add).
-  creating $macc model for $mul$/Users/ziadtaher/work/dd2/tut2/mul.v:20$7 ($mul).
-  creating $alu model for $macc $add$/Users/ziadtaher/work/dd2/tut2/mul.v:28$11.
-  creating $alu model for $macc $add$/Users/ziadtaher/work/dd2/tut2/mul.v:17$5.
-  creating $alu model for $macc $add$/Users/ziadtaher/work/dd2/tut2/mul.v:16$2.
-  creating $macc cell for $mul$/Users/ziadtaher/work/dd2/tut2/mul.v:20$7: $auto$alumacc.cc:365:replace_macc$13
-  creating $alu cell for $add$/Users/ziadtaher/work/dd2/tut2/mul.v:16$2: $auto$alumacc.cc:485:replace_alu$14
-  creating $alu cell for $add$/Users/ziadtaher/work/dd2/tut2/mul.v:17$5: $auto$alumacc.cc:485:replace_alu$17
-  creating $alu cell for $add$/Users/ziadtaher/work/dd2/tut2/mul.v:28$11: $auto$alumacc.cc:485:replace_alu$20
+  creating $macc model for $add$/Users/abdugad/dd2/tutorials/tut2/student/mul.v:16$2 ($add).
+  creating $macc model for $add$/Users/abdugad/dd2/tutorials/tut2/student/mul.v:17$5 ($add).
+  creating $macc model for $add$/Users/abdugad/dd2/tutorials/tut2/student/mul.v:28$11 ($add).
+  creating $macc model for $mul$/Users/abdugad/dd2/tutorials/tut2/student/mul.v:20$7 ($mul).
+  creating $alu model for $macc $add$/Users/abdugad/dd2/tutorials/tut2/student/mul.v:28$11.
+  creating $alu model for $macc $add$/Users/abdugad/dd2/tutorials/tut2/student/mul.v:17$5.
+  creating $alu model for $macc $add$/Users/abdugad/dd2/tutorials/tut2/student/mul.v:16$2.
+  creating $macc cell for $mul$/Users/abdugad/dd2/tutorials/tut2/student/mul.v:20$7: $auto$alumacc.cc:365:replace_macc$13
+  creating $alu cell for $add$/Users/abdugad/dd2/tutorials/tut2/student/mul.v:16$2: $auto$alumacc.cc:485:replace_alu$14
+  creating $alu cell for $add$/Users/abdugad/dd2/tutorials/tut2/student/mul.v:17$5: $auto$alumacc.cc:485:replace_alu$17
+  creating $alu cell for $add$/Users/abdugad/dd2/tutorials/tut2/student/mul.v:28$11: $auto$alumacc.cc:485:replace_alu$20
   created 3 $alu and 1 $macc cells.
 
 2.14. Executing SHARE pass (SAT-based resource sharing).
@@ -518,7 +518,7 @@ Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script
 ABC: ABC command line: "source <abc-temp-dir>/abc.script".
 ABC: 
 ABC: + read_blif <abc-temp-dir>/input.blif 
-ABC: + read_lib -w /Users/ziadtaher/cellgap/libs/hd_reduced_plus_final_set_est.lib 
+ABC: + read_lib -w /Users/abdugad/dd2/cellgap/libs/hd_reduced_plus_final_set_est.lib 
 ABC: Parsing finished successfully.  Parsing time =     0.04 sec
 ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbn_1".
 ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbp_1".
@@ -537,7 +537,7 @@ ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxbn_1".
 ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxbp_1".
 ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_1".
 ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtp_1".
-ABC: Library "sky130_fd_sc_hd__tt_025C_1v80" from "/Users/ziadtaher/cellgap/libs/hd_reduced_plus_final_set_est.lib" has 175 cells (17 skipped: 17 seq; 0 tri-state; 0 no func; 0 dont_use).  Time =     0.06 sec
+ABC: Library "sky130_fd_sc_hd__tt_025C_1v80" from "/Users/abdugad/dd2/cellgap/libs/hd_reduced_plus_final_set_est.lib" has 175 cells (17 skipped: 17 seq; 0 tri-state; 0 no func; 0 dont_use).  Time =     0.06 sec
 ABC: Memory =    9.95 MB. Time =     0.06 sec
 ABC: Warning: Detected 2 multi-output gates (for example, "sky130_fd_sc_hd__fa_1").
 ABC: + strash 
@@ -640,6 +640,6 @@ Removed 0 unused cells and 495 unused wires.
 7.2. Executing DEMUXMAP pass.
 Dumping module `\mul'.
 
-End of script. Logfile hash: 37f8b2d33c, CPU: user 0.25s system 0.01s, MEM: 24.36 MB peak
+End of script. Logfile hash: 0f31741dfa, CPU: user 0.27s system 0.02s, MEM: 24.63 MB peak
 Yosys 0.33 (git sha1 2584903a060)
-Time spent: 46% 2x abc (0 sec), 14% 1x dfflibmap (0 sec), ...
+Time spent: 47% 2x abc (0 sec), 11% 1x dfflibmap (0 sec), ...
